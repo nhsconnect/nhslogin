@@ -4,7 +4,7 @@
 
 By integrating NHS login to your website or app you can offer self-service access. Users signed in via NHS login will (optionally) have their ID verified and matched to their NHS number, which your service will receive once the user has logged in.
 
-NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC), which is an open standard. You can find out more about our implementation of OIDC by reading the [external interface specification](https://developer.nhs.uk/library/systems/nhs-login-info-suppliers/eis/) (EIS).
+NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC), which is an open standard. You can find out more about our implementation of OIDC by reading the [external interface specification](https://github.com/nhsconnect/nhslogin/blob/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.5.docx) (EIS).
 
 # The OIDC login flow
 
