@@ -34,7 +34,8 @@ Our sandpit is a deployment of much of the production code, with some elements o
 
 # How do I integrate to the sandpit?
 
-We’ll need to setup your service on NHS login sandpit. You can make a request to connect using this form: [https://goo.gl/forms/QFphpqYyUMvNafAy2](https://goo.gl/forms/QFphpqYyUMvNafAy2)
+We’ll need to setup your service on NHS login sandpit. You can make a request to connect using this form:
+[Sandpit environment request form](https://github.com/nhsconnect/nhslogin/raw/master/Sandpit%20Environment%20Form%200.1.xlsx)
 
 You’ll be asked to provide:
 
