@@ -36,7 +36,8 @@ Our sandpit is a deployment of much of the production code, with some elements o
 
 We’ll need to setup your service on NHS login sandpit. You can make a request to connect using this form:
 [Sandpit environment request form](https://github.com/nhsconnect/nhslogin/raw/master/Sandpit%20Environment%20Form%200.1.xlsx)
-
+ and sending it to the engage.nhslogin@nhs.net
+ 
 You’ll be asked to provide:
 
 -   A friendly name of your service e.g. what the public know you as
