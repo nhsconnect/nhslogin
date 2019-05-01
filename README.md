@@ -34,7 +34,7 @@ Our sandpit is a deployment of much of the production code, with some elements o
 
 # How do I integrate to the sandpit?
 
-We’ll need to setup your service on NHS login sandpit. Please provide the below information to engage.nhslogin@nhs.net
+We’ll need to setup your service on NHS login sandpit. Please provide the below information to [engage.nhslogin@nhs.net](mailto:engage.nhslogin@nhs.net?subject=Request%20Sandpit%20Access)
  
 Required information:
 
