@@ -34,24 +34,28 @@ Our sandpit is a deployment of much of the production code, with some elements o
 
 # How do I integrate to the sandpit?
 
-We’ll need to setup your service on NHS login sandpit. You can make a request to connect using this form:
-[Sandpit environment request form](https://github.com/nhsconnect/nhslogin/raw/master/Sandpit%20Environment%20Form%200.1.xlsx)
- and sending it to the engage.nhslogin@nhs.net
+We’ll need to setup your service on NHS login sandpit. Please provide the below information to engage.nhslogin@nhs.net
  
-You’ll be asked to provide:
+Required information:
 
 -   A friendly name of your service e.g. what the public know you as
     
 -   Your redirect_uri that we’ll return traffic to
     
--   Your public key for validating signed JWTs - see Appendix A for guidance
+-   Your public key for validating signed JWTs - see below for guidance on generating this
     
+Optional information:
 
+- A link to your Terms and Conditions
+
+- A link to your Privacy Notice
   
+We aim to process these requests within a 24 hours.
 
-You will need to add an OIDC Relying Party library to your service. OpenID certified examples can be found here: [https://openid.net/developers/certified/](https://openid.net/developers/certified/) We intend to provide some guidance and code examples for specific libraries soon.
 
-  
+You will need to add an OIDC Relying Party library to your service. OpenID certified examples can be found here: [https://openid.net/developers/certified/](https://openid.net/developers/certified/)
+
+We have provided links to a couple of example repos at the bottom of this file. We aim to add more client examples over the comming months. If you have one to add, please raise an issue or PR.
 
 Depending on the library you pick you’ll either need:
 
@@ -64,15 +68,11 @@ Depending on the library you pick you’ll either need:
 
 We have a [public slack](https://nhs-login-support-slack-invite.herokuapp.com/) where you can contact us for support.
 
-  
-
-# Appendix A
 
 ## Guidance for generating asymmetric key pair
 
-You will need to provide a public key when registering their service. This is required for the authentication mechanism on the token endpoint. The steps below explain how to generate that public key and corresponding private key.
+You will need to provide a public key when registering your service. This is required for the authentication mechanism on the token endpoint. The steps below explain how to generate that public key and corresponding private key.
 
-  
 
 Full details can be found here: [https://en.wikibooks.org/wiki/Cryptography/Generate_a_keypair_using_OpenSSL](https://en.wikibooks.org/wiki/Cryptography/Generate_a_keypair_using_OpenSSL)
 
@@ -89,7 +89,11 @@ Generate corresponding public_key.pem:
     openssl rsa -pubout -in private_key.pem -out public_key.pem
 
   
-You should now have your key pair. Only send the contents of public_key.pem file when completing the environment request form.
+You should now have your key pair. Only send the contents of public_key.pem file when requesting access to a new environment.
 
-# Examples
-Add 3rd party examples here
+# Example OIDC clients used for NHS login
+
+- https://github.com/initialspark/nhs-login-dotnet-core-example
+- https://github.com/TinyMedicalApps/NHS-Login-for-Dart-and-Flutter
+
+
