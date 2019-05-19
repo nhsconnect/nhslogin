@@ -65,16 +65,17 @@ There are a number of users already configured that you can use to test the logi
 
 ## Testing the registration process
 We currently have two methods to complete registration:
-    *     Existing GP Online details
-    *     Online ID check with video selfie
 
-We do not support testing of GP Online registration in the sandpit, but you can test the online ID process.
+- Existing GP Online details
+- Online ID check with video selfie
+
+We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.
 
 When registering a new user you will need to provide a unique email address (using the + trick in emails can help if you want to test a number of times). You can reuse your mobile number for multiple users.
 
 Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!
 
-We don’t tend to approve new registrations. If you need us to do this please get in touch via the slack channel
+We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via slack - see below for joining info.
 
 ## Testing FIDO UAF flow
 Please get in touch if you'd like to add FIDO UAF (TouchID etc.) to your app.
