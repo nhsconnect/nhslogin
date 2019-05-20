@@ -45,12 +45,12 @@ Required information:
 -   Your public key for validating signed JWTs - see below for guidance on generating this
 
   
-We aim to process these requests within a 24 hours.
+We aim to process these requests within 24 hours.
 
 
 You will need to add an OIDC Relying Party library to your service. OpenID certified examples can be found here: [https://openid.net/developers/certified/](https://openid.net/developers/certified/)
 
-We have provided links to a couple of example repos at the bottom of this file. We aim to add more client examples over the comming months. If you have one to add, please raise an issue or PR.
+We have provided links to a couple of example repos at the bottom of this file. We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.
 
 Depending on the library you pick you’ll either need:
 
