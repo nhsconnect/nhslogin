@@ -4,13 +4,13 @@
 
 By integrating NHS login to your website or app you can offer self-service access. Users signed in via NHS login will (optionally) have their ID verified and matched to their NHS number, which your service will receive once the user has logged in.
 
-NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC), which is an open standard. You can find out more about our implementation of OIDC by reading the [external interface specification](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.5.docx) (EIS).
+NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC), which is an open standard. You can find out more about our implementation of OIDC by reading the [external interface specification](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.6.docx) (EIS).
 
 # The OIDC login flow
 
 ## Overview
 
-The goal of the OIDC authorization code flow is for the relying party (your service) to obtain an ID Token from the OIDC provider (NHS login). The ID Token contains identifying information about the user (claims), such as family name, date of birth, and NHS number. Further claims can be obtained via the userinfo endpoint. The claims returned are based on the scopes specified in the original auth request - see table 21 of the [EIS](https://developer.nhs.uk/library/systems/nhs-login-info-suppliers/eis/) for more information. The ID Token also contains information about authentication mechanisms used and the level to which a user’s identity has been verified - these are called vectors of trust, see the EIS for [more information](https://developer.nhs.uk/library/systems/nhs-login-info-suppliers/eis/#data).
+The goal of the OIDC authorization code flow is for the relying party (your service) to obtain an ID Token from the OIDC provider (NHS login). The ID Token contains identifying information about the user (claims), such as family name, date of birth, and NHS number. Further claims can be obtained via the userinfo endpoint. The claims returned are based on the scopes specified in the original auth request - see table 21 of the [EIS](https://developer.nhs.uk/library/systems/nhs-login-info-suppliers/eis/) for more information. The ID Token also contains information about authentication mechanisms used and the level to which a user’s identity has been verified - these are called vectors of trust, see the EIS for [more information](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.6.docx).
 
 ## Initiating Authorization Flow
 
