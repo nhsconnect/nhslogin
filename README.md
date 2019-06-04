@@ -107,6 +107,9 @@ Generate corresponding public_key.pem:
   
 You should now have your key pair. Only send the contents of public_key.pem file when requesting access to a new environment.
 
+## Guidance on adding the NHS login button to your service
+Please get in touch if you'd like to add the NHS login button to your service.
+
 # Example OIDC clients used for NHS login
 
 - https://github.com/initialspark/nhs-login-dotnet-core-example
