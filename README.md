@@ -108,7 +108,7 @@ Generate corresponding public_key.pem:
 You should now have your key pair. Only send the contents of public_key.pem file when requesting access to a new environment.
 
 ## Guidance on adding the NHS login button to your service
-The NHS login button is available as a [downloadable package](http://).
+The NHS login button is available as a [downloadable package](https://github.com/nhsconnect/nhslogin/raw/master/nhs-login-buttons.zip).
 
 You must follow the [branding guidelines](http://).
 
