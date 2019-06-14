@@ -1,10 +1,10 @@
 # What is NHS login?
 
-[NHS login](https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/) is a new way for people to prove who they are online, so they can access health and care websites and apps securely and safely.
+[NHS login](https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/) is a new way for people to prove who they are online, so they can access health and care websites or apps safely and securely.
 
-By integrating NHS login to your website or app you can offer self-service access. Users signed in via NHS login will (optionally) have their ID verified and matched to their NHS number, which your service will receive once the user has logged in.
+By integrating NHS login to your website or app you can offer users self-service access. You can also choose the level and combination of verification and authentication required for user access.
 
-NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC), which is an open standard. You can find out more about our implementation of OIDC by reading the [external interface specification](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.6.docx) (EIS).
+NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC), which is an open standard. You can find out more about our use of OIDC by reading the [external interface specification](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.6.docx) (EIS).
 
 # The OIDC login flow
 
@@ -106,6 +106,13 @@ Generate corresponding public_key.pem:
 
   
 You should now have your key pair. Only send the contents of public_key.pem file when requesting access to a new environment.
+
+
+## Guidance on adding the NHS login button to your service
+The NHS login button is available as a [downloadable package](https://github.com/nhsconnect/nhslogin/raw/master/nhs-login-buttons.zip).
+
+You must follow the [branding guidelines](http://).
+
 
 # Example OIDC clients used for NHS login
 
