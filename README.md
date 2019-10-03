@@ -135,5 +135,6 @@ You must follow the [NHS login button guidelines](https://github.com/nhsconnect/
 
 - https://github.com/initialspark/nhs-login-dotnet-core-example
 - https://github.com/TinyMedicalApps/NHS-Login-for-Dart-and-Flutter
+- https://github.com/carepenny/nhs-login-js-example
 
 
