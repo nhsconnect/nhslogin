@@ -125,15 +125,21 @@ Generate corresponding public_key.pem:
 You should now have your key pair. Only send the contents of public_key.pem file when requesting access to a new environment.
 
 
-## Guidance on adding the NHS login button to your service
+## Adding the NHS login button to your service
 The NHS login button is available as a [downloadable package](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20buttons.zip).
 
 You must follow the [NHS login button guidelines](https://github.com/nhsconnect/nhslogin/raw/master/NHSloginbuttonguidelines.pdf).
 
 
-## Link your service to our NHS login settings page
+## Linking your service to our NHS login settings page
 NHS login provides capability for users to change their NHS login settings online, helping to reduce calls into your support desks. To help users do this, NHS login needs you to create a link from your service to the NHS login settings page. Users will need to be logged into your service to use this link.
-You must follow the [NHS login Link to Settings Page guidelines](https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20Link%20to%20Settings%20Page%20v1.0.pptx).
+
+Use the [NHS login Link to Settings Page presentation](https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20Link%20to%20Settings%20Page%20v1.0.pptx) for guidance on this.
+
+## Using NHS login to create or retrieve GP credentials
+If you are an IM1 supplier, learn how to use NHS login to create or retrieve GP credentials. These include an Account ID, ODS Code and Linkage Key. This means users do not have to go their GP practice to register for your service.
+
+Use the [NHS login GPIC presentation](https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20GPIC%20v1.0.pptx) for guidance on this.
 
 
 # Example OIDC clients used for NHS login
@@ -145,8 +151,7 @@ You must follow the [NHS login Link to Settings Page guidelines](https://github.
 - https://github.com/rikitikitaco/nhs-login-nodejs-example
 
 
-If you are an IM1 supplier, learn how to use NHS login to create or retrieve GP credentials. These include an Account ID, ODS Code and Linkage Key. This means users do not have to go their GP practice to register for your service.
-[insert powerpoint link]
+
 
 
 
