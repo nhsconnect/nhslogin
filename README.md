@@ -131,6 +131,11 @@ The NHS login button is available as a [downloadable package](https://github.com
 You must follow the [NHS login button guidelines](https://github.com/nhsconnect/nhslogin/raw/master/NHSloginbuttonguidelines.pdf).
 
 
+## Link your service to our NHS login settings page
+NHS login provides capability for users to change their NHS login settings online, helping to reduce calls into your support desks. To help users do this, NHS login needs you to create a link from your service to the NHS login settings page. Users will need to be logged into your service to use this link.
+[insert powerpoint link here]
+
+
 # Example OIDC clients used for NHS login
 
 - https://github.com/initialspark/nhs-login-dotnet-core-example
@@ -138,5 +143,10 @@ You must follow the [NHS login button guidelines](https://github.com/nhsconnect/
 - https://github.com/carepenny/nhs-login-js-example
 - https://github.com/rikitikitaco/nhs-login-java-spring-boot-example
 - https://github.com/rikitikitaco/nhs-login-nodejs-example
+
+
+If you are an IM1 supplier, learn how to use NHS login to create or retrieve GP credentials. These include an Account ID, ODS Code and Linkage Key. This means users do not have to go their GP practice to register for your service.
+[insert powerpoint link]
+
 
 
