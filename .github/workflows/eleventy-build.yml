@@ -1,0 +1,22 @@
+name: Eleventy Build
+on: [push]
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.5.0'
+      - name: Install npm packages
+        run: npm ci
+      - name: Build Deployment Package
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PUBLISH_DIR: _site
+          PUBLISH_BRANCH: gh-pages
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN  }}

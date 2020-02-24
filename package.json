@@ -1,0 +1,19 @@
+{
+  "name": "developer-docs",
+  "version": "1.0.0",
+  "description": "docs for sandpit/external partners",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "deploy":"eleventy --pathprefix /nhs-dev-docs/",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve"
+  },
+  "author": "NHS Digital",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
+  }
+}
