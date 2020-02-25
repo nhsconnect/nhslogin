@@ -161,7 +161,7 @@ How to add your own pages, files and contrbutions to this document and a few bas
 
 ## Viewing documents 
 
-To view the official NHS login documentation page, click [here](https://faithmawi.github.io/nhs-dev-docs/).   
+To view the official NHS login documentation page, click [here](https://faithmawi.github.io/nhslogin/).   
 
 This would be best for those of you who are viewing documentation and would like to view it in an easily navigatable format. 
 

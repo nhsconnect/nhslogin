@@ -16,7 +16,7 @@ These three pieces of information are required by IM1 paired services to create 
 
 Retrieving these items of information via NHS login removes the need for the user to enter them manually, as well as being able to seamlessly register previously unregistered GP Online users – preventing a visit to a GP Practice.
 
-![Diagram](nhs-dev-docs/images/gp-credentials-diagram.png)
+![Diagram](nhslogin/images/gp-credentials-diagram.png)
 
 ## This diagram illustrates:
 1. How NHS login processes a request from an RP for gp_integration_credentials via the /userinfo endpoint
