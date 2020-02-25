@@ -3,7 +3,7 @@
 
 A place to reference, use and contribute to.
 
-# A quick reference guide:
+## A quick reference guide:
 
 How to add your own pages, files and contrbutions to this document and a few basics tips on styling.
 
