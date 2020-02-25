@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Technical Conformancey
+title: Technical Conformance
 ---
 
 
