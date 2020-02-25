@@ -12,7 +12,7 @@ NHS login is based on OpenID Connect (OIDC), which is an open standard. You can 
 
 - www.digital.nhs.uk
 
-- enquiries@nhhsdigital.nhs.uk
+- enquiries@nhsdigital.nhs.uk
 
 - 0800 303 5678
 
