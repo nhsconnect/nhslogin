@@ -165,18 +165,26 @@ To view the official NHS login documentation page, click [here](https://faithmaw
 
 This would be best for those of you who are viewing documentation and would like to view it in an easily navigatable format. 
 
+## Navigating these files
+
+1. Click on the **src** file
+2. Find the file that you would like to view and click into it.
+
 ## Editing or Adding documents
 
-To view the files within this repository, click on the **src** file and then reference the below instructions.    
+This would be best for those of you wishing to edit or add your own contributions to these documents.     
 
-This would be best for those of you wishing to edit or add your own contributions to these documents.                        
-
+1. Click on the **src** file
+2. Find the file that you would like to edit and click into it.
+3. Click the **"Edit" icon button** at the top right of the page.
+4. When you are finished making your changes, click **Commit** at the bottom of the page.
 
 ## Creating a new page 
 
 1. Click on the **src** file
 2. Click the **"Create new file" button** at the top right of the page
 3. Give your file an appropriate name, making sure to end this name with **.md**
+4. When you are finished making your changes, click **Commit** at the bottom of the page.
 
 ## Before you start writing
 
