@@ -24,7 +24,7 @@ The links below contain examples of different implementations and integrations o
 
 [Java Demo](https://github.com/rikitikitaco/nhs-login-java-spring-boot-example)
 ***
-**NodJS Webclient**
+**NodeJS Webclient**
 
 [Sample NodeJS Webclient](https://github.com/rikitikitaco/nhs-login-nodejs-example)
 
