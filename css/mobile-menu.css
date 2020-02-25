@@ -1,0 +1,29 @@
+.mobile-menu {
+    padding: 16px 0;
+    display: none
+}
+
+.mobile-menu--open {
+    display: block;
+}
+
+@media(min-width: 769px) {
+    .mobile-menu--open {
+        display: none;
+    }
+}
+
+.mobile-menu__heading {
+    padding-left: 16px;
+    padding-top: 24px;
+    font-size: 1rem;
+}
+/* we are using a svg inside of the nav link that can overlap without this */
+.nhsuk-header__navigation-link {
+    padding-right: 35px;
+}
+
+/* we have no search bar on this site so we don't need the right styling */
+.nhsuk-header__menu-toggle {
+    right: 0;
+}

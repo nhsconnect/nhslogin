@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/nhs-dev-docs">
+     <link rel="stylesheet"  href="nhs-dev-docs/css/main.css">
+      <link rel="stylesheet"  href="nhs-dev-docs/css/mobile-menu.css">
+    <script src="nhs-dev-docs/js/main.min.js" ></script> 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>Technical Conformancey</title>
+  </head>
+  <body>
+      <header class="nhsuk-header" role="banner">
+        <div class="nhsuk-width-container nhsuk-header__container">
+          <div class="nhsuk-header__logo">
+            <a class="nhsuk-header__link nhsuk-header__link--service " href="/nhs-dev-docs" aria-label="NHS digital service manual homepage">
+              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+                <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+              </svg>
+              <span class="nhsuk-header__service-name">
+              NHS login Docs
+            </span>
+            </a>
+          </div>
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+          </div>
+
+          <div class="nhsuk-header__content" id="content-header"></form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nhsuk-header__navigation mobile-menu" id="header-navigation" role="navigation" aria-label="Primary navigation"
+  aria-labelledby="label-navigation">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+      <button class="nhsuk-header__navigation-close" id="close-menu">
+        <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true" focusable="false">
+          <path
+            d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
+          </path>
+        </svg>
+        <span class="nhsuk-u-visually-hidden">Close menu</span>
+      </button>
+    </p>
+    <ul class="nhsuk-header__navigation-list">
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          NHS Login
+        </h2>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/">
+          What is NHS login
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/oidc-login-flow">
+          The OIDC login flow
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          New to this document?
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item app-header__navigation-item__item--current">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/reference-guide">
+          A quick reference guide
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+       <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          External Interface Specification
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/interface-spec-doc">
+          Interface Specification Document
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Conformance
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/technical-conformance">
+          Technical Conformance
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Developer Support Information
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/developer-support">
+          Developer Support
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+       <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          GP Credentials
+        </h2>
+      </li>
+
+       <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/gp-credentials-para">
+          Using NHS login to create or retrieve GP credentials
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/gp-credentials-doc">
+          Scope and processing overview
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Button Guidance
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/adding-buttons">
+          Adding the NHS login button to your service
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Linking your Service
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/linking-to-settings-para">
+          About linking
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/linking-to-settings-ppt">
+          Guidance
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+       <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Examples
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhs-dev-docs/example-oidc">
+          Different implementations and integration of service
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-component-reading-width">
+
+        <div class="app-pane">
+
+         <div class="app-pane__side-bar">
+
+            <nav class="app-side-nav">
+            
+                <h2 class="app-side-nav__heading">NHS login</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhs-dev-docs">What is NHS login?</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/oidc-login-flow">The OIDC login flow</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">New to this document?</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/reference-guide">A quick reference guide</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">External Interface Specification</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/interface-spec-doc">Interface Specification Document</a>
+                </ul>
+
+                <h2 class="app-side-nav__heading">Conformance</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/technical-conformance">Technical Conformance</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">Developer Support Information</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/developer-support">Developer Support</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">GP Credentials</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                   <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/gp-credentials-para">Using NHS login to create or retrieve GP credentials</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/gp-credentials-doc">Scope and processing overview </a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Button Guidance</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/adding-buttons">Adding the NHS login button to your service</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Linking your Service</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/linking-to-settings-para">About linking</a>
+                  </li>
+                   <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/linking-to-settings-ppt">Guidance</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Examples</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhs-dev-docs/example-oidc">Different implementations and integration of service</a>
+                  </li>
+                </ul>
+            </nav>
+          </div>
+
+          <div class="app-pane__main-content">
+
+            <h1 class="app-page-heading">
+              Technical Conformancey
+            </h1>
+
+            <h2>IM1 Suppliers</h2>
+<table>
+<thead>
+<tr>
+<th>IM1 Suppliers have the option to test either the GP online or Prove your identity journey in the Integration Environment.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- NHS login provide a set of patient records that exist on the Spine Integration Environment which IM1 suppliers can use</td>
+</tr>
+<tr>
+<td>- IM1 suppliers should create new records in their local GP system based on the patient details provided by NHS login</td>
+</tr>
+<tr>
+<td>- IM1 suppliers should then create linkage key, account ID and ODS code details against the records created in the local GP system. These details should then be shared with</td>
+</tr>
+<tr>
+<td>- IM1 suppliers should also create new NHS login accounts by registering with an email and password</td>
+</tr>
+<tr>
+<td>- NHS login will update the linkage key, account ID, ODS code and IM1 token in the NAM Stub</td>
+</tr>
+<tr>
+<td>- IM1 supplier should be able to login successfully and proceed through either the GP Online or Prove your identity journey.</td>
+</tr>
+<tr>
+<td>- Once submitted suppliers should notify NHS login to approve the requests</td>
+</tr>
+<tr>
+<td>- IM1 supplier should be able to login successfully and be redirect to respected service with patient record which exists in the local GP system</td>
+</tr>
+</tbody>
+</table>
+<h2>Non-IM1 Suppliers</h2>
+<table>
+<thead>
+<tr>
+<th>Non-IM1 suppliers can choose to use the basic patient records provided to proceed through the Prove your identity journey. Non-IM1 suppliers now also have the abiliy to test  the GP online journey by using details from the NAM Stub.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- NHS login provide a set of patient records that exist in the NAM Stub, the details include Linkage Key, account ID and ODS code</td>
+</tr>
+<tr>
+<td>- Non-IM1 suppliers can create new NHS login accounts and proceed through the GP Online Journey by providing valid details from the NAM Stub</td>
+</tr>
+<tr>
+<td>- NHS login accounts verified against the NAM Stub are successfully redirected to the respected service</td>
+</tr>
+</tbody>
+</table>
+<h2>Testing FIDO UAF flow</h2>
+<p>Please get in touch if you'd like to add FIDO UAF (TouchID etc.) to your app.</p>
+
+
+     <div class="app-edit-instructions">
+              <hr />
+              <h2>Want to edit this page?</h2>
+              <ol>
+                <li>Click this <a href="https://github.com/faithmawi/nhs-dev-docs/blob/master/./src/technical-conformance.md">link</a></li>
+                <li>Then click the edit button in the top right of the document</li>
+                <li>Make sure you click <strong>Commit changes</strong> when you're done</li>
+              </ol>
+      </div>
+
+            <div class="app-index-navigation app-u-hide-desktop">
+              <nav class="app-side-nav">
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">
+        <li class="nhsuk-footer__list-item">
+          <a class="nhsuk-footer__list-item-link" href="https://github.com/nhsconnect/nhslogin">Our Github Repository</a>
+        </li>
+       <li class="nhsuk-footer__list-item">
+          <a class "nhsuk-footer__list-item-link" href="https://nhs-login-support-slack-invite.herokuapp.com/">Slack</a>
+        </li>
+      </ul>
+      <p class="nhsuk-footer__copyright">© Crown copyright</p>
+    </div>
+  </div>
+  <div class="app-ogl-footer">
+    <div class="nhsuk-width-container"></div>
+  </div>
+</footer>
+<script src="nhs-dev-docs/js/mobile-menu.js" ></script> 
+</body>
+</html>
