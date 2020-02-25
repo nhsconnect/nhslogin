@@ -163,18 +163,20 @@ How to add your own pages, files and contrbutions to this document and a few bas
 
 To view the official NHS login documentation page, click [here](https://nhsconnect.github.io/nhslogin/).   
 
+
+
 This would be best for those of you who are viewing documentation and would like to view it in an easily navigatable format. 
 
 ## Navigating these files
 
-1. Click on the **src** file
+1. Click on the **src** file click [here](https://github.com/nhsconnect/nhslogin/tree/master/src)
 2. Find the file that you would like to view and click into it.
 
 ## Editing or Adding documents
 
 This would be best for those of you wishing to edit or add your own contributions to these documents.     
 
-1. Click on the **src** file
+1. Click on the **src** file click [here](https://github.com/nhsconnect/nhslogin/tree/master/src)
 2. Find the file that you would like to edit and click into it.
 3. Click the **"Edit" icon button** at the top right of the page.
 4. When you are finished making your changes, click **Propose file change** at the bottom of the page.
@@ -185,7 +187,7 @@ This would be best for those of you wishing to edit or add your own contribution
 
 ## Creating a new page 
 
-1. Click on the **src** file
+1. Click on the **src** file click [here](https://github.com/nhsconnect/nhslogin/tree/master/src)
 2. Click the **"Create new file" button** at the top right of the page
 3. Give your file an appropriate name, making sure to end this name with **.md**
 4. When you are finished making your changes, click **Propose new file** at the bottom of the page.
