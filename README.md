@@ -161,7 +161,7 @@ How to add your own pages, files and contrbutions to this document and a few bas
 
 ## Viewing documents 
 
-To view the official NHS login documentation page, click [here](https://faithmawi.github.io/nhslogin/).   
+To view the official NHS login documentation page, click [here](https://nhsconnect.github.io/nhslogin/).   
 
 This would be best for those of you who are viewing documentation and would like to view it in an easily navigatable format. 
 
@@ -177,14 +177,22 @@ This would be best for those of you wishing to edit or add your own contribution
 1. Click on the **src** file
 2. Find the file that you would like to edit and click into it.
 3. Click the **"Edit" icon button** at the top right of the page.
-4. When you are finished making your changes, click **Commit** at the bottom of the page.
+4. When you are finished making your changes, click **Propose file change** at the bottom of the page.
+5. You will see a box that will allow you to add a title and description to your changes. 
+6. Add a title. The description is optional.
+7. Now click the green button that says **"Create Pull Request"**. Now your changes are in a queue waiting to be accepted by an admin.
+8. If you wish to cancel your request to make changes, click **"Close Pull Request"**
 
 ## Creating a new page 
 
 1. Click on the **src** file
 2. Click the **"Create new file" button** at the top right of the page
 3. Give your file an appropriate name, making sure to end this name with **.md**
-4. When you are finished making your changes, click **Commit** at the bottom of the page.
+4. When you are finished making your changes, click **Propose new file** at the bottom of the page.
+5. You will see a box that will allow you to add a title and description to your changes. 
+6. Add a title. The description is optional.
+7. Now click the green button that says **"Create Pull Request"**. Now your changes are in a queue waiting to be accepted by an admin.
+8. If you wish to cancel your request to make changes, click **"Close Pull Request"**
 
 ## Before you start writing
 
