@@ -10,5 +10,5 @@ title: GP Credentials
  
  These include an Account ID, ODS Code and Linkage Key. This means users do not have to go their GP practice to register for your service.
  
- Use the [NHS login GPIC presentation](https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20GPIC%20v1.0.pptx) for guidance on this.
+ Use the [NHS login GPIC presentation](https://github.com/nhsconnect/nhslogin/blob/master/NHSlogin%20GPIC%20v1.1.pptx) for guidance on this.
 
