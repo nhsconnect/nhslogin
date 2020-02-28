@@ -359,24 +359,24 @@
             </h1>
 
             <h2>Introduction</h2>
-<p>NHS login supports a scope of gp_integration_credentials which will allow a Relying Party (RP) to retrieve the following user claims:</p>
+<p>NHS login supports a scope of <strong>gp_integration_credentials</strong> which will allow a Relying Party (RP) to retrieve the following user claims:</p>
 <ul>
 <li>Account ID</li>
 <li>ODS Code</li>
 <li>Linkage Key</li>
 </ul>
 <p>These three pieces of information are required by IM1 paired services to create an IM1 token which is then used by the RP to invoke the GP system patient facing APIs.</p>
+<p>The RP (service) should be IM1 enabled for enabling this scope in production environment.</p>
 <p>Retrieving these items of information via NHS login removes the need for the user to enter them manually, as well as being able to seamlessly register previously unregistered GP Online users – preventing a visit to a GP Practice.</p>
 <p><img src="nhslogin/images/gp-credentials-diagram.png" alt="Diagram"></p>
 <h2>This diagram illustrates:</h2>
 <ol>
-<li>How NHS login processes a request from an RP for gp_integration_credentials via the /userinfo endpoint</li>
-<li>How NHS login validates gp_integration_credentials on each request and how gp_integration_credentials are refreshed if the information held by NHS login is invalid</li>
+<li>How NHS login processes a request from an RP for <strong>gp_integration_credentials</strong> via the /userinfo endpoint</li>
+<li>How NHS login validates <strong>gp_integration_credentials</strong> on each request and how gp_integration_credentials are refreshed if the information held by NHS login is invalid</li>
 </ol>
 <h2>GP integration credentials validation</h2>
-<p>When <strong>gp_integration_credentials</strong> scope is requested by an RP, NHS login performs a background check of the validity of a stored IM1 token.</p>
-<p>As this check runs in the background asynchronously, it is the responsibility of the RP to also validate their IM1 token (if one exists).</p>
-<p>If the RP determines that the claims returned from gp_integration_credentials scope are not valid it can request refreshed claims from NHS login by re-starting the login process.</p>
+<p>When <strong>gp_integration_credentials</strong> scope is requested by an RP, NHS login performs a background check of the validity of a stored IM1 token. As this check runs in the background asynchronously, it is the responsibility of the RP to also validate their IM1 token (if one exists).</p>
+<p>If the RP determines that the claims returned from <strong>gp_integration_credentials</strong> scope are not valid it can request refreshed claims from NHS login by re-starting the login process.</p>
 <p>Optional - the RP can utilise the “asserted_login_identity” request parameter to avoid the user needing to re-authenticate.</p>
 <h2>GP integration credentials are no longer valid</h2>
 <p>The reasons that the GP credentials might no longer be valid are:</p>
@@ -390,7 +390,7 @@
 <h2>Assumptions:</h2>
 <ul>
 <li>
-<p>When GP credentials (linkage keys) expire or get invalidated all the IM1 tokens generated using them also expire/get invalidated.</p>
+<p>When GP credentials (linkage keys) expire or get invalidated all the IM1 tokens generated using them also expire/get invalidated. So in case the RP has any process to expire or invalidate the GP credentials (linkage keys) then it should be disclosed/discussed with NHS login.</p>
 </li>
 <li>
 <p>RP should cater for user journey which prevents the user getting into an endless “retrieve GP credential” loop if the credentials genuinely can’t be retrieved.</p>
@@ -401,10 +401,10 @@
 <ul>
 <li>EMIS :  100%</li>
 <li>TPP  : 100%</li>
-<li>Vision : 3 Practices (250 in total – rollout in progress)</li>
-<li>Microtest **: None (36 in total)</li>
+<li>Vision : 100% (250 in total – rollout in progress)</li>
+<li>Microtest *: None (36 in total)</li>
 </ul>
-<p>** GP login credentials (linkage keys) for Microtest returned by NHS login are dummy in nature (to maintain the uniform behaviour of the service). These GP login credentials cannot be used by RPS for connecting to Microtest.</p>
+<p>*<em>GP login credentials (linkage keys) for Microtest returned by NHS login are dummy in nature (to maintain the uniform behaviour of the service). These GP login credentials cannot be used by RPS for connecting to Microtest.</em></p>
 
 
      <div class="app-edit-instructions">
