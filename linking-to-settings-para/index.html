@@ -10,7 +10,7 @@
       <link rel="stylesheet"  href="nhslogin/css/mobile-menu.css">
     <script src="nhslogin/js/main.min.js" ></script> 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>Linking services to NHS login</title>
+    <title>NHS login user settings</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -100,6 +100,17 @@
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/integrating-to-sandpit">
           Integrate to the sandpit
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/generating-pem">
+          Generating public key
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -213,13 +224,13 @@
 
       <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
-          Linking your Service
+          NHS login user settings
         </h2>
       </li>
 
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-para">
-          About linking
+          Settings information
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -229,17 +240,6 @@
         </a>
       </li>
 
-      <li class="nhsuk-header__navigation-item">
-        <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-ppt">
-          Guidance
-          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path
-              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-            </path>
-          </svg>
-        </a>
-      </li>
 
        <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
@@ -249,7 +249,7 @@
 
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/example-oidc">
-          Different implementations and integration of service
+          Example OIDC clients
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -294,6 +294,9 @@
                   <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="nhslogin/integrating-to-sandpit">Integrate to the sandpit</a>
                   </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/generating-pem">Generate public key</a>
+                  </li>
                 </ul>
                 <h2 class="app-side-nav__heading">External Interface Specification</h2>
                 <ul class="nhsuk-list app-side-nav__list">
@@ -334,19 +337,16 @@
                     <a class="app-side-nav__link" href="nhslogin/adding-buttons">Adding the NHS login button to your service</a>
                   </li>
                 </ul>
-                <h2 class="app-side-nav__heading">Linking your Service</h2>
+                <h2 class="app-side-nav__heading">NHS login user settings</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">About linking</a>
-                  </li>
-                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-ppt">Guidance</a>
+                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">Settings information</a>
                   </li>
                 </ul>
                 <h2 class="app-side-nav__heading">Examples</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Different implementations and integration of service</a>
+                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Example OIDC clients</a>
                   </li>
                 </ul>
             </nav>
@@ -355,20 +355,19 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Linking services to NHS login
+              NHS login user settings
             </h1>
 
-            <p>NHS login provides capability for users to change their NHS login settings online, helping to reduce calls into your support desks.</p>
-<p>To help users do this, NHS login needs you to create a link from your service to the NHS login settings page.</p>
-<p>Users will need to be logged into your service to use this link.
-Use the <a href="https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20Link%20to%20Settings%20Page%20v1.0.pptx">NHS login Link to Settings Page presentation</a> for guidance on this.</p>
+            <p>NHS login provides capability for users to change their NHS login settings online, helping to reduce support overheads.</p>
 <h2>NHS login currently allows users to:</h2>
 <ul>
 <li>change their email address</li>
 <li>change their password</li>
 <li>change their mobile phone number</li>
-<li>delete their NHS login</li>
+<li>delete their NHS login
+To help users do this, NHS login needs you to create a link from your service to the <a href="https://settings.login.nhs.uk">NHS login settings page</a>.</li>
 </ul>
+<p>Use <a href="https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20Link%20to%20Settings%20Page%20v1.0.pptx">this slide deck</a> for guidance on implementing this.</p>
 
 
      <div class="app-edit-instructions">
@@ -403,6 +402,9 @@ Use the <a href="https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin%20Li
         </li>
        <li class="nhsuk-footer__list-item">
           <a class "nhsuk-footer__list-item-link" href="https://nhs-login-support-slack-invite.herokuapp.com/">Slack</a>
+        </li>
+       <li class="nhsuk-footer__list-item">
+          <a class "nhsuk-footer__list-item-link" href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>
         </li>
       </ul>
       <p class="nhsuk-footer__copyright">© Crown copyright</p>

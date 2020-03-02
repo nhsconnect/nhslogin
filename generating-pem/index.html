@@ -10,7 +10,7 @@
       <link rel="stylesheet"  href="nhslogin/css/mobile-menu.css">
     <script src="nhslogin/js/main.min.js" ></script> 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <title>How do I integrate to the sandpit?</title>
+    <title>Guidance for generating asymmetric key pair</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -100,6 +100,17 @@
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/integrating-to-sandpit">
           Integrate to the sandpit
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/generating-pem">
+          Generating public key
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -213,13 +224,13 @@
 
       <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
-          Linking your Service
+          NHS login user settings
         </h2>
       </li>
 
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-para">
-          About linking
+          Settings information
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -229,17 +240,6 @@
         </a>
       </li>
 
-      <li class="nhsuk-header__navigation-item">
-        <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-ppt">
-          Guidance
-          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path
-              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-            </path>
-          </svg>
-        </a>
-      </li>
 
        <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
@@ -249,7 +249,7 @@
 
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/example-oidc">
-          Different implementations and integration of service
+          Example OIDC clients
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -294,6 +294,9 @@
                   <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="nhslogin/integrating-to-sandpit">Integrate to the sandpit</a>
                   </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/generating-pem">Generate public key</a>
+                  </li>
                 </ul>
                 <h2 class="app-side-nav__heading">External Interface Specification</h2>
                 <ul class="nhsuk-list app-side-nav__list">
@@ -334,19 +337,16 @@
                     <a class="app-side-nav__link" href="nhslogin/adding-buttons">Adding the NHS login button to your service</a>
                   </li>
                 </ul>
-                <h2 class="app-side-nav__heading">Linking your Service</h2>
+                <h2 class="app-side-nav__heading">NHS login user settings</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">About linking</a>
-                  </li>
-                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-ppt">Guidance</a>
+                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">Settings information</a>
                   </li>
                 </ul>
                 <h2 class="app-side-nav__heading">Examples</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Different implementations and integration of service</a>
+                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Example OIDC clients</a>
                   </li>
                 </ul>
             </nav>
@@ -355,38 +355,24 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              How do I integrate to the sandpit?
+              Guidance for generating asymmetric key pair
             </h1>
 
-            <p>We’ll need to setup your service on NHS login sandpit. Please provide the below information to engage.nhslogin@nhs.net</p>
-<p>Required information:</p>
-<p>A friendly name of your service e.g. what the public know you as</p>
-<p>Your redirect_uri that we’ll return traffic to</p>
-<p>Your public key for validating signed JWTs - see below for guidance on generating this</p>
-<p>We aim to process these requests within 24 hours.</p>
-<p>You will need to add an OIDC Relying Party library to your service. OpenID certified examples can be found <a href="https://openid.net/developers/certified">here</a>.</p>
-<p>We have provided links to a couple of example repos at the bottom of this file. We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.</p>
-<p>Depending on the library you pick you’ll either need:</p>
-<p>the <a href="https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration">configuration endpoint</a>.</p>
-<p>or the specific endpoints, which can be found at the configuration endpoint</p>
-<h2>Testing the login flow in the Sandpit</h2>
-<p>Before testing the registration flow you should ensure a login flow can be completed. This involves all of the interaction points, such as the token and userinfo endpoints.</p>
-<p>There are a number of users already configured that you can use to test the login flow. We'll send you the test pack when we configure your client.</p>
-<h2>Testing the registration process</h2>
-<p>We currently have two methods to complete registration:</p>
-<p>Existing GP Online details
-Online ID check with video selfie</p>
-<p>We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.</p>
-<p>When registering a new user you will need to provide a unique email address (using the + trick in emails can help if you want to test a number of times). You can reuse your mobile number for multiple users.</p>
-<p>Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!</p>
-<p>We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via slack - see below for joining info.</p>
+            <h2>Guidance for generating asymmetric key pair</h2>
+<p>You will need to provide a public key when registering your service. This is required for the authentication mechanism on the token endpoint. The steps below explain how to generate that public key and corresponding private key.</p>
+<p>Full details can be found <a href="https://en.wikibooks.org/wiki/Cryptography/Generate_a_keypair_using_OpenSSL">here</a>.</p>
+<p><strong>Generate private_key.pem</strong></p>
+<p><code>openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048</code></p>
+<p><strong>Generate corresponding public_key.pem</strong></p>
+<p><code>openssl rsa -pubout -in private_key.pem -out public_key.pem</code></p>
+<p>You should now have your key pair. Only send the contents of the <strong>public_key.pem</strong> file when requesting access to a new environment.</p>
 
 
      <div class="app-edit-instructions">
               <hr />
               <h2>Want to edit this page?</h2>
               <ol>
-                <li>Click this <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/intergrating-to-sandpit.md">link</a></li>
+                <li>Click this <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/generating-pem.md">link</a></li>
                 <li>Then click the edit button in the top right of the document</li>
                 <li>Make sure you click <strong>Commit changes</strong> when you're done</li>
               </ol>
@@ -414,6 +400,9 @@ Online ID check with video selfie</p>
         </li>
        <li class="nhsuk-footer__list-item">
           <a class "nhsuk-footer__list-item-link" href="https://nhs-login-support-slack-invite.herokuapp.com/">Slack</a>
+        </li>
+       <li class="nhsuk-footer__list-item">
+          <a class "nhsuk-footer__list-item-link" href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>
         </li>
       </ul>
       <p class="nhsuk-footer__copyright">© Crown copyright</p>

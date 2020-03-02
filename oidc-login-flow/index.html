@@ -108,6 +108,17 @@
           </svg>
         </a>
       </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/generating-pem">
+          Generating public key
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
 
       <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
@@ -213,13 +224,13 @@
 
       <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
-          Linking your Service
+          NHS login user settings
         </h2>
       </li>
 
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-para">
-          About linking
+          Settings information
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -229,17 +240,6 @@
         </a>
       </li>
 
-      <li class="nhsuk-header__navigation-item">
-        <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-ppt">
-          Guidance
-          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-            aria-hidden="true">
-            <path
-              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
-            </path>
-          </svg>
-        </a>
-      </li>
 
        <li>
         <h2 class="app-side-nav__heading mobile-menu__heading">
@@ -249,7 +249,7 @@
 
       <li class="nhsuk-header__navigation-item">
         <a class="nhsuk-header__navigation-link" href="/nhslogin/example-oidc">
-          Different implementations and integration of service
+          Example OIDC clients
           <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
             aria-hidden="true">
             <path
@@ -294,6 +294,9 @@
                   <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="nhslogin/integrating-to-sandpit">Integrate to the sandpit</a>
                   </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/generating-pem">Generate public key</a>
+                  </li>
                 </ul>
                 <h2 class="app-side-nav__heading">External Interface Specification</h2>
                 <ul class="nhsuk-list app-side-nav__list">
@@ -334,19 +337,16 @@
                     <a class="app-side-nav__link" href="nhslogin/adding-buttons">Adding the NHS login button to your service</a>
                   </li>
                 </ul>
-                <h2 class="app-side-nav__heading">Linking your Service</h2>
+                <h2 class="app-side-nav__heading">NHS login user settings</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">About linking</a>
-                  </li>
-                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-ppt">Guidance</a>
+                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">Settings information</a>
                   </li>
                 </ul>
                 <h2 class="app-side-nav__heading">Examples</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Different implementations and integration of service</a>
+                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Example OIDC clients</a>
                   </li>
                 </ul>
             </nav>
@@ -359,13 +359,13 @@
             </h1>
 
             <h2>Overview</h2>
-<p>The goal of the OIDC authorisation code flow is for the relying party (your service) to obtain an ID Token from the OIDC provider (NHS login).</p>
-<p>The ID Token contains identifying information about the user (claims), such as family name, date of birth, and NHS number. Further claims can be obtained via the userinfo endpoint.</p>
+<p>The goal of the OIDC <strong>authorisation code flow</strong> is for the relying party (your service) to obtain an ID Token from the OIDC provider (NHS login).</p>
+<p>The ID Token contains key information, such as <strong>sub</strong> and identifying information about the user (claims), such as family name, date of birth, and NHS number. Further claims can be obtained via the userinfo endpoint.</p>
 <p>The claims returned are based on the scopes specified in the original auth request - see table 11 of the <a href="https://github.com/nhsconnect/nhslogin/blob/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.8.docx?raw=true">EIS</a> for more information.</p>
 <p>The ID Token also contains information about authentication mechanisms used and the level to which a user’s identity has been verified - these are called vectors of trust, see the EIS for <a href="https://github.com/nhsconnect/nhslogin/blob/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.8.docx?raw=true">more information</a>.</p>
-<h2>Initiating authorisation Flow</h2>
-<p>The first step involves the client sending a request to NHS login with the desired parameters (<a href="https://docs.google.com/document/d/1cr5um4tjvWsFYGC-1nqf_uZsKNR1DfVSfvtcvC1XkJQ/edit#heading=h.tq8n3hgq5rl6">example included here</a>). These include your identifying information, such as client_id, and scopes, which will ultimately determine the returned claims.</p>
-<h2>Completing authorisation Flow</h2>
+<h2>Initiating authorisation flow</h2>
+<p>The first step involves the client sending a request to NHS login with the desired parameters. These include your identifying information, such as client_id, <a href="https://tools.ietf.org/html/rfc8485">Vectors of Trust</a>, and scopes, which will ultimately determine the available claims.</p>
+<h2>Completing authorisation flow</h2>
 <p>NHS login will return an authorisation code, which you then use to obtain the ID Token. This is done by making a request to the NHS login token endpoint. The token endpoint requires authentication via private_key_jwt <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication">method</a>. The returned ID Token must be validated before it can be used within your service.</p>
 
 
@@ -401,6 +401,9 @@
         </li>
        <li class="nhsuk-footer__list-item">
           <a class "nhsuk-footer__list-item-link" href="https://nhs-login-support-slack-invite.herokuapp.com/">Slack</a>
+        </li>
+       <li class="nhsuk-footer__list-item">
+          <a class "nhsuk-footer__list-item-link" href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>
         </li>
       </ul>
       <p class="nhsuk-footer__copyright">© Crown copyright</p>
