@@ -3,28 +3,24 @@ layout: base.njk
 title: How do I integrate to the sandpit?
 ---
 
-We’ll need to setup your service on NHS login sandpit. Please provide the below information to engage.nhslogin@nhs.net
+We’ll need to setup your service on NHS login sandpit. Please provide the below information to [engage.nhslogin@nhs.net](engage.nhslogin@nhs.net)
 
  Required information:
 
-A friendly name of your service e.g. what the public know you as
-
-Your redirect_uri that we’ll return traffic to
-
-Your public key for validating signed JWTs - see below for guidance on generating this
-
+- A friendly name of your service e.g. what the public know you as
+- Your redirect_uri that we’ll return traffic to
+- Your public key for validating signed JWTs - see [here](https://nhsconnect.github.io/nhslogin/integrating-to-sandpit/) for guidance
 
  We aim to process these requests within 24 hours.
 
- You will need to add an OIDC Relying Party library to your service. OpenID certified examples can be found [here](https://openid.net/developers/certified).
+ You will need to add an OIDC client library to your service. OpenID certified examples can be found [here](https://openid.net/developers/certified).
 
- We have provided links to a couple of example repos at the bottom of this file. We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.
+ We have provided links to some [example client repos](https://nhsconnect.github.io/nhslogin/example-oidc). We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.
 
- Depending on the library you pick you’ll either need:
+ Depending on the OIDC client library you pick you’ll either need:
 
-the [configuration endpoint](https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration).
-
-or the specific endpoints, which can be found at the configuration endpoint
+- the [configuration endpoint](https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration)
+- or the specific endpoints, which can be found at the configuration endpoint
 
 
  ## Testing the login flow in the Sandpit
@@ -37,10 +33,8 @@ or the specific endpoints, which can be found at the configuration endpoint
 
 We currently have two methods to complete registration:
 
-
-Existing GP Online details
-Online ID check with video selfie
-
+- Existing GP Online details
+- Online ID check with video selfie
 
  We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.
 
@@ -48,5 +42,5 @@ Online ID check with video selfie
 
  Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!
 
- We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via slack - see below for joining info.
+ We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via Slack.
 
