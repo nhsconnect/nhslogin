@@ -22,11 +22,11 @@ NHS login will return an authorization code, which you then use to obtain the ID
 
 # How can I test NHS login in my service?
 
-We have a stub and a sandpit that development teams can use to familiarise themselves with NHS login.
+We have a mock and a sandpit that development teams can use to familiarise themselves with NHS login.
 
-## NHS login stub
+## NHS login mock
 
-We have developed a lightweight stub that is a representation of our OIDC endpoints. You can find out more about the stub and access it here: [https://stub.signin.nhs.uk/client](https://stub.signin.nhs.uk/client). The stub is entirely self-service and requires no registration.
+We have developed a lightweight mock that is a representation of our OIDC endpoints. You can find out more about the mock and access it here: [https://oidc.mock.signin.nhs.uk/client](https://oidc.mock.signin.nhs.uk/client). The mock is entirely self-service and requires no registration.
 
 ## Sandpit
 
