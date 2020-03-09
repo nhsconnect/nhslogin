@@ -8,14 +8,16 @@ NHS login is based on [OpenID Connect](https://openid.net/connect/faq/) (OIDC). 
 
 # NHS login developer documentation
 
-A place to reference, use, and contribute to [https://nhsconnect.github.io/nhslogin/](https://nhsconnect.github.io/nhslogin/)
+Documentation is hosted on GitHub pages: [https://nhsconnect.github.io/nhslogin/](https://nhsconnect.github.io/nhslogin/)
 
 ## Running locally
 
 NHS login developer documentation uses [11ty](https://www.11ty.dev/).
 
 To run locally:
+
 ```npm install```
+
 ```npx @11ty/eleventy --serve```
 
 More 11ty guidance [here](https://www.11ty.dev/docs/getting-started/).
