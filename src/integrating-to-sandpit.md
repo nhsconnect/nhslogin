@@ -9,7 +9,7 @@ We’ll need to setup your service on NHS login sandpit. Please provide the belo
 
 - A friendly name of your service e.g. what the public know you as
 - Your redirect_uri that we’ll return traffic to
-- Your public key for validating signed JWTs - see [here](https://nhsconnect.github.io/nhslogin/integrating-to-sandpit/) for guidance
+- Your public key for validating signed JWTs - see [here](https://nhsconnect.github.io/nhslogin/generating-pem/) for guidance
 
  We aim to process these requests within 24 hours.
 
