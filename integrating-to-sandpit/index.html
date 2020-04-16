@@ -364,7 +364,9 @@
 <li>A friendly name of your service e.g. what the public know you as</li>
 <li>Your redirect_uri that we’ll return traffic to</li>
 <li>Your public key for validating signed JWTs - see <a href="https://nhsconnect.github.io/nhslogin/generating-pem/">here</a> for guidance</li>
+<li>A list of scopes* you would like to use (see the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">EIS</a> for available scopes)</li>
 </ul>
+<p>*some scopes, such as <code>profile_extended</code>, depend on integration to PDS, which this environment cannot access and therefore won't be available on <code>/userinfo</code></p>
 <p>We aim to process these requests within 24 hours.</p>
 <p>You will need to add an OIDC client library to your service. OpenID certified examples can be found <a href="https://openid.net/developers/certified">here</a>.</p>
 <p>We have provided links to some <a href="https://nhsconnect.github.io/nhslogin/example-oidc">example client repos</a>. We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.</p>
