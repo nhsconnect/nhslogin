@@ -11,4 +11,4 @@ This document defines the interfaces implemented by the Platform and describes t
 
 The specification document is available [here](https://github.com/nhsconnect/nhslogin/blob/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.8.docx?raw=true).
 
-N.B. This is a Word document that we are currently in the process of moving to this site.
+N.B. We are currently in the process of moving the content from the Word document to this site.
