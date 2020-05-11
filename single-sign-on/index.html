@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>OIDC clients used for NHS login</title>
+<title>Single Sign On</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -370,26 +370,21 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              OIDC clients used for NHS login
+              Single Sign On
             </h1>
 
-            <p>The links below contain examples of different implementations and integrations of NHS login.</p>
-<h2>Client Github Repository Links</h2>
-<p><strong>DotNET</strong></p>
-<p><a href="https://github.com/initialspark/nhs-login-dotnet-core-example">Initial Spark (DotNET)</a></p>
-<p><strong>Dart and Flutter</strong></p>
-<p><a href="https://github.com/TinyMedicalApps/NHS-Login-for-Dart-and-Flutter">Tiny Medical Apps (Dart and Flutter)</a></p>
-<p><strong>JavaScript</strong></p>
-<p><a href="https://github.com/carepenny/nhs-login-js-example">Care Penny (JavaScript)</a></p>
-<p><strong>Java</strong></p>
-<p><a href="https://github.com/rikitikitaco/nhs-login-java-spring-boot-example">Java Demo</a></p>
-<p><strong>NodeJS Webclient</strong></p>
-<p><a href="https://github.com/rikitikitaco/nhs-login-nodejs-example">Sample NodeJS Webclient</a></p>
+            <p>NHS login supports Single Sign On (SSO) based on an asserted token exchange between two Relying Parties (RP1 &amp; RP2).</p>
+<ul>
+<li>Asserted tokens are one time tokens (TTL 60 sec)</li>
+<li>Partner services can control which other partner services they share SSO with</li>
+</ul>
+<p>NHS login supports two parameters asserted_login_identity and prompt as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).</p>
+<p><a href="https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin_SSO_v1.0.pptx">View our document providing guidance on Single Sign On (SSO)</a></p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/example-oidc.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/single-sign-on.md">this page</a> on GitHub
               </p>
       </div>
 
