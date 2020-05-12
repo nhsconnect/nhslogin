@@ -54,14 +54,14 @@ A non-normative example jwt payload section is as follows:
 
 User requests RP1 login - OIDC flow - Authorisation code flow
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step1.png "Step 1: login to RP1 diagram")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step1_smaller.png "Step 1: login to RP1 diagram")
 
 ### Step 2: SSO from RP1 to RP2
 
 User transitions from RP1 to RP2 - Single Sign On - Asserted token flow
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step2.png "Step 2: SSO from RP1 to RP2 diagram")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step2_smaller.png "Step 2: SSO from RP1 to RP2 diagram")
 
 ### SSO sequence diagram
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SequenceDiagram.png "SSO sequence diagram")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SequenceDiagram_smaller.png "SSO sequence diagram")
