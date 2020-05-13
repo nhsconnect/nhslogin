@@ -13,7 +13,7 @@ title: Adding the NHS login button to your service
 
 The NHS login button is available to download in a variety of different formats. **This button must always be visible.**
 
-![button](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/ContinueWith_Original.svg "the NHS login button")
+![button](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_button.svg "the NHS login button")
 
 [Download the NHS login button package](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20buttons.zip).
 
