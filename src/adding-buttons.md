@@ -77,7 +77,7 @@ You can scale the button as needed for different devices and screen sizes, but y
 
 If the width of the button needs to change, the padding to the left and right of the text should be 16dp + *x*. The logo should be 67.05dp x 28dp and there should be 16dp between the logo and the button text. The padding above and below the logo should always be 12dp. The padding aroudn the NHS login button should be equal to aat least half of its height. 
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_padding_small.png "padding example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_padding.png "padding example")
 
 ---
 
