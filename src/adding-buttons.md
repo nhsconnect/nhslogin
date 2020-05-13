@@ -5,7 +5,7 @@ title: Adding the NHS login button to your service
 
 ## Overview
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Button_overview.png "Diagram showing how the NHS login button works")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg "Diagram showing how the NHS login button works")
 
 ---
 
