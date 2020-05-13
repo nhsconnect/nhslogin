@@ -25,7 +25,7 @@ The NHS login button is available in NHS blue and in a light version. When the b
 
 Changing the colour of the button to anything other than the original and light version is not allowed.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_colour.png "colour example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_colour.svg "colour example")
 
 ---
 
@@ -33,7 +33,7 @@ Changing the colour of the button to anything other than the original and light 
 
 The NHS login button must always be as clear and visible as any other third party login options. All login buttons should be the same size and have a similar visual weight.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_colour.png "clear and visible example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_clear.svg "clear and visible example")
 
 ---
 
