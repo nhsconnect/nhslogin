@@ -84,7 +84,9 @@ If the width of the button needs to change, the padding to the left and right of
 ## Related links
 
 For detailsed technical guidance on who can use NHS and NHS Digital identities, including how and where they should be correctly applied, please visit: 
+
 [NHS Identity Guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/ "NHS Identity Guidelines")
+
 [NHS Digital Style Guidelines](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines "NHS Digital Style Guidelines")
 
 
