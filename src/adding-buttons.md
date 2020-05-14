@@ -57,19 +57,19 @@ If for any reason you need to have the call to action outside of the button, ple
 
 This condensed version is only to be used at times when you cannot comfortably display the call to action text within the button, or it is not appropriate to do so due to surrounding copy.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_cta.png "condensed version example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_condensed.png "condensed version example")
 
 ### Line breaking
 
 The call to action text should be placed on one line to keep the design of the button consistent. Whichever call to action you choose to use, do not break the text onto more than one line.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_cta.png "line breaking example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_linebreaking.png "line breaking example")
 
 ### Size
 
 You can scale the button as needed for different devices and screen sizes, but you must keep the aspect ratio the same so that the NHS logo is not stretched. When scaling the button, you must ensure that the writing is still clear and readable.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_cta.png "size example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_size.png "size example")
 
 ### Padding
 
