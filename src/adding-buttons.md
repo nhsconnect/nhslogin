@@ -21,11 +21,9 @@ The NHS login button is available to download in a variety of different formats.
 
 ## Colour
 
-The NHS login button is available in NHS blue and in a light version. When the button is placed on a background that is darker than 50% grey, the light version of the button should be used for legibility. 
+The NHS login button is available in NHS blue and in a light version. When the button is placed on a background that is darker than 50% grey, the light version of the button should be used for legibility. <br> Changing the colour of the button to anything other than the original and light version is not allowed.
 
-Changing the colour of the button to anything other than the original and light version is not allowed.
-
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_colour.svg "colour example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_colour.svg "colour example") 
 
 ---
 
