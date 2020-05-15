@@ -9,8 +9,8 @@ We’ll need to setup your service on NHS login sandpit. Please provide the belo
 
 - A friendly name of your service e.g. what the public know you as
 - Your redirect_uri that we’ll return traffic to
-- Your public key for validating signed JWTs - see [here](https://nhsconnect.github.io/nhslogin/generating-pem/) for guidance
-- A list of scopes* you would like to use (see the [EIS](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) for available scopes)
+- Your public key for validating signed JWTs - [see here](https://nhsconnect.github.io/nhslogin/generating-pem/) for guidance
+- A list of scopes* you would like to use - [see the EIS for available scopes](https://nhsconnect.github.io/nhslogin/interface-spec-doc/)
 
 *some scopes, such as `profile_extended`, depend on integration to PDS, which this environment cannot access and therefore won't be available on `/userinfo`
 
