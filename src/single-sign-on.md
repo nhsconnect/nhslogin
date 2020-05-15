@@ -17,7 +17,7 @@ Please refer to [NHS login Interface Specification - Federated document](/nhslog
 
 ### parameter: prompt
 
-**Req?** opt 
+This is an optional parameter.
 
 Requests that the NHS login Service forces the user to sign-in, or to request that the Service does not prompt the user to sign-in (SSO).
  
@@ -29,7 +29,7 @@ Requests that the NHS login Service forces the user to sign-in, or to request th
 
 ### parameter: asserted_login_identity
 
-**Req?** opt 
+This is an optional parameter.
 
 The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available. 
 
