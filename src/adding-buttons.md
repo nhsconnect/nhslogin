@@ -41,6 +41,8 @@ To allow users to recognise the NHS login option quickly, we strongly recommend 
 
 If you want to adapt the button design or translate the text to match the style of your website or app, continue reading these guidelines.
 
+---
+
 ### Call to action text
 
 To encourage users to click the button, we recommend using ‘**Continue with NHS login**’ as the call to action text. This may need to change depending on the context and environment. 
@@ -49,7 +51,9 @@ If you need to change the text, you should make it clear to the user that they a
 
 These examples show which calls to action work best.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_cta.png "call to action examples")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_cta.svg "call to action examples")
+
+---
 
 ### Condensed version
 
@@ -57,25 +61,31 @@ If for any reason you need to have the call to action outside of the button, ple
 
 This condensed version is only to be used at times when you cannot comfortably display the call to action text within the button, or it is not appropriate to do so due to surrounding copy.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_condensed.png "condensed version example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_condensed.svg "condensed version example")
+
+---
 
 ### Line breaking
 
 The call to action text should be placed on one line to keep the design of the button consistent. Whichever call to action you choose to use, do not break the text onto more than one line.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_linebreaking.png "line breaking example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_linebreaking.svg "line breaking example")
+
+---
 
 ### Size
 
 You can scale the button as needed for different devices and screen sizes, but you must keep the aspect ratio the same so that the NHS logo is not stretched. When scaling the button, you must ensure that the writing is still clear and readable.
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Example_size.png "size example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_size.svg "size example")
+
+---
 
 ### Padding
 
 If the width of the button needs to change, the padding to the left and right of the text should be 16dp + *x*. The logo should be 67.05dp x 28dp and there should be 16dp between the logo and the button text. The padding above and below the logo should always be 12dp. The padding around the NHS login button should be equal to at least half of its height. 
 
-![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_padding.png "padding example")
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_padding.svg "padding example")
 
 ---
 
