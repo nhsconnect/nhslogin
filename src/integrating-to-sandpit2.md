@@ -25,25 +25,28 @@ We’ll need to setup your service on NHS login sandpit. Please provide the belo
 - the [configuration endpoint](https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration)
 - or the specific endpoints, which can be found at the configuration endpoint
 
+--- 
 
- ## Testing the login flow in the Sandpit
+## Testing the login flow in the Sandpit
 
- Before testing the registration flow you should ensure a login flow can be completed. This involves all of the interaction points, such as the token and userinfo endpoints.
+Before testing the registration flow you should ensure a login flow can be completed. This involves all of the interaction points, such as the token and userinfo endpoints.
 
-  There are a number of users already configured that you can use to test the login flow. We'll send you the test pack when we configure your client.
+There are a number of users already configured that you can use to test the login flow. We'll send you the test pack when we configure your client.
 
- ## Testing the registration process
+---
+
+## Testing the registration process
 
 We currently have two methods to complete registration:
 
 - Existing GP Online details
 - Online ID check with video selfie
 
- We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.
+We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.
 
- When registering a new user you will need to provide a unique email address (using the + trick in emails can help if you want to test a number of times). You can reuse your mobile number for multiple users.
+When registering a new user you will need to provide a unique email address (using the + trick in emails can help if you want to test a number of times). You can reuse your mobile number for multiple users.
 
- Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!
+Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!
 
- We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via Slack.
+We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via Slack.
 

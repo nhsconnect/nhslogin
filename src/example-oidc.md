@@ -10,15 +10,15 @@ The links below contain examples of different implementations and integrations o
 
 **DotNET**
 
-[Initial Spark (DotNET)](https://github.com/initialspark/nhs-login-dotnet-core-example)
+[Initial Spark](https://github.com/initialspark/nhs-login-dotnet-core-example)
 
 **Dart and Flutter**
 
-[Tiny Medical Apps (Dart and Flutter)](https://github.com/TinyMedicalApps/NHS-Login-for-Dart-and-Flutter)
+[Tiny Medical Apps](https://github.com/TinyMedicalApps/NHS-Login-for-Dart-and-Flutter)
 
 **JavaScript**
 
-[Care Penny (JavaScript)](https://github.com/carepenny/nhs-login-js-example)
+[Care Penny](https://github.com/carepenny/nhs-login-js-example)
 
 **Java**
 
