@@ -1,11 +1,13 @@
 ---
 layout: base.njk
-title: Introduction to vectors of trust
+title: Introduction to Vectors of Trust
 ---
 
 Vectors of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows your service to request the appropriate authentication and identity verification of the user, determined by the transaction(s) the user is undertaking in your service.
 
 Your service should include a vector value in the query string as part of the initialisation of the OIDC flow. 
+
+---
 
 ## Authentication Credentials
 
@@ -40,6 +42,7 @@ NHS login supports the following types of authentication credentials. Note that 
     </tbody>
   </table>
 </div>
+
 
 
 ## Identity Proofing Levels

@@ -58,7 +58,11 @@ A non-normative example jwt payload section is as follows:
 
 ## Settings page link details
 
-**Production:** https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw
+**Production:** 
 
-**Other environments:** https://settings/<ENV>.login.nhs.uk?asserted_login_identity=ewrffw...wfw
+`https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
+
+**Other environments:** 
+
+`https://settings/<ENV>.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
 
