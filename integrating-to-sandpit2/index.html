@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>Introduction to Vectors of Trust</title>
+<title>How do I integrate to the sandpit?</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -370,78 +370,46 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Introduction to Vectors of Trust
+              How do I integrate to the sandpit?
             </h1>
 
-            <p>Vectors of Trust <a href="https://tools.ietf.org/html/rfc8485">(VoT RFC 8485)</a> allows your service to request the appropriate authentication and identity verification of the user, determined by the transaction(s) the user is undertaking in your service.</p>
-<p>Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.</p>
+            <p>We’ll need to setup your service on NHS login sandpit. Please provide the below information to <a href="engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a></p>
+<p>Required information:</p>
+<ul>
+<li>A friendly name of your service e.g. what the public know you as</li>
+<li>Your redirect_uri that we’ll return traffic to</li>
+<li>Your public key for validating signed JWTs - <a href="https://nhsconnect.github.io/nhslogin/generating-pem/">see here</a> for guidance</li>
+<li>A list of scopes* you would like to use - <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">see the EIS for available scopes</a></li>
+</ul>
+<p>*some scopes, such as <code>profile_extended</code>, depend on integration to PDS, which this environment cannot access and therefore won't be available on <code>/userinfo</code></p>
+<p>We aim to process these requests within 24 hours.</p>
+<p>You will need to add an OIDC client library to your service. OpenID certified examples can be found <a href="https://openid.net/developers/certified">here</a>.</p>
+<p>We have provided links to some <a href="https://nhsconnect.github.io/nhslogin/example-oidc">example client repos</a>. We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.</p>
+<p>Depending on the OIDC client library you pick you’ll either need:</p>
+<ul>
+<li>the <a href="https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration">configuration endpoint</a></li>
+<li>or the specific endpoints, which can be found at the configuration endpoint</li>
+</ul>
 <hr>
-<h2>Authentication Credentials</h2>
-<p>NHS login supports the following types of authentication credentials. Note that the credential component may occur more than once.</p>
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">NHS login Authentication Context Class</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Authentication type</th>
-        <th class="nhsuk-table__header" scope="col">Basic description</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cp - Username and password</td>
-        <td class="nhsuk-table__cell ">The user is asked to provide a username (email address) and password.</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cd - Registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account.</p><p>This can be either via OTP SMS or a remembered browser.</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Ck - Shared cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by a shared key.</p><p>N.B. This is yet to be implemented, but is anticipated to be MFA app registration.</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cm - Asymmetric Cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by cryptographic proof of key possession using asymmetric key, such as a FIDO-compliant device</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2>Identity Proofing Levels</h2>
-<p>The NHS login supports the following levels of identification verification. These are based upon <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3051 Identity Verification and
-Authentication Standard for Digital Health and Care Services</a></p>
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">Levels of identification verification</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Proofing level</th>
-        <th class="nhsuk-table__header" scope="col">Basic description</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P0 - Low identity proofing</td>
-        <td class="nhsuk-table__cell ">A user has verified ownership of an email address and mobile phone number</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P5 - Knowledge-based verification</td>
-        <td class="nhsuk-table__cell "><p>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>
-                <p>This maps to ‘Verification – Medium’ within DCB3051</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P9 - Physical comparison</td>
-        <td class="nhsuk-table__cell "><p>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.
-<p>This maps to ‘Verification – High’ within DCB3051</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<h2>Testing the login flow in the Sandpit</h2>
+<p>Before testing the registration flow you should ensure a login flow can be completed. This involves all of the interaction points, such as the token and userinfo endpoints.</p>
+<p>There are a number of users already configured that you can use to test the login flow. We'll send you the test pack when we configure your client.</p>
+<hr>
+<h2>Testing the registration process</h2>
+<p>We currently have two methods to complete registration:</p>
+<ul>
+<li>Existing GP Online details</li>
+<li>Online ID check with video selfie</li>
+</ul>
+<p>We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.</p>
+<p>When registering a new user you will need to provide a unique email address (using the + trick in emails can help if you want to test a number of times). You can reuse your mobile number for multiple users.</p>
+<p>Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!</p>
+<p>We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via Slack.</p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/vectors-of-trust-intro.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/integrating-to-sandpit2.md">this page</a> on GitHub
               </p>
       </div>
 

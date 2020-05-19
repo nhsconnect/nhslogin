@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>How do I integrate to the sandpit?</title>
+<title>GP Credentials</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -370,44 +370,60 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              How do I integrate to the sandpit?
+              GP Credentials
             </h1>
 
-            <p>We’ll need to setup your service on NHS login sandpit. Please provide the below information to <a href="engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a></p>
-<p>Required information:</p>
+            <h2>Introduction</h2>
+<p>NHS login supports a scope of <code>gp_integration_credentials</code> which will allow a Relying Party (RP) to retrieve the following user claims:</p>
 <ul>
-<li>A friendly name of your service e.g. what the public know you as</li>
-<li>Your redirect_uri that we’ll return traffic to</li>
-<li>Your public key for validating signed JWTs - see <a href="https://nhsconnect.github.io/nhslogin/generating-pem/">here</a> for guidance</li>
-<li>A list of scopes* you would like to use (see the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">EIS</a> for available scopes)</li>
+<li>Account ID</li>
+<li>ODS Code</li>
+<li>Linkage Key</li>
 </ul>
-<p>*some scopes, such as <code>profile_extended</code>, depend on integration to PDS, which this environment cannot access and therefore won't be available on <code>/userinfo</code></p>
-<p>We aim to process these requests within 24 hours.</p>
-<p>You will need to add an OIDC client library to your service. OpenID certified examples can be found <a href="https://openid.net/developers/certified">here</a>.</p>
-<p>We have provided links to some <a href="https://nhsconnect.github.io/nhslogin/example-oidc">example client repos</a>. We aim to add more client examples over the coming months. If you have one to add, please raise an issue or PR.</p>
-<p>Depending on the OIDC client library you pick you’ll either need:</p>
+<p>These three pieces of information are required by IM1 paired services to create an IM1 token which is then used by the RP to invoke the GP system patient facing APIs.</p>
+<p>The RP (service) must be IM1 enabled for enabling this scope in production environment.</p>
+<p>Retrieving these items of information via NHS login removes the need for the user to enter them manually, as well as being able to seamlessly register previously unregistered GP Online users – preventing a visit to a GP Practice.</p>
+<p><img src="nhslogin/images/gp-credentials-diagram.png" alt="Diagram"></p>
+<p>This diagram illustrates</p>
+<ol>
+<li>How NHS login processes a request from an RP for <code>gp_integration_credentials</code> via the <strong>/userinfo</strong> endpoint</li>
+<li>How NHS login validates <code>gp_integration_credentials</code> on each request and how <code>gp_integration_credentials</code> are refreshed if the information held by NHS login is invalid</li>
+</ol>
+<hr>
+<h2>GP integration credentials validation</h2>
+<p>When <code>gp_integration_credentials</code> scope is requested by an RP, NHS login performs a background check of the validity of a stored IM1 token. As this check runs in the background asynchronously, it is the responsibility of the RP to also validate their IM1 token (if one exists).</p>
+<p>If the RP determines that the claims returned from <code>gp_integration_credentials</code> scope are not valid it can request refreshed claims from NHS login by re-starting the login process.</p>
+<p>Optional - the RP can utilise the <code>asserted_login_identity</code> request parameter to avoid the user needing to re-authenticate.</p>
+<hr>
+<h2>GP integration credentials are no longer valid</h2>
+<p>The GP credentials might no longer be valid due to:</p>
+<ol>
+<li>The user has moved GP Practice</li>
+<li>The GP Practice has changed GP systems</li>
+<li>Practices merge / divides</li>
+<li>The user’s GP online access been revoked at the GP system e.g. for multiple failed login attempts</li>
+</ol>
+<p>In cases 1, 2 and 3 generally the ODS code for the user changes and will be detected by NHS login automatically via a separate background process that validates PDS information relating to the user.</p>
+<h3>Assumptions</h3>
 <ul>
-<li>the <a href="https://auth.sandpit.signin.nhs.uk/.well-known/openid-configuration">configuration endpoint</a></li>
-<li>or the specific endpoints, which can be found at the configuration endpoint</li>
+<li>When GP credentials (linkage keys) expire or get invalidated all the IM1 tokens generated using them also expire/get invalidated. So in case the RP has any process to expire or invalidate the GP credentials (linkage keys) then it should be disclosed/discussed with NHS login.</li>
+<li>RP should cater for user journey which prevents the user getting into an endless “retrieve GP credential” loop if the credentials genuinely can’t be retrieved.</li>
 </ul>
-<h2>Testing the login flow in the Sandpit</h2>
-<p>Before testing the registration flow you should ensure a login flow can be completed. This involves all of the interaction points, such as the token and userinfo endpoints.</p>
-<p>There are a number of users already configured that you can use to test the login flow. We'll send you the test pack when we configure your client.</p>
-<h2>Testing the registration process</h2>
-<p>We currently have two methods to complete registration:</p>
+<hr>
+<h2>GP systems coverage</h2>
+<p>Currently NHS login provides coverage for GP login credentials</p>
 <ul>
-<li>Existing GP Online details</li>
-<li>Online ID check with video selfie</li>
+<li>EMIS: 100%</li>
+<li>TPP: 100%</li>
+<li>Vision: 100% (250 in total)</li>
+<li>Microtest*: None (36 in total)</li>
 </ul>
-<p>We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.</p>
-<p>When registering a new user you will need to provide a unique email address (using the + trick in emails can help if you want to test a number of times). You can reuse your mobile number for multiple users.</p>
-<p>Do not use any other personal information when completing registration. This includes NHS number and ID photo - take a picture of anything you like, within reason!</p>
-<p>We don’t tend to approve new registrations in this environment. If you need us to do this please get in touch via Slack.</p>
+<p>*<em>GP login credentials (linkage keys) for Microtest returned by NHS login are dummy in nature, to maintain the uniform behaviour of the service. These GP login credentials cannot be used by RPS for connecting to Microtest.</em></p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/integrating-to-sandpit.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/gp-credentials-para2.md">this page</a> on GitHub
               </p>
       </div>
 

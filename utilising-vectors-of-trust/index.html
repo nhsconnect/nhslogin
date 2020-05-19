@@ -374,27 +374,17 @@
             </h1>
 
             <h2>Requesting Vectors of Trust values</h2>
-<p>The client MAY request a set of acceptable VoT values with the &quot;vtr&quot; (vector of trust request) claim request as part of the Authentication
-Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.</p>
-<p>The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in
-the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Ck&quot;\]</code> is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Ck&quot;
-simultaneously are acceptable for this transaction.</p>
-<p>Vector request values MAY omit components, indicating that any value is acceptable for that component category, including omission of that
-component in the response vector.</p>
+<p>The client <strong>may</strong> request a set of acceptable VoT values with the &quot;vtr&quot; (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.</p>
+<p>The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Ck&quot;\]</code> is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Ck&quot; simultaneously are acceptable for this transaction.</p>
+<p>Vector request values <strong>may</strong> omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.</p>
 <p>Omission of vtr will result in a default value of <code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code> being assumed.</p>
+<hr>
 <h2>Returned Vectors of Trust values</h2>
-<p>The vector is sent as a string within the &quot;vot&quot; (vector of trust) claim in the ID and Access tokens. The trustmark that applies to this vector
-is sent as an HTTPS URL in the &quot;vtm&quot; (vector trust mark) claim to provide context to the vector.</p>
-<p>For example, part of the body of an ID token claiming &quot;Medium IDV, authenticated user via password and registered device
-identifier&quot; will look like this JSON object payload of the ID token.</p>
-<pre><code>{
-   &quot;iss&quot;: &quot;https://auth.login.nhs.uk/&quot;,
-   &quot;vot&quot;: &quot;P5.Cp.Cd&quot;,
-   &quot;vtm&quot;: &quot;https://auth.login.nhs.uk/trustmark/login.nhs.uk&quot;
-}
-</code></pre>
-<p>The body of the token is signed using JOSE, as per the OpenID Connect specification. By putting the &quot;vot&quot; and &quot;vtm&quot; values inside the token,
-the vector and its context are strongly bound to the federated credential represented by the token.</p>
+<p>The vector is sent as a string within the &quot;vot&quot; (vector of trust) claim in the ID and Access tokens. The trustmark that applies to this vector is sent as an HTTPS URL in the &quot;vtm&quot; (vector trust mark) claim to provide context to the vector.</p>
+<p>For example, part of the body of an ID token claiming &quot;Medium IDV, authenticated user via password and registered device identifier&quot; will look like this JSON object payload of the ID token.</p>
+<pre class="language-html"><code class="language-html">{<br>   "iss": "https://auth.login.nhs.uk/",<br>   "vot": "P5.Cp.Cd",<br>   "vtm": "https://auth.login.nhs.uk/trustmark/login.nhs.uk"<br>}</code></pre>
+<p>The body of the token is signed using JOSE, as per the OpenID Connect specification. By putting the &quot;vot&quot; and &quot;vtm&quot; values inside the token, the vector and its context are strongly bound to the federated credential represented by the token.</p>
+<hr>
 <h2>Profiles</h2>
 <p>Vectors can be combined to create profiles.</p>
 <table>
@@ -433,22 +423,19 @@ the vector and its context are strongly bound to the federated credential repres
 </table>
 <h3>Example 1 – Partner Service provides access to sensitive data</h3>
 <p>This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'.</p>
-<p>The service requires High Verification and High Authentication. The service sends the following as acceptable Vectors in the ‘vtr’
-parameter:</p>
+<p>The service requires High Verification and High Authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>\[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”\]</code></p>
 <h3>Example 2 – Partner Service provides access to basic data (not sensitive)</h3>
 <p>This example maps onto archetype A3 within the standard 'DCB3051'.</p>
-<p>The service requires Medium Verification and High Authentication. The service sends the following as acceptable Vectors in
-the ‘vtr’ parameter:</p>
+<p>The service requires Medium Verification and High Authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>\[“P5.Cp.Cd”, “P5.Cp.Ck” , “P5.Cm”, “P9.Cp.Cd”, “P9.Cp.Ck”, “P9.Cm”\]</code></p>
+<hr>
 <h2>Single Sign-on</h2>
-<p>If the user’s current session (if any), does not meet the requested Vectors of Trust (vtr) in the incoming request, then the user
-will be required to sign-in, in order to meet the requested vectors.</p>
-<p>Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the <code>prompt</code> parameter on the initial authorisation
-request.</p>
+<p>If the user’s current session (if any), does not meet the requested Vectors of Trust (vtr) in the incoming request, then the user will be required to sign-in, in order to meet the requested vectors.</p>
+<p>Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the <code>prompt</code> parameter on the initial authorisation request.</p>
+<hr>
 <h2>Trustmark</h2>
-<p>The Trustmark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS
-login supports and hence their trustworthiness</p>
+<p>The Trustmark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.</p>
 <p>The NHS login Trustmark is self-hosted.</p>
 
 

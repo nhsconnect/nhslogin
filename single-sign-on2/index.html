@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>Introduction to Vectors of Trust</title>
+<title>Single Sign On</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -370,78 +370,64 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Introduction to Vectors of Trust
+              Single Sign On
             </h1>
 
-            <p>Vectors of Trust <a href="https://tools.ietf.org/html/rfc8485">(VoT RFC 8485)</a> allows your service to request the appropriate authentication and identity verification of the user, determined by the transaction(s) the user is undertaking in your service.</p>
-<p>Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.</p>
+            <p>NHS login supports Single Sign On (SSO) based on an asserted token exchange between two Relying Parties (RP1 &amp; RP2).</p>
+<ul>
+<li>Asserted tokens are one time tokens (TTL 60 sec)</li>
+<li>Partner services can control which other partner services they share SSO with</li>
+</ul>
+<p>NHS login supports two parameters asserted_login_identity and prompt as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).</p>
 <hr>
-<h2>Authentication Credentials</h2>
-<p>NHS login supports the following types of authentication credentials. Note that the credential component may occur more than once.</p>
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">NHS login Authentication Context Class</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Authentication type</th>
-        <th class="nhsuk-table__header" scope="col">Basic description</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cp - Username and password</td>
-        <td class="nhsuk-table__cell ">The user is asked to provide a username (email address) and password.</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cd - Registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account.</p><p>This can be either via OTP SMS or a remembered browser.</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Ck - Shared cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by a shared key.</p><p>N.B. This is yet to be implemented, but is anticipated to be MFA app registration.</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cm - Asymmetric Cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by cryptographic proof of key possession using asymmetric key, such as a FIDO-compliant device</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h2>Identity Proofing Levels</h2>
-<p>The NHS login supports the following levels of identification verification. These are based upon <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3051 Identity Verification and
-Authentication Standard for Digital Health and Care Services</a></p>
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">Levels of identification verification</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Proofing level</th>
-        <th class="nhsuk-table__header" scope="col">Basic description</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P0 - Low identity proofing</td>
-        <td class="nhsuk-table__cell ">A user has verified ownership of an email address and mobile phone number</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P5 - Knowledge-based verification</td>
-        <td class="nhsuk-table__cell "><p>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>
-                <p>This maps to ‘Verification – Medium’ within DCB3051</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P9 - Physical comparison</td>
-        <td class="nhsuk-table__cell "><p>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.
-<p>This maps to ‘Verification – High’ within DCB3051</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<h2>Technical details</h2>
+<p>Please refer to <a href="/nhslogin/interface-spec-doc/">NHS login Interface Specification - Federated document</a>, for most up-to-date technical details.</p>
+<h3>parameter: prompt</h3>
+<p>This is an optional parameter.</p>
+<p>Requests that the NHS login Service forces the user to sign-in, or to request that the Service does not prompt the user to sign-in (SSO).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;blank&gt;</code></td>
+<td>The service will SSO the user if they still have a valid session, <br> else the user will be requested to log in.</td>
+</tr>
+<tr>
+<td><code>&quot;none&quot;</code></td>
+<td>The Service will SSO the user if they still have a valid session, <br> otherwise an error code is returned</td>
+</tr>
+<tr>
+<td><code>&quot;login&quot;</code></td>
+<td>The Service will request the user to log in, regardless of a session <br> already existing.</td>
+</tr>
+</tbody>
+</table>
+<h3>parameter: asserted_login_identity</h3>
+<p>This is an optional parameter.</p>
+<p>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available.</p>
+<p>The content will be a signed <code>jwt</code> with payload containing <code>“code”</code> attribute with the value being that of the <code>jti</code> attribute from the ID Token issued to RP1. The <code>jwt “iss”</code> attribute <strong>must</strong> contain the client_id of RP1, the <code>jwt</code> <strong>must</strong> have an <code>“exp”</code> of no longer that 60 seconds, <strong>must</strong> have <code>“jti”</code> and <code>“iat”</code> attributes (as per RFC7519) and <strong>must</strong> be signed by RP1 using its client private key. RP1 passes the <code>jwt</code> to RP2 for RP2 to use in its authentication request.</p>
+<p>A non-normative example jwt payload section is as follows:</p>
+<pre class="language-html"><code class="language-html">{<br>  code: “eeroifoteiwrudjdwusdu”,<br>  iss: “client1”,<br>  jti: “reioteotijdvorijevoihroi”,<br>  iat: 1548701645,<br>  exp: 1548701705<br>}</code></pre>
+<hr>
+<h2>SSO flow</h2>
+<h3>Step 1: login to RP1</h3>
+<p>User requests RP1 login - OIDC flow - Authorisation code flow</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step1_smaller.png" alt="diagram" title="Step 1: login to RP1 diagram"></p>
+<h3>Step 2: SSO from RP1 to RP2</h3>
+<p>User transitions from RP1 to RP2 - Single Sign On - Asserted token flow</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step2_smaller.png" alt="diagram" title="Step 2: SSO from RP1 to RP2 diagram"></p>
+<h3>SSO sequence diagram</h3>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SequenceDiagram_smaller.png" alt="diagram" title="SSO sequence diagram"></p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/vectors-of-trust-intro.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/single-sign-on2.md">this page</a> on GitHub
               </p>
       </div>
 
