@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/nhslogin">
+     <link rel="stylesheet"  href="nhslogin/css/main.css">
+      <link rel="stylesheet"  href="nhslogin/css/mobile-menu.css">
+    <script src="nhslogin/js/main.min.js" ></script> 
+<link rel="shortcut icon" href="/nhslogin/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/nhslogin/images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/nhslogin/images/apple-touch-icon-180x180.png">
+<link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
+<link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
+
+<title>External Interface Specification</title>
+  </head>
+  <body>
+      <header class="nhsuk-header" role="banner">
+        <div class="nhsuk-width-container nhsuk-header__container">
+          <div class="nhsuk-header__logo">
+            <a class="nhsuk-header__link nhsuk-header__link--service " href="/nhslogin" aria-label="NHS digital service manual homepage">
+              <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+                <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+              </svg>
+              <span class="nhsuk-header__service-name">
+              NHS login - developer documentation
+            </span>
+            </a>
+          </div>
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+          </div>
+
+          <div class="nhsuk-header__content" id="content-header"></form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nhsuk-header__navigation mobile-menu" id="header-navigation" role="navigation" aria-label="Primary navigation"
+  aria-labelledby="label-navigation">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+      <button class="nhsuk-header__navigation-close" id="close-menu">
+        <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          aria-hidden="true" focusable="false">
+          <path
+            d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z">
+          </path>
+        </svg>
+        <span class="nhsuk-u-visually-hidden">Close menu</span>
+      </button>
+    </p>
+    <ul class="nhsuk-header__navigation-list">
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          NHS login
+        </h2>
+      </li>
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/">
+          What is NHS login
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/oidc-login-flow">
+          The OIDC login flow
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Tesing NHS login
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/test-login-service">
+          Test Environments
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/integrating-to-sandpit">
+          Integrate to the sandpit
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/generating-pem">
+          Generating public key
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          External Interface Specification
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/interface-spec-doc">
+          Interface Specification Document
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Conformance
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/technical-conformance">
+          Technical Conformance
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Developer Support Information
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/developer-support">
+          Developer Support
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+       <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          GP Credentials
+        </h2>
+      </li>
+
+       <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/gp-credentials-para">
+          Using NHS login to create or retrieve GP credentials
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/gp-credentials-doc">
+          Scope and processing overview
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Button Guidance
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/adding-buttons">
+          Adding the NHS login button to your service
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          NHS login user settings
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/linking-to-settings-para">
+          Settings information
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+
+
+       <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">
+          Examples
+        </h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/example-oidc">
+          Example OIDC clients
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+              d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z">
+            </path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full app-component-reading-width">
+
+        <div class="app-pane">
+
+         <div class="app-pane__side-bar">
+
+            <nav class="app-side-nav">
+            
+                <h2 class="app-side-nav__heading">NHS login</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhslogin">What is NHS login?</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/oidc-login-flow">The OIDC login flow</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Integrating with NHS login</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhslogin/integration-process">The NHS login integration process</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/adding-buttons">Adding the NHS login button to your service</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Testing NHS login</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="/nhslogin/test-login-service">Test environments</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/integrating-to-sandpit">Integrate to the sandpit</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/generating-pem">Generate public key</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">External Interface Specification</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/interface-spec-doc">Interface Specification Document</a>
+                </ul>
+
+                <h2 class="app-side-nav__heading">Conformance</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/technical-conformance">Technical Conformance</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">Developer Support Information</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/developer-support">Developer Support</a>
+                  </li>
+                </ul>
+
+                <h2 class="app-side-nav__heading">GP Credentials</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                   <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/gp-credentials-para">Using NHS login to create or retrieve GP credentials</a>
+                  </li>
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/gp-credentials-doc">Scope and processing overview </a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">NHS login user settings</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/linking-to-settings-para">Settings information</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Single Sign On</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/single-sign-on">SSO guidance</a>
+                  </li>
+                </ul>
+                <h2 class="app-side-nav__heading">Examples</h2>
+                <ul class="nhsuk-list app-side-nav__list">
+                  <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/example-oidc">Example OIDC clients</a>
+                  </li>
+                </ul>
+            </nav>
+          </div>
+
+
+          <div class="app-pane__main-content">
+
+            <h1 class="app-page-heading">
+              External Interface Specification
+            </h1>
+
+            <table>
+<thead>
+<tr>
+<th><strong>Document filename</strong></th>
+<th><strong>NHS login Interface Specification - Federation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Directorate / Programme</strong></td>
+<td>NHS login Programme</td>
+</tr>
+<tr>
+<td><strong>Document reference</strong></td>
+<td>CID-IS-F</td>
+</tr>
+<tr>
+<td><strong>Information asset owner</strong></td>
+<td>Melissa Ruscoe</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Matthew Brown</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>V1.9</td>
+</tr>
+<tr>
+<td><strong>Version issue date</strong></td>
+<td>15 May 2020</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/nhsconnect/nhslogin/blob/master/NHS%20login%20-%20Interface%20Specification%20-%20Federation%20v1.9.docx?raw=true">Download the EIS as a word document</a>.</p>
+<hr>
+<h2>Contents</h2>
+<dl>
+<dt><b>1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#introduction">Introduction</a></dt>
+<dd><b>1.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#purpose-of-document">Purpose of Document</a></dd>
+<dd><b>1.2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#audience">Audience</a></dd>
+<dd><b>1.3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#definitions">Definitions</a></dd>
+</dl>
+<dl>
+<dt><b>2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#specficiation-status">Specification status</a></dt>
+<dd><b>2.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#scope-constraint">Scope / Constraints</a></dd>
+<dd><b>2.2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#changes-in-this-version">Changes in this version</a></dd>
+</dl>
+<dl>
+<dt><b>3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#messages-overview">Messages overview</a></dt>
+<dd><b>3.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#authorization-code-flow">Authorization code flow</a></dd>
+<dd><b>3.2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#public-and-confidential-clients">Public and confidential cients</a></dd>
+<dd><b>3.3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#endpoints">Endpoints</a></dd>
+<dd><b>3.4</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#authorize-endpoint">Authorize endpoint</a></dd>
+<dd><b>3.5</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#token-endpoint">Token endpoint</a></dd>
+<dd><b>3.6</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#userinfo-endpoint">UserInfo endpoint</a></dd>
+</dl>
+<dl>
+<dt><b>4</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#tokens">Tokens</a></dt>
+<dd><b>4.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#jwt-header">JWT header</a></dd>
+<dd><b>4.2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#id-token-payload">ID token payload</a></dd>
+<dd><b>4.3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#access-token-payload">Access token payload</a></dd>
+<dd><b>4.4</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#jose-signing">JOSE signing</a></dd>
+</dl>
+<dl>
+<dt><b>5</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#data-view">Data view</a></dt>
+<dd><b>5.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#vectors-of-trust">Vectors of trust</a></dd>
+</dl>
+<dl>
+<dt><b>6</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#password-less-authentication-using-fido-uaf">Password-less authentication using FIDO UAF</a></dt>
+<dd><b>6.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#overview">Overview</a></dd>
+<dd><b>6.2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#fido-uaf-registration-flow">FIDO UAF registration flow</a></dd>
+<dd><b>6.3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#fido-uaf-authentication-flow">FIDO UAF authentication flow</a></dd>
+<dd><b>6.4</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#fido-uaf-deregistration-flow">FIDO UAF deregistration flow</a></dd>
+<dd><b>6.5</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#platform-restrictions">Platform restrictions</a></dd>
+</dl>
+<dl>
+<dt><b>7</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#partner-services-and-security">Partner services and security</a></dt>
+<dd><b>7.1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#partner-service-registration">Partner service registration</a></dd>
+<dd><b>7.2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#partner-service-authentication">Partner service authentication</a></dd>
+<dd><b>7.3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#client-redirects">Client redirects</a></dd>
+</dl>
+<dl>
+<dt><b>8</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc2#references">References</a></dt>
+</dl>
+<dl>
+<dt><b>9</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-test#document-management">Document management</a></dt>
+</dl>
+<hr>
+<h2>1 Introduction</h2>
+<h3>1.1 Purpose of document</h3>
+<p>NHS login implements OpenID Connect 1.0 OpenID Provider role to assert the identity of the End-User to a Partner Service, as well as enabling the Service to obtain basic profile information about the End-User in an interoperable manner.</p>
+<p>This document defines the interfaces implemented by the Platform and describes the data flows supported by these interfaces.</p>
+<h3>1.2 Audience</h3>
+<p>The primary audiences for this document are:</p>
+<ul>
+<li>NHS login Programme team</li>
+<li>NHS Digital – Digital Delivery Centre</li>
+<li>NHS Digital – Other Delivery teams</li>
+<li>NHS England</li>
+<li>3rd Party Suppliers integrating with the NHS Digital NHS login Platform</li>
+</ul>
+<h3>1.3 Definitions</h3>
+<p>Where used in this document set, the keywords <strong>must</strong>, <strong>should</strong> and <strong>may</strong> are to be interpreted as follows:</p>
+<ul>
+<li><strong>must</strong>: This word, or the terms &quot;<strong>required</strong>&quot; or &quot;<strong>shall</strong>&quot;, means that the definition is an absolute requirement of the specification.</li>
+<li><strong>should</strong>: This word, or the adjective &quot;<strong>recommended</strong>&quot;, means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications MUST be understood and carefully weighed before choosing a different course.</li>
+<li><strong>may</strong>: This word, or the adjective &quot;<strong>optional</strong>”, means that an item is truly optional. One implementer may choose to include the item because a particular implementation requires it or because the implementer feels that it enhances the implementation while another implementer may omit the same item.  An implementation which does not include a particular option <strong>must</strong> be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option <strong>must</strong> be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides).</li>
+</ul>
+<hr>
+<h2>2 Specification status</h2>
+<h3>2.1 Scope / constraints</h3>
+<ul>
+<li>This document relates to NHS login ‘Federation interface’ during Beta. Further amendments WILL be implemented prior to full rollout – this document is a draft representing intended design, but is subject to clarification.</li>
+<li>The NHS login Platform supports Authentication using the Authorization Code Flow only. Implicit &amp; Hybrid Flows are not supported</li>
+<li>HTTP is not supported - all HTTP-based flows must be HTTPS (using TLS v1.2 or above)</li>
+</ul>
+<h3>2.2 Changes in this version</h3>
+<p>Version 1.9 of this specification includes the following changes:</p>
+<ul>
+<li>Addition of identity_proofing_level claim in the “profile” scope</li>
+<li>Minor clarification on conditions applicable for requesting scopes</li>
+<li>Updates to Verification of Identity Levels</li>
+<li>Updates to Requesting Vectors of Trust values</li>
+<li>Updates to Client Redirects</li>
+<li>Minor reference changes</li>
+</ul>
+<hr>
+<h2>3 Messages Overview</h2>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1</li>
+<li><a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov)</a></li>
+<li><a href="https://tools.ietf.org/html/draft-richer-vectors-of-trust-09">Vectors of trust</a></li>
+</ul>
+<p>This section describes how the NHS Digital NHS login Platform implements authentication using the OpenID Connect Authorization Code Flow.</p>
+<h3>3.1 Authorization Code Flow</h3>
+<p>The Authorization Code Flow returns an Authorization Code to the Client, which can then exchange it for an ID Token and an Access Token directly. This avoids exposing any tokens to the User Agent and possibly other malicious applications with access to the User Agent.</p>
+<p>Using this flow also means the Platform can also authenticate the Client before exchanging the Authorization Code for an Access Token. The Authorization Code flow is suitable for Clients that can securely maintain a Client Secret between themselves and the Platform.</p>
+<p>INSERT DIAGRAM!</p>
+<p>The Authorization Code Flow goes through the following steps:</p>
+<ol>
+<li>The client prepares an Authentication Request containing the desired request parameters (see section 3.4.1)</li>
+<li>The client sends the request to the Platform – via the User Agent (browser)</li>
+<li>The Platform validates the Authentication Request (see section 3.4.2)</li>
+<li>The Platform authenticates the End-User (see section 3.4.3)</li>
+<li>The Platform obtains End-User Consent/Authorization (see section 3.4.4)</li>
+<li>The Platform sends the Authorization Code to the Client via the End User’s browser</li>
+<li>The client requests a response using the Authorization Code at the Token Endpoint (see section 3.5.1)</li>
+<li>The client receives a response that contains an ID Token and Access Token in the response body (see section 3.5.3)</li>
+<li>The client validates the ID token and retrieves the End-User’s Subject Identifier.</li>
+</ol>
+<h3>3.2 Public and Confidential Clients</h3>
+<p>Clients are classified as either Public or Confidential based on their ability to maintain the confidentiality of their credentials.</p>
+<p><strong>3.2.1 Confidential Client</strong></p>
+<p>The client is capable of maintaining the confidentiality of its credentials.  For example, the client is implemented on a secure server with restricted access to its credentials.</p>
+<p>INSERT DIAGRAM</p>
+<p><strong>3.2.2 Public Client</strong></p>
+<p><em>This section is provided for information only; public clients are not supported by NHS login.</em></p>
+<p>A Public client is incapable of maintaining the confidentiality of its credentials. For example, the client executes on a device used by the end-user, such as an installed native application or browser-based application.</p>
+<p>INSERT DIAGRAM</p>
+<p>Public clients using the Authorization Code flow are susceptible to authorization code interception attacks. For example, a rogue application could intercept the authorization code as it is being passed through the mobile/native operating system. To mitigate this attack, public clients follow the Proof Key for Code Exchange (PKCE) specification, which binds the Authorisation Request to the subsequent Token Request. PKCE is an extension to the regular Authorization Code flow, so the flow is the same, except that PKCE elements are included at various steps.</p>
+<p>Public clients are also at risk of masquerading by malicious services; a malicious service could re-use the client_id of a genuine Public client and trick a user into revealing their information.</p>
+<p><em>For the above reasons Public clients are not supported by NHS login.</em></p>
+<h3>3.3 Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/.well-known/openid-configuration</code></td>
+<td>This is the standard openid discovery address – this will maintain full addresses for the below endpoints. <br>This is consumed by a Service with a direct HTTPS call.</td>
+</tr>
+<tr>
+<td><code>/.well-known/jwks.json</code></td>
+<td>The Keys used by NHS login to sign tokens are available here. <br>This is consumed by a secure Service’s backend with a direct HTTPS call.</td>
+</tr>
+<tr>
+<td><code>/authorize</code></td>
+<td>This initiates the Authorization Code flow – the endpoint is consumed by directing a user-agent (typically a web browser) to the endpoint address, using HTTPS. <br>This is also termed the OIDC Authentication Endpoint.</td>
+</tr>
+<tr>
+<td><code>/token</code></td>
+<td>This is used to retrieve tokens, including ID tokens, by exchanging an authorization code. <br>This is consumed by a secure Service’s backend with a direct HTTPS call. <br>The token endpoint is also used to refresh access tokens, using a previously-issued refresh token.</td>
+</tr>
+<tr>
+<td><code>/userinfo</code></td>
+<td>This endpoint is used after retrieving tokens – sensitive and/or time-bound attributes are available from this endpoint. <br> This is consumed by a secure Service’s backend with a direct HTTPS call.</td>
+</tr>
+</tbody>
+</table>
+<h3>3.4 Authorize endpoint</h3>
+<p><strong>3.4.1 Authentication request</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1.2.1</li>
+<li><a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov) for OpenID Connect</a></li>
+<li><a href="https://tools.ietf.org/html/rfc7519">RFC7519: JSON Web Token (JWT)</a></li>
+</ul>
+<p>The client initiates an authentication request to the NHS Digital NHS login authorize endpoint using the HTTP GET or POST methods. If using HTTP GET, then the parameters are serialised using URI query Serialisation. In the case of HTTP POST, then the parameters are serialised using Form Serialisation (HTTP Content-Type application/x-www-form-urlencoded)</p>
+<p>Authentication Request parameters are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Value(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scope</code></td>
+<td>mand</td>
+<td><code>&quot;openid&quot;</code></td>
+<td>The openid scope value MUST be present. <br> Other scope values listed MAY be present. Scope values used that are not understood by NHS login WILL be ignored. <br> Additional scope values supported by NHS login are defined in section 3.4.1.1</td>
+</tr>
+<tr>
+<td><code>response_type</code></td>
+<td>mand</td>
+<td><code>&quot;code&quot;</code></td>
+<td>OAuth 2.0 Response Type value that determines the authorization processing flow to be used, including what parameters are returned from the endpoints used. When using the Authorization Code Flow, this value MUST be “code”</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>mand</td>
+<td></td>
+<td>Oauth 2.0 Client Identifier <br>This is a static identifier previously provided by the NHS login Partner Onboarding team</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>mand</td>
+<td></td>
+<td>Redirection URI to which the response will be sent. This URI MUST exactly match one of the Redirection URI values for the Client pre-registered at the OpenID Provider <br> When using this flow, the Redirection URI MUST NOT use the http scheme</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>mand</td>
+<td></td>
+<td>Opaque value used to maintain state between the request and the callback. Typically, Cross-Site Request Forgery (CSRF, XSRF) mitigation is done by cryptographically binding the value of this parameter with a browser cookie. <br> This value will be returned to the client in the authentication response. <br> The iGov profile for OIDC specifies this parameter as Mandatory to help RPs protect against CSRF attacks.</td>
+</tr>
+<tr>
+<td><code>response_mode</code></td>
+<td>n/a</td>
+<td></td>
+<td>The only response_mode supported by NHS login will be the default mode (“query”), where the Authorization Response parameters are encoded in the query string which is added to the redirect_uri when redirecting back to the Client. <br> See <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html" title="Oauth 2.0 Multiple Response Type Encoding Practices">Oauth 2.0 Multiple Response Type Encoding Practices</a></td>
+</tr>
+<tr>
+<td><code>nonce</code></td>
+<td>mand</td>
+<td></td>
+<td>String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token. Sufficient entropy MUST be present in the nonce values used to prevent attackers from guessing values.<br> The iGov profile for OIDC specifies this parameter as Mandatory to help RPs protect against CSRF attacks.</td>
+</tr>
+<tr>
+<td><code>display</code></td>
+<td>opt</td>
+<td><code>“page”</code> <br> <code>“touch”</code></td>
+<td>ASCII string value that specifies how the Platform displays the authentication and consent user interface pages to the End-User. The defined values shown “page” and “touch” are supported for NHS login beta phases, with the default value being “page”. <br>“popup” and “wap” values are not supported</td>
+</tr>
+<tr>
+<td><code>prompt</code></td>
+<td>opt</td>
+<td><code>&lt;blank&gt;</code> <br> <code>“none”</code> <br><code>“login”</code></td>
+<td>Requests that the NHS login Service forces the user to sign-in, or to request that the Service does not prompt the user to sign-in (SSO) <br> <code>&lt;blank&gt;</code> - The Service will SSO the user if they still have a valid session, else the user will be requested to login<br> <code>none</code> – The Service will SSO the user if they still have a valid session, otherwise an error code is returned <br> <code>login</code> – The Service will request the user to login, regardless of a session already existing</td>
+</tr>
+<tr>
+<td><code>max_age</code></td>
+<td>n/a</td>
+<td></td>
+<td>Not currently supported</td>
+</tr>
+<tr>
+<td><code>ui_locales</code></td>
+<td>n/a</td>
+<td></td>
+<td>Not currently supported</td>
+</tr>
+<tr>
+<td><code>id_token_hint</code></td>
+<td>n/a</td>
+<td></td>
+<td>Not currently supported</td>
+</tr>
+<tr>
+<td><code>login_hint</code></td>
+<td>n/a</td>
+<td></td>
+<td>Not currently supported</td>
+</tr>
+<tr>
+<td><code>acr_values</code></td>
+<td>n/a</td>
+<td></td>
+<td>Not supported – not used, superseded by vtr</td>
+</tr>
+<tr>
+<td><code>vtr</code></td>
+<td>opt</td>
+<td>See section 5.1 for values</td>
+<td>Vector of Trust Request – requested levels of Identity Verification and Authentication. <br> Client SHOULD request only single level of Identity Verification (values defined in section 5.1.1 -Verification of Identity Levels and Table 18) <br> Omission of vtr will result in a default value of “[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]” being assumed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NHS login extensions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Value(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fido_auth_response</code></td>
+<td>opt</td>
+<td></td>
+<td>Base64 URL-encoded FIDO UAF AuthResponse message generated by FIDO client on a registered device</td>
+</tr>
+<tr>
+<td><code>asserted_login_identity</code></td>
+<td>opt</td>
+<td></td>
+<td>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available. The content will be a signed jwt with payload containing “code” attribute with the value being that of the “jti” attribute from the ID Token issued to RP1. The jwt “iss” attribute MUST contain the client_id of RP1, the jwt MUST have an “exp” of no longer that 60 seconds, MUST have “jti” and “iat” attributes (as per RFC7519) and MUST be signed by RP1 using its client private key. RP1 passes the jwt to RP2 for RP2 to use in its authentication request.<br> A non-normative example jwt payload section is as follows<br> <code>{</code> <br> <code>code: “eeroifoteiwrudjdwusdu”,</code> <br> <code>iss: &lt;br&gt; “client1”,</code> <br> <code>jti: “reioteotijdvorijevoihroi”,</code> <br> <code>iat: 1548701645,</code> <br> <code>exp: 1548701705</code> <br> <code>}</code></td>
+</tr>
+<tr>
+<td><code>allow_registration</code></td>
+<td>opt</td>
+<td><code>&quot;false&quot;</code></td>
+<td>Optional parameter which, if set to “false”, will hide links to account registration screens in the NHS login UI. If the parameter is absent to set to any value other than “false” then account registration options will be displayed to the user in the NHS login UI.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3.4.1.1 Scope to be requested</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 5.1</li>
+</ul>
+<p>Scopes can be used to request that specific sets of information be made available as Claim Values when making an Authentication Request (s3.4.1).</p>
+<p><strong>OpenID Connect Standard Scopes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openid</code></td>
+<td>Mandatory value for OpenID Connect Requests</td>
+</tr>
+<tr>
+<td><code>profile</code></td>
+<td>This scope value requests access to the End-User’s default profile claims, which are: nhs_number, birthdate, family_name, identity_proofing_level</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>This scope value requests access to the email and email_verified claims</td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>This scope value requests access to the phone_number and phone_number_verified claims</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NHS login extensions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gp_integration_credentials</code></td>
+<td>This scope value requests access to the End-User’s gp_integration_credentials claims. <br>Note: This scope can only be requested by an IM1 enabled client.</td>
+</tr>
+<tr>
+<td><code>gp_registration_details</code></td>
+<td>This scope value requests access to the End-User’s gp_registration_details claims as held within the NHS Personal Demographics Service</td>
+</tr>
+<tr>
+<td><code>profile_extended</code></td>
+<td>This scope value requests access to the End-User’s additional demographics claims (as held within the NHS Personal Demographics Service), which are: given_name</td>
+</tr>
+<tr>
+<td><code>client_metadata</code></td>
+<td>This scope requests access to the End-User’s client_user_metadata claim which holds client-specific metadata for the user account. Unlike other claims, the client_user_metadata can be updated by the client – see section 3.6.3</td>
+</tr>
+</tbody>
+</table>
+<p>INSERT DIAGRAM</p>
+<p>An HTTP 302 redirect response by the Client triggers the User Agent (browser) to make an Authentication Request to the Authorization Endpoint (with line wraps within values for display purposes only):</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 302 Found<br>  Location: https://auth.login.nhs.uk/authorize?<br>    response_type=code<br>    &amp;scope=openid%20profile%20email<br>    &amp;client_id=s6BhdRkqt3<br>    &amp;state=af0ifjsldkj<br>    &amp;redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb<br>    &amp;vtr=%5B%E2%80%9CP9.Cp.Cd%E2%80%9D%5D</code></pre>
+<p>The User Agent sends the following request to the Platform in response to the HTTP 302 redirect response by the Client (with line wraps within values for display purposes only):</p>
+<pre class="language-html"><code class="language-html">  GET /authorize?<br>    response_type=code<br>    &amp;scope=openid%20profile%20email<br>    &amp;client_id=s6BhdRkqt3<br>    &amp;state=af0ifjsldkj<br>    &amp;redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb<br>    &amp;vtr=%5B%E2%80%9CP9.Cp.Cd%E2%80%9D%5D<br> HTTP/1.1<br>  Host: https://auth.login.nhs.uk</code></pre>
+<p><strong>3.4.2	Authentication Request Validation</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1.2.2</li>
+</ul>
+<p>The Authentication Request is authenticated as described in <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.2.2</p>
+<p>Additional validations are:</p>
+<ul>
+<li>the submitted redirect URI is an exact match of the one of the redirection URI values registered for the client</li>
+</ul>
+<p><strong>3.4.3	Authorisation Server Authenticates the End-User</strong></p>
+<p>Outside the scope of this spec</p>
+<p><strong>3.4.4	Authorisation Server obtains End-User Consent / Authorisation</strong></p>
+<p>Outside the scope of this spec</p>
+<p><strong>3.4.5	Authentication Response</strong></p>
+<p><strong>3.4.5.1	Successful response</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.2.5</li>
+<li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.2</li>
+</ul>
+<p>The Authentication Response returns the parameters listed in Table 3 by adding them as query parameters to the redirect_uri specified in the Authentication Request.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>code</code></td>
+<td>mand</td>
+<td>The authorization code generated by the NHS login Platform. <br> The authorization code SHALL expire shortly after it is issued to mitigate the risk of leaks. A maximum authorization code lifetime of 10 minutes is RECOMMENDED. <br>The client MUST NOT use the authorization code more than once. If an authorization code is used more than once, the NHS login Platform WILL deny the request. <br>The authorization code is bound to the client identifier and redirection URI.</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>mand</td>
+<td>if the &quot;state&quot; parameter was present in the client authorization request, then it SHALL be the exact value received from the client, otherwise not included</td>
+</tr>
+</tbody>
+</table>
+<p>A non-normative example follows:</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 302 Found<br>Location: https://client.example.org/cb?<br>    code=SplxlOBeZQQYbYS6WxSbIA<br>    &amp;state=af0ifjsldkj</code></pre>
+<p><strong>3.4.5.2	Error Response</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.2.6</li>
+<li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.2.1</li>
+</ul>
+<p>If the authentication request is denied or fails, the authorisation server informs the client using the parameters defined in Table 4. Unless the Redirection URI is invalid, the Authorisation Server returns the client to the Redirection URI specified in the Authentication Request with the error and state parameters. Other parameters should not be returned</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>error</code></td>
+<td>mand</td>
+<td>Error code, see Table 5 for permitted values</td>
+</tr>
+<tr>
+<td><code>error_description</code></td>
+<td>opt</td>
+<td>Human-readable ASCII encoded text description of the error</td>
+</tr>
+<tr>
+<td><code>error_uri</code></td>
+<td>opt</td>
+<td>URI of a web page that includes additional information about the error</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>cond</td>
+<td>OAuth 2.0 state value. REQUIRED if the Authorization Request included the state parameter. Set to the value received from the Client.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OAuth 2.0 error codes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>invalid_request</code></td>
+<td>The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed.</td>
+</tr>
+<tr>
+<td><code>unauthorized_client</code></td>
+<td>The client is not authorized to request an authorization code using this method</td>
+</tr>
+<tr>
+<td><code>access_denied</code></td>
+<td>The resource owner or Platform denied the request</td>
+</tr>
+<tr>
+<td><code>unsupported_response_type</code></td>
+<td>The Platform does not support obtaining an authorization code using this method</td>
+</tr>
+<tr>
+<td><code>invalid_scope</code></td>
+<td>The requested scope is invalid, unknown, or malformed</td>
+</tr>
+<tr>
+<td><code>server_error</code></td>
+<td>The Platform encountered an unexpected condition that prevented it from fulfilling the request. (This error code is needed because a 500 Internal Server Error HTTP status code cannot be returned to the client via an HTTP redirect.)</td>
+</tr>
+<tr>
+<td><code>temporarily_unavailable</code></td>
+<td>The Platform is currently unable to handle the request due to a temporary overloading or maintenance of the server.  (This error code is needed because a 503  Service Unavailable HTTP status code cannot be returned to the client via an HTTP redirect.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OpenID Connect Error Codes (in addition to the above)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>interaction_required</code></td>
+<td>The Platform requires End-User interaction of some form to proceed. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User interaction.</td>
+</tr>
+<tr>
+<td><code>login_required</code></td>
+<td>The Platform requires End-User authentication. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User authentication.</td>
+</tr>
+<tr>
+<td><code>account_selection_required</code></td>
+<td>The End-User is REQUIRED to select a session at the Platform. The End-User MAY be authenticated at the Platform with different associated accounts, but the End-User did not select a session. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface to prompt for a session to use</td>
+</tr>
+<tr>
+<td><code>consent_required</code></td>
+<td>The Platform requires End-User consent. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User consent</td>
+</tr>
+<tr>
+<td><code>invalid_request_uri</code></td>
+<td>The request_uri in the Authorization Request returns an error or contains invalid data</td>
+</tr>
+<tr>
+<td><code>invalid_request_object</code></td>
+<td>The request parameter contains an invalid Request Object</td>
+</tr>
+<tr>
+<td><code>request_not_supported</code></td>
+<td>The OP does not support use of the request parameter</td>
+</tr>
+<tr>
+<td><code>request_uri_not_supported</code></td>
+<td>The OP does not support use of the request_uri parameter</td>
+</tr>
+<tr>
+<td><code>registration_not_supported</code></td>
+<td>The OP does not support use of the registration parameter</td>
+</tr>
+</tbody>
+</table>
+<p>A non-normative example follows:</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 302 Found<br>Location: https://client.example.org/cb?<br>    error=invalid_request<br>    &amp;error_description=Unsupported%20response_type%20value<br>    &amp;state=af0ifjsldkj</code></pre>
+<h3>3.5	Token Endpoint</h3>
+<p><strong>3.5.1	Token Request</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.3.1 &amp; s12</li>
+<li><a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov) for OpenID Connect</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.3 &amp; s6</li>
+</ul>
+<p>A Token request is used to obtain an Access Token and an ID Token. The Partner Service (client) sends a Token Request to the Token Endpoint to obtain a Token Response.</p>
+<p>Confidential Clients MUST authenticate to the Token Endpoint using the authentication method registered for its client_id (see section 7.2.1).</p>
+<p>The Client sends the parameters to the Token Endpoint using the HTTP POST method and the Form Serialization(HTTP Content-Type application/x-www-form-urlencoded) – the request must be sent using TLS v1.2 or above.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grant_type</code></td>
+<td>mand</td>
+<td>Value MUST be set to &quot;authorization_code&quot; OR “refresh_token”</td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>cond</td>
+<td>The authorization code previously received from the Platform. MUST be present when grant_type is “authorization_code”</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>cond</td>
+<td>Required when grant_type is “authorization_code” – MUST match the &quot;redirect_uri&quot; parameter that was included in the authorization request.</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>cond</td>
+<td>Optional for Confidential Clients</td>
+</tr>
+<tr>
+<td><code>client_assertion_type</code></td>
+<td>mand</td>
+<td>Mandatory for Confidential Clients <br> “urn:ietf:params:oauth:client-assertion-type:jwt-bearer”</td>
+</tr>
+<tr>
+<td><code>client_assertion</code></td>
+<td>mand</td>
+<td>Mandatory for Confidential Clients <br> A signed JWT presented for Client Authentication, as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a> <br>(Note the “iss” and “sub” claim MUST equal the client_id and the “aud” MUST contain the token endpoint URL) <br>The assertion MUST be signed using the private key of the client, agreed during onboarding</td>
+</tr>
+<tr>
+<td><code>refresh_token</code></td>
+<td>cond</td>
+<td>The refresh token previously issued to the client. MUST be present when grant_type is “refresh_token”</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>opt</td>
+<td>Only applicable for grant_type of “refresh_token”. The scope of the access request. The requested scope MUST NOT include any scope not originally granted by the originating “authorization_code” grant. If omitted is treated as equal to the scope originally granted by the “authorization_code” grant.</td>
+</tr>
+</tbody>
+</table>
+<p>A non-normative example follows:</p>
+<pre class="language-html"><code class="language-html">POST /token HTTP/1.1<br>Host: auth.login.nhs.uk<br>Content-Type: application/x-www-form-urlencoded<br><br>grant_type=authorization_code<br>    &amp;code=SplxlOBeZQQYbYS6WxSbIA<br>    &amp;redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb<br>    &amp;client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer<br>    &amp;client_assertion=PHNhbWxwOl ... ZT</code></pre>
+<p><strong>3.5.2	Token Request Validation</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.3.2</li>
+<li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s6</li>
+</ul>
+<p>The Token Request is validated as described in the OpenID Connect Core Specification [1], section 3.1.3.2 (for grant_type “authorization_code”) or as described in The OAuth 2.0 Authorization Framework [6] (for grant_type “refresh_token”). The client_assertion is validated as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a> for Client Authentication for all requests.</p>
+<p><strong>3.5.3	Token Response</strong></p>
+<p><strong>3.5.3.1	Successful Response</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1.3.3 &amp; s12.2</li>
+<li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.4 &amp; s6</li>
+</ul>
+<p>After receiving and validating a valid and authorised Token request from the client, the Token Endpoint returns a response which includes an ID Token and an Access Token. The response uses the “application/json” media type.</p>
+<table>
+<thead>
+<tr>
+<th>Header name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache-Control</td>
+<td>no-store</td>
+</tr>
+<tr>
+<td>Pragma</td>
+<td>no-cache</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>access_token</code></td>
+<td>mand</td>
+<td>Signed JWT which encodes the Access Token, see sections 4.1 and 4.3</td>
+</tr>
+<tr>
+<td><code>token_type</code></td>
+<td>mand</td>
+<td>Must be value “bearer”</td>
+</tr>
+<tr>
+<td><code>refresh_token</code></td>
+<td>opt</td>
+<td>The refresh token which can be used to obtain new access tokens as described in section 3.5.1</td>
+</tr>
+<tr>
+<td><code>expires_in</code></td>
+<td>opt</td>
+<td>Recommended. <br> The lifetime in seconds of the access token.  If omitted, the Platform SHOULD provide the expiration time via other means or document the default value</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>cond</td>
+<td>OPTIONAL, if identical to the scope requested by the client; <br>otherwise, REQUIRED</td>
+</tr>
+<tr>
+<td><code>id_token</code></td>
+<td>cond</td>
+<td>Signed JWT which encodes the ID Token – see sections 4.1 and 4.2. Only issued for grant_type “authorization_code”</td>
+</tr>
+</tbody>
+</table>
+<p>A non-normative example follows:</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>{<br> "access_token": "SlAV32hkKG",<br> "refresh_token": "dS4tfWD",<br> "token_type": "Bearer",<br> "expires_in": 3600,<br> "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOWdkazcifQ.ewogImlzc<br>   yI6ICJodHRwOi8vc2VydmVyLmV4YW1wbGUuY29tIiwKICJzdWIiOiAiMjQ4Mjg5<br>   NzYxMDAxIiwKICJhdWQiOiAiczZCaGRSa3F0MyIsCiAibm9uY2UiOiAibi0wUzZ<br>   fV3pBMk1qIiwKICJleHAiOiAxMzExMjgxOTcwLAogImlhdCI6IDEzMTEyODA5Nz<br>   AKfQ.ggW8hZ1EuVLuxNuuIJKX_V8a_OMXzR0EHR9R6jgdqrOOF4daGU96Sr_P6q<br>   Jp6IcmD3HP99Obi1PRs-cwh3LO-p146waJ8IhehcwL7F09JdijmBqkvPeB2T9CJ<br>   NqeGpe-gccMg4vfKjkM8FcGvnzZUN4_KSP0aAp1tOJ1zZwgjxqGByKHiOtX7Tpd<br>   QyHE5lcMiKPXfEIQILVq0pc_E2DzL7emopWoaoZTF_m0_N0YzFC6g6EJbOEoRoS<br>   K5hoDalrcvRYLSrQAZZKflyuVCyixEoV9GfNQC3_osjzw2PAithfubEEBLuVVk4<br>   XUVrWOLrLl0nx7RkKU8NXNHq-rvKMzqg"<br>}</code></pre>
+<p><strong>3.5.3.2	Error Response</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.3.4</li>
+<li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s5.2</li>
+</ul>
+<p>If the Token Request is invalid or unauthorized, the Platform constructs the error response. The parameters of the Token Error Response are defined as in Section 5.2 of OAuth 2.0 [RFC6749]. The HTTP response body uses the application/json media type with HTTP response code of 400.</p>
+<p>The following is a non-normative example Token Error Response:</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 400 Bad Request<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>{<br> "error": "invalid_request"<br>}</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>error</code></td>
+<td>mand</td>
+<td>Error code</td>
+</tr>
+<tr>
+<td><code>error_description</code></td>
+<td>opt</td>
+<td>Human-readable ASCII encoded text description of the error</td>
+</tr>
+<tr>
+<td><code>error_uri</code></td>
+<td>opt</td>
+<td>URI of a web page that includes additional information about the error</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OAuth 2.0 error codes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>invalid_request</code></td>
+<td>The request is missing a required parameter, includes an unsupported parameter value (other than grant type), repeats a parameter, includes multiple credentials, utilizes more than one mechanism for authenticating the client, or is otherwise malformed.</td>
+</tr>
+<tr>
+<td><code>invalid_client</code></td>
+<td>Client authentication failed (e.g., unknown client, no client authentication included, or unsupported authentication method).</td>
+</tr>
+<tr>
+<td><code>invalid_grant</code></td>
+<td>The provided authorization grant (e.g., authorization code, resource owner credentials) or refresh token is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.</td>
+</tr>
+<tr>
+<td><code>unauthorized_client</code></td>
+<td>The authenticated client is not authorized to use this authorization grant type.</td>
+</tr>
+<tr>
+<td><code>unsupported_grant_type</code></td>
+<td>The authorization grant type is not supported by the Platform.</td>
+</tr>
+<tr>
+<td><code>invalid_scope</code></td>
+<td>The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner</td>
+</tr>
+</tbody>
+</table>
+<h3>3.6 UserInfo endpoint</h3>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s5.3</li>
+</ul>
+<p>The UserInfo Endpoint is an OAuth 2.0 Protected Resource that returns Claims about the authenticated End-User. To obtain the requested Claims about the End-User, the Client makes a request to the UserInfo Endpoint using an Access Token obtained through OpenID Connect Authentication. These Claims are represented by a JSON object that contains a collection of name and value pairs for the Claims.</p>
+<p><strong>3.6.1	UserInfo Request</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s5.3.1</li>
+<li><a href="https://tools.ietf.org/html/rfc6750">RFC6750: OAuth 2.0 Bearer Token Usage</a>, s2</li>
+</ul>
+<p>The Client sends the UserInfo Request using either HTTP GET (recommended) or HTTP POST.</p>
+<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.</p>
+<p>The following is a non-normative example of a UserInfo Request:</p>
+<pre class="language-html"><code class="language-html">GET /userinfo HTTP/1.1<br>Host: auth.login.nhs.uk<br>Authorization: Bearer SlAV32hkKG</code></pre>
+<p><strong>3.6.2	UserInfo Response</strong></p>
+<p><strong>3.6.2.1	Successful Response</strong></p>
+<p>Reference:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s5.3.2</li>
+</ul>
+<p>The UserInfo Claims SHALL be returned as the members of a JSON object.  If a Claim is not returned, then that Claim Name SHALL be omitted from the JSON object representing the Claims; it SHALL NOT be present with a null or empty string value.</p>
+<p>Claims will ONLY be returned when a user has consented to the information being released to the client.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 5.1</li>
+</ul>
+<p>The NHS login Service supports standard and additional claims as follows:</p>
+<p><strong>OpenID Connect Standard Claims</strong></p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Supported</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iss</code></td>
+<td>Y</td>
+<td>Issuer Identifier for the Issuer of the response</td>
+</tr>
+<tr>
+<td><code>aud</code></td>
+<td>Y</td>
+<td>The Partner Service identifier</td>
+</tr>
+<tr>
+<td><code>sub</code></td>
+<td>Y</td>
+<td>Subject - Identifier for the End-User at the Issuer</td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>Y</td>
+<td>Surname(s) or last name(s) of the End-User</td>
+</tr>
+<tr>
+<td><code>given_name</code></td>
+<td>Y</td>
+<td>First name(s) of the End-User <br> This information will only be returned where the user's identity has been verified AND the profile_extended scope is requested</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Y</td>
+<td>End-User's preferred e-mail address <br> Present if the email scope was present in the request</td>
+</tr>
+<tr>
+<td><code>email_verified</code></td>
+<td>Y</td>
+<td>True if the End-User's e-mail address has been verified; otherwise false <br> Present if the email scope was present in the request</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td>Y</td>
+<td>End-User's preferred phone number <br> Present if the phone scope was present in the request</td>
+</tr>
+<tr>
+<td><code>phone_number_verified</code></td>
+<td>Y</td>
+<td>True if the End-User's phone number has been verified; otherwise false <br> Present if the phone scope was present in the request</td>
+</tr>
+<tr>
+<td><code>birthdate</code></td>
+<td>Y</td>
+<td>End-User's date of birth in ISO8601‑2004 format: YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NHS login Additional Claims</strong></p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Supported</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nhs_number</code></td>
+<td>Y</td>
+<td>A string containing the End User’s NHS Number – this is a 10 digit string</td>
+</tr>
+<tr>
+<td><code>gp_integration_credentials</code></td>
+<td>Y</td>
+<td>A json object containing the end user’s GP integration credentials <br> These will only be returned where the user’s identity has been verified AND the gp_integration_credentials scope is requested<br> <code>{</code> <br> <code>gp_user_id: “32498239048-3248734”,</code> <br> <code>gp_linkage_key: “dfje2rkjdfkjdfm”,</code> <br> <code>gp_ods_code: “A12344”</code> <br> <code>}</code></td>
+</tr>
+<tr>
+<td><code>gp_registration_details</code></td>
+<td>Y</td>
+<td>A json object containing information on the End-User’s registered General Practice as held in NHS Personal Demographics Service. <br>This information will only be returned where the user’s identity has been verified AND the gp_registration_details scope is requested <br> <code>{</code> <br> <code>gp_ods_code: “A12344”</code> <br> <code>}</code></td>
+</tr>
+<tr>
+<td><code>client_user_metadata</code></td>
+<td>Y</td>
+<td>A string containing either a randomly-generated (by NHS login) number which has been encrypted using PKCS1_OAEP cipher with the RP’s public key and then base64URL encoded or a value set by the RP. The value contained in this claim is opaque to NHS login and RP may optionally update this value – see section 3.6.3 <br>If no value is held for the RP then this claim is not returned</td>
+</tr>
+<tr>
+<td><code>identity_proofing_level</code></td>
+<td>Y</td>
+<td>A string containing the End User’s identity proofing level. It will contain one of the values defined in section 5.1.1 -Verification of Identity Levels and Table 18 – e.g. “P0”, “P9”</td>
+</tr>
+</tbody>
+</table>
+<p>The sub Claim in the UserInfo Response MUST be verified to exactly match the sub Claim in the ID Token; if they do not match, the UserInfo Response values MUST NOT be used.</p>
+<p>The UserInfo response MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<p>Upon receipt of the UserInfo Request, the UserInfo Endpoint SHALL return the JSON Serialization of the UserInfo Response in the HTTP response. The content-type of the HTTP response SHALL be “application/json; the response body SHALL be encoded using UTF-8.</p>
+<p>The UserInfo Response will not be signed and/or encrypted.</p>
+<p>The following is a non-normative example of a UserInfo Response:</p>
+<pre class="language-html"><code class="language-html">  HTTP/1.1 200 OK<br>  Content-Type: application/json<br><br>  {<br>   “iss”: “https://login.nhs.uk”,<br>   “sub”: “24400320-234545-234241-111”,<br>   “aud”: “s6BhdRkqt3”,<br>   “email”: “janedoe@example.com”,<br>   “email_verified”: true,<br>   “phone_number”: “01234567891”,<br>   “phone_number_verified”: true,<br>   “nhs_number”: “8527685222”,<br>   “birthdate”: 2001-12-30,<br>   “family_name”: “Doe”,<br>   “identity_proofing_level”: “P9”,<br>   “gp_integration_credentials”: {<br>    gp_user_id: “32498239048-3248734”,<br>    gp_linkage_key: “dfje2rkjdfkjdfm”,<br>    gp_ods_code: “A12344”<br>    },<br>   “client_user_metadata”: “U2e3rsdjwd…==”<br>  }</code></pre>
+<p><strong>3.6.2.2 Error Response</strong></p>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s5.3.3</li>
+<li><a href="https://tools.ietf.org/html/rfc6750">RFC6750: OAuth 2.0 Bearer Token Usage</a>, s3</li>
+</ul>
+<p>When an error condition occurs, the UserInfo Endpoint returns an Error Response which will include JSON keys as defined in Table 12. As defined in the OpenID Connect Core Specification, errors relating to Bearer Token Usage are returned using the HTTP “WWW-Authenticate” response header field as per Section 3 of OAuth 2.0 Bearer Token Usage. Errors not related to Bearer Token Usage omit the “WWW-Authenticate” response header field and return error details in the response body.</p>
+<table>
+<thead>
+<tr>
+<th>JSON Key</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>error</code></td>
+<td>mand</td>
+<td>Error code, see Table 13 for permitted values</td>
+</tr>
+<tr>
+<td><code>error_description</code></td>
+<td>opt</td>
+<td>Human-readable ASCII encoded text description of the error</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Oauth 2.0 error code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>invalid_request</code></td>
+<td>The request is missing a required parameter, includes an unsupported parameter or parameter value, repeats the same parameter, uses more than one method for including an access token, or is otherwise malformed.  The resource server SHOULD respond with the HTTP 400 (Bad Request) status code.</td>
+</tr>
+<tr>
+<td><code>invalid_token</code></td>
+<td>The access token provided is expired, revoked, malformed, or invalid for other reasons.  The resource SHOULD respond with the HTTP 401 (Unauthorized) status code.  The client MAY request a new access token and retry the protected resource request.</td>
+</tr>
+<tr>
+<td><code>insufficient_scope</code></td>
+<td>The request requires higher privileges than provided by the access token.  The resource server SHOULD respond with the HTTP 403 (Forbidden) status code and MAY include the “scope” attribute with the scope necessary to access the protected resource</td>
+</tr>
+</tbody>
+</table>
+<p>The following is a non-normative example of a UserInfo Error Response relating to Bearer Token Usage:</p>
+<pre class="language-html"><code class="language-html">  HTTP/1.1 401 Unauthorized<br>  WWW-Authenticate: error=”invalid_token”,<br>    error_description=”The access token expired”</code></pre>
+<p>The following is a non-normative example of a UserInfo Error Response not relating to Bearer Token Usage:</p>
+<pre class="language-html"><code class="language-html">  HTTP/1.1 400 Bad Request<br>  Content-Type: application/json<br><br>  {<br>     “error”: “invalid_request”,<br>     “error_description”: ”Invalid parameter content”<br>  }</code></pre>
+<p><strong>3.6.3 UserInfo Update Request</strong></p>
+<p>NHS login extends the OpenID Connect Specification and allows a client to request the update of the client_user_metadata claim via HTTP PATCH.</p>
+<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.</p>
+<p>The Client sends the parameters to the UserInfo Endpoint using the HTTP PATCH method and a Content-Type of ‘application/json’ – the request must be sent using TLS v1.2 or above.</p>
+<table>
+<thead>
+<tr>
+<th>JSON key</th>
+<th>Req?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_user_metadata</code></td>
+<td>opt</td>
+<td>New value for the client_user_metadata claim. The maximum length is 1024 characters. Setting the value to an empty string (i.e. client_user_metadata=) will result in NHS login clearing the value. Setting the value to “auto” will result in NHS login re-generating a new value as described in Table 11.</td>
+</tr>
+</tbody>
+</table>
+<p>As the client_user_metadata value is opaque to NHS login no specific validation will be undertaken other than to ensure a maximum length of 1024 characters.</p>
+<p>The following is a non-normative example of a UserInfo Update Request:</p>
+<pre class="language-html"><code class="language-html">PATCH /userinfo HTTP/1.1<br>Host: auth.login.nhs.uk<br>Authorization: Bearer SlAV32hkKG<br>Content-Type: application/json<br><br>{‘client_user_metadata’: ‘ZT&amp;PHNhbWxwOl ... ZT’}</code></pre>
+<p><strong>3.6.4	UserInfo Update Response</strong></p>
+<p>A successful UserInfo Update Response will be an HTTP 204 response with no response body. Error responses will be as described in section 3.6.2.2</p>
+<hr>
+<h2>4 Tokens</h2>
+<p>An ID Token is a security token that contains Claims about the Authentication of an End-User by the Platform, when using a Client and potentially other requested Claims. The Access Token is a credential that can be used by an application to access an API – initially the UserInfo endpoint.</p>
+<p>The NHS login Platform uses signed JSON Web Tokens (JWTs) for ID Tokens and Access Tokens.</p>
+<h3>4.1	JWT Header</h3>
+<p>References:</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc7519">RFC7519 – JSON Web Token (JWT)</a></li>
+<li><a href="https://tools.ietf.org/html/rfc7515">RFC7515 – JSON Web Signature (JWS)</a></li>
+</ul>
+<p>The JWT header will contain the following claims:</p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Req?</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alg</code></td>
+<td>mand</td>
+<td>Algorithm used for signing the JWT</td>
+<td>“RS512” – RSASSA-PKCS1-v1_5 with the SHA-512 hash algorithm</td>
+</tr>
+<tr>
+<td><code>typ</code></td>
+<td>mand</td>
+<td>Type</td>
+<td>&quot;JWT&quot;</td>
+</tr>
+<tr>
+<td><code>jku</code></td>
+<td>n/a</td>
+<td>JWK Set URL</td>
+<td>Not supported, keys are communicated outside the JWT, see <a href="https://tools.ietf.org/html/rfc7519">RFC7519 – JSON Web Token (JWT)</a>, s2</td>
+</tr>
+<tr>
+<td><code>jwk</code></td>
+<td>n/a</td>
+<td>JSON Web Key</td>
+<td>Not supported, keys are communicated outside the JWT, see <a href="https://tools.ietf.org/html/rfc7519">RFC7519 – JSON Web Token (JWT)</a>, s2</td>
+</tr>
+<tr>
+<td><code>x5u</code></td>
+<td>n/a</td>
+<td>X.509 URL</td>
+<td>Not supported, keys are communicated outside the JWT, see <a href="https://tools.ietf.org/html/rfc7519">RFC7519 – JSON Web Token (JWT)</a>, s2</td>
+</tr>
+<tr>
+<td><code>x5c</code></td>
+<td>n/a</td>
+<td>X.509 Certificate Chain</td>
+<td>Not supported, keys are communicated outside the JWT, see <a href="https://tools.ietf.org/html/rfc7519">RFC7519 – JSON Web Token (JWT)</a>, s2</td>
+</tr>
+</tbody>
+</table>
+<p>The JWT header MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<h3>4.2 ID Token Payload</h3>
+<p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a></li>
+</ul>
+<p>The following Claims are used within the ID Token for all Oauth 2.0 flows used by OpenID Connect:</p>
+<table>
+<thead>
+<tr>
+<th>Claim - standard</th>
+<th>Req?</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iss</code></td>
+<td>mand</td>
+<td>Issuer Identifier for the Issuer of the response</td>
+<td>The iss value is a case sensitive URL using the https scheme that contains scheme, host, and optionally, port number and path components and no query or fragment components.</td>
+</tr>
+<tr>
+<td><code>sub</code></td>
+<td>mand</td>
+<td>Subject Identifier</td>
+<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., 24400320 or AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4 <br> It SHALL NOT exceed 255 ASCII characters in length. <br> The sub value is a case sensitive string</td>
+</tr>
+<tr>
+<td><code>aud</code></td>
+<td>mand</td>
+<td>Audience(s) that this ID Token is intended for</td>
+<td>It SHALL contain the Oauth 2.0 client_id of the Partner Services as an audience value. It MAY also contain identifiers for other audiences. In the general case, the aud value is an array of case sensitive strings. In the common special case when there is one audience, the aud value SHALL be a single case sensitive string</td>
+</tr>
+<tr>
+<td><code>exp</code></td>
+<td>mand</td>
+<td>Expiration time on or after which the ID Token MUST NOT be accepted for processing</td>
+<td>The processing of this parameter requires that the current date/time MUST be before the expiration date/time listed in the value. Implementers MAY provide for some small leeway, usually no more than a few minutes, to account for clock skew. Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular</td>
+</tr>
+<tr>
+<td><code>iat</code></td>
+<td>mand</td>
+<td>Time at which the JWT was issued</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular</td>
+</tr>
+<tr>
+<td><code>jti</code></td>
+<td>mand</td>
+<td>JWT unique identifier</td>
+<td>Value is unique to each token created by the issuer</td>
+</tr>
+<tr>
+<td><code>auth_time</code></td>
+<td>cond</td>
+<td>Time when the End-User authentication occurred</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br> When a max_age request is made or when auth_time is requested as an Essential Claim, then this Claim is REQUIRED; otherwise, its inclusion is OPTIONAL. (The auth_time Claim semantically corresponds to the OpenID 2.0 PAPE [10] auth_time response parameter.)</td>
+</tr>
+<tr>
+<td><code>nonce</code></td>
+<td>cond</td>
+<td>String value used to associate a Client session with an ID Token, and to mitigate replay attacks</td>
+<td>The value is passed through unmodified from the Authentication Request to the ID Token. <br> If present in the ID Token, Clients MUST verify that the nonce Claim Value is equal to the value of the nonce parameter sent in the Authentication Request. <br> If present in the Authentication Request, the Platform MUST include a nonce Claim in the ID Token with the Claim Value being the nonce value sent in the Authentication Request. <br>The Platform will perform no other processing on nonce values used. <br> The nonce value is a case sensitive string</td>
+</tr>
+<tr>
+<td><code>acr</code></td>
+<td>n/a</td>
+<td>Authentication Context Class Reference</td>
+<td>Not supported - superseded by vot</td>
+</tr>
+<tr>
+<td><code>amr</code></td>
+<td>n/a</td>
+<td>Authentication Methods References</td>
+<td>Not currently supported</td>
+</tr>
+<tr>
+<td><code>azp</code></td>
+<td>n/a</td>
+<td>Authorized party – the party to which the ID Token was issued</td>
+<td>Not currently supported</td>
+</tr>
+<tr>
+<td><code>vot</code></td>
+<td>mand</td>
+<td>Vectors of Trust</td>
+<td>The level to which the user’s identity has been verified. <br>See s5.1 for values</td>
+</tr>
+<tr>
+<td><code>vtm</code></td>
+<td>mand</td>
+<td>Vector Trust Mark</td>
+<td>https URI of the vtm claim <br>See s5.1.5</td>
+</tr>
+<tr>
+<td><code>family_name</code></td>
+<td>cond</td>
+<td>Family Name</td>
+<td>Surname(s) or last name(s) of the End-User</td>
+</tr>
+<tr>
+<td><code>birthdate</code></td>
+<td>cond</td>
+<td>Birthdate</td>
+<td>If the user’s date of birth is available, it is returned in ISO8601‑2004 format, YYYY-MM-DD</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Claim - NHS login extensions</th>
+<th>Req?</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nhs_number</code></td>
+<td>cond</td>
+<td>NHS Number</td>
+<td>If the user’s NHS Number is known, then it SHALL be included (subject to the profile scope being requested). Will be represented as a 10-digit string.</td>
+</tr>
+<tr>
+<td><code>identity_proofing_level</code></td>
+<td>cond</td>
+<td>Identity Proofing Level</td>
+<td>User’s identity proofing level shall be included (subject to the profile scope being requested). It will contain one of the values defined in section 5.1.1 -Verification of Identity Levels and Table 18 – e.g. “P0”, “P9”.</td>
+</tr>
+</tbody>
+</table>
+<p>ID Tokens MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<p>The following is a non-normative example of the set of Claims (the JWT Claims Set) in an ID Token:</p>
+<pre class="language-html"><code class="language-html">  {<br>   “iss”: “ https://auth.login.nhs.uk”,<br>   “sub”: “24400320”,<br>   “aud”: “s6BhdRkqt3”,<br>   “nonce”: “n-0S6_WzA2Mj”,<br>   “exp”: 1311281970,<br>   “iat”: 1311280970,<br>   “auth_time”: 1311280969,<br>   “vot”: “P9.Ca.Cc”,	<br>   “vtm”: “https://auth.login.nhs.uk/trustmark/auth.login.nhs.uk”<br>   “nhs_number”: “4447685222”,<br>   “birthdate”: “2001-12-30”,<br>   “family_name”: “Johnson”,<br>   “identity_proofing_level”: “P9”<br>  }</code></pre>
+<h3>4.3 Access Token Payload</h3>
+<p>References:</p>
+<hr>
+<h2>9 Document Management</h2>
+<p><strong>Revision History</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Version</strong></th>
+<th><strong>Date</strong></th>
+<th><strong>Summary of Changes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1.0 Draft</td>
+<td>30 April 2018</td>
+<td>First draft for review</td>
+</tr>
+<tr>
+<td>V1.1 Draft</td>
+<td>16 July 2018</td>
+<td>Second draft</td>
+</tr>
+<tr>
+<td>V1.2 Draft</td>
+<td>30 July 2018</td>
+<td>Draft following comments</td>
+</tr>
+<tr>
+<td>V1.3 Draft</td>
+<td>23 Aug 2018</td>
+<td>Draft for informal external comments</td>
+</tr>
+<tr>
+<td>V1.4 Draft</td>
+<td>06 Nov 2018</td>
+<td>Draft for external supplier comments</td>
+</tr>
+<tr>
+<td>V1.4i</td>
+<td>19 Mar 2019</td>
+<td>Updated following comments <br> Issued for approval for Public Beta</td>
+</tr>
+<tr>
+<td>V1.5</td>
+<td>01 Apr 2019</td>
+<td>Include refresh token</td>
+</tr>
+<tr>
+<td>V1.6</td>
+<td>07 May 2019</td>
+<td>Include FIDO UAF details</td>
+</tr>
+<tr>
+<td>V1.7</td>
+<td>21 Oct 2019</td>
+<td>Minor clarifications on supported scope and claims</td>
+</tr>
+<tr>
+<td>V1.8</td>
+<td>19 Nov 2019</td>
+<td>Include client_metadata scope</td>
+</tr>
+<tr>
+<td>V1.9</td>
+<td>15 May 2020</td>
+<td>Include identity_proofing_level claim <br> Change to section 5.1.1, 5.1.3 &amp; 7.3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reviewed by:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Title / Responsibility</strong></th>
+<th><strong>Date</strong></th>
+<th><strong>Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matthew Brown</td>
+<td>Lead Technical Architect</td>
+<td>15 May 2020</td>
+<td>V1.9</td>
+</tr>
+<tr>
+<td>Priyanka Mittal</td>
+<td>NHS login Technical Architect</td>
+<td>15 May 2020</td>
+<td>V1.9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Approved by:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Title / Responsibility</strong></th>
+<th><strong>Date</strong></th>
+<th><strong>Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Melissa Ruscoe</td>
+<td>Programme Head</td>
+<td>15 May 2020</td>
+<td>V1.9</td>
+</tr>
+<tr>
+<td>Darren Hutton</td>
+<td>Product Owner</td>
+<td>15 May 2020</td>
+<td>V1.9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Document Control:</strong></p>
+<p>The controlled copy of this document is maintained in the NHS Digital corporate network. Any copies of this document held outside of that area, in whatever format (e.g. paper, email attachment), are considered to have passed out of control and should be checked for currency and validity.</p>
+
+
+     <div class="app-edit-instructions">
+              <hr />
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-t.md">this page</a> on GitHub
+              </p>
+      </div>
+
+            <div class="app-index-navigation app-u-hide-desktop">
+              <nav class="app-side-nav">
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list">
+        <li class="nhsuk-footer__list-item">
+          <a class="nhsuk-footer__list-item-link" href="https://github.com/nhsconnect/nhslogin">Github</a>
+        </li>
+       <li class="nhsuk-footer__list-item">
+          <a class "nhsuk-footer__list-item-link" href="https://nhs-login-support-slack-invite.herokuapp.com/">Slack</a>
+        </li>
+       <li class="nhsuk-footer__list-item">
+          <a class "nhsuk-footer__list-item-link" href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>
+        </li>
+      </ul>
+      <p class="nhsuk-footer__copyright">© Crown copyright</p>
+    </div>
+  </div>
+  <div class="app-ogl-footer">
+    <div class="nhsuk-width-container"></div>
+  </div>
+</footer>
+<script src="nhslogin/js/mobile-menu.js" ></script> 
+</body>
+</html>
