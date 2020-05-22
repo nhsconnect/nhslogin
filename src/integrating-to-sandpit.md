@@ -3,7 +3,7 @@ layout: base.njk
 title: How do I integrate to the sandpit?
 ---
 
-We’ll need to setup your service on NHS login sandpit. Please provide the below information to [engage.nhslogin@nhs.net](engage.nhslogin@nhs.net)
+ You will need to complete and submit the [Sandpit Environment Request Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Hwf2UP67GkCIA2c3SOYp4uJkON3kMNVHktlWAnhMAvNURFFXNjMxM1FaS05GODhSM0VCS1Y0VzUzMCQlQCN0PWcu) so that we can set up your service in the NHS login sandpit.
 
  Required information:
 
