@@ -5,6 +5,8 @@ title: GP Credentials
 
 ## Introduction
 
+If you are an IM1 supplier, learn how to use NHS login to create or retrieve GP credentials. This means users do not have to go their GP practice to register for your service.
+
 NHS login supports a scope of `gp_integration_credentials` which will allow a Relying Party (RP) to retrieve the following user claims:
 
 - Account ID
@@ -62,4 +64,4 @@ Currently NHS login provides coverage for GP login credentials
 - Vision: 100% (250 in total)
 - Microtest*: None (36 in total)
 
-**GP login credentials (linkage keys) for Microtest returned by NHS login are dummy in nature, to maintain the uniform behaviour of the service. These GP login credentials cannot be used by RPS for connecting to Microtest.*
+**GP login credentials (linkage keys) for Microtest returned by NHS login are dummy in nature, to maintain the uniform behaviour of the service. These GP login credentials cannot be used by RPs for connecting to Microtest.*
