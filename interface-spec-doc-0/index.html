@@ -1567,6 +1567,487 @@
 <pre class="language-html"><code class="language-html">  {<br>   “iss”: “ https://auth.login.nhs.uk”,<br>   “sub”: “24400320”,<br>   “aud”: “s6BhdRkqt3”,<br>   “nonce”: “n-0S6_WzA2Mj”,<br>   “exp”: 1311281970,<br>   “iat”: 1311280970,<br>   “auth_time”: 1311280969,<br>   “vot”: “P9.Ca.Cc”,	<br>   “vtm”: “https://auth.login.nhs.uk/trustmark/auth.login.nhs.uk”<br>   “nhs_number”: “4447685222”,<br>   “birthdate”: “2001-12-30”,<br>   “family_name”: “Johnson”,<br>   “identity_proofing_level”: “P9”<br>  }</code></pre>
 <h3>4.3 Access Token Payload</h3>
 <p>References:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a></li>
+<li><a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Req?</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>iss</code></td>
+<td>mand</td>
+<td>Issuer Identifier for the Issuer of the response</td>
+<td>The iss value is a case sensitive URL using the https scheme that contains scheme, host, and optionally, port number and path components and no query or fragment components.</td>
+</tr>
+<tr>
+<td><code>sub</code></td>
+<td>mand</td>
+<td>Subject Identifier</td>
+<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., 24400320 or AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4. It SHALL NOT exceed 255 ASCII characters in length. <br>The sub value is a case sensitive string</td>
+</tr>
+<tr>
+<td><code>aud</code></td>
+<td>mand</td>
+<td>Audience(s) that this ID Token is intended for</td>
+<td>It SHALL contain the Oauth 2.0 client_id of the Partner Service as an audience value. It MAY also contain identifiers for other audiences. In the general case, the aud value is an array of case sensitive strings. In the common special case when there is one audience, the aud value SHALL be a single case sensitive string</td>
+</tr>
+<tr>
+<td><code>exp</code></td>
+<td>mand</td>
+<td>Expiration time on or after which the ID Token MUST NOT be accepted for processing</td>
+<td>The processing of this parameter requires that the current date/time MUST be before the expiration date/time listed in the value. Implementers MAY provide for some small leeway, usually no more than a few minutes, to account for clock skew. Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See RFC 3339 [RFC3339] for details regarding date/times in general and UTC in particular</td>
+</tr>
+<tr>
+<td><code>iat</code></td>
+<td>mand</td>
+<td>Time at which the JWT was issued</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See RFC 3339 [RFC3339] for details regarding date/times in general and UTC in particular</td>
+</tr>
+<tr>
+<td><code>jti</code></td>
+<td>mand</td>
+<td>JWT unique identifier</td>
+<td>Value is unique to each token created by the issuer</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>mand</td>
+<td>Scopes that the access_token provides access to</td>
+<td>A space-separated list of scopes for which the token is issued.  This list will be scopes requested in the authentication request (see s3.4.1) or a subset of them</td>
+</tr>
+<tr>
+<td><code>auth_time</code></td>
+<td>cond</td>
+<td>Time when the End-User authentication occurred</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a max_age request is made or when auth_time is requested as an Essential Claim, then this Claim is REQUIRED; otherwise, its inclusion is OPTIONAL. (The auth_time Claim semantically corresponds to the OpenID 2.0 PAPE [10] auth_time response parameter.)</td>
+</tr>
+<tr>
+<td><code>acr</code></td>
+<td>n/a</td>
+<td>Authentication Context Class Reference</td>
+<td>Not supported – superseded by vot</td>
+</tr>
+<tr>
+<td><code>vot</code></td>
+<td>mand</td>
+<td>Vectors of Trust</td>
+<td>The level to which the user’s identity has been verified. <br>See s5.1 for values</td>
+</tr>
+<tr>
+<td><code>vtm</code></td>
+<td>mand</td>
+<td>Vector Trust Mark</td>
+<td>https URI of the vtm claim <br>See s5.1.5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NHS login extensions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Req?</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nhs_number</code></td>
+<td>cond</td>
+<td>NHS Number</td>
+<td>If the user’s NHS Number is known, then it SHALL be included (subject to the profile scope being requested). Will be represented as a 10-digit string.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Spine Core extensions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Req?</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reason_for_request</code></td>
+<td>opt</td>
+<td>The identified the purpose for which the request is being made.</td>
+<td>Purpose for which access is being requested. Will contain “patientaccess”. See [11]</td>
+</tr>
+<tr>
+<td><code>requesting_system</code></td>
+<td>opt</td>
+<td>Identifier for the system or device making the request</td>
+<td>This is an identifier for the deployed client system that has been authorised to make API calls. In the case of Spine-enabled clients (or those using the SSP to broker API calls), this will be a Spine Accredited System ID (ASID) <br>The naming system prefix for the ASID will be https://fhir.nhs.uk/Id/accredited-system<br> See [11]</td>
+</tr>
+<tr>
+<td><code>requesting_patient</code></td>
+<td>opt</td>
+<td>NHS Number</td>
+<td>If this authorisation relates to a citizen, this attribute will hold the NHS Number of the citizen<br>The naming system prefix for the NHS Number will be http://fhir.nhs.net/Id/nhs-number <br>See [11]</td>
+</tr>
+</tbody>
+</table>
+<p>Access Tokens MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<h3>4.4 JOSE Signing</h3>
+<p>References:</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc7519">RFC7519 – JSON Web Token (JWT)</a></li>
+<li><a href="https://tools.ietf.org/html/rfc7515">RFC7515 – JSON Web Signature (JWS)</a></li>
+</ul>
+<p>The JWT will be signed using the RSASSA-PKCS1-v1_5 with the SHA-512 hash algorithm (“RS512”)</p>
+<hr>
+<h2>5 Data view</h2>
+<h3>5.1 Vectors of Trust</h3>
+<p>References:</p>
+<ul>
+<li><a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a></li>
+<li><a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov)</a></li>
+<li><a href="https://tools.ietf.org/html/draft-richer-vectors-of-trust-09">RFC8485 - Vectors of Trust</a></li>
+</ul>
+<p>NHS login supports Vectors of Trust for Identification Verification and Authentication.   Credential Management and Assertion Presentation are out of scope</p>
+<p><strong>5.1.1 Verification of Identity Levels</strong></p>
+<p>NHS login supports the following levels of identification verification. These are based upon <a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td>No identity proofing <br> This maps to 'Verification - Low' within DCB3051</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>Knowledge-based verification ONLY <br> This maps to 'Verification - Medium' within DCB3015</td>
+</tr>
+<tr>
+<td>P9</td>
+<td>Physical comparison <br> This maps to 'Verification - High' within DCB3051</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5.1.2 Authentication Credentials</strong></p>
+<p>NHS login supports the following types of authentication credentials.  Note that the credential component may occur more than once</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cp</code></td>
+<td>Password-based <br>The user is in possession of a secret (for example a password, PIN, etc) belonging to the legitimate account holder</td>
+</tr>
+<tr>
+<td><code>Cd</code></td>
+<td>Registered Device <br>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by identifiers only</td>
+</tr>
+<tr>
+<td><code>Ck</code></td>
+<td>Shared Cryptographic key within a Registered Device <br>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by a <strong>shared</strong> key</td>
+</tr>
+<tr>
+<td><code>Cm</code></td>
+<td>Asymmetric Cryptographic key within a Registered Device <br>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by cryptographic proof of key possession using <strong>asymmetric</strong> key, such as a FIDO-compliant device</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5.1.3	Requesting Vectors of Trust values</strong></p>
+<p>Vector of Trust (VoT) is a combination of - Identity Verification (defined in section 5.1.1 -Verification of Identity Levels) and Authentication (defined in section 5.1.2 – Authentication Credentials) levels.</p>
+<p>The client MAY request a set of acceptable VoT values with the &quot;vtr&quot; (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components. The component values within each vector are ANDed together while the separate vectors are ORed together.  For example, a list of vectors in the form ‘[&quot;P9.Cp.Cd &quot;, &quot;P9.Ck&quot;]’ is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Ck&quot; simultaneously are acceptable for this transaction.</p>
+<p>The requested set of VoT, SHOULD only contain one value for Identity Verification component, combined with one or more values of the Authentication component.</p>
+<p>Client SHOULD only request the lowest level of acceptable Identity Verification, within the VoT set. Vector request values MAY omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.</p>
+<p><strong>5.1.4	Returning Vectors of Trust values</strong></p>
+<p>The vector is sent as a string within the &quot;vot&quot; (vector of trust) claim in the ID and Access tokens.  The trustmark that applies to this vector SHALL be sent as an HTTPS URL in the &quot;vtm&quot; (vector trust mark) claim to provide context to the vector.</p>
+<p>For example, part of the body of an ID token claiming &quot;Medium Assurance Identity, authenticated user via password and registered device identifier&quot; could look like this JSON object payload of the ID token.</p>
+<pre class="language-html"><code class="language-html">{<br>…<br>…<br>  "iss": " https://auth.login.nhs.uk/",<br>  "vot": "P5.Cp.Cd",<br>  "vtm": https://auth.login.nhs.uk/trustmark/login.nhs.uk<br>…<br>…<br>}</code></pre>
+<p>The body of the token is signed using JOSE, as per the OpenID Connect specification. By putting the &quot;vot&quot; and &quot;vtm&quot; values inside the token, the vector and its context are strongly bound to the federated credential represented by the token.</p>
+<p><strong>5.1.5	Trustmark</strong></p>
+<p>References</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/draft-richer-vectors-of-trust-09">RFC8485 - Vectors of Trust</a>, section 5</li>
+</ul>
+<p>The Trustmark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.</p>
+<p>The NHS login Trustmark will be self-hosted.</p>
+<p>The following is a non-normative example a Trustmark based on s5.1.3 and 5.1.4 above:</p>
+<pre class="language-html"><code class="language-html">{<br>  "idp": "https://auth.login.nhs.uk/",<br>  "trustmark_provider": "https://auth.login.nhs.uk/",<br>  "P": ["P0", "P3", "P5", "P6", "P7", "P9"],<br>  "C": ["Cp", "Cd", "Ck", "Cm"]<br>}</code></pre>
+<p><strong>5.1.6	Profiles</strong></p>
+<p>Aligning the above to the standard <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a> brings a standard set of vectors supported by the NHS login Service, described in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Vector</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>“P0.Cp”</code></td>
+<td>Low Identity verification, user authenticated using password</td>
+</tr>
+<tr>
+<td><code>“P0.Cp.Cd”</code></td>
+<td>Low Identity verification, user authenticated using password and enrolled device (2FA)</td>
+</tr>
+<tr>
+<td><code>“P0.Cp.Ck”</code></td>
+<td>Low Identity verification, user authenticated using password and shared key within a device (2FA)</td>
+</tr>
+<tr>
+<td><code>“P5.Cp.Cd”</code></td>
+<td>Medium Identity verification, user authenticated using password and enrolled device (2FA)</td>
+</tr>
+<tr>
+<td><code>“P5.Cp.Ck”</code></td>
+<td>Medium Identity verification, user authenticated using password and shared key within a device (2FA)</td>
+</tr>
+<tr>
+<td><code>“P5.Cm”</code></td>
+<td>Medium Identity verification, user authenticated via asymmetric key within a device (2FA) (for example, FIDO UAF authentication)</td>
+</tr>
+<tr>
+<td><code>“P9.Cp.Cd”</code></td>
+<td>High Identity verification, user authenticated using password and enrolled device (2FA)</td>
+</tr>
+<tr>
+<td><code>“P9.Cp.Ck”</code></td>
+<td>High Identity verification, user authenticated using password and shared key within a device (2FA)</td>
+</tr>
+<tr>
+<td><code>“P9.Cm”</code></td>
+<td>High Identity verification, user authenticated via asymmetric key within a device (2FA) (for example, FIDO UAF authentication)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5.1.6.1	Example 1 – Partner Service provides access to sensitive data</strong></p>
+<p>This example maps onto archetypes A1, A4, A5, A6, A7 within the standard ‘DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services’ [12]</p>
+<p>The service requires High Verification and High Authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p><code>“[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]”</code></p>
+<p><strong>5.1.6.2	Example 2 – Partner Service provides access to basic data (not sensitive)</strong></p>
+<p>This example maps onto archetype A3 within the standard ‘DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services’ [12]</p>
+<p>The service requires Medium Verification and High Authentication, with SSO allowed. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p><code>“[“P5.Cp.Cd”, “P5.Cp.Ck”,“P5.Cm”]”</code></p>
+<p><strong>5.1.6.3	Example 3 – Partner Service provides access to both basic data (not sensitive) and sensitive data</strong></p>
+<p>This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data.</p>
+<p>Service requests NHS login for Medium Verification (P5) and High Authentication for a user. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p><code>“[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]”</code></p>
+<p>Successfully authenticated user can either be P5 or P9 in terms of identity verification.</p>
+<p>For a P9 user (high identity verification) the service can offer all the functionalities, as the user meets service requirements of High Verification and High Authentication</p>
+<p>For a P5 user (medium identity verification) the service offers basic features at the user’s initial login as the user meets service requirements of Medium Verification and High Authentication only.</p>
+<p>When a P5 user, attempts to access other features supported by sensitive data then the service requires High Verification and High Authentication, with SSO allowed. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p><code>“[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]”</code></p>
+<p><strong>5.1.6.4	The user is prompted to undertake a verification step-up journey to take the user verification level from Medium to High.Single Sign-on</strong></p>
+<p>If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (vtr) in the incoming request, then the user will be required to sign-in, in order to meet the requested vectors.</p>
+<p>Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the ‘prompt’ parameter on the initial authorisation request – see section 3.4.1.</p>
+<hr>
+<h2>6 Password-less Authentication using FIDO</h2>
+<p>References:</p>
+<ul>
+<li><a href="https://fidoalliance.org/specifications/download/">FIDO Universal Authentication Framework version 1.0</a></li>
+<li><a href="https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html">FIDO UAF Registry of Predefined Values version 1.0</a></li>
+<li><a href="https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html">FIDO UAF Authenticator Commands version 1.0</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6750">OAuth 2.0 Bearer Token Usage</a></li>
+</ul>
+<p>This section describes how the NHS Digital NHS login Platform implements password-less authentication using a combination of FIDO Universal Authentication Framework and the OpenID Connect Authorization Code Flow.</p>
+<p>The NHS login Platform supports the FIDO UAF Protocol version 1.0.</p>
+<h3>6.1 Overview</h3>
+<p>The objective of utilising FIDO UAF in combination with the OpenID Connect Authorization Code flow is to enable native app clients to offer an enhanced login experience to users, allowing them to utilise device-based biometric authentication (e.g. fingerprint).</p>
+<p>NHS login exposes four endpoints to support password-less authentication via FIDO UAF. These are :</p>
+<ul>
+<li>regRequest – enables a client to request a FIDO UAF Registration Request Message from the NHS login platform. The access token retrieved by the client during user authentication MUST be presented in the Authorization HTTP Header as a Bearer token as per RFC6750</li>
+<li>regResponse – enables a client to POST a FIDO UAF Registration Response Message to the NHS login platform.</li>
+<li>dereg – enables a client to POST a FIDO UAF Deregistration Request Message to the NHS login platform specifying a set of keys to delete. The NHS login platform will remove the relevant user key(s) and return a FIDO UAF Deregistration Request Message for processing by the FIDO client. The access token retrieved by the client during user authentication MUST be presented in the Authorization HTTP Header as a Bearer token as per RFC6750</li>
+<li>authRequest –  enables a client to request a FIDO UAF Authentication Request Message from the NHS login platform. The client processes the FIDO UAF Authentication Request Message and creates a FIDO UAF Authentication Response Message which the client then base64 URL encodes and provides to the NHS login platform as an authentication request parameter (fido_auth_response) as described in section 3.4.1</li>
+</ul>
+<p>The endpoints are published in the /.well-known/openid-configuration document, under the keys  &quot;fido_uaf_registration_request_endpoint&quot;,  &quot;fido_uaf_registration_response_endpoint&quot;, &quot;fido_uaf_deregistration_endpoint&quot; and &quot;fido_uaf_authentication_request_endpoint&quot;</p>
+<h3>6.2 FIDO UAF registration flow</h3>
+<p>Figure 4 below is a non-normative illustration of the FIDO UAF Registration flow (taken from the FIDO UAF Architectural Overview document [15]). The process is initiated after user authentication using the standard NHS login OIDC Authorization Code Flow (as per section 3.1 of this specification).</p>
+<p>The client initiates registration by invoking the regRequest endpoint of the NHS login platform (1). The NHS login platform generates a FIDO UAF Registration Request Message and returns this to the client, which passes it to the FIDO Client on the device for processing (2). The FIDO Client interacts with the FIDO Authenticators on the user’s device (3) and creates a FIDO UAF Registration Response Message corresponding to the original FIDO UAF Registration Request Message. The FIDO Client passes this message back to the client which sends it to the regResponse endpoint of the NHS login service (4). The NHS login platform validates the details held within the FIDO UAF Registration Response Message and stores the relevant details (5). FIDO UAF registration is complete.</p>
+<p>INSERT DIAGRAM</p>
+<p><strong>6.2.1	Registration Request endpoint</strong></p>
+<p><strong>6.2.1.1	Request Syntax</strong></p>
+<p>The Client sends the request for a FIDO UAF Registration Request Message using HTTP GET.</p>
+<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.</p>
+<p>The following is a non-normative example of a regRequest Request:</p>
+<pre class="language-html"><code class="language-html">GET /regRequest HTTP/1.1<br>Host: uaf.prod.signin.nhs.uk<br>Authorization: Bearer SlAV…32hkKG</code></pre>
+<p><strong>6.2.1.2	Registration Request Validation</strong></p>
+<p>The access token presented in the request is validated prior to generating a FIDO UAF Registration Response Message as per section 3.4.6.1 of the FIDO UAF Protocol Specification.</p>
+<p><strong>6.2.1.3	Registration Request Response</strong></p>
+<p>The response from the Registration Request endpoint will be a FIDO UAF Registration Request Message as per section 3.4.1 of the FIDO UAF Protocol Specification.</p>
+<p>The following is a non-normative example of a response from the Registration Request endpoint:</p>
+<p><em>The contents have been truncated for legibility</em></p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>[{"header": {"upv": {"major": 1,"minor": 0},<br>"op": "Reg",<br>"appID": "https://uaf-test-1.noknoktest.com:8443/SampleApp/uaf/facets",<br>"serverData": "Ijycj…VbOnvg", "exts":[{"id":"fido.uaf.uvm", "data":"", "fail_if_unknown":true}]},<br>"challenge": "H9iW9yA9aAXF_lelQoi_DhUk514Ad8Tqv0zCnCqKDpo",<br>"username": "apa",<br>"policy": {"accepted": [[{<br>"userVerification": 512,<br>"keyProtection": 1,<br>"tcDisplay": 1,<br>"authenticationAlgorithms": [1],<br>"assertionSchemes": ["UAFV1TLV"]<br>}],<br>…<br>…],<br>"disallowed": [{"userVerification": 512,<br>"keyProtection": 16,<br>"assertionSchemes": ["UAFV1TLV"]},<br>…<br>…]}}]</code></pre>
+<p><strong>6.2.2	Registration Response endpoint</strong></p>
+<p><strong>6.2.2.1	Request Syntax</strong></p>
+<p>The Client sends the FIDO UAF Registration Response Message (as per section 3.4.4 of the FIDO UAF Protocol Specification) to the Registration Response endpoint using HTTP POST.</p>
+<p>The following is a non-normative example of a regResponse Request:</p>
+<p><em>The contents have been truncated for legibility</em></p>
+<pre class="language-html"><code class="language-html">POST /regResponse HTTP/1.1<br>Host: uaf.prod.signin.nhs.uk<br>Content-Type: application/json<br><br>[{"assertions": [{"assertion": "AT7uAgM…cSNmQ",<br>"assertionScheme": "UAFV1TLV"<br>}],<br>"fcParams": "eyJhcH…hcHAifQ",<br>"header": {"appID": "https://uaf-test-1.noknoktest.com:8443/SampleApp/uaf/facets",<br>"op": "Reg",<br>"serverData": "IjycjPZ…WVbOnvg",<br>"upv": {"major": 1,<br>"minor": 0}, "exts":[{"id":"fido.uaf.uvm", "data":"", "fail_if_unknown":true}]}}]</code></pre>
+<p><strong>6.2.2.2	Registration Response Request Validation</strong></p>
+<p>The FIDO UAF Registration Response Message is validated and processed as per section 3.4.6.5 of the FIDO UAF Protocol Specification.</p>
+<p><strong>6.2.2.3	Registration Response Response</strong></p>
+<p>The response from the Registration Response endpoint will be a list of Registration records stored within the NHS login platform.</p>
+<p>The following is a non-normative example of a successful response from the Registration Response endpoint:</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>[{<br>  "attestDataToSign": "Az6…pSDg==",<br>  "attestSignature": "4PZZ…Rw==",<br>  "attestVerifiedStatus": "VALID",<br>  "authenticator": {<br>    "AAID": "107968223",<br>    "deviceId": null,<br>    "KeyID": "ODY4MjIz",<br>    "status": null,<br>    "username": "8f7…2a4"<br>  },<br>  "authenticator_string": "107968223#ODY4MjIz",<br>  "AuthenticatorVersion": "0.0",<br>  "PublicKey": "MFkw…pSDg==",<br>  "status": "SUCCESS",<br>  "timeStamp": "1547727594654",<br>  "username": "8f7…72a4"<br>}]</code></pre>
+<h3>6.3	FIDO UAF authentication flow</h3>
+<p>Figure 5 below is a non-normative illustration of the FIDO UAF Authentication flow (taken from the FIDO UAF Architectural Overview document [15]). The process is initiated after FIDO UAF registration has been completed.</p>
+<p>The client initiates authentication by invoking the authRequest endpoint of the NHS login platform (1). The NHS login platform generates a FIDO UAF Authentication Request Message and returns this to the client, which passes it to the FIDO Client on the device for processing (2). The FIDO Client interacts with the FIDO Authenticators on the user’s device (3) and creates a FIDO UAF Authentication Response Message corresponding to the original FIDO UAF Registration Request Message. The FIDO Client passes this message back to the client which sends it to the NHS login service as a base64-URL encoded parameter in an OpenID Connect Authentication Request(4) (see fido_auth_response parameter in section 3.4.1 of this document). The NHS login platform validates the FIDO UAF Authentication Response Message using the public key for the user stored in the NHS login FIDO registry (5) and if validated treats this as a successful authentication using an authentication vector of “Cm” (see section 5.1.2 of this document).</p>
+<p>INSERT DIAGRAM</p>
+<p><strong>6.3.1	Authentication Request endpoint</strong></p>
+<p><strong>6.3.1.1	Request Syntax</strong></p>
+<p>The Client sends the request for a FIDO UAF Authentication Request Message using HTTP GET.</p>
+<p>The following is a non-normative example of an authRequest Request:</p>
+<pre class="language-html"><code class="language-html">GET /authRequest HTTP/1.1<br>Host: uaf.prod.signin.nhs.uk</code></pre>
+<p><strong>6.3.1.2	Authentication Request Validation</strong></p>
+<p>No specific validation of the request is performed</p>
+<p><strong>6.3.1.3	Authentication Request Response</strong></p>
+<p>The response from the Authentication Request endpoint will be a FIDO UAF Authentication Request Message as per section 3.5.2 of the FIDO UAF Protocol Specification.</p>
+<p>The following is a non-normative  example of a response from the Authentication Request endpoint:</p>
+<p><em>The contents have been truncated for legibility</em></p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>[{"header": {"upv": {"major": 1,"minor": 0},<br>"op": "Reg",<br>"appID": "https://uaf-test-1.noknoktest.com:8443/SampleApp/uaf/facets",<br>"serverData": "Ijycj…VbOnvg", "exts":[{"id":"fido.uaf.uvm", "data":"", "fail_if_unknown":true}]},<br>"challenge": "H9iW9yA9aAXF_lelQoi_DhUk514Ad8Tqv0zCnCqKDpo",<br>"username": "apa",<br>"policy": {"accepted": [[{<br>"userVerification": 512,<br>"keyProtection": 1,<br>"tcDisplay": 1,<br>"authenticationAlgorithms": [1],<br>"assertionSchemes": ["UAFV1TLV"]<br>}],<br>…<br>…],<br>"disallowed": [{"userVerification": 512,<br>"keyProtection": 16,<br>"assertionSchemes": ["UAFV1TLV"]},<br>…<br>…]}}]</code></pre>
+<h3>6.4	FIDO UAF deregistration flow</h3>
+<p>Figure 6 below is a non-normative illustration of the FIDO UAF Deregistration flow (taken from the FIDO UAF Architectural Overview document [15]). The process can be initiated after FIDO UAF registration has been completed.</p>
+<p>The client initiates authenticator deregistration by invoking the deregRequest endpoint of the NHS login platform (1). The request MUST include the Access Token obtained from an OpenID Connect Authentication Request, which MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.  The request can either be a list of authenticators to be deregistered (sent using HTTP POST) or a request to remove all authenticators for the user (using a HTTP GET). The NHS login platform generates a FIDO UAF Deregistration Request Message, removes the relevant authenticator records from the NHS login FIDO registry and returns the message to the client. The client passes the FIDO UAF Deregistration Request Message to the FIDO Client on the device for processing (3) and removal of authenticators from the device.</p>
+<p>INSERT DIAGRAM</p>
+<p><strong>6.4.1	Deregistration Request endpoint</strong></p>
+<p><strong>6.4.1.1	Request Syntax</strong></p>
+<p>The Client either sends a FIDO UAF Deregistration Request Message (as per section 3.6.1 of the FIDO UAF Protocol Specification) to the Deregistration Request endpoint using HTTP POST or can make a HTTP GET to the endpoint with no body.</p>
+<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.</p>
+<p>The following is a non-normative  example of a deregRequest HTTP POST Request:</p>
+<p><em>The contents have been truncated for legibility</em></p>
+<pre class="language-html"><code class="language-html">POST /deregRequest HTTP/1.1<br>Host: uaf.prod.signin.nhs.uk<br>Content-Type: application/json<br>Authorization: Bearer SlAV3…2hkKG<br><br>[{"header": {"appID": "https://uaf-test-1.noknoktest.com:8443/SampleApp/uaf/facets",<br>"op": "Reg",<br>"serverData": "IjycjPZ…WVbOnvg",<br>"upv": {"major": 1,<br>"minor": 0}, "exts":[{"id":"fido.uaf.uvm", "data":"", "fail_if_unknown":true}]}, "authenticators": [{"aaid": "ABCD#ABCD", "keyID": "ZMC…JfNg"}]}]</code></pre>
+<p>The following is a non-normative example of a deregRequest HTTP GET Request:</p>
+<pre class="language-html"><code class="language-html">GET /deregRequest HTTP/1.1<br>Host: uaf.prod.signin.nhs.uk<br>Authorization: Bearer SlAV3…2hkKG</code></pre>
+<p><strong>6.4.1.2	Deregistration Request Request Validation</strong></p>
+<p>The access token is validated, and the NHS login user account details are retrieved.</p>
+<p>For HTTP POST processing, each authenticator provided in the message is removed from the NHS login FIDO registry once it has been validated as relating to the NHS login user account.</p>
+<p>For HTTP GET processing, each authenticator stored in the NHS login FIDO registry is identified for the NHS login user account and subsequently removed.</p>
+<p>The FIDO UAF Registration Response Message is validated and processed as per section 3.4.6.5 of the FIDO UAF Protocol Specification.</p>
+<p><strong>6.4.1.3	Deregistration Request Response</strong></p>
+<p>The response from the Deregistration Request endpoint will be a FIDO UAF Deregistration Request Message listing the authenticator records removed from the NHS login FIDO registry.</p>
+<p>The following is a non-normative example of a successful response from the Deregistration Request endpoint:</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>[{"header": {"appID": "https://uaf-test-1.noknoktest.com:8443/SampleApp/uaf/facets",<br>"op": "Reg",<br>"serverData": "IjycjPZ…WVbOnvg",<br>"upv": {"major": 1, "minor": 0}}, <br>"authenticators": [{"aaid": "ABCD#ABCD", "keyID": "ZMC…JfNg"}]}]</code></pre>
+<h3>6.5	Platform Restrictions</h3>
+<p>This section details specific restrictions implemented within the NHS login FIDO processing.</p>
+<p><strong>6.5.1	Authenticator Policy Matching Criteria</strong></p>
+<p>As the NHS login platform is designed for public use, restricting authenticators by device or manufacturer (i.e. via facets) is not an appropriate authenticator matching policy. Instead the platform specifies matching criteria based on User Verification Method, Authentication Algorithm, Assertion Scheme (fixed value of “UAFV1TLV”) and Key Protection.</p>
+<p><strong>User Verification Methods</strong></p>
+<p>The platform will accept authenticators which support Presence AND Fingerprint (1027), OR Presence AND Faceprint (1041), OR Presence AND Handprint (1281) (see FIDO UAF Registry of Predefined Values [16], section 3.1)</p>
+<p>If a FIDO UAF Registration Request Message or FIDO UAF Authentication Request Message header contains an extension with an id of “fido.uaf.uvm” then the User Verification Method utilised by the authenticator MUST be returned in the assertion, as a TAG_EXTENSION tag to the TAG_UAFV1_KRD tag (for Registration – see FIDO UAF Authenticator Commands [17] section 6.1.1.1) or TAG_UAFV1_SIGNED_DATA tag (for Authentication – see FIDO UAF Authenticator Commands [17] section 6.1.1.2). The data held in the TAG_EXTENSION_ID tag of the extension tag MUST equal “fido.uaf.uvm”, and the data held in the TAG_EXTENSION_DATA tag  of the extension tag MUST contain the User Verification Method and the value MUST match a User Verification Method value in an accepted Matching Criteria of the relevant Request Message Policy.</p>
+<p><strong>Authentication Algorithms</strong></p>
+<p>The NHS login platform supports the ECDSA family of signing algorithms. Specific values supported are UAF_ALG_SIGN_SECP256R1_ECDSA_SHA256_RAW, UAF_ALG_SIGN_SECP256R1_ECDSA_SHA256_DER, UAF_ALG_SIGN_SECP256K1_ECDSA_SHA256_RAW or UAF_ALG_SIGN_SECP256K1_ECDSA_SHA256_DER. See FIDO UAF Registry of Predefined Values [15] for specific details.</p>
+<p><strong>Key Protection</strong></p>
+<p>The NHS login platform supports on-device key protection mechanisms. Specific values supported are KEY_PROTECTION_SOFTWARE, KEY_PROTECTION_HARDWARE, KEY_PROTECTION_TEE or KEY_PROTECTION_SECURE_ELEMENT. See FIDO UAF Registry of Predefined Values [15] for specific details.</p>
+<p><strong>6.5.2	Public Key Representation Formats</strong></p>
+<p>Clients MUST utilise either UAF_ALG_KEY_ECC_X962_RAW or UAF_ALG_KEY_ECC_X962_DER formats for the TAG_PUB_KEY to align with supported Authentication Algorithms.</p>
+<hr>
+<h2>7 Partner Services and Security</h2>
+<h3>7.1	Partner Service Registration</h3>
+<p>Currently, Partner Services will be registered and onboarded into the NHS login Platform using a standard offline process.</p>
+<p>The following information is required is required for the offline registration process:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redirect URIs</td>
+<td>List of Redirection URI values used by the Client. <br>The redirect_uri parameter value used in each Authorization Request MUST exactly match one of these registered Redirection URI values</td>
+</tr>
+<tr>
+<td>Client Name</td>
+<td>Name of the Client to be presented to the End-User</td>
+</tr>
+<tr>
+<td>Public Key</td>
+<td>A copy of the client’s public key is supplied. The public key must be in PEM format and represent a 2048-bit RSA keypair*.</td>
+</tr>
+<tr>
+<td>Scopes</td>
+<td>Required scopes</td>
+</tr>
+</tbody>
+</table>
+<p>On successful registration, the following information will be provided</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Req?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_id</code></td>
+<td>mand</td>
+<td>string</td>
+<td>Id for the client, allocated by the NHS login service</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>An example use of OpenSSL to generate a RSA public/private key pair and then extract the public key is as follows:</em></p>
+<pre class="language-html"><code class="language-html">openssl genpkey -algorithm RSA -out ../keys/private_key.pem -outform PEM -aes-256-cbc -pass file:../keys/password.txt -pkeyopt rsa_keygen_bits:2048<br>openssl rsa -pubout -in ../keys/private_key.pem -out ../keys/public_key.pem -passin file:../keys/password.txt</code></pre>
+<h3>7.2 Partner Service Authentication</h3>
+<p>Reference:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 9</li>
+</ul>
+<p><strong>7.2.1 Confidential Clients</strong></p>
+<p>Partner Services which are confidential clients will use the following authentication mechanism:</p>
+<ul>
+<li>private_key_jwt, as per https://tools.ietf.org/html/rfc7523</li>
+</ul>
+<p>The authentication mechanism of “none” is not supported for confidential clients</p>
+<h3>7.3	Client Redirects</h3>
+<p>The NHS login Platform will only allow redirect URIs which have been pre-agreed during the onboarding process.</p>
+<p>Wildcard URIs are not permitted.</p>
+<p>HTTP URIs are NOT permitted</p>
+<p>URIs with querystring parameters are not permitted. (The 'state' parameter described in section 3.4 is designed to support conveying dynamic request content within the OIDC authentication request.)</p>
+<hr>
+<h2>8 References</h2>
+<ul>
+<li>OpenID Foundation, <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0 incorporating errata set 1</a></li>
+<li>OpenID Connect Foundation, <a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov) for OpenID Connect 1.0</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc8485">RFC8485:Vectors of Trust</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc7519">RFC7519: JSON Web Token (JWT)</a></li>
+<li>OpenID Foundation, <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">OAuth 2.0 Multiple Response Type Encoding Practices</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc6750">RFC6750: OAuth 2.0 Bearer Token Usage</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc7515">RFC7515 - JSON Web Signature (JWS)</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 - Date and Time on the Internet: Timestamps</a></li>
+<li>OpenID Foundation, <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID Provider Authentication Policy Extension 1.0</a></li>
+<li>NHS Digital, <a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a></li>
+<li>NHS Digital, <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a></li>
+<li>Cabinet Office, <a href="https://www.gov.uk/government/publications/authentication-credentials-for-online-government-services">GPG44 - Authentication credentials for online government services</a></li>
+<li>Cabinet Office, <a href="https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual">GPG45 - Identity proofing and verification of an individual</a></li>
+<li>FIDO Alliance, <a href="https://fidoalliance.org/specifications/download/">FIDO Universal Authentication Framework</a></li>
+<li>FIDO Alliance, <a href="https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html">FIDO UAF Registry of Predefined Values</a></li>
+<li>FIDO Alliance, <a href="https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html">FIDO UAF Authenticator Commands</a></li>
+<li>OpenID Foundation, <a href="http://openid.net/2015/05/26/enhancing-oauth-security-for-mobile-applications-with-pkse/">Enhancing OAuth Security for Mobile Applications with PKCE</a></li>
+<li>NHS Digital, <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a></li>
+</ul>
 <hr>
 <h2>9 Document Management</h2>
 <p><strong>Revision History</strong></p>
@@ -1692,7 +2173,7 @@
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-t.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-0.md">this page</a> on GitHub
               </p>
       </div>
 

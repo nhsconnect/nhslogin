@@ -374,7 +374,7 @@
             </h1>
 
             <h2>Managing NHS login</h2>
-<p>NHS login provides capability for users to change their NHS login settings online, helping to reduce support overheads.</p>
+<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks. To help users do this NHS login needs partner services to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
 <h3>NHS login currently allows users to:</h3>
 <ul>
 <li>change their email address</li>
@@ -382,31 +382,25 @@
 <li>change their mobile phone number</li>
 <li>delete their NHS login</li>
 </ul>
-<p>To help users do this, NHS login needs you to create a link from your service to the <a href="https://settings.login.nhs.uk">NHS login settings page</a>.</p>
+<p>To help users do this, NHS login needs you to create a link from your service to the NHS login settings page:</p>
+<p>INSERT SCREENSHOT OF THE SETTINGS PAGE.</p>
 <hr>
 <h2>Technical details</h2>
-<p>Please refer to <a href="/nhslogin/interface-spec-doc/">NHS login Interface Specification - Federated document</a>, for most up-to-date technical details.</p>
 <p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login Settings” functionality from the partner service without the need for re-authentication.</p>
 <ol>
 <li><code>asserted_login_identity</code> will be a querystring parameter</li>
 <li>parameter content is a signed <code>jwt</code></li>
 <li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
 </ol>
-<p>Refer to the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation document</a> for technical details. In the context of document :</p>
+<p>Refer to the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> for technical details. In the context of document :</p>
 <ul>
 <li>RP1 is partner service</li>
 <li>RP2 is NHS login</li>
 </ul>
-<h3>parameter: asserted_login_identity</h3>
-<p>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available.</p>
-<p>The content will be a signed jwt with payload containing <code>code</code> attribute with the value being that of the <code>jti</code> attribute from the ID Token issued to RP1. The <code>jwt “iss&quot;</code> attribute <strong>must</strong> contain the client_id of RP1, the jwt <strong>must</strong> have an <code>“exp”</code> of no longer that 60 seconds, <strong>must</strong> have <code>“jti”</code> and <code>“iat”</code> attributes (as per RFC7519) and <strong>must</strong> be signed by RP1 using its client private key. RP1 passes the <code>jwt</code> to RP2 for RP2 to use in its authentication request.</p>
-<p>A non-normative example jwt payload section is as follows:</p>
-<pre class="language-html"><code class="language-html">{<br>  code: “eeroifoteiwrudjdwusdu”,<br>  iss: “client1”,<br>  jti: “reioteotijdvorijevoihroi”,<br>  iat: 1548701645,<br>  exp: 1548701705<br>}</code></pre>
-<hr>
-<h2>Settings flow</h2>
+<h3>User settings flow</h3>
 <p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
 <hr>
-<h2>Settings page link details</h2>
+<h2>User settings page links</h2>
 <p><strong>Production:</strong></p>
 <p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
 <p><strong>Other environments:</strong></p>

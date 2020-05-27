@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>GP Credentials</title>
+<title>Introduction</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -370,61 +370,35 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              GP Credentials
+              Introduction
             </h1>
 
-            <h2>Introduction</h2>
-<p>If you are an IM1 supplier, learn how to use NHS login to create or retrieve GP credentials. This means users do not have to go their GP practice to register for your service.</p>
-<p>NHS login supports a scope of <code>gp_integration_credentials</code> which will allow a Relying Party (RP) to retrieve the following user claims:</p>
-<ul>
-<li>Account ID</li>
-<li>ODS Code</li>
-<li>Linkage Key</li>
-</ul>
-<p>These three pieces of information are required by IM1 paired services to create an IM1 token which is then used by the RP to invoke the GP system patient facing APIs.</p>
-<p>The RP (service) must be IM1 enabled for enabling this scope in production environment.</p>
-<p>Retrieving these items of information via NHS login removes the need for the user to enter them manually, as well as being able to seamlessly register previously unregistered GP Online users – preventing a visit to a GP Practice.</p>
-<p><img src="nhslogin/images/gp-credentials-diagram.png" alt="Diagram"></p>
-<p>This diagram illustrates</p>
-<ol>
-<li>How NHS login processes a request from an RP for <code>gp_integration_credentials</code> via the <strong>/userinfo</strong> endpoint</li>
-<li>How NHS login validates <code>gp_integration_credentials</code> on each request and how <code>gp_integration_credentials</code> are refreshed if the information held by NHS login is invalid</li>
-</ol>
+            <h2>1.1 Purpose of document</h2>
+<p>NHS login implements OpenID Connect 1.0 OpenID Provider role to assert the identity of the End-User to a Partner Service, as well as enabling the Service to obtain basic profile information about the End-User in an interoperable manner.</p>
+<p>This document defines the interfaces implemented by the Platform and describes the data flows supported by these interfaces.</p>
 <hr>
-<h2>GP integration credentials validation</h2>
-<p>When <code>gp_integration_credentials</code> scope is requested by an RP, NHS login performs a background check of the validity of a stored IM1 token. As this check runs in the background asynchronously, it is the responsibility of the RP to also validate their IM1 token (if one exists).</p>
-<p>If the RP determines that the claims returned from <code>gp_integration_credentials</code> scope are not valid it can request refreshed claims from NHS login by re-starting the login process.</p>
-<p>Optional - the RP can utilise the <code>asserted_login_identity</code> request parameter to avoid the user needing to re-authenticate.</p>
-<hr>
-<h2>GP integration credentials are no longer valid</h2>
-<p>The GP credentials might no longer be valid due to:</p>
-<ol>
-<li>The user has moved GP Practice</li>
-<li>The GP Practice has changed GP systems</li>
-<li>Practices merge / divides</li>
-<li>The user’s GP online access been revoked at the GP system e.g. for multiple failed login attempts</li>
-</ol>
-<p>In cases 1, 2 and 3 generally the ODS code for the user changes and will be detected by NHS login automatically via a separate background process that validates PDS information relating to the user.</p>
-<h3>Assumptions</h3>
+<h2>1.2 Audience</h2>
+<p>The primary audiences for this document are:</p>
 <ul>
-<li>When GP credentials (linkage keys) expire or get invalidated all the IM1 tokens generated using them also expire/get invalidated. So in case the RP has any process to expire or invalidate the GP credentials (linkage keys) then it should be disclosed/discussed with NHS login.</li>
-<li>RP should cater for user journey which prevents the user getting into an endless “retrieve GP credential” loop if the credentials genuinely can’t be retrieved.</li>
+<li>NHS login Programme team</li>
+<li>NHS Digital – Digital Delivery Centre</li>
+<li>NHS Digital – Other Delivery teams</li>
+<li>NHS England</li>
+<li>3rd Party Suppliers integrating with the NHS Digital NHS login Platform</li>
 </ul>
 <hr>
-<h2>GP systems coverage</h2>
-<p>Currently NHS login provides coverage for GP login credentials</p>
+<h2>1.3 Definitions</h2>
+<p>Where used in this document set, the keywords <strong>must</strong>, <strong>should</strong> and <strong>may</strong> are to be interpreted as follows:</p>
 <ul>
-<li>EMIS: 100%</li>
-<li>TPP: 100%</li>
-<li>Vision: 100% (250 in total)</li>
-<li>Microtest*: None (36 in total)</li>
+<li><strong>must</strong>: This word, or the terms &quot;<strong>required</strong>&quot; or &quot;<strong>shall</strong>&quot;, means that the definition is an absolute requirement of the specification.</li>
+<li><strong>should</strong>: This word, or the adjective &quot;<strong>recommended</strong>&quot;, means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications MUST be understood and carefully weighed before choosing a different course.</li>
+<li><strong>may</strong>: This word, or the adjective &quot;<strong>optional</strong>”, means that an item is truly optional. One implementer may choose to include the item because a particular implementation requires it or because the implementer feels that it enhances the implementation while another implementer may omit the same item.  An implementation which does not include a particular option <strong>must</strong> be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option <strong>must</strong> be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides).</li>
 </ul>
-<p>*<em>GP login credentials (linkage keys) for Microtest returned by NHS login are dummy in nature, to maintain the uniform behaviour of the service. These GP login credentials cannot be used by RPs for connecting to Microtest.</em></p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/gp-credentials-para2.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-1.md">this page</a> on GitHub
               </p>
       </div>
 
