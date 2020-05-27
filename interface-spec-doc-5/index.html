@@ -380,6 +380,7 @@
 <p>NHS login supports Vectors of Trust for Identification Verification and Authentication. Credential Management and Assertion Presentation are out of scope.</p>
 <h3>5.1.1 Verification of Identity Levels</h3>
 <p>NHS login supports the following levels of identification verification. These are based upon <a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a>.</p>
+<dl><dt>Table 18 - NHS login Verification Levels</dt></dl>
 <table>
 <thead>
 <tr>
@@ -403,7 +404,8 @@
 </tbody>
 </table>
 <h3>5.1.2 Authentication Credentials</h3>
-<p>NHS login supports the following types of authentication credentials.  Note that the credential component may occur more than once</p>
+<p>NHS login supports the following types of authentication credentials.  Note that the credential component may occur more than once.</p>
+<dl><dt>Table 19 - NHS login Authentication Context Class</dt></dl>
 <table>
 <thead>
 <tr>
@@ -431,7 +433,7 @@
 </tbody>
 </table>
 <h3>5.1.3	Requesting Vectors of Trust values</h3>
-<p>Vector of Trust (VoT) is a combination of - Identity Verification (defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">section 5.1.1 - Verification of Identity Levels</a>) and Authentication (defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">section 5.1.2 – Authentication Credentials</a>) levels.</p>
+<p>Vector of Trust (VoT) is a combination of - Identity Verification (defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.1 Verification of Identity Levels</a>) and Authentication (defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.2 Authentication Credentials</a>) levels.</p>
 <p>The client <strong>MAY</strong> request a set of acceptable VoT values with the <code>vtr</code> (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components. The component values within each vector are <strong>AND</strong>ed together while the separate vectors are <strong>OR</strong>ed together.  For example, a list of vectors in the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Ck&quot;]</code> is stating that either the full set of &quot;P9 <strong>AND</strong> Cp <strong>AND</strong> Cd&quot; simultaneously <strong>OR</strong> the full set of &quot;P9 <strong>AND</strong> Ck&quot; simultaneously are acceptable for this transaction.</p>
 <p>The requested set of VoT, <strong>SHOULD</strong> only contain one value for Identity Verification component, combined with one or more values of the Authentication component.</p>
 <p>Client <strong>SHOULD</strong> only request the lowest level of acceptable Identity Verification, within the VoT set. Vector request values <strong>MAY</strong> omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.</p>
@@ -447,7 +449,7 @@
 </ul>
 <p>The Trustmark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.</p>
 <p>The NHS login Trustmark will be self-hosted.</p>
-<p>The following is a non-normative example a Trustmark based on <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">section 5.1.3 - Requesting Vectors of Trust values</a> and <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">section 5.1.4 - Returning Vectors of Trust values</a> above:</p>
+<p>The following is a non-normative example a Trustmark based on <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.3 Requesting Vectors of Trust values</a> and <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.4 Returning Vectors of Trust values</a> above:</p>
 <pre class="language-html"><code class="language-html">{<br>  "idp": "https://auth.login.nhs.uk/",<br>  "trustmark_provider": "https://auth.login.nhs.uk/",<br>  "P": ["P0", "P3", "P5", "P6", "P7", "P9"],<br>  "C": ["Cp", "Cd", "Ck", "Cm"]<br>}</code></pre>
 <h3>5.1.6	Profiles</h3>
 <p>Aligning the above to the standard <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a> brings a standard set of vectors supported by the NHS login Service, described in the table below.</p>
@@ -516,7 +518,7 @@
 <p><code>“[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]”</code></p>
 <p><strong>5.1.6.4	The user is prompted to undertake a verification step-up journey to take the user verification level from Medium to High.Single Sign-on</strong></p>
 <p>If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (<code>vtr</code>) in the incoming request, then the user will be required to sign-in, in order to meet the requested vectors.</p>
-<p>Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the <code>prompt</code> parameter on the initial authorisation request – see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3">section 3.4.1 - INSERT NAME</a>.</p>
+<p>Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the <code>prompt</code> parameter on the initial authorisation request – see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3">3.4.1 Authentication request</a>.</p>
 
 
      <div class="app-edit-instructions">

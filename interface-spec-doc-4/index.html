@@ -380,6 +380,7 @@
 <li><a href="https://tools.ietf.org/html/rfc7515">RFC7515 – JSON Web Signature (JWS)</a></li>
 </ul>
 <p>The JWT header will contain the following claims:</p>
+<dl><dt>Table 15 - JWT Header</dt></dl>
 <table>
 <thead>
 <tr>
@@ -436,10 +437,11 @@
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a></li>
 </ul>
 <p>The following Claims are used within the ID Token for all Oauth 2.0 flows used by OpenID Connect:</p>
+<dl><dt>Table 16.1 - id_token claims, standard</dt></dl>
 <table>
 <thead>
 <tr>
-<th>Claim - standard</th>
+<th>Claim</th>
 <th>Req?</th>
 <th>Name</th>
 <th>Description</th>
@@ -456,25 +458,25 @@
 <td><code>sub</code></td>
 <td>mand</td>
 <td>Subject Identifier</td>
-<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., <code>24400320</code> or <code>AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4</code> <br> It <strong>SHALL NOT</strong> exceed 255 ASCII characters in length. <br> The <code>sub</code> value is a case sensitive string.</td>
+<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., <code>24400320</code> or <code>AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4</code>. <br>It <strong>SHALL NOT</strong> exceed 255 ASCII characters in length. <br> The <code>sub</code> value is a case sensitive string.</td>
 </tr>
 <tr>
 <td><code>aud</code></td>
 <td>mand</td>
 <td>Audience(s) that this ID Token is intended for</td>
-<td>It <strong>SHALL</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Services as an audience value. It <strong>MAY</strong> also contain identifiers for other audiences. In the general case, the <code>aud</code> value is an array of case sensitive strings. In the common special case when there is one audience, the <code>aud</code> value <strong>SHALL</strong> be a single case sensitive string.</td>
+<td>It <strong>SHALL</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Services as an audience value. It <strong>MAY</strong> also contain identifiers for other audiences. <br>In the general case, the <code>aud</code> value is an array of case sensitive strings. <br>In the common special case when there is one audience, the <code>aud</code> value <strong>SHALL</strong> be a single case sensitive string.</td>
 </tr>
 <tr>
 <td><code>exp</code></td>
 <td>mand</td>
 <td>Expiration time on or after which the ID Token <strong>MUST NOT</strong> be accepted for processing</td>
-<td>The processing of this parameter requires that the current date/time <strong>MUST</strong> be before the expiration date/time listed in the value. Implementers <strong>MAY</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
+<td>The processing of this parameter requires that the current date/time <strong>MUST</strong> be before the expiration date/time listed in the value. <br>Implementers <strong>MAY</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. <br>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
 </tr>
 <tr>
 <td><code>iat</code></td>
 <td>mand</td>
 <td>Time at which the JWT was issued</td>
-<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
 </tr>
 <tr>
 <td><code>jti</code></td>
@@ -486,13 +488,13 @@
 <td><code>auth_time</code></td>
 <td>cond</td>
 <td>Time when the End-User authentication occurred</td>
-<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br> When a <code>max_age</code> request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>REQUIRED</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. (The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter).</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a <code>max_age</code> request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>REQUIRED</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. <br>(The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter).</td>
 </tr>
 <tr>
 <td><code>nonce</code></td>
 <td>cond</td>
 <td>String value used to associate a Client session with an ID Token, and to mitigate replay attacks</td>
-<td>The value is passed through unmodified from the Authentication Request to the ID Token. <br> If present in the ID Token, Clients <strong>MUST</strong> verify that the nonce Claim Value is equal to the value of the nonce parameter sent in the Authentication Request. <br> If present in the Authentication Request, the Platform <strong>MUST</strong> include a nonce Claim in the ID Token with the Claim Value being the nonce value sent in the Authentication Request. <br>The Platform will perform no other processing on nonce values used. <br> The nonce value is a case sensitive string.</td>
+<td>The value is passed through unmodified from the Authentication Request to the ID Token. <br>If present in the ID Token, Clients <strong>MUST</strong> verify that the nonce Claim Value is equal to the value of the nonce parameter sent in the Authentication Request. <br>If present in the Authentication Request, the Platform <strong>MUST</strong> include a nonce Claim in the ID Token with the Claim Value being the nonce value sent in the Authentication Request. <br>The Platform will perform no other processing on nonce values used. <br>The nonce value is a case sensitive string.</td>
 </tr>
 <tr>
 <td><code>acr</code></td>
@@ -516,13 +518,13 @@
 <td><code>vot</code></td>
 <td>mand</td>
 <td>Vectors of Trust</td>
-<td>The level to which the user’s identity has been verified. <br>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">s5.1 - INSERT NAME</a> for values.</td>
+<td>The level to which the user’s identity has been verified. <br>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1 Vectors of Trust</a> for values.</td>
 </tr>
 <tr>
 <td><code>vtm</code></td>
 <td>mand</td>
 <td>Vector Trust Mark</td>
-<td>https URI of the vtm claim <br>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">s5.1.5 - INSERT NAME</a>.</td>
+<td>https URI of the vtm claim <br>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.5 Trustmark</a>.</td>
 </tr>
 <tr>
 <td><code>family_name</code></td>
@@ -538,10 +540,11 @@
 </tr>
 </tbody>
 </table>
+<dl><dt>Table 16.2 - id_token claims, NHS login extensions</dt></dl>
 <table>
 <thead>
 <tr>
-<th>Claim - NHS login extensions</th>
+<th>Claim</th>
 <th>Req?</th>
 <th>Name</th>
 <th>Description</th>
@@ -552,17 +555,17 @@
 <td><code>nhs_number</code></td>
 <td>cond</td>
 <td>NHS Number</td>
-<td>If the user’s NHS Number is known, then it <strong>SHALL</strong> be included (subject to the profile scope being requested). Will be represented as a 10-digit string.</td>
+<td>If the user’s NHS Number is known, then it <strong>SHALL</strong> be included (subject to the profile scope being requested). <br>Will be represented as a 10-digit string.</td>
 </tr>
 <tr>
 <td><code>identity_proofing_level</code></td>
 <td>cond</td>
 <td>Identity Proofing Level</td>
-<td>User’s identity proofing level shall be included (subject to the profile scope being requested). It will contain one of the values defined in section 5.1.1 -Verification of Identity Levels and Table 18 – e.g. “P0”, “P9”.</td>
+<td>User’s identity proofing level shall be included (subject to the profile scope being requested). <br>It will contain one of the values defined in section <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.1 Verification of Identity Levels</a> and Table 18 – e.g. “P0”, “P9”.</td>
 </tr>
 </tbody>
 </table>
-<p>ID Tokens MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<p>ID Tokens <strong>MAY</strong> contain other Claims. Any Claims used that are not understood <strong>MUST</strong> be ignored by the RP.</p>
 <p>The following is a non-normative example of the set of Claims (the JWT Claims Set) in an ID Token:</p>
 <pre class="language-html"><code class="language-html">  {<br>   “iss”: “ https://auth.login.nhs.uk”,<br>   “sub”: “24400320”,<br>   “aud”: “s6BhdRkqt3”,<br>   “nonce”: “n-0S6_WzA2Mj”,<br>   “exp”: 1311281970,<br>   “iat”: 1311280970,<br>   “auth_time”: 1311280969,<br>   “vot”: “P9.Ca.Cc”,	<br>   “vtm”: “https://auth.login.nhs.uk/trustmark/auth.login.nhs.uk”<br>   “nhs_number”: “4447685222”,<br>   “birthdate”: “2001-12-30”,<br>   “family_name”: “Johnson”,<br>   “identity_proofing_level”: “P9”<br>  }</code></pre>
 <hr>
@@ -572,6 +575,7 @@
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a></li>
 <li><a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a></li>
 </ul>
+<dl><dt>Table 17.1 - access_token claims, standard</dt></dl>
 <table>
 <thead>
 <tr>
@@ -592,65 +596,65 @@
 <td><code>sub</code></td>
 <td>mand</td>
 <td>Subject Identifier</td>
-<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., 24400320 or AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4. It SHALL NOT exceed 255 ASCII characters in length. <br>The sub value is a case sensitive string</td>
+<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., 24400320 or AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4. <br>It <strong>SHALL NOT</strong> exceed 255 ASCII characters in length. <br>The sub value is a case sensitive string.</td>
 </tr>
 <tr>
 <td><code>aud</code></td>
 <td>mand</td>
 <td>Audience(s) that this ID Token is intended for</td>
-<td>It SHALL contain the Oauth 2.0 client_id of the Partner Service as an audience value. It MAY also contain identifiers for other audiences. In the general case, the aud value is an array of case sensitive strings. In the common special case when there is one audience, the aud value SHALL be a single case sensitive string</td>
+<td>It <strong>SHALL</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Service as an audience value. It <strong>MAY</strong> also contain identifiers for other audiences. <br>In the general case, the <code>aud</code> value is an array of case sensitive strings. <br>In the common special case when there is one audience, the <code>aud</code> value <strong>SHALL</strong> be a single case sensitive string.</td>
 </tr>
 <tr>
 <td><code>exp</code></td>
 <td>mand</td>
-<td>Expiration time on or after which the ID Token MUST NOT be accepted for processing</td>
-<td>The processing of this parameter requires that the current date/time MUST be before the expiration date/time listed in the value. Implementers MAY provide for some small leeway, usually no more than a few minutes, to account for clock skew. Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See RFC 3339 [RFC3339] for details regarding date/times in general and UTC in particular</td>
+<td>Expiration time on or after which the ID Token <strong>MUST NOT</strong> be accepted for processing</td>
+<td>The processing of this parameter requires that the current date/time <strong>MUST</strong> be before the expiration date/time listed in the value. <br>Implementers <strong>MAY</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. <br>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
 </tr>
 <tr>
 <td><code>iat</code></td>
 <td>mand</td>
 <td>Time at which the JWT was issued</td>
-<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. See RFC 3339 [RFC3339] for details regarding date/times in general and UTC in particular</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
 </tr>
 <tr>
 <td><code>jti</code></td>
 <td>mand</td>
 <td>JWT unique identifier</td>
-<td>Value is unique to each token created by the issuer</td>
+<td>Value is unique to each token created by the issue.</td>
 </tr>
 <tr>
 <td><code>scope</code></td>
 <td>mand</td>
-<td>Scopes that the access_token provides access to</td>
-<td>A space-separated list of scopes for which the token is issued.  This list will be scopes requested in the authentication request (see s3.4.1) or a subset of them</td>
+<td>Scopes that the <code>access_token</code> provides access to</td>
+<td>A space-separated list of scopes for which the token is issued. <br>This list will be scopes requested in the authentication request (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.4.1 Authentication request</a>) or a subset of them.</td>
 </tr>
 <tr>
 <td><code>auth_time</code></td>
 <td>cond</td>
 <td>Time when the End-User authentication occurred</td>
-<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a max_age request is made or when auth_time is requested as an Essential Claim, then this Claim is REQUIRED; otherwise, its inclusion is OPTIONAL. (The auth_time Claim semantically corresponds to the OpenID 2.0 PAPE [10] auth_time response parameter.)</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a max_age request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>REQUIRED</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. (The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter.)</td>
 </tr>
 <tr>
 <td><code>acr</code></td>
 <td>n/a</td>
 <td>Authentication Context Class Reference</td>
-<td>Not supported – superseded by vot</td>
+<td>Not supported – superseded by <code>vot</code>.</td>
 </tr>
 <tr>
 <td><code>vot</code></td>
 <td>mand</td>
 <td>Vectors of Trust</td>
-<td>The level to which the user’s identity has been verified. <br>See s5.1 for values</td>
+<td>The level to which the user’s identity has been verified. <br>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5/">5.1 Vectors of Trust</a> for values.</td>
 </tr>
 <tr>
 <td><code>vtm</code></td>
 <td>mand</td>
 <td>Vector Trust Mark</td>
-<td>https URI of the vtm claim <br>See s5.1.5</td>
+<td>https URI of the <code>vtm</code> claim <br>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5/">5.1.5 Trustmark</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>NHS login extensions</strong></p>
+<dl><dt>Table 17.2 - access_token claims, NHS login extensions</dt></dl>
 <table>
 <thead>
 <tr>
@@ -665,11 +669,11 @@
 <td><code>nhs_number</code></td>
 <td>cond</td>
 <td>NHS Number</td>
-<td>If the user’s NHS Number is known, then it SHALL be included (subject to the profile scope being requested). Will be represented as a 10-digit string.</td>
+<td>If the user’s NHS Number is known, then it SHALL be included (subject to the profile scope being requested). <br>Will be represented as a 10-digit string.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Spine Core extensions</strong></p>
+<dl><dt>Table 17.3 - access_token claims, Spine Core extensions</dt></dl>
 <table>
 <thead>
 <tr>
@@ -684,23 +688,23 @@
 <td><code>reason_for_request</code></td>
 <td>opt</td>
 <td>The identified the purpose for which the request is being made.</td>
-<td>Purpose for which access is being requested. Will contain “patientaccess”. See [11]</td>
+<td>Purpose for which access is being requested. Will contain <code>patientaccess</code>. <br>See <a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a>.</td>
 </tr>
 <tr>
 <td><code>requesting_system</code></td>
 <td>opt</td>
 <td>Identifier for the system or device making the request</td>
-<td>This is an identifier for the deployed client system that has been authorised to make API calls. In the case of Spine-enabled clients (or those using the SSP to broker API calls), this will be a Spine Accredited System ID (ASID) <br>The naming system prefix for the ASID will be https://fhir.nhs.uk/Id/accredited-system<br> See [11]</td>
+<td>This is an identifier for the deployed client system that has been authorised to make API calls. <br>In the case of Spine-enabled clients (or those using the SSP to broker API calls), this will be a Spine Accredited System ID (ASID). <br>The naming system prefix for the ASID will be <a href="https://fhir.nhs.uk/Id/accredited-system">https://fhir.nhs.uk/Id/accredited-system</a>. <br>See <a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a>.</td>
 </tr>
 <tr>
 <td><code>requesting_patient</code></td>
 <td>opt</td>
 <td>NHS Number</td>
-<td>If this authorisation relates to a citizen, this attribute will hold the NHS Number of the citizen<br>The naming system prefix for the NHS Number will be http://fhir.nhs.net/Id/nhs-number <br>See [11]</td>
+<td>If this authorisation relates to a citizen, this attribute will hold the NHS Number of the citizen. <br>The naming system prefix for the NHS Number will be <a href="http://fhir.nhs.net/Id/nhs-number">http://fhir.nhs.net/Id/nhs-number</a>. <br>See <a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a>.</td>
 </tr>
 </tbody>
 </table>
-<p>Access Tokens MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<p>Access Tokens <strong>MAY</strong> contain other Claims. Any Claims used that are not understood <strong>MUST</strong> be ignored by the RP.</p>
 <hr>
 <h2>4.4 JOSE Signing</h2>
 <p>References:</p>

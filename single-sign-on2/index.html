@@ -378,7 +378,6 @@
 <p>NHS login supports two parameters asserted_login_identity and prompt as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).</p>
 <hr>
 <h2>Technical details</h2>
-<p>Please refer to <a href="/nhslogin/interface-spec-doc/">NHS login Interface Specification - Federated document</a>, for most up-to-date technical details.</p>
 <h3>parameter: prompt</h3>
 <p>This is an optional parameter.</p>
 <p>Requests that the NHS login Service forces the user to sign-in, or to request that the Service does not prompt the user to sign-in (SSO).</p>
@@ -407,7 +406,7 @@
 <h3>parameter: asserted_login_identity</h3>
 <p>This is an optional parameter.</p>
 <p>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available.</p>
-<p>The content will be a signed <code>jwt</code> with payload containing <code>“code”</code> attribute with the value being that of the <code>jti</code> attribute from the ID Token issued to RP1. The <code>jwt “iss”</code> attribute <strong>must</strong> contain the client_id of RP1, the <code>jwt</code> <strong>must</strong> have an <code>“exp”</code> of no longer that 60 seconds, <strong>must</strong> have <code>“jti”</code> and <code>“iat”</code> attributes (as per RFC7519) and <strong>must</strong> be signed by RP1 using its client private key. RP1 passes the <code>jwt</code> to RP2 for RP2 to use in its authentication request.</p>
+<p>The content will be a signed <code>jwt</code> with payload containing <code>“code”</code> attribute with the value being that of the <code>jti</code> attribute from the ID Token issued to RP1. The <code>jwt “iss”</code> attribute <strong>MUST</strong> contain the client_id of RP1, the <code>jwt</code> <strong>MUST</strong> have an <code>“exp”</code> of no longer that 60 seconds, <strong>MUST</strong> have <code>“jti”</code> and <code>“iat”</code> attributes (as per RFC7519) and <strong>MUST</strong> be signed by RP1 using its client private key. RP1 passes the <code>jwt</code> to RP2 for RP2 to use in its authentication request.</p>
 <p>A non-normative example jwt payload section is as follows:</p>
 <pre class="language-html"><code class="language-html">{<br>  code: “eeroifoteiwrudjdwusdu”,<br>  iss: “client1”,<br>  jti: “reioteotijdvorijevoihroi”,<br>  iat: 1548701645,<br>  exp: 1548701705<br>}</code></pre>
 <hr>

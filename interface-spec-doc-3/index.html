@@ -374,38 +374,41 @@
 <ul>
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1</li>
 <li><a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov)</a></li>
-<li><a href="https://tools.ietf.org/html/draft-richer-vectors-of-trust-09">Vectors of trust</a></li>
+<li><a href="https://tools.ietf.org/html/draft-richer-vectors-of-trust-09">Vectors of Trust</a></li>
 </ul>
 <p>This section describes how the NHS Digital NHS login Platform implements authentication using the OpenID Connect Authorization Code Flow.</p>
 <hr>
 <h2>3.1 Authorization Code Flow</h2>
 <p>The Authorization Code Flow returns an Authorization Code to the Client, which can then exchange it for an ID Token and an Access Token directly. This avoids exposing any tokens to the User Agent and possibly other malicious applications with access to the User Agent.</p>
 <p>Using this flow also means the Platform can also authenticate the Client before exchanging the Authorization Code for an Access Token. The Authorization Code flow is suitable for Clients that can securely maintain a Client Secret between themselves and the Platform.</p>
-<p>INSERT DIAGRAM!</p>
+<dl><dt>Figure 1: Authorization Code Flow</dt></dl>
+<p><img src="nhslogin/images/EIS-Figure1.png" alt="diagram"></p>
 <p>The Authorization Code Flow goes through the following steps:</p>
 <ol>
-<li>The client prepares an Authentication Request containing the desired request parameters (see section 3.4.1)</li>
+<li>The client prepares an Authentication Request containing the desired request parameters (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.4.1 Authentication request</a>)</li>
 <li>The client sends the request to the Platform – via the User Agent (browser)</li>
-<li>The Platform validates the Authentication Request (see section 3.4.2)</li>
-<li>The Platform authenticates the End-User (see section 3.4.3)</li>
-<li>The Platform obtains End-User Consent/Authorization (see section 3.4.4)</li>
+<li>The Platform validates the Authentication Request (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.4.2 Authentication Request Validation</a>)</li>
+<li>The Platform authenticates the End-User (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.4.3 Authorisation Server Authenticates the End-User</a>)</li>
+<li>The Platform obtains End-User Consent / Authorization (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.4.4 Authorisation Server obtains End-User Consent / Authorization</a>)</li>
 <li>The Platform sends the Authorization Code to the Client via the End User’s browser</li>
-<li>The client requests a response using the Authorization Code at the Token Endpoint (see section 3.5.1)</li>
-<li>The client receives a response that contains an ID Token and Access Token in the response body (see section 3.5.3)</li>
+<li>The client requests a response using the Authorization Code at the Token Endpoint (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.5.1 Token Request</a>)</li>
+<li>The client receives a response that contains an ID Token and Access Token in the response body (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.5.3 Token Response</a>)</li>
 <li>The client validates the ID token and retrieves the End-User’s Subject Identifier.</li>
 </ol>
 <hr>
 <h2>3.2 Public and Confidential Clients</h2>
 <p>Clients are classified as either Public or Confidential based on their ability to maintain the confidentiality of their credentials.</p>
-<h3>3.2.1 Confidential Client**</h3>
+<h3>3.2.1 Confidential Client</h3>
 <p>The client is capable of maintaining the confidentiality of its credentials.  For example, the client is implemented on a secure server with restricted access to its credentials.</p>
-<p>INSERT DIAGRAM</p>
+<dl><dt>Figure 2: Confidential Client</dt></dl>
+<p><img src="nhslogin/images/EIS-Figure2.png" alt="diagram"></p>
 <h3>3.2.2 Public Client</h3>
 <p><em>This section is provided for information only; public clients are not supported by NHS login.</em></p>
 <p>A Public client is incapable of maintaining the confidentiality of its credentials. For example, the client executes on a device used by the end-user, such as an installed native application or browser-based application.</p>
-<p>INSERT DIAGRAM</p>
+<dl><dt>Figure 3: Public Client</dt></dl>
+<p><img src="nhslogin/images/EIS-Figure3.png" alt="diagram"></p>
 <p>Public clients using the Authorization Code flow are susceptible to authorization code interception attacks. For example, a rogue application could intercept the authorization code as it is being passed through the mobile/native operating system. To mitigate this attack, public clients follow the Proof Key for Code Exchange (PKCE) specification, which binds the Authorisation Request to the subsequent Token Request. PKCE is an extension to the regular Authorization Code flow, so the flow is the same, except that PKCE elements are included at various steps.</p>
-<p>Public clients are also at risk of masquerading by malicious services; a malicious service could re-use the client_id of a genuine Public client and trick a user into revealing their information.</p>
+<p>Public clients are also at risk of masquerading by malicious services; a malicious service could re-use the <code>client_id</code> of a genuine Public client and trick a user into revealing their information.</p>
 <p><em>For the above reasons Public clients are not supported by NHS login.</em></p>
 <hr>
 <h2>3.3 Endpoints</h2>
@@ -450,6 +453,7 @@
 </ul>
 <p>The client initiates an authentication request to the NHS Digital NHS login authorize endpoint using the HTTP GET or POST methods. If using HTTP GET, then the parameters are serialised using URI query Serialisation. In the case of HTTP POST, then the parameters are serialised using Form Serialisation (HTTP Content-Type application/x-www-form-urlencoded)</p>
 <p>Authentication Request parameters are:</p>
+<dl><dt>Table 1.1: Authentication Request Parameters</dt></dl>
 <table>
 <thead>
 <tr>
@@ -463,26 +467,26 @@
 <tr>
 <td><code>scope</code></td>
 <td>mand</td>
-<td><code>&quot;openid&quot;</code></td>
-<td>The openid scope value MUST be present. <br> Other scope values listed MAY be present. Scope values used that are not understood by NHS login WILL be ignored. <br> Additional scope values supported by NHS login are defined in section 3.4.1.1</td>
+<td><code>openid</code></td>
+<td>The openid scope value <strong>MUST</strong> be present. <br> Other scope values listed <strong>MAY</strong> be present. Scope values used that are not understood by NHS login WILL be ignored. <br> Additional scope values supported by NHS login are defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.4.1.1 Scope to be requested</a>.</td>
 </tr>
 <tr>
 <td><code>response_type</code></td>
 <td>mand</td>
-<td><code>&quot;code&quot;</code></td>
-<td>OAuth 2.0 Response Type value that determines the authorization processing flow to be used, including what parameters are returned from the endpoints used. When using the Authorization Code Flow, this value MUST be “code”</td>
+<td><code>code</code></td>
+<td>OAuth 2.0 Response Type value that determines the authorization processing flow to be used, including what parameters are returned from the endpoints used. When using the Authorization Code Flow, this value <strong>MUST</strong> be <code>code</code>.</td>
 </tr>
 <tr>
 <td><code>client_id</code></td>
 <td>mand</td>
 <td></td>
-<td>Oauth 2.0 Client Identifier <br>This is a static identifier previously provided by the NHS login Partner Onboarding team</td>
+<td>Oauth 2.0 Client Identifier <br>This is a static identifier previously provided by the NHS login Partner Onboarding team.</td>
 </tr>
 <tr>
 <td><code>redirect_uri</code></td>
 <td>mand</td>
 <td></td>
-<td>Redirection URI to which the response will be sent. This URI MUST exactly match one of the Redirection URI values for the Client pre-registered at the OpenID Provider <br> When using this flow, the Redirection URI MUST NOT use the http scheme</td>
+<td>Redirection URI to which the response will be sent. This URI <strong>MUST</strong> exactly match one of the Redirection URI values for the Client pre-registered at the OpenID Provider <br> When using this flow, the Redirection URI <strong>MUST NOT</strong> use the http scheme.</td>
 </tr>
 <tr>
 <td><code>state</code></td>
@@ -494,24 +498,24 @@
 <td><code>response_mode</code></td>
 <td>n/a</td>
 <td></td>
-<td>The only response_mode supported by NHS login will be the default mode (“query”), where the Authorization Response parameters are encoded in the query string which is added to the redirect_uri when redirecting back to the Client. <br> See <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html" title="Oauth 2.0 Multiple Response Type Encoding Practices">Oauth 2.0 Multiple Response Type Encoding Practices</a></td>
+<td>The only <code>response_mode</code> supported by NHS login will be the default mode (<code>query</code>), where the Authorization Response parameters are encoded in the query string which is added to the <code>redirect_uri</code> when redirecting back to the Client. <br> See <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">Oauth 2.0 Multiple Response Type Encoding Practices</a>.</td>
 </tr>
 <tr>
 <td><code>nonce</code></td>
 <td>mand</td>
 <td></td>
-<td>String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token. Sufficient entropy MUST be present in the nonce values used to prevent attackers from guessing values.<br> The iGov profile for OIDC specifies this parameter as Mandatory to help RPs protect against CSRF attacks.</td>
+<td>String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token. Sufficient entropy <strong>MUST</strong> be present in the nonce values used to prevent attackers from guessing values. <br>The iGov profile for OIDC specifies this parameter as Mandatory to help RPs protect against CSRF attacks.</td>
 </tr>
 <tr>
 <td><code>display</code></td>
 <td>opt</td>
-<td><code>“page”</code> <br> <code>“touch”</code></td>
-<td>ASCII string value that specifies how the Platform displays the authentication and consent user interface pages to the End-User. The defined values shown “page” and “touch” are supported for NHS login beta phases, with the default value being “page”. <br>“popup” and “wap” values are not supported</td>
+<td><code>page</code> <br> <code>touch</code></td>
+<td>ASCII string value that specifies how the Platform displays the authentication and consent user interface pages to the End-User. The defined values shown <code>page</code> and <code>touch</code> are supported for NHS login beta phases, with the default value being <code>page</code>. <br><code>popup</code> and <code>wap</code> values are not supported</td>
 </tr>
 <tr>
 <td><code>prompt</code></td>
 <td>opt</td>
-<td><code>&lt;blank&gt;</code> <br> <code>“none”</code> <br><code>“login”</code></td>
+<td><code>&lt;blank&gt;</code> <br> <code>none</code> <br><code>login</code></td>
 <td>Requests that the NHS login Service forces the user to sign-in, or to request that the Service does not prompt the user to sign-in (SSO) <br> <code>&lt;blank&gt;</code> - The Service will SSO the user if they still have a valid session, else the user will be requested to login<br> <code>none</code> – The Service will SSO the user if they still have a valid session, otherwise an error code is returned <br> <code>login</code> – The Service will request the user to login, regardless of a session already existing</td>
 </tr>
 <tr>
@@ -542,17 +546,17 @@
 <td><code>acr_values</code></td>
 <td>n/a</td>
 <td></td>
-<td>Not supported – not used, superseded by vtr</td>
+<td>Not supported – not used, superseded by <code>vtr</code></td>
 </tr>
 <tr>
 <td><code>vtr</code></td>
 <td>opt</td>
-<td>See section 5.1 for values</td>
-<td>Vector of Trust Request – requested levels of Identity Verification and Authentication. <br> Client SHOULD request only single level of Identity Verification (values defined in section 5.1.1 -Verification of Identity Levels and Table 18) <br> Omission of vtr will result in a default value of “[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]” being assumed.</td>
+<td>See <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5/">5.1 Vectors of Trust</a> for values.</td>
+<td>Vector of Trust Request – requested levels of Identity Verification and Authentication. <br> Client <strong>SHOULD</strong> request only single level of Identity Verification (values defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5/">5.1.1 Verification of Identity Levels</a> and Table 18) <br> Omission of <code>vtr</code> will result in a default value of <code>“[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]”</code> being assumed.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>NHS login extensions</strong></p>
+<dl><dt>Table 1.2: Authentication Request Parameters, NHS login extensions</dt></dl>
 <table>
 <thead>
 <tr>
@@ -567,19 +571,19 @@
 <td><code>fido_auth_response</code></td>
 <td>opt</td>
 <td></td>
-<td>Base64 URL-encoded FIDO UAF AuthResponse message generated by FIDO client on a registered device</td>
+<td>Base64 URL-encoded FIDO UAF AuthResponse message generated by FIDO client on a registered device.</td>
 </tr>
 <tr>
 <td><code>asserted_login_identity</code></td>
 <td>opt</td>
 <td></td>
-<td>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available. The content will be a signed jwt with payload containing “code” attribute with the value being that of the “jti” attribute from the ID Token issued to RP1. The jwt “iss” attribute MUST contain the client_id of RP1, the jwt MUST have an “exp” of no longer that 60 seconds, MUST have “jti” and “iat” attributes (as per RFC7519) and MUST be signed by RP1 using its client private key. RP1 passes the jwt to RP2 for RP2 to use in its authentication request.<br> A non-normative example jwt payload section is as follows<br> <code>{</code> <br> <code>code: “eeroifoteiwrudjdwusdu”,</code> <br> <code>iss: &lt;br&gt; “client1”,</code> <br> <code>jti: “reioteotijdvorijevoihroi”,</code> <br> <code>iat: 1548701645,</code> <br> <code>exp: 1548701705</code> <br> <code>}</code></td>
+<td>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available. The content will be a signed jwt with payload containing <code>code</code> attribute with the value being that of the <code>jti</code> attribute from the ID Token issued to RP1. The jwt <code>iss</code> attribute <strong>MUST</strong> contain the <code>client_id</code> of RP1, the jwt <strong>MUST</strong> have an <code>exp</code> of no longer that 60 seconds, <strong>MUST</strong> have <code>jti</code> and <code>iat</code> attributes (as per <a href="https://tools.ietf.org/html/rfc7519">RFC7519</a>) and <strong>MUST</strong> be signed by RP1 using its client private key. RP1 passes the jwt to RP2 for RP2 to use in its authentication request.<br> A non-normative example jwt payload section is as follows<br> <code>{</code> <br> <code>code: “eeroifoteiwrudjdwusdu”,</code> <br> <code>iss: &lt;br&gt; “client1”,</code> <br> <code>jti: “reioteotijdvorijevoihroi”,</code> <br> <code>iat: 1548701645,</code> <br> <code>exp: 1548701705</code> <br> <code>}</code></td>
 </tr>
 <tr>
 <td><code>allow_registration</code></td>
 <td>opt</td>
-<td><code>&quot;false&quot;</code></td>
-<td>Optional parameter which, if set to “false”, will hide links to account registration screens in the NHS login UI. If the parameter is absent to set to any value other than “false” then account registration options will be displayed to the user in the NHS login UI.</td>
+<td><code>false</code></td>
+<td>Optional parameter which, if set to <code>false</code>, will hide links to account registration screens in the NHS login UI. If the parameter is absent to set to any value other than <code>false</code> then account registration options will be displayed to the user in the NHS login UI.</td>
 </tr>
 </tbody>
 </table>
@@ -588,8 +592,8 @@
 <ul>
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 5.1</li>
 </ul>
-<p>Scopes can be used to request that specific sets of information be made available as Claim Values when making an Authentication Request (s3.4.1).</p>
-<p><strong>OpenID Connect Standard Scopes</strong></p>
+<p>Scopes can be used to request that specific sets of information be made available as Claim Values when making an <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">Authentication Request</a> (3.4.1).</p>
+<dl><dt>Table 2.1: Scope Values, OpenID Connect standard scopes</dt></dl>
 <table>
 <thead>
 <tr>
@@ -604,19 +608,19 @@
 </tr>
 <tr>
 <td><code>profile</code></td>
-<td>This scope value requests access to the End-User’s default profile claims, which are: nhs_number, birthdate, family_name, identity_proofing_level</td>
+<td>This scope value requests access to the End-User’s <br>default profile claims, which are: <code>nhs_number</code>,<br> <code>birthdate</code>, <code>family_name</code>, <code>identity_proofing_level</code></td>
 </tr>
 <tr>
 <td><code>email</code></td>
-<td>This scope value requests access to the email and email_verified claims</td>
+<td>This scope value requests access to the<br> <code>email</code> and <code>email_verified</code> claims</td>
 </tr>
 <tr>
 <td><code>phone</code></td>
-<td>This scope value requests access to the phone_number and phone_number_verified claims</td>
+<td>This scope value requests access to the <br><code>phone_number</code> and <code>phone_number_verified</code> claims</td>
 </tr>
 </tbody>
 </table>
-<p><strong>NHS login extensions</strong></p>
+<dl><dt>Table 2.2: Scope Values, NHS login extensions</dt></dl>
 <table>
 <thead>
 <tr>
@@ -627,23 +631,24 @@
 <tbody>
 <tr>
 <td><code>gp_integration_credentials</code></td>
-<td>This scope value requests access to the End-User’s gp_integration_credentials claims. <br>Note: This scope can only be requested by an IM1 enabled client.</td>
+<td>This scope value requests access to the End-User’s <br><code>gp_integration_credentials</code> claims. <br>This scope can only be requested by an IM1 enabled client.</td>
 </tr>
 <tr>
 <td><code>gp_registration_details</code></td>
-<td>This scope value requests access to the End-User’s gp_registration_details claims as held within the NHS Personal Demographics Service</td>
+<td>This scope value requests access to the End-User’s <br><code>gp_registration_details</code> claims as held within<br> the NHS Personal Demographics Service</td>
 </tr>
 <tr>
 <td><code>profile_extended</code></td>
-<td>This scope value requests access to the End-User’s additional demographics claims (as held within the NHS Personal Demographics Service), which are: given_name</td>
+<td>This scope value requests access to the End-User’s <br>additional demographics claims (as held within <br>the NHS Personal Demographics Service), which are:<br> <code>given_name</code></td>
 </tr>
 <tr>
 <td><code>client_metadata</code></td>
-<td>This scope requests access to the End-User’s client_user_metadata claim which holds client-specific metadata for the user account. Unlike other claims, the client_user_metadata can be updated by the client – see section 3.6.3</td>
+<td>This scope requests access to the End-User’s<br> <code>client_user_metadata</code> claim which holds <br>client-specific metadata for the user account. <br>Unlike other claims, the <code>client_user_metadata</code> <br>can be updated by the client – see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.6.3 UserInfo Update Request</a></td>
 </tr>
 </tbody>
 </table>
-<p>INSERT DIAGRAM</p>
+<dl><dt>Non-Normative Example</dt></dl>
+<p><img src="nhslogin/images/EIS-Non-normative.png" alt="diagram"></p>
 <p>An HTTP 302 redirect response by the Client triggers the User Agent (browser) to make an Authentication Request to the Authorization Endpoint (with line wraps within values for display purposes only):</p>
 <pre class="language-html"><code class="language-html">HTTP/1.1 302 Found<br>  Location: https://auth.login.nhs.uk/authorize?<br>    response_type=code<br>    &amp;scope=openid%20profile%20email<br>    &amp;client_id=s6BhdRkqt3<br>    &amp;state=af0ifjsldkj<br>    &amp;redirect_uri=https%3A%2F%2Fclient.example.org%2Fcb<br>    &amp;vtr=%5B%E2%80%9CP9.Cp.Cd%E2%80%9D%5D</code></pre>
 <p>The User Agent sends the following request to the Platform in response to the HTTP 302 redirect response by the Client (with line wraps within values for display purposes only):</p>
@@ -653,14 +658,14 @@
 <ul>
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1.2.2</li>
 </ul>
-<p>The Authentication Request is authenticated as described in <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.2.2</p>
+<p>The Authentication Request is authenticated as described in <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1.2.2</p>
 <p>Additional validations are:</p>
 <ul>
 <li>the submitted redirect URI is an exact match of the one of the redirection URI values registered for the client</li>
 </ul>
 <h3>3.4.3	Authorisation Server Authenticates the End-User</h3>
 <p>Outside the scope of this spec</p>
-<h3>3.4.4	Authorisation Server obtains End-User Consent / Authorisation</h3>
+<h3>3.4.4	Authorisation Server obtains End-User Consent / Authorization</h3>
 <p>Outside the scope of this spec</p>
 <h3>3.4.5	Authentication Response</h3>
 <p><strong>3.4.5.1	Successful response</strong></p>
@@ -669,7 +674,8 @@
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.2.5</li>
 <li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.2</li>
 </ul>
-<p>The Authentication Response returns the parameters listed in Table 3 by adding them as query parameters to the redirect_uri specified in the Authentication Request.</p>
+<p>The Authentication Response returns the parameters listed in Table 3 by adding them as query parameters to the <code>redirect_uri</code> specified in the Authentication Request.</p>
+<dl><dt>Table 3: Authentication Successful Response</dt></dl>
 <table>
 <thead>
 <tr>
@@ -682,12 +688,12 @@
 <tr>
 <td><code>code</code></td>
 <td>mand</td>
-<td>The authorization code generated by the NHS login Platform. <br> The authorization code SHALL expire shortly after it is issued to mitigate the risk of leaks. A maximum authorization code lifetime of 10 minutes is RECOMMENDED. <br>The client MUST NOT use the authorization code more than once. If an authorization code is used more than once, the NHS login Platform WILL deny the request. <br>The authorization code is bound to the client identifier and redirection URI.</td>
+<td>The authorization code generated by the NHS login Platform. <br> The authorization code <strong>SHALL</strong> expire shortly after it is issued to mitigate the risk of leaks. A maximum authorization code lifetime of 10 minutes is <strong>RECOMMENDED</strong>. <br>The client <strong>MUST NOT</strong> use the authorization code more than once. If an authorization code is used more than once, the NHS login Platform WILL deny the request. <br>The authorization code is bound to the client identifier and redirection URI.</td>
 </tr>
 <tr>
 <td><code>state</code></td>
 <td>mand</td>
-<td>if the &quot;state&quot; parameter was present in the client authorization request, then it SHALL be the exact value received from the client, otherwise not included</td>
+<td>if the <code>state</code> parameter was present in the client authorization request, then it <strong>SHALL</strong> be the exact value received from the client, otherwise not included.</td>
 </tr>
 </tbody>
 </table>
@@ -700,6 +706,7 @@
 <li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.2.1</li>
 </ul>
 <p>If the authentication request is denied or fails, the authorisation server informs the client using the parameters defined in Table 4. Unless the Redirection URI is invalid, the Authorisation Server returns the client to the Redirection URI specified in the Authentication Request with the error and state parameters. Other parameters should not be returned</p>
+<dl><dt>Table 4: Authentication Error Response</dt></dl>
 <table>
 <thead>
 <tr>
@@ -722,16 +729,16 @@
 <tr>
 <td><code>error_uri</code></td>
 <td>opt</td>
-<td>URI of a web page that includes additional information about the error</td>
+<td>URI of a web page that includes additional information about the error.</td>
 </tr>
 <tr>
 <td><code>state</code></td>
 <td>cond</td>
-<td>OAuth 2.0 state value. REQUIRED if the Authorization Request included the state parameter. Set to the value received from the Client.</td>
+<td>OAuth 2.0 state value. REQUIRED if the Authorization Request included the state parameter. <br>Set to the value received from the Client.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>OAuth 2.0 error codes</strong></p>
+<dl><dt>Table 5.1: Error Codes for Authentication Error Response, OAuth 2.0 error codes</dt></dl>
 <table>
 <thead>
 <tr>
@@ -746,31 +753,31 @@
 </tr>
 <tr>
 <td><code>unauthorized_client</code></td>
-<td>The client is not authorized to request an authorization code using this method</td>
+<td>The client is not authorized to request an authorization code using this method.</td>
 </tr>
 <tr>
 <td><code>access_denied</code></td>
-<td>The resource owner or Platform denied the request</td>
+<td>The resource owner or Platform denied the request.</td>
 </tr>
 <tr>
 <td><code>unsupported_response_type</code></td>
-<td>The Platform does not support obtaining an authorization code using this method</td>
+<td>The Platform does not support obtaining an authorization code using this method.</td>
 </tr>
 <tr>
 <td><code>invalid_scope</code></td>
-<td>The requested scope is invalid, unknown, or malformed</td>
+<td>The requested scope is invalid, unknown, or malformed.</td>
 </tr>
 <tr>
 <td><code>server_error</code></td>
-<td>The Platform encountered an unexpected condition that prevented it from fulfilling the request. (This error code is needed because a 500 Internal Server Error HTTP status code cannot be returned to the client via an HTTP redirect.)</td>
+<td>The Platform encountered an unexpected condition that prevented it from fulfilling the request. <br>(This error code is needed because a 500 Internal Server Error HTTP status code cannot be returned to the client via an HTTP redirect.)</td>
 </tr>
 <tr>
 <td><code>temporarily_unavailable</code></td>
-<td>The Platform is currently unable to handle the request due to a temporary overloading or maintenance of the server.  (This error code is needed because a 503  Service Unavailable HTTP status code cannot be returned to the client via an HTTP redirect.)</td>
+<td>The Platform is currently unable to handle the request due to a temporary overloading or maintenance of the server. <br>(This error code is needed because a 503  Service Unavailable HTTP status code cannot be returned to the client via an HTTP redirect.)</td>
 </tr>
 </tbody>
 </table>
-<p><strong>OpenID Connect Error Codes (in addition to the above)</strong></p>
+<dl><dt>Table 5.2: Error Codes for Authentication Error Response, OpenID Connect Error Codes (in addition to the above)</dt></dl>
 <table>
 <thead>
 <tr>
@@ -781,39 +788,39 @@
 <tbody>
 <tr>
 <td><code>interaction_required</code></td>
-<td>The Platform requires End-User interaction of some form to proceed. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User interaction.</td>
+<td>The Platform requires End-User interaction of some form to proceed. <br>This error <strong>MAY</strong> be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User interaction.</td>
 </tr>
 <tr>
 <td><code>login_required</code></td>
-<td>The Platform requires End-User authentication. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User authentication.</td>
+<td>The Platform requires End-User authentication. <br>This error <strong>MAY</strong> be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User authentication.</td>
 </tr>
 <tr>
 <td><code>account_selection_required</code></td>
-<td>The End-User is REQUIRED to select a session at the Platform. The End-User MAY be authenticated at the Platform with different associated accounts, but the End-User did not select a session. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface to prompt for a session to use</td>
+<td>The End-User is REQUIRED to select a session at the Platform. <br>The End-User <strong>MAY</strong> be authenticated at the Platform with different associated accounts, but the End-User did not select a session. This error <strong>MAY</strong> be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface to prompt for a session to use.</td>
 </tr>
 <tr>
 <td><code>consent_required</code></td>
-<td>The Platform requires End-User consent. This error MAY be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User consent</td>
+<td>The Platform requires End-User consent. <br>This error <strong>MAY</strong> be returned when the prompt parameter value in the Authentication Request is none, but the Authentication Request cannot be completed without displaying a user interface for End-User consent.</td>
 </tr>
 <tr>
 <td><code>invalid_request_uri</code></td>
-<td>The request_uri in the Authorization Request returns an error or contains invalid data</td>
+<td>The <code>request_uri</code> in the Authorization Request returns an error or contains invalid data.</td>
 </tr>
 <tr>
 <td><code>invalid_request_object</code></td>
-<td>The request parameter contains an invalid Request Object</td>
+<td>The request parameter contains an invalid Request Object.</td>
 </tr>
 <tr>
 <td><code>request_not_supported</code></td>
-<td>The OP does not support use of the request parameter</td>
+<td>The OP does not support use of the <code>request</code> parameter.</td>
 </tr>
 <tr>
 <td><code>request_uri_not_supported</code></td>
-<td>The OP does not support use of the request_uri parameter</td>
+<td>The OP does not support use of the <code>request_uri</code> parameter.</td>
 </tr>
 <tr>
 <td><code>registration_not_supported</code></td>
-<td>The OP does not support use of the registration parameter</td>
+<td>The OP does not support use of the <code>registration</code> parameter.</td>
 </tr>
 </tbody>
 </table>
@@ -821,7 +828,7 @@
 <pre class="language-html"><code class="language-html">HTTP/1.1 302 Found<br>Location: https://client.example.org/cb?<br>    error=invalid_request<br>    &amp;error_description=Unsupported%20response_type%20value<br>    &amp;state=af0ifjsldkj</code></pre>
 <hr>
 <h2>3.5 Token Endpoint</h2>
-<p>### 3.5.1	Token Request</p>
+<h3>3.5.1 Token Request</h3>
 <p>References:</p>
 <ul>
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.3.1 &amp; s12</li>
@@ -829,8 +836,9 @@
 <li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.3 &amp; s6</li>
 </ul>
 <p>A Token request is used to obtain an Access Token and an ID Token. The Partner Service (client) sends a Token Request to the Token Endpoint to obtain a Token Response.</p>
-<p>Confidential Clients MUST authenticate to the Token Endpoint using the authentication method registered for its client_id (see section 7.2.1).</p>
+<p>Confidential Clients <strong>MUST</strong> authenticate to the Token Endpoint using the authentication method registered for its <code>client_id</code> (see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-7/">7.2.1 Partner Service Authentication</a>).</p>
 <p>The Client sends the parameters to the Token Endpoint using the HTTP POST method and the Form Serialization(HTTP Content-Type application/x-www-form-urlencoded) – the request must be sent using TLS v1.2 or above.</p>
+<dl><dt>Table 6: Token Request Parameters</dt></dl>
 <table>
 <thead>
 <tr>
@@ -843,42 +851,42 @@
 <tr>
 <td><code>grant_type</code></td>
 <td>mand</td>
-<td>Value MUST be set to &quot;authorization_code&quot; OR “refresh_token”</td>
+<td>Value <strong>MUST</strong> be set to <code>authorization_code</code> OR <code>refresh_token</code>.</td>
 </tr>
 <tr>
 <td><code>code</code></td>
 <td>cond</td>
-<td>The authorization code previously received from the Platform. MUST be present when grant_type is “authorization_code”</td>
+<td>The authorization code previously received from the Platform. <br><strong>MUST</strong> be present when <code>grant_type</code> is <code>authorization_code</code>.</td>
 </tr>
 <tr>
 <td><code>redirect_uri</code></td>
 <td>cond</td>
-<td>Required when grant_type is “authorization_code” – MUST match the &quot;redirect_uri&quot; parameter that was included in the authorization request.</td>
+<td>Required when <code>grant_type</code> is <code>authorization_code</code> – <strong>MUST</strong> match the <code>redirect_uri</code> parameter that was included in the authorization request.</td>
 </tr>
 <tr>
 <td><code>client_id</code></td>
 <td>cond</td>
-<td>Optional for Confidential Clients</td>
+<td>Optional for Confidential Clients.</td>
 </tr>
 <tr>
 <td><code>client_assertion_type</code></td>
 <td>mand</td>
-<td>Mandatory for Confidential Clients <br> “urn:ietf:params:oauth:client-assertion-type:jwt-bearer”</td>
+<td>Mandatory for Confidential Clients. <br> <code>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</code></td>
 </tr>
 <tr>
 <td><code>client_assertion</code></td>
 <td>mand</td>
-<td>Mandatory for Confidential Clients <br> A signed JWT presented for Client Authentication, as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a> <br>(Note the “iss” and “sub” claim MUST equal the client_id and the “aud” MUST contain the token endpoint URL) <br>The assertion MUST be signed using the private key of the client, agreed during onboarding</td>
+<td>Mandatory for Confidential Clients. <br> A signed JWT presented for Client Authentication, as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a> <br>(Note the <code>iss</code> and <code>sub</code> claim <strong>MUST</strong> equal the <code>client_id</code> and the <code>aud</code> <strong>MUST</strong> contain the token endpoint URL) <br>The assertion <strong>MUST</strong> be signed using the private key of the client, agreed during onboarding.</td>
 </tr>
 <tr>
 <td><code>refresh_token</code></td>
 <td>cond</td>
-<td>The refresh token previously issued to the client. MUST be present when grant_type is “refresh_token”</td>
+<td>The refresh token previously issued to the client. <strong>MUST</strong> be present when <code>grant_type</code> is <code>refresh_token</code>.</td>
 </tr>
 <tr>
 <td><code>scope</code></td>
 <td>opt</td>
-<td>Only applicable for grant_type of “refresh_token”. The scope of the access request. The requested scope MUST NOT include any scope not originally granted by the originating “authorization_code” grant. If omitted is treated as equal to the scope originally granted by the “authorization_code” grant.</td>
+<td>Only applicable for <code>grant_type</code> of <code>refresh_token</code>. The scope of the access request. <br>The requested scope <strong>MUST NOT</strong> include any scope not originally granted by the originating <code>authorization_code</code> grant. <br>If omitted is treated as equal to the scope originally granted by the <code>authorization_code</code> grant.</td>
 </tr>
 </tbody>
 </table>
@@ -890,7 +898,7 @@
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.3.2</li>
 <li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s6</li>
 </ul>
-<p>The Token Request is validated as described in the OpenID Connect Core Specification [1], section 3.1.3.2 (for grant_type “authorization_code”) or as described in The OAuth 2.0 Authorization Framework [6] (for grant_type “refresh_token”). The client_assertion is validated as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a> for Client Authentication for all requests.</p>
+<p>The Token Request is validated as described in the <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 3.1.3.2 (for <code>grant_type</code> <code>authorization_code</code>) or as described in <a href="https://tools.ietf.org/html/rfc6749">The OAuth 2.0 Authorization Framework</a> (for <code>grant_type</code> <code>refresh_token</code>). The <code>client_assertion</code> is validated as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a> for Client Authentication for all requests.</p>
 <h3>3.5.3	Token Response</h3>
 <p><strong>3.5.3.1	Successful Response</strong></p>
 <p>References:</p>
@@ -899,6 +907,7 @@
 <li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s4.1.4 &amp; s6</li>
 </ul>
 <p>After receiving and validating a valid and authorised Token request from the client, the Token Endpoint returns a response which includes an ID Token and an Access Token. The response uses the “application/json” media type.</p>
+<dl><dt>Table 7: Token Response, HTTP headers & values</dt></dl>
 <table>
 <thead>
 <tr>
@@ -917,6 +926,7 @@
 </tr>
 </tbody>
 </table>
+<dl><dt>Table 8: Token Response</dt></dl>
 <table>
 <thead>
 <tr>
@@ -929,32 +939,32 @@
 <tr>
 <td><code>access_token</code></td>
 <td>mand</td>
-<td>Signed JWT which encodes the Access Token, see sections 4.1 and 4.3</td>
+<td>Signed JWT which encodes the Access Token, see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-4/">4.1 JWT Header</a> and <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-4/">4.3 Access Token Payload</a>.</td>
 </tr>
 <tr>
 <td><code>token_type</code></td>
 <td>mand</td>
-<td>Must be value “bearer”</td>
+<td>Must be value <code>bearer</code>.</td>
 </tr>
 <tr>
 <td><code>refresh_token</code></td>
 <td>opt</td>
-<td>The refresh token which can be used to obtain new access tokens as described in section 3.5.1</td>
+<td>The refresh token which can be used to obtain new access tokens as described in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.5.1 Token Request</a>.</td>
 </tr>
 <tr>
 <td><code>expires_in</code></td>
 <td>opt</td>
-<td>Recommended. <br> The lifetime in seconds of the access token.  If omitted, the Platform SHOULD provide the expiration time via other means or document the default value</td>
+<td>Recommended. <br> The lifetime in seconds of the access token.  If omitted, the Platform <strong>SHOULD</strong> provide the expiration time via other means or document the default value.</td>
 </tr>
 <tr>
 <td><code>scope</code></td>
 <td>cond</td>
-<td>OPTIONAL, if identical to the scope requested by the client; <br>otherwise, REQUIRED</td>
+<td>OPTIONAL, if identical to the scope requested by the client; <br>otherwise, REQUIRED.</td>
 </tr>
 <tr>
 <td><code>id_token</code></td>
 <td>cond</td>
-<td>Signed JWT which encodes the ID Token – see sections 4.1 and 4.2. Only issued for grant_type “authorization_code”</td>
+<td>Signed JWT which encodes the ID Token – see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-4/">4.1 JWT Header</a> and <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-4/">4.2 ID Token Payload</a>. Only issued for <code>grant_type</code> <code>authorization_code</code></td>
 </tr>
 </tbody>
 </table>
@@ -966,9 +976,10 @@
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s3.1.3.4</li>
 <li><a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a>, s5.2</li>
 </ul>
-<p>If the Token Request is invalid or unauthorized, the Platform constructs the error response. The parameters of the Token Error Response are defined as in Section 5.2 of OAuth 2.0 [RFC6749]. The HTTP response body uses the application/json media type with HTTP response code of 400.</p>
+<p>If the Token Request is invalid or unauthorized, the Platform constructs the error response. The parameters of the Token Error Response are defined as in Section 5.2 of <a href="https://tools.ietf.org/html/rfc6749">OAuth 2.0 RFC6749</a>. The HTTP response body uses the application/json media type with HTTP response code of 400.</p>
 <p>The following is a non-normative example Token Error Response:</p>
 <pre class="language-html"><code class="language-html">HTTP/1.1 400 Bad Request<br>Content-Type: application/json<br>Cache-Control: no-store<br>Pragma: no-cache<br><br>{<br> "error": "invalid_request"<br>}</code></pre>
+<dl><dt>Table 9: Token Error Response</dt></dl>
 <table>
 <thead>
 <tr>
@@ -981,21 +992,21 @@
 <tr>
 <td><code>error</code></td>
 <td>mand</td>
-<td>Error code</td>
+<td>Error code.</td>
 </tr>
 <tr>
 <td><code>error_description</code></td>
 <td>opt</td>
-<td>Human-readable ASCII encoded text description of the error</td>
+<td>Human-readable ASCII encoded text description of the error.</td>
 </tr>
 <tr>
 <td><code>error_uri</code></td>
 <td>opt</td>
-<td>URI of a web page that includes additional information about the error</td>
+<td>URI of a web page that includes additional information about the error.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>OAuth 2.0 error codes</strong></p>
+<dl><dt>Table 10: Error Codes for Token Error Response, OAuth 2.0 error codes</dt></dl> 
 <table>
 <thead>
 <tr>
@@ -1026,7 +1037,7 @@
 </tr>
 <tr>
 <td><code>invalid_scope</code></td>
-<td>The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner</td>
+<td>The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner.</td>
 </tr>
 </tbody>
 </table>
@@ -1044,23 +1055,23 @@
 <li><a href="https://tools.ietf.org/html/rfc6750">RFC6750: OAuth 2.0 Bearer Token Usage</a>, s2</li>
 </ul>
 <p>The Client sends the UserInfo Request using either HTTP GET (recommended) or HTTP POST.</p>
-<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.</p>
+<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of <a href="https://tools.ietf.org/html/rfc6750">OAuth 2.0 Bearer Token Usage</a>.</p>
 <p>The following is a non-normative example of a UserInfo Request:</p>
 <pre class="language-html"><code class="language-html">GET /userinfo HTTP/1.1<br>Host: auth.login.nhs.uk<br>Authorization: Bearer SlAV32hkKG</code></pre>
-<p>### 3.6.2	UserInfo Response</p>
-<p><strong>3.6.2.1	Successful Response</strong></p>
+<h3>3.6.3 UserInfo Response</h3>
+<p><strong>3.6.2.1 Successful Response</strong></p>
 <p>Reference:</p>
 <ul>
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s5.3.2</li>
 </ul>
-<p>The UserInfo Claims SHALL be returned as the members of a JSON object.  If a Claim is not returned, then that Claim Name SHALL be omitted from the JSON object representing the Claims; it SHALL NOT be present with a null or empty string value.</p>
+<p>The UserInfo Claims <strong>SHALL</strong> be returned as the members of a JSON object.  If a Claim is not returned, then that Claim Name <strong>SHALL</strong> be omitted from the JSON object representing the Claims; it <strong>SHALL NOT</strong> be present with a null or empty string value.</p>
 <p>Claims will ONLY be returned when a user has consented to the information being released to the client.</p>
 <p>References:</p>
 <ul>
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 5.1</li>
 </ul>
 <p>The NHS login Service supports standard and additional claims as follows:</p>
-<p><strong>OpenID Connect Standard Claims</strong></p>
+<dl><dt>Table 11.1: NHS login Supported Claims, OpenID Connect Standard Claims</dt></dl> 
 <table>
 <thead>
 <tr>
@@ -1073,56 +1084,56 @@
 <tr>
 <td><code>iss</code></td>
 <td>Y</td>
-<td>Issuer Identifier for the Issuer of the response</td>
+<td>Issuer Identifier for the Issuer of the response.</td>
 </tr>
 <tr>
 <td><code>aud</code></td>
 <td>Y</td>
-<td>The Partner Service identifier</td>
+<td>The Partner Service identifier.</td>
 </tr>
 <tr>
 <td><code>sub</code></td>
 <td>Y</td>
-<td>Subject - Identifier for the End-User at the Issuer</td>
+<td>Subject - Identifier for the End-User at the Issuer.</td>
 </tr>
 <tr>
 <td><code>family_name</code></td>
 <td>Y</td>
-<td>Surname(s) or last name(s) of the End-User</td>
+<td>Surname(s) or last name(s) of the End-User.</td>
 </tr>
 <tr>
 <td><code>given_name</code></td>
 <td>Y</td>
-<td>First name(s) of the End-User <br> This information will only be returned where the user's identity has been verified AND the profile_extended scope is requested</td>
+<td>First name(s) of the End-User <br> This information will only be returned where the user's identity has been verified AND the <code>profile_extended</code> scope is requested.</td>
 </tr>
 <tr>
 <td><code>email</code></td>
 <td>Y</td>
-<td>End-User's preferred e-mail address <br> Present if the email scope was present in the request</td>
+<td>End-User's preferred e-mail address. <br>Present if the <code>email</code> scope was present in the request.</td>
 </tr>
 <tr>
 <td><code>email_verified</code></td>
 <td>Y</td>
-<td>True if the End-User's e-mail address has been verified; otherwise false <br> Present if the email scope was present in the request</td>
+<td>True if the End-User's e-mail address has been verified; otherwise false. <br> Present if the <code>email</code> scope was present in the request.</td>
 </tr>
 <tr>
 <td><code>phone_number</code></td>
 <td>Y</td>
-<td>End-User's preferred phone number <br> Present if the phone scope was present in the request</td>
+<td>End-User's preferred phone number. <br> Present if the <code>phone_number</code> scope was present in the request.</td>
 </tr>
 <tr>
 <td><code>phone_number_verified</code></td>
 <td>Y</td>
-<td>True if the End-User's phone number has been verified; otherwise false <br> Present if the phone scope was present in the request</td>
+<td>True if the End-User's phone number has been verified; otherwise false. <br>Present if the <code>phone_number</code> scope was present in the request.</td>
 </tr>
 <tr>
 <td><code>birthdate</code></td>
 <td>Y</td>
-<td>End-User's date of birth in ISO8601‑2004 format: YYYY-MM-DD</td>
+<td>End-User's date of birth in ISO8601‑2004 format: YYYY-MM-DD.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>NHS login Additional Claims</strong></p>
+<dl><dt>Table 11.2: NHS login Supported Claims, NHS login Additional Claims</dt></dl>
 <table>
 <thead>
 <tr>
@@ -1135,32 +1146,32 @@
 <tr>
 <td><code>nhs_number</code></td>
 <td>Y</td>
-<td>A string containing the End User’s NHS Number – this is a 10 digit string</td>
+<td>A string containing the End User’s NHS Number – this is a 10 digit string.</td>
 </tr>
 <tr>
 <td><code>gp_integration_credentials</code></td>
 <td>Y</td>
-<td>A json object containing the end user’s GP integration credentials <br> These will only be returned where the user’s identity has been verified AND the gp_integration_credentials scope is requested<br> <code>{</code> <br> <code>gp_user_id: “32498239048-3248734”,</code> <br> <code>gp_linkage_key: “dfje2rkjdfkjdfm”,</code> <br> <code>gp_ods_code: “A12344”</code> <br> <code>}</code></td>
+<td>A json object containing the end user’s GP integration credentials. <br> These will only be returned where the user’s identity has been verified AND the <code>gp_integration_credentials</code> scope is requested.<br> <code>{</code> <br> <code>gp_user_id: “32498239048-3248734”,</code> <br> <code>gp_linkage_key: “dfje2rkjdfkjdfm”,</code> <br> <code>gp_ods_code: “A12344”</code> <br> <code>}</code></td>
 </tr>
 <tr>
 <td><code>gp_registration_details</code></td>
 <td>Y</td>
-<td>A json object containing information on the End-User’s registered General Practice as held in NHS Personal Demographics Service. <br>This information will only be returned where the user’s identity has been verified AND the gp_registration_details scope is requested <br> <code>{</code> <br> <code>gp_ods_code: “A12344”</code> <br> <code>}</code></td>
+<td>A json object containing information on the End-User’s registered General Practice as held in NHS Personal Demographics Service. <br>This information will only be returned where the user’s identity has been verified AND the <code>gp_registration_details</code> scope is requested.<br> <code>{</code> <br> <code>gp_ods_code: “A12344”</code> <br> <code>}</code></td>
 </tr>
 <tr>
 <td><code>client_user_metadata</code></td>
 <td>Y</td>
-<td>A string containing either a randomly-generated (by NHS login) number which has been encrypted using PKCS1_OAEP cipher with the RP’s public key and then base64URL encoded or a value set by the RP. The value contained in this claim is opaque to NHS login and RP may optionally update this value – see section 3.6.3 <br>If no value is held for the RP then this claim is not returned</td>
+<td>A string containing either a randomly-generated (by NHS login) number which has been encrypted using PKCS1_OAEP cipher with the RP’s public key and then base64URL encoded or a value set by the RP. The value contained in this claim is opaque to NHS login and RP may optionally update this value – see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.6.3 User Info Update Request</a> <br>If no value is held for the RP then this claim is not returned.</td>
 </tr>
 <tr>
 <td><code>identity_proofing_level</code></td>
 <td>Y</td>
-<td>A string containing the End User’s identity proofing level. It will contain one of the values defined in section 5.1.1 -Verification of Identity Levels and Table 18 – e.g. “P0”, “P9”</td>
+<td>A string containing the End User’s identity proofing level. It will contain one of the values defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5/">5.1.1 Verification of Identity Levels</a> and Table 18 – e.g. “P0”, “P9”</td>
 </tr>
 </tbody>
 </table>
-<p>The sub Claim in the UserInfo Response MUST be verified to exactly match the sub Claim in the ID Token; if they do not match, the UserInfo Response values MUST NOT be used.</p>
-<p>The UserInfo response MAY contain other Claims. Any Claims used that are not understood MUST be ignored by the RP.</p>
+<p>The sub Claim in the UserInfo Response <strong>MUST</strong> be verified to exactly match the sub Claim in the ID Token; if they do not match, the UserInfo Response values <strong>MUST NOT</strong> be used.</p>
+<p>The UserInfo response <strong>MAY</strong> contain other Claims. Any Claims used that are not understood <strong>MUST</strong> be ignored by the RP.</p>
 <p>Upon receipt of the UserInfo Request, the UserInfo Endpoint SHALL return the JSON Serialization of the UserInfo Response in the HTTP response. The content-type of the HTTP response SHALL be “application/json; the response body SHALL be encoded using UTF-8.</p>
 <p>The UserInfo Response will not be signed and/or encrypted.</p>
 <p>The following is a non-normative example of a UserInfo Response:</p>
@@ -1171,7 +1182,8 @@
 <li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s5.3.3</li>
 <li><a href="https://tools.ietf.org/html/rfc6750">RFC6750: OAuth 2.0 Bearer Token Usage</a>, s3</li>
 </ul>
-<p>When an error condition occurs, the UserInfo Endpoint returns an Error Response which will include JSON keys as defined in Table 12. As defined in the OpenID Connect Core Specification, errors relating to Bearer Token Usage are returned using the HTTP “WWW-Authenticate” response header field as per Section 3 of OAuth 2.0 Bearer Token Usage. Errors not related to Bearer Token Usage omit the “WWW-Authenticate” response header field and return error details in the response body.</p>
+<p>When an error condition occurs, the UserInfo Endpoint returns an Error Response which will include JSON keys as defined in Table 12. As defined in the <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, errors relating to Bearer Token Usage are returned using the HTTP “WWW-Authenticate” response header field as per Section 3 of <a href="https://tools.ietf.org/html/rfc6750">OAuth 2.0 Bearer Token Usage</a>. Errors not related to Bearer Token Usage omit the “WWW-Authenticate” response header field and return error details in the response body.</p>
+<dl><dt>Table 12: UserInfo Error Response</dt></dl>
 <table>
 <thead>
 <tr>
@@ -1193,25 +1205,26 @@
 </tr>
 </tbody>
 </table>
+<dl><dt>Table 12: Error Codes for UserInfo Error Response, Oauth 2.0 error codes</dt></dl>
 <table>
 <thead>
 <tr>
-<th>Oauth 2.0 error code</th>
+<th>Code</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>invalid_request</code></td>
-<td>The request is missing a required parameter, includes an unsupported parameter or parameter value, repeats the same parameter, uses more than one method for including an access token, or is otherwise malformed.  The resource server SHOULD respond with the HTTP 400 (Bad Request) status code.</td>
+<td>The request is missing a required parameter, includes an unsupported parameter or parameter value, repeats the same parameter, uses more than one method for including an access token, or is otherwise malformed. The resource server <strong>SHOULD</strong> respond with the HTTP 400 (Bad Request) status code.</td>
 </tr>
 <tr>
 <td><code>invalid_token</code></td>
-<td>The access token provided is expired, revoked, malformed, or invalid for other reasons.  The resource SHOULD respond with the HTTP 401 (Unauthorized) status code.  The client MAY request a new access token and retry the protected resource request.</td>
+<td>The access token provided is expired, revoked, malformed, or invalid for other reasons. The resource <strong>SHOULD</strong> respond with the HTTP 401 (Unauthorized) status code. The client <strong>MAY</strong> request a new access token and retry the protected resource request.</td>
 </tr>
 <tr>
 <td><code>insufficient_scope</code></td>
-<td>The request requires higher privileges than provided by the access token.  The resource server SHOULD respond with the HTTP 403 (Forbidden) status code and MAY include the “scope” attribute with the scope necessary to access the protected resource</td>
+<td>The request requires higher privileges than provided by the access token. The resource server <strong>SHOULD</strong> respond with the HTTP 403 (Forbidden) status code and <strong>MAY</strong> include the <code>scope</code> attribute with the scope necessary to access the protected resource.</td>
 </tr>
 </tbody>
 </table>
@@ -1220,9 +1233,10 @@
 <p>The following is a non-normative example of a UserInfo Error Response not relating to Bearer Token Usage:</p>
 <pre class="language-html"><code class="language-html">  HTTP/1.1 400 Bad Request<br>  Content-Type: application/json<br><br>  {<br>     “error”: “invalid_request”,<br>     “error_description”: ”Invalid parameter content”<br>  }</code></pre>
 <p>### 3.6.3 UserInfo Update Request</p>
-<p>NHS login extends the OpenID Connect Specification and allows a client to request the update of the client_user_metadata claim via HTTP PATCH.</p>
-<p>The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of OAuth 2.0 Bearer Token Usage.</p>
+<p>NHS login extends the OpenID Connect Specification and allows a client to request the update of the <code>client_user_metadata</code> claim via HTTP PATCH.</p>
+<p>The Access Token obtained from an OpenID Connect Authentication Request <strong>MUST</strong> be sent as a Bearer Token using the Authorization header field, per Section 2 of <a href="https://tools.ietf.org/html/rfc6750">OAuth 2.0 Bearer Token Usage</a>.</p>
 <p>The Client sends the parameters to the UserInfo Endpoint using the HTTP PATCH method and a Content-Type of ‘application/json’ – the request must be sent using TLS v1.2 or above.</p>
+<dl><dt>Table 14: UserInfo Update Request Parameters</dt></dl>
 <table>
 <thead>
 <tr>
@@ -1235,15 +1249,15 @@
 <tr>
 <td><code>client_user_metadata</code></td>
 <td>opt</td>
-<td>New value for the client_user_metadata claim. The maximum length is 1024 characters. Setting the value to an empty string (i.e. client_user_metadata=) will result in NHS login clearing the value. Setting the value to “auto” will result in NHS login re-generating a new value as described in Table 11.</td>
+<td>New value for the <code>client_user_metadata</code> claim. The maximum length is 1024 characters. Setting the value to an empty string (i.e. <code>client_user_metadata=</code>) will result in NHS login clearing the value. Setting the value to <code>auto</code> will result in NHS login re-generating a new value as described in Table 11.</td>
 </tr>
 </tbody>
 </table>
-<p>As the client_user_metadata value is opaque to NHS login no specific validation will be undertaken other than to ensure a maximum length of 1024 characters.</p>
+<p>As the <code>client_user_metadata</code> value is opaque to NHS login no specific validation will be undertaken other than to ensure a maximum length of 1024 characters.</p>
 <p>The following is a non-normative example of a UserInfo Update Request:</p>
 <pre class="language-html"><code class="language-html">PATCH /userinfo HTTP/1.1<br>Host: auth.login.nhs.uk<br>Authorization: Bearer SlAV32hkKG<br>Content-Type: application/json<br><br>{‘client_user_metadata’: ‘ZT&amp;PHNhbWxwOl ... ZT’}</code></pre>
 <h3>3.6.4	UserInfo Update Response</h3>
-<p>A successful UserInfo Update Response will be an HTTP 204 response with no response body. Error responses will be as described in section 3.6.2.2</p>
+<p>A successful UserInfo Update Response will be an HTTP 204 response with no response body. Error responses will be as described in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3/">3.6.2.2 Error Response</a>.</p>
 
 
      <div class="app-edit-instructions">
