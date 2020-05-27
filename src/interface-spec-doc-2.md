@@ -13,7 +13,7 @@ title: 2 Specification status
 
 ## 2.2 Changes in this version
 Version 1.9 of this specification includes the following changes:
-- Addition of identity_proofing_level claim in the “profile” scope
+- Addition of `identity_proofing_level` claim in the `profile` scope
 - Minor clarification on conditions applicable for requesting scopes
 - Updates to Verification of Identity Levels
 - Updates to Requesting Vectors of Trust values

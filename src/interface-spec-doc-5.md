@@ -16,6 +16,8 @@ NHS login supports Vectors of Trust for Identification Verification and Authenti
 
 NHS login supports the following levels of identification verification. These are based upon [DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services](https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html).
 
+<dl><dt>Table 18 - NHS login Verification Levels</dt></dl>
+
 | Value | Description | 
 | ----- | ----------- | 
 | `P0`  | No identity proofing <br> This maps to 'Verification - Low' within [DCB3051](https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html) |
@@ -24,7 +26,9 @@ NHS login supports the following levels of identification verification. These ar
 
 ### 5.1.2 Authentication Credentials
 
-NHS login supports the following types of authentication credentials.  Note that the credential component may occur more than once
+NHS login supports the following types of authentication credentials.  Note that the credential component may occur more than once.
+
+<dl><dt>Table 19 - NHS login Authentication Context Class</dt></dl>
 
 | Value | Description | 
 | ----- | ----------- | 
@@ -35,7 +39,7 @@ NHS login supports the following types of authentication credentials.  Note that
 
 ### 5.1.3	Requesting Vectors of Trust values
 
-Vector of Trust (VoT) is a combination of - Identity Verification (defined in [section 5.1.1 - Verification of Identity Levels](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)) and Authentication (defined in [section 5.1.2 – Authentication Credentials](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)) levels.
+Vector of Trust (VoT) is a combination of - Identity Verification (defined in [5.1.1 Verification of Identity Levels](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)) and Authentication (defined in [5.1.2 Authentication Credentials](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)) levels.
 
 The client **MAY** request a set of acceptable VoT values with the `vtr` (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components. The component values within each vector are **AND**ed together while the separate vectors are **OR**ed together.  For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"]` is stating that either the full set of "P9 **AND** Cp **AND** Cd" simultaneously **OR** the full set of "P9 **AND** Ck" simultaneously are acceptable for this transaction.
 
@@ -72,7 +76,7 @@ The Trustmark provides a list of claims that NHS login supports. This enables th
 
 The NHS login Trustmark will be self-hosted.
 
-The following is a non-normative example a Trustmark based on [section 5.1.3 - Requesting Vectors of Trust values](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5) and [section 5.1.4 - Returning Vectors of Trust values](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5) above:
+The following is a non-normative example a Trustmark based on [5.1.3 Requesting Vectors of Trust values](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5) and [5.1.4 Returning Vectors of Trust values](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5) above:
 
 ``` html
 {
@@ -138,4 +142,4 @@ When a P5 user, attempts to access other features supported by sensitive data th
 
 If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (`vtr`) in the incoming request, then the user will be required to sign-in, in order to meet the requested vectors.
 
-Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the `prompt` parameter on the initial authorisation request – see [section 3.4.1 - INSERT NAME](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3).
+Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the `prompt` parameter on the initial authorisation request – see [3.4.1 Authentication request](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3).

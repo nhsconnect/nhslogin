@@ -53,4 +53,4 @@ Wildcard URIs are not permitted.
 
 HTTP URIs are NOT permitted
 
-URIs with querystring parameters are not permitted. (The 'state' parameter described in [section 3.4](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3) is designed to support conveying dynamic request content within the OIDC authentication request.)
+URIs with querystring parameters are not permitted. (The 'state' parameter described in [3.4 Authorize endpoint](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3) is designed to support conveying dynamic request content within the OIDC authentication request.)

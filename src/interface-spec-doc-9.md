@@ -3,6 +3,16 @@ layout: base.njk
 title: 9 Document Management
 ---
 
+| **Document filename**       | **NHS login Interface Specification - Federation** |
+| --------------------------- | -------------------------------------------------- | 
+| **Directorate / Programme** | NHS login Programme                                |
+| **Document reference**      | CID-IS-F                                           |
+| **Information asset owner** | Melissa Ruscoe                                     |
+| **Author**                  | Matthew Brown                                      |
+| **Version**                 | V1.9                                               |
+| **Version issue date**      | 15 May 2020                                        |
+
+
 ### Revision History
 
 | **Version** | **Date**      | **Summary of Changes**                             |

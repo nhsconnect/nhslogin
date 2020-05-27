@@ -21,10 +21,10 @@ The objective of utilising FIDO UAF in combination with the OpenID Connect Autho
 
 NHS login exposes four endpoints to support password-less authentication via FIDO UAF. These are:
 
-1. **regRequest** <br>Enables a client to request a FIDO UAF Registration Request Message from the NHS login platform. The access token retrieved by the client during user authentication **MUST** be presented in the Authorization HTTP Header as a Bearer token as per RFC6750.
+1. **regRequest** <br>Enables a client to request a FIDO UAF Registration Request Message from the NHS login platform. The access token retrieved by the client during user authentication **MUST** be presented in the Authorization HTTP Header as a Bearer token as per [RFC6750: OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
 2. **regResponse** <br>Enables a client to POST a FIDO UAF Registration Response Message to the NHS login platform.
-3. **dereg** <br>Enables a client to POST a FIDO UAF Deregistration Request Message to the NHS login platform specifying a set of keys to delete. The NHS login platform will remove the relevant user key(s) and return a FIDO UAF Deregistration Request Message for processing by the FIDO client. The access token retrieved by the client during user authentication **MUST** be presented in the Authorization HTTP Header as a Bearer token as per RFC6750.
-4. **authRequest** <br>Enables a client to request a FIDO UAF Authentication Request Message from the NHS login platform. The client processes the FIDO UAF Authentication Request Message and creates a FIDO UAF Authentication Response Message which the client then base64 URL encodes and provides to the NHS login platform as an authentication request parameter (fido_auth_response) as described in [section 3.4.1](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3).
+3. **dereg** <br>Enables a client to POST a FIDO UAF Deregistration Request Message to the NHS login platform specifying a set of keys to delete. The NHS login platform will remove the relevant user key(s) and return a FIDO UAF Deregistration Request Message for processing by the FIDO client. The access token retrieved by the client during user authentication **MUST** be presented in the Authorization HTTP Header as a Bearer token as per [RFC6750: OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
+4. **authRequest** <br>Enables a client to request a FIDO UAF Authentication Request Message from the NHS login platform. The client processes the FIDO UAF Authentication Request Message and creates a FIDO UAF Authentication Response Message which the client then base64 URL encodes and provides to the NHS login platform as an authentication request parameter (fido_auth_response) as described in [3.4.1 Authentication request](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3).
 
 The endpoints are published in the /.well-known/openid-configuration document, under the keys  `fido_uaf_registration_request_endpoint`,  `fido_uaf_registration_response_endpoint`, `fido_uaf_deregistration_endpoint` and `fido_uaf_authentication_request_endpoint`.
 
@@ -38,7 +38,7 @@ The client initiates registration by invoking the regRequest endpoint of the NHS
 
 <dl><dt>Figure 4 - FIDO UAF Registration flow</dt></dl>
 
-![Diagram](nhslogin/images/EIS-figure4.png)
+![Diagram](nhslogin/images/EIS_Figure4.png)
 
 
 ### 6.2.1 Registration Request endpoint
@@ -165,11 +165,11 @@ Pragma: no-cache
 
 Figure 5 below is a non-normative illustration of the FIDO UAF Authentication flow (taken from the [FIDO UAF Architectural Overview](https://fidoalliance.org/specifications/download/)). The process is initiated after FIDO UAF registration has been completed.
 
-The client initiates authentication by invoking the authRequest endpoint of the NHS login platform (1). The NHS login platform generates a FIDO UAF Authentication Request Message and returns this to the client, which passes it to the FIDO Client on the device for processing (2). The FIDO Client interacts with the FIDO Authenticators on the user’s device (3) and creates a FIDO UAF Authentication Response Message corresponding to the original FIDO UAF Registration Request Message. The FIDO Client passes this message back to the client which sends it to the NHS login service as a base64-URL encoded parameter in an OpenID Connect Authentication Request(4) (see `fido_auth_response` parameter in [section 3.4.1](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3)). The NHS login platform validates the FIDO UAF Authentication Response Message using the public key for the user stored in the NHS login FIDO registry (5) and if validated treats this as a successful authentication using an authentication vector of “Cm” (see [section 5.1.2](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)).
+The client initiates authentication by invoking the authRequest endpoint of the NHS login platform (1). The NHS login platform generates a FIDO UAF Authentication Request Message and returns this to the client, which passes it to the FIDO Client on the device for processing (2). The FIDO Client interacts with the FIDO Authenticators on the user’s device (3) and creates a FIDO UAF Authentication Response Message corresponding to the original FIDO UAF Registration Request Message. The FIDO Client passes this message back to the client which sends it to the NHS login service as a base64-URL encoded parameter in an OpenID Connect Authentication Request(4) (see `fido_auth_response` parameter in [3.4.1 Authentication request](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3)). The NHS login platform validates the FIDO UAF Authentication Response Message using the public key for the user stored in the NHS login FIDO registry (5) and if validated treats this as a successful authentication using an authentication vector of `Cm` (see [5.1.2 Authentication Credentials](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)).
 
 <dl><dt>Figure 5 - FIDO UAF Authentication flow</dt></dl>
 
-![Diagram](nhslogin/images/EIS-figure5.png)
+![Diagram](nhslogin/images/EIS_Figure5.png)
 
 ### 6.3.1 Authentication Request endpoint
 
@@ -234,7 +234,7 @@ The client initiates authenticator deregistration by invoking the deregRequest e
 
 <dl><dt>Figure 6 - FIDO UAF Deregistration flow</dt></dl>
 
-![Diagram](nhslogin/images/EIS-figure6.png)
+![Diagram](nhslogin/images/EIS_Figure6.png)
 
 ### 6.4.1	Deregistration Request endpoint
 
@@ -310,7 +310,7 @@ As the NHS login platform is designed for public use, restricting authenticators
 
 **User Verification Methods**
 
-The platform will accept authenticators which support Presence **AND** Fingerprint (1027), **OR** Presence **AND** Faceprint (1041), **OR** Presence **AND** Handprint (1281) (see [FIDO UAF Registry of Predefined Values](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html), section 3.1)
+The platform will accept authenticators which support Presence AND Fingerprint (1027), OR Presence AND Faceprint (1041), OR Presence AND Handprint (1281) (see [FIDO UAF Registry of Predefined Values](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html), section 3.1)
 
 If a FIDO UAF Registration Request Message or FIDO UAF Authentication Request Message header contains an extension with an id of `fido.uaf.uvm` then the User Verification Method utilised by the authenticator **MUST** be returned in the assertion, as a `TAG_EXTENSION` tag to the `TAG_UAFV1_KRD` tag (for Registration – see [FIDO UAF Authenticator Commands](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html) section 6.1.1.1) or `TAG_UAFV1_SIGNED_DATA` tag (for Authentication – see [FIDO UAF Authenticator Commands](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html) section 6.1.1.2). The data held in the `TAG_EXTENSION_ID` tag of the extension tag **MUST** equal `fido.uaf.uvm`, and the data held in the `TAG_EXTENSION_DATA` tag of the extension tag **MUST** contain the User Verification Method and the value **MUST** match a User Verification Method value in an accepted Matching Criteria of the relevant Request Message Policy.
 

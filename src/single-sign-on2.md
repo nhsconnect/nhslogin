@@ -13,8 +13,6 @@ NHS login supports two parameters asserted_login_identity and prompt as part of 
 
 ## Technical details
 
-Please refer to [NHS login Interface Specification - Federated document](/nhslogin/interface-spec-doc/), for most up-to-date technical details.
-
 ### parameter: prompt
 
 This is an optional parameter.
@@ -33,7 +31,7 @@ This is an optional parameter.
 
 The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available. 
 
-The content will be a signed `jwt` with payload containing `“code”` attribute with the value being that of the `jti` attribute from the ID Token issued to RP1. The `jwt “iss”` attribute **must** contain the client_id of RP1, the `jwt` **must** have an `“exp”` of no longer that 60 seconds, **must** have `“jti”` and `“iat”` attributes (as per RFC7519) and **must** be signed by RP1 using its client private key. RP1 passes the `jwt` to RP2 for RP2 to use in its authentication request.
+The content will be a signed `jwt` with payload containing `“code”` attribute with the value being that of the `jti` attribute from the ID Token issued to RP1. The `jwt “iss”` attribute **MUST** contain the client_id of RP1, the `jwt` **MUST** have an `“exp”` of no longer that 60 seconds, **MUST** have `“jti”` and `“iat”` attributes (as per RFC7519) and **MUST** be signed by RP1 using its client private key. RP1 passes the `jwt` to RP2 for RP2 to use in its authentication request.
 
 A non-normative example jwt payload section is as follows:
 ``` html

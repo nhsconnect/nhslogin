@@ -40,7 +40,7 @@ There are a number of users already configured that you can use to test the logi
 We currently have two methods to complete registration:
 
 - Existing GP Online details
-- Online ID check with video selfie
+- Online ID check with either video selfie or facial recognition scan
 
 We do not support testing of GP Online method in the sandpit, but you can test the online ID checking process.
 
