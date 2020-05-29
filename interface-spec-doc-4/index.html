@@ -429,7 +429,7 @@
 </tr>
 </tbody>
 </table>
-<p>The JWT header <strong>MAY</strong> contain other Claims. Any Claims used that are not understood <strong>MUST</strong> be ignored by the RP.</p>
+<p>The JWT header <strong>may</strong> contain other Claims. Any Claims used that are not understood <strong>must</strong> be ignored by the RP.</p>
 <hr>
 <h2>4.2 ID Token Payload</h2>
 <p>References:</p>
@@ -458,19 +458,19 @@
 <td><code>sub</code></td>
 <td>mand</td>
 <td>Subject Identifier</td>
-<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., <code>24400320</code> or <code>AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4</code>. <br>It <strong>SHALL NOT</strong> exceed 255 ASCII characters in length. <br> The <code>sub</code> value is a case sensitive string.</td>
+<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., <code>24400320</code> or <code>AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4</code>. <br>It <strong>shall not</strong> exceed 255 ASCII characters in length. <br> The <code>sub</code> value is a case sensitive string.</td>
 </tr>
 <tr>
 <td><code>aud</code></td>
 <td>mand</td>
 <td>Audience(s) that this ID Token is intended for</td>
-<td>It <strong>SHALL</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Services as an audience value. It <strong>MAY</strong> also contain identifiers for other audiences. <br>In the general case, the <code>aud</code> value is an array of case sensitive strings. <br>In the common special case when there is one audience, the <code>aud</code> value <strong>SHALL</strong> be a single case sensitive string.</td>
+<td>It <strong>shall</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Services as an audience value. It <strong>may</strong> also contain identifiers for other audiences. <br>In the general case, the <code>aud</code> value is an array of case sensitive strings. <br>In the common special case when there is one audience, the <code>aud</code> value <strong>shall</strong> be a single case sensitive string.</td>
 </tr>
 <tr>
 <td><code>exp</code></td>
 <td>mand</td>
-<td>Expiration time on or after which the ID Token <strong>MUST NOT</strong> be accepted for processing</td>
-<td>The processing of this parameter requires that the current date/time <strong>MUST</strong> be before the expiration date/time listed in the value. <br>Implementers <strong>MAY</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. <br>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
+<td>Expiration time on or after which the ID Token <strong>must not</strong> be accepted for processing</td>
+<td>The processing of this parameter requires that the current date/time <strong>must</strong> be before the expiration date/time listed in the value. <br>Implementers <strong>may</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. <br>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
 </tr>
 <tr>
 <td><code>iat</code></td>
@@ -488,13 +488,13 @@
 <td><code>auth_time</code></td>
 <td>cond</td>
 <td>Time when the End-User authentication occurred</td>
-<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a <code>max_age</code> request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>REQUIRED</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. <br>(The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter).</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a <code>max_age</code> request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>required</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. <br>(The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter).</td>
 </tr>
 <tr>
 <td><code>nonce</code></td>
 <td>cond</td>
 <td>String value used to associate a Client session with an ID Token, and to mitigate replay attacks</td>
-<td>The value is passed through unmodified from the Authentication Request to the ID Token. <br>If present in the ID Token, Clients <strong>MUST</strong> verify that the nonce Claim Value is equal to the value of the nonce parameter sent in the Authentication Request. <br>If present in the Authentication Request, the Platform <strong>MUST</strong> include a nonce Claim in the ID Token with the Claim Value being the nonce value sent in the Authentication Request. <br>The Platform will perform no other processing on nonce values used. <br>The nonce value is a case sensitive string.</td>
+<td>The value is passed through unmodified from the Authentication Request to the ID Token. <br>If present in the ID Token, Clients <strong>must</strong> verify that the nonce Claim Value is equal to the value of the nonce parameter sent in the Authentication Request. <br>If present in the Authentication Request, the Platform <strong>must</strong> include a nonce Claim in the ID Token with the Claim Value being the nonce value sent in the Authentication Request. <br>The Platform will perform no other processing on nonce values used. <br>The nonce value is a case sensitive string.</td>
 </tr>
 <tr>
 <td><code>acr</code></td>
@@ -555,17 +555,17 @@
 <td><code>nhs_number</code></td>
 <td>cond</td>
 <td>NHS Number</td>
-<td>If the user’s NHS Number is known, then it <strong>SHALL</strong> be included (subject to the profile scope being requested). <br>Will be represented as a 10-digit string.</td>
+<td>If the user’s NHS Number is known, then it <strong>shall</strong> be included (subject to the profile scope being requested). <br>Will be represented as a 10-digit string.</td>
 </tr>
 <tr>
 <td><code>identity_proofing_level</code></td>
 <td>cond</td>
 <td>Identity Proofing Level</td>
-<td>User’s identity proofing level shall be included (subject to the profile scope being requested). <br>It will contain one of the values defined in section <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.1 Verification of Identity Levels</a> and Table 18 – e.g. “P0”, “P9”.</td>
+<td>User’s identity proofing level <strong>shall</strong> be included (subject to the profile scope being requested). <br>It will contain one of the values defined in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">5.1.1 Verification of Identity Levels</a> and Table 18 – e.g. “P0”, “P9”.</td>
 </tr>
 </tbody>
 </table>
-<p>ID Tokens <strong>MAY</strong> contain other Claims. Any Claims used that are not understood <strong>MUST</strong> be ignored by the RP.</p>
+<p>ID Tokens <strong>may</strong> contain other Claims. Any Claims used that are not understood <strong>must</strong> be ignored by the RP.</p>
 <p>The following is a non-normative example of the set of Claims (the JWT Claims Set) in an ID Token:</p>
 <pre class="language-html"><code class="language-html">  {<br>   “iss”: “ https://auth.login.nhs.uk”,<br>   “sub”: “24400320”,<br>   “aud”: “s6BhdRkqt3”,<br>   “nonce”: “n-0S6_WzA2Mj”,<br>   “exp”: 1311281970,<br>   “iat”: 1311280970,<br>   “auth_time”: 1311280969,<br>   “vot”: “P9.Ca.Cc”,	<br>   “vtm”: “https://auth.login.nhs.uk/trustmark/auth.login.nhs.uk”<br>   “nhs_number”: “4447685222”,<br>   “birthdate”: “2001-12-30”,<br>   “family_name”: “Johnson”,<br>   “identity_proofing_level”: “P9”<br>  }</code></pre>
 <hr>
@@ -596,19 +596,19 @@
 <td><code>sub</code></td>
 <td>mand</td>
 <td>Subject Identifier</td>
-<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., 24400320 or AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4. <br>It <strong>SHALL NOT</strong> exceed 255 ASCII characters in length. <br>The sub value is a case sensitive string.</td>
+<td>A locally unique and never reassigned identifier within the Issuer for the End-User, which is intended to be consumed by the Client, e.g., <code>24400320</code> or <code>AitOawmwtWwcT0k51BayewNvutrJUqsvl6qs7A4</code>. <br>It <strong>shall not</strong> exceed 255 ASCII characters in length. <br>The <code>sub</code> value is a case sensitive string.</td>
 </tr>
 <tr>
 <td><code>aud</code></td>
 <td>mand</td>
 <td>Audience(s) that this ID Token is intended for</td>
-<td>It <strong>SHALL</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Service as an audience value. It <strong>MAY</strong> also contain identifiers for other audiences. <br>In the general case, the <code>aud</code> value is an array of case sensitive strings. <br>In the common special case when there is one audience, the <code>aud</code> value <strong>SHALL</strong> be a single case sensitive string.</td>
+<td>It <strong>shall</strong> contain the Oauth 2.0 <code>client_id</code> of the Partner Service as an audience value. It <strong>may</strong> also contain identifiers for other audiences. <br>In the general case, the <code>aud</code> value is an array of case sensitive strings. <br>In the common special case when there is one audience, the <code>aud</code> value <strong>shall</strong> be a single case sensitive string.</td>
 </tr>
 <tr>
 <td><code>exp</code></td>
 <td>mand</td>
-<td>Expiration time on or after which the ID Token <strong>MUST NOT</strong> be accepted for processing</td>
-<td>The processing of this parameter requires that the current date/time <strong>MUST</strong> be before the expiration date/time listed in the value. <br>Implementers <strong>MAY</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. <br>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
+<td>Expiration time on or after which the ID Token <strong>must not</strong> be accepted for processing</td>
+<td>The processing of this parameter requires that the current date/time <strong>must</strong> be before the expiration date/time listed in the value. <br>Implementers <strong>may</strong> provide for some small leeway, usually no more than a few minutes, to account for clock skew. <br>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>See <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a> for details regarding date/times in general and UTC in particular.</td>
 </tr>
 <tr>
 <td><code>iat</code></td>
@@ -632,7 +632,7 @@
 <td><code>auth_time</code></td>
 <td>cond</td>
 <td>Time when the End-User authentication occurred</td>
-<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a max_age request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>REQUIRED</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. (The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter.)</td>
+<td>Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z as measured in UTC until the date/time. <br>When a max_age request is made or when <code>auth_time</code> is requested as an Essential Claim, then this Claim is <strong>required</strong>; otherwise, its inclusion is <strong>OPTIONAL</strong>. (The <code>auth_time</code> Claim semantically corresponds to the <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID 2.0 PAPE</a> <code>auth_time</code> response parameter.)</td>
 </tr>
 <tr>
 <td><code>acr</code></td>
@@ -669,7 +669,7 @@
 <td><code>nhs_number</code></td>
 <td>cond</td>
 <td>NHS Number</td>
-<td>If the user’s NHS Number is known, then it SHALL be included (subject to the profile scope being requested). <br>Will be represented as a 10-digit string.</td>
+<td>If the user’s NHS Number is known, then it <strong>shall</strong> be included (subject to the profile scope being requested). <br>Will be represented as a 10-digit string.</td>
 </tr>
 </tbody>
 </table>
@@ -704,7 +704,7 @@
 </tr>
 </tbody>
 </table>
-<p>Access Tokens <strong>MAY</strong> contain other Claims. Any Claims used that are not understood <strong>MUST</strong> be ignored by the RP.</p>
+<p>Access Tokens <strong>may</strong> contain other Claims. Any Claims used that are not understood <strong>must</strong> be ignored by the RP.</p>
 <hr>
 <h2>4.4 JOSE Signing</h2>
 <p>References:</p>

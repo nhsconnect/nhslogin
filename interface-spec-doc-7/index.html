@@ -372,7 +372,7 @@
 
             <h2>7.1 Partner Service Registration</h2>
 <p>Currently, Partner Services will be registered and onboarded into the NHS login Platform using a standard offline process.</p>
-<p>The following information is required is required for the offline registration process:</p>
+<p>The following information is <strong>required</strong> for the offline registration process:</p>
 <dl><dt>Table 20: Client Metadata - supplied by client</dt></dl>
 <table>
 <thead>
@@ -384,7 +384,7 @@
 <tbody>
 <tr>
 <td>Redirect URIs</td>
-<td>List of Redirection URI values used by the Client. <br>The redirect_uri parameter value used in each Authorization Request <strong>MUST</strong> exactly match one of these registered Redirection URI values.</td>
+<td>List of Redirection URI values used by the Client. <br>The redirect_uri parameter value used in each Authorization Request <strong>must</strong> exactly match one of these registered Redirection URI values.</td>
 </tr>
 <tr>
 <td>Client Name</td>
@@ -392,7 +392,7 @@
 </tr>
 <tr>
 <td>Public Key</td>
-<td>A copy of the client’s public key is supplied. The public key must be in PEM format and represent a 2048-bit RSA keypair. <br>An example use of OpenSSL to generate a RSA public/private key pair and then extract the public key is as follows: <br> <code>openssl genpkey -algorithm RSA -out ../keys/private_key.pem -outform PEM -aes-256-cbc -pass file:../keys/password.txt -pkeyopt rsa_keygen_bits:2048</code> <br> <code>openssl rsa -pubout -in ../keys/private_key.pem -out ../keys/public_key.pem -passin file:../keys/password.txt</code></td>
+<td>A copy of the client’s public key is supplied. The public key <strong>must</strong> be in PEM format and represent a 2048-bit RSA keypair. <br>An example use of OpenSSL to generate a RSA public/private key pair and then extract the public key is as follows: <br> <code>openssl genpkey -algorithm RSA -out ../keys/private_key.pem -outform PEM -aes-256-cbc -pass file:../keys/password.txt -pkeyopt rsa_keygen_bits:2048</code> <br> <code>openssl rsa -pubout -in ../keys/private_key.pem -out ../keys/public_key.pem -passin file:../keys/password.txt</code></td>
 </tr>
 <tr>
 <td>Scopes</td>
@@ -424,7 +424,7 @@
 <h2>7.2 Partner Service Authentication</h2>
 <p>Reference:</p>
 <ul>
-<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, section 9</li>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s9</li>
 </ul>
 <h3>7.2.1 Confidential Clients</h3>
 <p>Partner Services which are confidential clients will use the following authentication mechanism:</p>
