@@ -7,7 +7,7 @@ title: 2 Specification status
 
 - This document relates to NHS login ‘Federation interface’ during Beta. Further amendments WILL be implemented prior to full rollout – this document is a draft representing intended design, but is subject to clarification.
 - The NHS login Platform supports Authentication using the Authorization Code Flow only. Implicit & Hybrid Flows are not supported
-- HTTP is not supported - all HTTP-based flows must be HTTPS (using TLS v1.2 or above)
+- HTTP is not supported - all HTTP-based flows **must** be HTTPS (using TLS v1.2 or above)
 
 ---
 

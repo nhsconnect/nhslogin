@@ -26,7 +26,7 @@ NHS login supports the following levels of identification verification. These ar
 
 ### 5.1.2 Authentication Credentials
 
-NHS login supports the following types of authentication credentials.  Note that the credential component may occur more than once.
+NHS login supports the following types of authentication credentials.  Note that the credential component **may** occur more than once.
 
 <dl><dt>Table 19 - NHS login Authentication Context Class</dt></dl>
 
@@ -41,15 +41,15 @@ NHS login supports the following types of authentication credentials.  Note that
 
 Vector of Trust (VoT) is a combination of - Identity Verification (defined in [5.1.1 Verification of Identity Levels](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)) and Authentication (defined in [5.1.2 Authentication Credentials](https://nhsconnect.github.io/nhslogin/interface-spec-doc-5)) levels.
 
-The client **MAY** request a set of acceptable VoT values with the `vtr` (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components. The component values within each vector are **AND**ed together while the separate vectors are **OR**ed together.  For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"]` is stating that either the full set of "P9 **AND** Cp **AND** Cd" simultaneously **OR** the full set of "P9 **AND** Ck" simultaneously are acceptable for this transaction.
+The client **may** request a set of acceptable VoT values with the `vtr` (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components. The component values within each vector are **AND**ed together while the separate vectors are **OR**ed together.  For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"]` is stating that either the full set of "P9 **AND** Cp **AND** Cd" simultaneously **OR** the full set of "P9 **AND** Ck" simultaneously are acceptable for this transaction.
 
-The requested set of VoT, **SHOULD** only contain one value for Identity Verification component, combined with one or more values of the Authentication component.
+The requested set of VoT, **should** only contain one value for Identity Verification component, combined with one or more values of the Authentication component.
 
-Client **SHOULD** only request the lowest level of acceptable Identity Verification, within the VoT set. Vector request values **MAY** omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.
+Client **should** only request the lowest level of acceptable Identity Verification, within the VoT set. Vector request values **may** omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.
 
 ### 5.1.4	Returning Vectors of Trust values
 
-The vector is sent as a string within the `vot` (vector of trust) claim in the ID and Access tokens. The trustmark that applies to this vector **SHALL** be sent as an HTTPS URL in the `vtm` (vector trust mark) claim to provide context to the vector.
+The vector is sent as a string within the `vot` (vector of trust) claim in the ID and Access tokens. The trustmark that applies to this vector **shall** be sent as an HTTPS URL in the `vtm` (vector trust mark) claim to provide context to the vector.
 
 For example, part of the body of an ID token claiming "Medium Assurance Identity, authenticated user via password and registered device identifier" could look like this JSON object payload of the ID token.
 
@@ -70,7 +70,7 @@ The body of the token is signed using JOSE, as per the OpenID Connect specificat
 ### 5.1.5 Trustmark
 
 References
-- [RFC8485 - Vectors of Trust](https://tools.ietf.org/html/draft-richer-vectors-of-trust-09), section 5
+- [RFC8485 - Vectors of Trust](https://tools.ietf.org/html/draft-richer-vectors-of-trust-09), s5
 
 The Trustmark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.
 
@@ -140,6 +140,6 @@ When a P5 user, attempts to access other features supported by sensitive data th
 
 **5.1.6.4	The user is prompted to undertake a verification step-up journey to take the user verification level from Medium to High.Single Sign-on**
 
-If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (`vtr`) in the incoming request, then the user will be required to sign-in, in order to meet the requested vectors.
+If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (`vtr`) in the incoming request, then the user will be **required** to sign-in, in order to meet the requested vectors.
 
 Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the `prompt` parameter on the initial authorisation request – see [3.4.1 Authentication request](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3).

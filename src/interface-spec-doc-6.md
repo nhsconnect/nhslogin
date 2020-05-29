@@ -21,9 +21,9 @@ The objective of utilising FIDO UAF in combination with the OpenID Connect Autho
 
 NHS login exposes four endpoints to support password-less authentication via FIDO UAF. These are:
 
-1. **regRequest** <br>Enables a client to request a FIDO UAF Registration Request Message from the NHS login platform. The access token retrieved by the client during user authentication **MUST** be presented in the Authorization HTTP Header as a Bearer token as per [RFC6750: OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
+1. **regRequest** <br>Enables a client to request a FIDO UAF Registration Request Message from the NHS login platform. The access token retrieved by the client during user authentication **must** be presented in the Authorization HTTP Header as a Bearer token as per [RFC6750: OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
 2. **regResponse** <br>Enables a client to POST a FIDO UAF Registration Response Message to the NHS login platform.
-3. **dereg** <br>Enables a client to POST a FIDO UAF Deregistration Request Message to the NHS login platform specifying a set of keys to delete. The NHS login platform will remove the relevant user key(s) and return a FIDO UAF Deregistration Request Message for processing by the FIDO client. The access token retrieved by the client during user authentication **MUST** be presented in the Authorization HTTP Header as a Bearer token as per [RFC6750: OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
+3. **dereg** <br>Enables a client to POST a FIDO UAF Deregistration Request Message to the NHS login platform specifying a set of keys to delete. The NHS login platform will remove the relevant user key(s) and return a FIDO UAF Deregistration Request Message for processing by the FIDO client. The access token retrieved by the client during user authentication **must** be presented in the Authorization HTTP Header as a Bearer token as per [RFC6750: OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
 4. **authRequest** <br>Enables a client to request a FIDO UAF Authentication Request Message from the NHS login platform. The client processes the FIDO UAF Authentication Request Message and creates a FIDO UAF Authentication Response Message which the client then base64 URL encodes and provides to the NHS login platform as an authentication request parameter (fido_auth_response) as described in [3.4.1 Authentication request](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3).
 
 The endpoints are published in the /.well-known/openid-configuration document, under the keys  `fido_uaf_registration_request_endpoint`,  `fido_uaf_registration_response_endpoint`, `fido_uaf_deregistration_endpoint` and `fido_uaf_authentication_request_endpoint`.
@@ -32,7 +32,7 @@ The endpoints are published in the /.well-known/openid-configuration document, u
 
 ## 6.2 FIDO UAF registration flow
 
-Figure 4 below is a non-normative illustration of the FIDO UAF Registration flow (taken from the [FIDO UAF Architectural Overview](https://fidoalliance.org/specifications/download/)). The process is initiated after user authentication using the standard NHS login OIDC Authorization Code Flow (as per [section 3.1](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3)).
+Figure 4 below is a non-normative illustration of the FIDO UAF Registration flow (taken from the [FIDO UAF Architectural Overview](https://fidoalliance.org/specifications/download/)). The process is initiated after user authentication using the standard NHS login OIDC Authorization Code Flow (as per [3.1 Authorization Code Flow](https://nhsconnect.github.io/nhslogin/interface-spec-doc-3)).
 
 The client initiates registration by invoking the regRequest endpoint of the NHS login platform (1). The NHS login platform generates a FIDO UAF Registration Request Message and returns this to the client, which passes it to the FIDO Client on the device for processing (2). The FIDO Client interacts with the FIDO Authenticators on the user’s device (3) and creates a FIDO UAF Registration Response Message corresponding to the original FIDO UAF Registration Request Message. The FIDO Client passes this message back to the client which sends it to the regResponse endpoint of the NHS login service (4). The NHS login platform validates the details held within the FIDO UAF Registration Response Message and stores the relevant details (5). FIDO UAF registration is complete.
 
@@ -47,7 +47,7 @@ The client initiates registration by invoking the regRequest endpoint of the NHS
 
 The Client sends the request for a FIDO UAF Registration Request Message using HTTP GET.
 
-The Access Token obtained from an OpenID Connect Authentication Request MUST be sent as a Bearer Token using the Authorization header field, per Section 2 of [OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
+The Access Token obtained from an OpenID Connect Authentication Request **must** be sent as a Bearer Token using the Authorization header field, per [OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750), s2.
 
 The following is a non-normative example of a regRequest Request:
 
@@ -59,11 +59,11 @@ Authorization: Bearer SlAV…32hkKG
 
 **6.2.1.2	Registration Request Validation**
 
-The access token presented in the request is validated prior to generating a FIDO UAF Registration Response Message as per section 3.4.6.1 of the FIDO UAF Protocol Specification.
+The access token presented in the request is validated prior to generating a FIDO UAF Registration Response Message as per FIDO UAF Protocol Specification, s3.4.6.1.
 
 **6.2.1.3	Registration Request Response**
 
-The response from the Registration Request endpoint will be a FIDO UAF Registration Request Message as per section 3.4.1 of the FIDO UAF Protocol Specification.
+The response from the Registration Request endpoint will be a FIDO UAF Registration Request Message as per FIDO UAF Protocol Specification, s3.4.1.
 
 The following is a non-normative example of a response from the Registration Request endpoint:
 
@@ -101,7 +101,7 @@ Pragma: no-cache
 
 **6.2.2.1	Request Syntax**
 
-The Client sends the FIDO UAF Registration Response Message (as per section 3.4.4 of the FIDO UAF Protocol Specification) to the Registration Response endpoint using HTTP POST.
+The Client sends the FIDO UAF Registration Response Message (as per FIDO UAF Protocol Specification, s3.4.4) to the Registration Response endpoint using HTTP POST.
 
 The following is a non-normative example of a regResponse Request:
 
@@ -125,7 +125,7 @@ Content-Type: application/json
 
 **6.2.2.2	Registration Response Request Validation**
 
-The FIDO UAF Registration Response Message is validated and processed as per section 3.4.6.5 of the FIDO UAF Protocol Specification.
+The FIDO UAF Registration Response Message is validated and processed as per FIDO UAF Protocol Specification, s3.4.6.5.
 
 **6.2.2.3	Registration Response Response**
 
@@ -190,7 +190,7 @@ No specific validation of the request is performed
 
 **6.3.1.3	Authentication Request Response**
 
-The response from the Authentication Request endpoint will be a FIDO UAF Authentication Request Message as per section 3.5.2 of the FIDO UAF Protocol Specification.
+The response from the Authentication Request endpoint will be a FIDO UAF Authentication Request Message as per FIDO UAF Protocol Specification, s3.5.2.
 
 The following is a non-normative example of a response from the Authentication Request endpoint:
 
@@ -230,7 +230,7 @@ Pragma: no-cache
 
 Figure 6 below is a non-normative illustration of the FIDO UAF Deregistration flow (taken from the [FIDO UAF Architectural Overview](https://fidoalliance.org/specifications/download/)). The process can be initiated after FIDO UAF registration has been completed.
 
-The client initiates authenticator deregistration by invoking the deregRequest endpoint of the NHS login platform (1). The request **MUST** include the Access Token obtained from an OpenID Connect Authentication Request, which **MUST** be sent as a Bearer Token using the Authorization header field, per Section 2 of [OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750). The request can either be a list of authenticators to be deregistered (sent using HTTP POST) or a request to remove all authenticators for the user (using a HTTP GET). The NHS login platform generates a FIDO UAF Deregistration Request Message, removes the relevant authenticator records from the NHS login FIDO registry and returns the message to the client. The client passes the FIDO UAF Deregistration Request Message to the FIDO Client on the device for processing (3) and removal of authenticators from the device.
+The client initiates authenticator deregistration by invoking the deregRequest endpoint of the NHS login platform (1). The request **must** include the Access Token obtained from an OpenID Connect Authentication Request, which **must** be sent as a Bearer Token using the Authorization header field, per [OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750), s2. The request can either be a list of authenticators to be deregistered (sent using HTTP POST) or a request to remove all authenticators for the user (using a HTTP GET). The NHS login platform generates a FIDO UAF Deregistration Request Message, removes the relevant authenticator records from the NHS login FIDO registry and returns the message to the client. The client passes the FIDO UAF Deregistration Request Message to the FIDO Client on the device for processing (3) and removal of authenticators from the device.
 
 <dl><dt>Figure 6 - FIDO UAF Deregistration flow</dt></dl>
 
@@ -240,9 +240,9 @@ The client initiates authenticator deregistration by invoking the deregRequest e
 
 **6.4.1.1	Request Syntax**
 
-The Client either sends a FIDO UAF Deregistration Request Message (as per section 3.6.1 of the FIDO UAF Protocol Specification) to the Deregistration Request endpoint using HTTP POST or can make a HTTP GET to the endpoint with no body. 
+The Client either sends a FIDO UAF Deregistration Request Message (as per FIDO UAF Protocol Specification, s3.6.1) to the Deregistration Request endpoint using HTTP POST or can make a HTTP GET to the endpoint with no body. 
 
-The Access Token obtained from an OpenID Connect Authentication Request **MUST** be sent as a Bearer Token using the Authorization header field, per Section 2 of [OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750).
+The Access Token obtained from an OpenID Connect Authentication Request **must** be sent as a Bearer Token using the Authorization header field, per [OAuth 2.0 Bearer Token Usage](https://tools.ietf.org/html/rfc6750), s2.
 
 The following is a non-normative example of a deregRequest HTTP POST Request:
 
@@ -277,7 +277,7 @@ For HTTP POST processing, each authenticator provided in the message is removed 
 
 For HTTP GET processing, each authenticator stored in the NHS login FIDO registry is identified for the NHS login user account and subsequently removed.
 
-The FIDO UAF Registration Response Message is validated and processed as per section 3.4.6.5 of the FIDO UAF Protocol Specification.
+The FIDO UAF Registration Response Message is validated and processed as per FIDO UAF Protocol Specification, s3.4.6.5.
 
 **6.4.1.3	Deregistration Request Response**
 
@@ -310,9 +310,9 @@ As the NHS login platform is designed for public use, restricting authenticators
 
 **User Verification Methods**
 
-The platform will accept authenticators which support Presence AND Fingerprint (1027), OR Presence AND Faceprint (1041), OR Presence AND Handprint (1281) (see [FIDO UAF Registry of Predefined Values](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html), section 3.1)
+The platform will accept authenticators which support Presence AND Fingerprint (1027), OR Presence AND Faceprint (1041), OR Presence AND Handprint (1281) (see [FIDO UAF Registry of Predefined Values](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html), s3.1)
 
-If a FIDO UAF Registration Request Message or FIDO UAF Authentication Request Message header contains an extension with an id of `fido.uaf.uvm` then the User Verification Method utilised by the authenticator **MUST** be returned in the assertion, as a `TAG_EXTENSION` tag to the `TAG_UAFV1_KRD` tag (for Registration – see [FIDO UAF Authenticator Commands](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html) section 6.1.1.1) or `TAG_UAFV1_SIGNED_DATA` tag (for Authentication – see [FIDO UAF Authenticator Commands](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html) section 6.1.1.2). The data held in the `TAG_EXTENSION_ID` tag of the extension tag **MUST** equal `fido.uaf.uvm`, and the data held in the `TAG_EXTENSION_DATA` tag of the extension tag **MUST** contain the User Verification Method and the value **MUST** match a User Verification Method value in an accepted Matching Criteria of the relevant Request Message Policy.
+If a FIDO UAF Registration Request Message or FIDO UAF Authentication Request Message header contains an extension with an id of `fido.uaf.uvm` then the User Verification Method utilised by the authenticator **must** be returned in the assertion, as a `TAG_EXTENSION` tag to the `TAG_UAFV1_KRD` tag (for Registration – see [FIDO UAF Authenticator Commands](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html), s6.1.1.1) or `TAG_UAFV1_SIGNED_DATA` tag (for Authentication – see [FIDO UAF Authenticator Commands](https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html), s6.1.1.2). The data held in the `TAG_EXTENSION_ID` tag of the extension tag **must** equal `fido.uaf.uvm`, and the data held in the `TAG_EXTENSION_DATA` tag of the extension tag **must** contain the User Verification Method and the value **must** match a User Verification Method value in an accepted Matching Criteria of the relevant Request Message Policy.
 
 **Authentication Algorithms**
 
@@ -328,4 +328,4 @@ See [FIDO UAF Registry of Predefined Values](https://fidoalliance.org/specificat
 
 ### 6.5.2	Public Key Representation Formats
 
-Clients **MUST** utilise either `UAF_ALG_KEY_ECC_X962_RAW` or `UAF_ALG_KEY_ECC_X962_DER` formats for the `TAG_PUB_KEY` to align with supported Authentication Algorithms.
+Clients **must** utilise either `UAF_ALG_KEY_ECC_X962_RAW` or `UAF_ALG_KEY_ECC_X962_DER` formats for the `TAG_PUB_KEY` to align with supported Authentication Algorithms.
