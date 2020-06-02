@@ -7,11 +7,13 @@ NHS login supports Single Sign On (SSO) based on an asserted token exchange betw
 - Asserted tokens are one time tokens (TTL 60 sec)
 - Partner services can control which other partner services they share SSO with
 
-NHS login supports two parameters asserted_login_identity and prompt as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).
+NHS login supports two parameters `asserted_login_identity` and `prompt` as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).
 
 ---
 
 ## Technical details
+
+Please refer to NHS login [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) for most up-to-date technical details
 
 ### parameter: prompt
 
