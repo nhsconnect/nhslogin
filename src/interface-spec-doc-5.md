@@ -138,7 +138,7 @@ When a P5 user, attempts to access other features supported by sensitive data th
 
 `“[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]”`
 
-**5.1.6.4	The user is prompted to undertake a verification step-up journey to take the user verification level from Medium to High.Single Sign-on**
+**5.1.6.4	Single Sign-on**
 
 If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (`vtr`) in the incoming request, then the user will be **required** to sign-in, in order to meet the requested vectors.
 
