@@ -375,8 +375,51 @@
 <li>Asserted tokens are one time tokens (TTL 60 sec)</li>
 <li>Partner services can control which other partner services they share SSO with</li>
 </ul>
-<p>NHS login supports two parameters asserted_login_identity and prompt as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).</p>
-<p><a href="https://github.com/nhsconnect/nhslogin/raw/master/NHSlogin_SSO_v1.0.pptx">View our document providing guidance on Single Sign On (SSO)</a></p>
+<p>NHS login supports two parameters <code>asserted_login_identity</code> and <code>prompt</code> as part of the OIDC flow which will allows for seamless login between two Relying Parties (RP1 and RP2).</p>
+<hr>
+<h2>Technical details</h2>
+<p>Please refer to NHS login <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">external interface specification</a> for most up-to-date technical details</p>
+<h3>parameter: prompt</h3>
+<p>This is an optional parameter.</p>
+<p>Requests that the NHS login Service forces the user to sign-in, or to request that the Service does not prompt the user to sign-in (SSO).</p>
+<table>
+<thead>
+<tr>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;blank&gt;</code></td>
+<td>The service will SSO the user if they still have a valid session, <br> else the user will be requested to log in.</td>
+</tr>
+<tr>
+<td><code>&quot;none&quot;</code></td>
+<td>The Service will SSO the user if they still have a valid session, <br> otherwise an error code is returned</td>
+</tr>
+<tr>
+<td><code>&quot;login&quot;</code></td>
+<td>The Service will request the user to log in, regardless of a session <br> already existing.</td>
+</tr>
+</tbody>
+</table>
+<h3>parameter: asserted_login_identity</h3>
+<p>This is an optional parameter.</p>
+<p>The purpose of this parameter is to support seamless login between two RPs (RP1 and RP2) where cookie-based SSO is not available.</p>
+<p>The content will be a signed <code>jwt</code> with payload containing <code>“code”</code> attribute with the value being that of the <code>jti</code> attribute from the ID Token issued to RP1. The <code>jwt “iss”</code> attribute <strong>MUST</strong> contain the client_id of RP1, the <code>jwt</code> <strong>MUST</strong> have an <code>“exp”</code> of no longer that 60 seconds, <strong>MUST</strong> have <code>“jti”</code> and <code>“iat”</code> attributes (as per RFC7519) and <strong>MUST</strong> be signed by RP1 using its client private key. RP1 passes the <code>jwt</code> to RP2 for RP2 to use in its authentication request.</p>
+<p>A non-normative example jwt payload section is as follows:</p>
+<pre class="language-html"><code class="language-html">{<br>  code: “eeroifoteiwrudjdwusdu”,<br>  iss: “client1”,<br>  jti: “reioteotijdvorijevoihroi”,<br>  iat: 1548701645,<br>  exp: 1548701705<br>}</code></pre>
+<hr>
+<h2>SSO flow</h2>
+<h3>Step 1: login to RP1</h3>
+<p>User requests RP1 login - OIDC flow - Authorisation code flow</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step1_smaller.png" alt="diagram" title="Step 1: login to RP1 diagram"></p>
+<h3>Step 2: SSO from RP1 to RP2</h3>
+<p>User transitions from RP1 to RP2 - Single Sign On - Asserted token flow</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step2_smaller.png" alt="diagram" title="Step 2: SSO from RP1 to RP2 diagram"></p>
+<h3>SSO sequence diagram</h3>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SequenceDiagram_smaller.png" alt="diagram" title="SSO sequence diagram"></p>
 
 
      <div class="app-edit-instructions">
