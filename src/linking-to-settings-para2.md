@@ -15,8 +15,8 @@ NHS login provides capability for users to change their NHS login account settin
 
 To help users do this, NHS login needs you to create a link from your service to the NHS login settings page:
 
-INSERT SCREENSHOT OF THE SETTINGS PAGE.
- 
+![diagram](nhslogin/images/example_settings.png)
+
 ---
 
 ## Technical details
