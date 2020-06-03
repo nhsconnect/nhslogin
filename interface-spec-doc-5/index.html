@@ -516,7 +516,7 @@
 <p>For a P5 user (medium identity verification) the service offers basic features at the user’s initial login as the user meets service requirements of Medium Verification and High Authentication only.</p>
 <p>When a P5 user, attempts to access other features supported by sensitive data then the service requires High Verification and High Authentication, with SSO allowed. The service sends the following as acceptable Vectors in the <code>vtr</code> parameter:</p>
 <p><code>“[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]”</code></p>
-<p><strong>5.1.6.4	The user is prompted to undertake a verification step-up journey to take the user verification level from Medium to High.Single Sign-on</strong></p>
+<p><strong>5.1.6.4	Single Sign-on</strong></p>
 <p>If the user’s current sign-on session (if any), does not meet the requested Vectors of Trust (<code>vtr</code>) in the incoming request, then the user will be <strong>required</strong> to sign-in, in order to meet the requested vectors.</p>
 <p>Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the <code>prompt</code> parameter on the initial authorisation request – see <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3">3.4.1 Authentication request</a>.</p>
 
