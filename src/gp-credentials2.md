@@ -57,7 +57,7 @@ For example, a user's GP access may be revoked due to multiple failed login atte
 
 ## GP systems coverage
 
-Currently NHS login provides coverage for GP login credentials
+The platforms that NHS login provides coverage for GP login credentials are:
 
 - EMIS: 100%
 - TPP: 100%
