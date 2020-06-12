@@ -9,7 +9,7 @@ title: Adding the NHS login button to your service
 
 ---
 
-## The button
+## NHS login button
 
 The NHS login button is available to download in a variety of different formats. **This button must always be visible.**
 

@@ -43,7 +43,7 @@ NHS login supports the following types of authentication credentials. Note that 
   </table>
 </div>
 
-
+---
 
 ## Identity Proofing Levels
 
