@@ -41,12 +41,12 @@ Refer to the [NHS login Interface Specification – Federation](https://nhsconne
 
 **Production:** 
 
-`https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
+`https://settings.signin.nhs.uk?asserted_login_identity=ewrffw...wfw`
 
 **Other environments:** 
 
-`https://settings.<ENV>.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
+`https://settings.<ENV>.signin.nhs.uk?asserted_login_identity=ewrffw...wfw`
 
-e.g. `https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
+e.g. `https://settings.sandpit.signin.nhs.uk?asserted_login_identity=ewrffw...wfw`
 
 
