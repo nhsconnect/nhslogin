@@ -387,8 +387,7 @@
 <h2>GP integration credentials validation</h2>
 <p>When <code>gp_integration_credentials</code> scope is requested by an RP, NHS login performs a background check of the validity of a stored IM1 token. As this check runs in the background asynchronously, it is the responsibility of the RP to also validate their IM1 token (if one exists).</p>
 <p>If the RP determines that the claims returned from <code>gp_integration_credentials</code> scope are not valid it can request refreshed claims from NHS login by re-starting the login process.</p>
-<h3>Optional</h3>
-<p>The RP can utilise the <code>asserted_login_identity</code> request parameter to avoid the user needing to re-authenticate.</p>
+<p><strong>Optional</strong>: the RP can utilise the <code>asserted_login_identity</code> request parameter to avoid the user needing to re-authenticate.</p>
 <hr>
 <h2>GP integration credentials are no longer valid</h2>
 <p>The GP credentials might no longer be valid due to:</p>
