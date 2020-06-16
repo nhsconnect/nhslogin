@@ -33,9 +33,7 @@ When `gp_integration_credentials` scope is requested by an RP, NHS login perform
 
 If the RP determines that the claims returned from `gp_integration_credentials` scope are not valid it can request refreshed claims from NHS login by re-starting the login process.
 
-### Optional
-
-The RP can utilise the `asserted_login_identity` request parameter to avoid the user needing to re-authenticate.
+**Optional**: the RP can utilise the `asserted_login_identity` request parameter to avoid the user needing to re-authenticate.
 
 ---
 
