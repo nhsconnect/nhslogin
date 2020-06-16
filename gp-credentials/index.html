@@ -367,45 +367,46 @@
             </h1>
 
             <h2>Introduction</h2>
-<p>If you are an IM1 supplier, learn how to use NHS login to create or retrieve GP credentials. This means users do not have to go their GP practice to register for your service.</p>
-<p>NHS login supports a scope of <code>gp_integration_credentials</code> which will allow a Relying Party (RP) to retrieve the following user claims:</p>
+<p>If you are an IM1 supplier, you can learn how to use NHS login to create or retrieve GP credentials. This means users do not have to go their GP practice to register for your service.</p>
+<p>NHS login supports a scope of <code>gp_integration_credentials</code> which will allow a relying party (RP) to retrieve the following user claims:</p>
 <ul>
 <li>Account ID</li>
 <li>ODS Code</li>
 <li>Linkage Key</li>
 </ul>
-<p>These three pieces of information are required by IM1 paired services to create an IM1 token which is then used by the RP to invoke the GP system patient facing APIs.</p>
-<p>The RP (service) must be IM1 enabled for enabling this scope in production environment.</p>
-<p>Retrieving these items of information via NHS login removes the need for the user to enter them manually, as well as being able to seamlessly register previously unregistered GP Online users – preventing a visit to a GP Practice.</p>
+<p>These three pieces of information are required by IM1 paired services to create an IM1 token, which is then used by the RP to invoke the GP system patient facing APIs.</p>
+<p>The RP (service) must be IM1 enabled to allow this scope in the production environment.</p>
+<p>Retrieving these items of information via NHS login removes the need for the user to enter them manually. It also allows for the seamless registration of previously unregistered GP Online users, preventing the need to visit to a GP Practice.</p>
 <p><img src="nhslogin/images/gp-credentials-diagram.png" alt="Diagram"></p>
-<p>This diagram illustrates</p>
+<p>This diagram illustrates:</p>
 <ol>
-<li>How NHS login processes a request from an RP for <code>gp_integration_credentials</code> via the <strong>/userinfo</strong> endpoint</li>
-<li>How NHS login validates <code>gp_integration_credentials</code> on each request and how <code>gp_integration_credentials</code> are refreshed if the information held by NHS login is invalid</li>
+<li>how NHS login processes a request from an RP for <code>gp_integration_credentials</code> via the <strong>/userinfo</strong> endpoint</li>
+<li>how NHS login validates <code>gp_integration_credentials</code> on each request and how <code>gp_integration_credentials</code> are refreshed if the information held by NHS login is invalid</li>
 </ol>
 <hr>
 <h2>GP integration credentials validation</h2>
 <p>When <code>gp_integration_credentials</code> scope is requested by an RP, NHS login performs a background check of the validity of a stored IM1 token. As this check runs in the background asynchronously, it is the responsibility of the RP to also validate their IM1 token (if one exists).</p>
 <p>If the RP determines that the claims returned from <code>gp_integration_credentials</code> scope are not valid it can request refreshed claims from NHS login by re-starting the login process.</p>
-<p>Optional - the RP can utilise the <code>asserted_login_identity</code> request parameter to avoid the user needing to re-authenticate.</p>
+<h3>Optional</h3>
+<p>The RP can utilise the <code>asserted_login_identity</code> request parameter to avoid the user needing to re-authenticate.</p>
 <hr>
 <h2>GP integration credentials are no longer valid</h2>
 <p>The GP credentials might no longer be valid due to:</p>
 <ol>
-<li>The user has moved GP Practice</li>
-<li>The GP Practice has changed GP systems</li>
-<li>Practices merge / divides</li>
-<li>The user’s GP online access been revoked at the GP system e.g. for multiple failed login attempts</li>
+<li>the user has moved GP surgery</li>
+<li>the GP surgery has changed GP systems</li>
+<li>GP surgeries merge / divide</li>
+<li>the user’s GP online access been revoked at the GP system</li>
 </ol>
-<p>In cases 1, 2 and 3 generally the ODS code for the user changes and will be detected by NHS login automatically via a separate background process that validates PDS information relating to the user.</p>
+<p>For example, a user's GP access may be revoked due to multiple failed login attempts. In cases 1, 2 and 3 generally the ODS code for the user changes. This will be detected by NHS login automatically via a separate background process, which validates PDS information relating to the user.</p>
 <h3>Assumptions</h3>
 <ul>
-<li>When GP credentials (linkage keys) expire or get invalidated all the IM1 tokens generated using them also expire/get invalidated. So in case the RP has any process to expire or invalidate the GP credentials (linkage keys) then it should be disclosed/discussed with NHS login.</li>
-<li>RP should cater for user journey which prevents the user getting into an endless “retrieve GP credential” loop if the credentials genuinely can’t be retrieved.</li>
+<li>When GP credentials (linkage keys) expire or are invalidated, all the IM1 tokens generated using them are also expired or invalidated. If the RP has any process to expire or invalidate the GP credentials (linkage keys) then it should be disclosed/discussed with NHS login.</li>
+<li>RP should cater for a user journey which prevents the user getting into an endless “retrieve GP credential” loop if the credentials genuinely can’t be retrieved.</li>
 </ul>
 <hr>
 <h2>GP systems coverage</h2>
-<p>Currently NHS login provides coverage for GP login credentials</p>
+<p>The platforms that NHS login provides coverage for GP login credentials are:</p>
 <ul>
 <li>EMIS: 100%</li>
 <li>TPP: 100%</li>
