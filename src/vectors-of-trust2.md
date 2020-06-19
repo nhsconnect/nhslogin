@@ -154,3 +154,5 @@ Also note that SSO behaviour, or to refuse SSO behaviour, can be controlled usin
 The trust mark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.
 
 The NHS login trust mark is self-hosted.
+
+
