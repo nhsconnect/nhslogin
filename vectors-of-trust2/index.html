@@ -480,13 +480,23 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
 </tbody>
 </table>
 <h3>Example 1: Partner service provides access to sensitive data</h3>
-<p>This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'.</p>
-<p>The service requires high verification and high authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p>This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'. The service requires high verification and high authentication.</p>
+<p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>\[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”\]</code></p>
 <h3>Example 2: Partner service provides access to basic data (not sensitive)</h3>
-<p>This example maps onto archetype A3 within the standard 'DCB3051'.</p>
-<p>The service requires medium verification and high authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p>This example maps onto archetype A3 within the standard 'DCB3051'. The service requires medium verification and high authentication.</p>
+<p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>\[“P5.Cp.Cd”, “P5.Cp.Ck” , “P5.Cm”, “P9.Cp.Cd”, “P9.Cp.Ck”, “P9.Cm”\]</code></p>
+<h3>Example 3: Partner service provides access to both basic data and sensitive data</h3>
+<p>This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and high authentication.</p>
+<p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p><code>[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]</code></p>
+<p>A successfully authenticated user can be either medium or high level in terms of identity verification.</p>
+<p>The service can offer all functionalities to a user that meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and high authentication only.</p>
+<p>When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication (with Single Sign On allowed).</p>
+<p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
+<p><code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code></p>
+<p>The user is prompted to undertake a verification step-up journey to take the user verification level from medium to high.</p>
 <hr>
 <h2>Single sign-on (SSO)</h2>
 <p>If the user’s current session (if any) does not meet the requested Vectors of Trust (vtr) in the incoming request, then the user will be required to sign-in, to meet the requested vectors.</p>
