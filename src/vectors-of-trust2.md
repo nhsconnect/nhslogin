@@ -125,19 +125,39 @@ Vectors can be combined to create profiles.
 
 ### Example 1: Partner service provides access to sensitive data
 
-This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'.
+This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'. The service requires high verification and high authentication. 
 
-The service requires high verification and high authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
 `\[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”\]`
 
 ### Example 2: Partner service provides access to basic data (not sensitive)
 
-This example maps onto archetype A3 within the standard 'DCB3051'.
+This example maps onto archetype A3 within the standard 'DCB3051'. The service requires medium verification and high authentication. 
 
-The service requires medium verification and high authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
 `\[“P5.Cp.Cd”, “P5.Cp.Ck” , “P5.Cm”, “P9.Cp.Cd”, “P9.Cp.Ck”, “P9.Cm”\]`
+
+### Example 3: Partner service provides access to both basic data and sensitive data
+
+This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and high authentication.
+
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+
+`[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]`
+
+A successfully authenticated user can be either medium or high level in terms of identity verification.
+
+The service can offer all functionalities to a user that meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and high authentication only.
+
+When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication (with Single Sign On allowed).
+
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+
+`[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]` 
+
+The user is prompted to undertake a verification step-up journey to take the user verification level from medium to high.
 
 ---
 
