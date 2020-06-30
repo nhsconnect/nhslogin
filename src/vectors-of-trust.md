@@ -3,13 +3,13 @@ layout: base.njk
 title: Introduction to Vectors of Trust
 ---
 
-Vectors of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows your service to request the appropriate authentication and identity verification of the user, determined by the transaction(s) the user is undertaking in your service.
+Vectors of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows you to request the appropriate levels of authentication and identity verification required for users to gain access to your service. This will be determined by the transactions the user performs in your service.
 
 Your service should include a vector value in the query string as part of the initialisation of the OIDC flow. 
 
 ---
 
-## Authentication Credentials
+## Authentication credentials
 
 NHS login supports the following types of authentication credentials. Note that the credential component may occur more than once.
 
@@ -24,20 +24,20 @@ NHS login supports the following types of authentication credentials. Note that 
     </thead>
     <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cp - Username and password</td>
-        <td class="nhsuk-table__cell ">The user is asked to provide a username (email address) and password.</td>
+        <td class="nhsuk-table__cell">Cp - Email address and password</td>
+        <td class="nhsuk-table__cell ">The user is asked to provide their email address and a password.</td>
       </tr>
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell">Cd - Registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account.</p><p>This can be either via OTP SMS or a remembered browser.</p></td>
+        <td class="nhsuk-table__cell "><p>The user is in possession of a device that has been associated with their NHS login. The association can be made with a One Time Password (OTP) text message, or a remembered browser.</p></td>
       </tr>
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell">Ck - Shared cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by a shared key.</p><p>N.B. This is yet to be implemented, but is anticipated to be MFA app registration.</p></td>
+        <td class="nhsuk-table__cell "><p>The user is in possession of a device that has been associated with their NHS login. The delivery or use of the device is by a shared key. <br> <i>This is yet to be implemented but is anticipated to be MFA app registration.</i></p></td>
       </tr>
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell">Cm - Asymmetric Cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device which has previously been associated with their account – delivery/use of the device is by cryptographic proof of key possession using asymmetric key, such as a FIDO-compliant device</p></td>
+        <td class="nhsuk-table__cell "><p>The user is in possession of a device that has been associated with their NHS login. The delivery or use of the device is by cryptographic proof of key possession using asymmetric key, like a FIDO-compliant device.</p></td>
       </tr>
     </tbody>
   </table>
@@ -48,7 +48,7 @@ NHS login supports the following types of authentication credentials. Note that 
 ## Identity Proofing Levels
 
 The NHS login supports the following levels of identification verification. These are based upon [DCB3051 Identity Verification and
-Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services)
+Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
 
 
 <div class="nhsuk-table-responsive">
@@ -62,16 +62,15 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
     </thead>
     <tbody class="nhsuk-table__body">
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P0 - Low identity proofing</td>
-        <td class="nhsuk-table__cell ">A user has verified ownership of an email address and mobile phone number</td>
+        <td class="nhsuk-table__cell">Low (P0) <br>Low identity proofing</td>
+        <td class="nhsuk-table__cell ">A user has verified ownership of an email address and mobile phone number.</td>
       </tr>
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P5 - Knowledge-based verification</td>
-        <td class="nhsuk-table__cell "><p>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>
-                <p>This maps to ‘Verification – Medium’ within DCB3051</p></td>
+        <td class="nhsuk-table__cell">Medium (P5) <br>Knowledge-based verification</td>
+        <td class="nhsuk-table__cell "><p>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>.<br>This maps to ‘Verification – Medium’ within DCB3051</p></td>
       </tr>
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">P9 - Physical comparison</td>
+        <td class="nhsuk-table__cell">High (P9) <br>Physical comparison</td>
         <td class="nhsuk-table__cell "><p>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.
 <p>This maps to ‘Verification – High’ within DCB3051</p></td>
       </tr>
@@ -85,7 +84,7 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
 
 The client **may** request a set of acceptable VoT values with the "vtr" (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.
 
-The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"\]` is stating that either the full set of "P9 AND Cp AND Cd" simultaneously OR the full set of "P9 AND Ck" simultaneously are acceptable for this transaction.
+The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"]` is stating that either the full set of "P9 AND Cp AND Cd" simultaneously OR the full set of "P9 AND Ck" simultaneously are acceptable for this transaction.
 
 Vector request values **may** omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.
 
@@ -117,41 +116,63 @@ Vectors can be combined to create profiles.
 
 | Vector     | Description                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| “P0.Cp”    | No Identity verification, user authenticated using password                                                                    |
-| “P5.Cp.Cd” | Medium Identity verification, user authenticated using password and enrolled device (2FA)                                      |
-| “P5.Cp.Ck” | Medium Identity verification, user authenticated using password and shared key within a device (2FA)                           |
-| “P9.Cp.Cd” | High Identity verification, user authenticated using password and enrolled device (2FA)                                        |
-| “P9.Cp.Ck” | High Identity verification, user authenticated using password and shared key within a device (2FA)                             |
-| “P9.Cm”    | High Identity verification, user authenticated via asymmetric key within a device (2FA) (for example, FIDO UAF authentication) |
+| “P0.Cp”    | No identity verification, user authenticated using password                                                                    |
+| “P5.Cp.Cd” | Medium identity verification, user authenticated using password and enrolled device (2FA)                                      |
+| “P5.Cp.Ck” | Medium identity verification, user authenticated using password and shared key within a device (2FA)                           |
+| “P9.Cp.Cd” | High identity verification, user authenticated using password and enrolled device (2FA)                                        |
+| “P9.Cp.Ck” | High identity verification, user authenticated using password and shared key within a device (2FA)                             |
+| “P9.Cm”    | High identity verification, user authenticated via asymmetric key within a device (2FA) (for example, FIDO UAF authentication) |
 
-### Example 1 – Partner Service provides access to sensitive data
+### Example 1: Partner service provides access to sensitive data
 
-This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'.
+This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'. The service requires high verification and high authentication. 
 
-The service requires High Verification and High Authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
-`\[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”\]`
+`[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]`
 
-### Example 2 – Partner Service provides access to basic data (not sensitive)
+### Example 2: Partner service provides access to basic data (not sensitive)
 
-This example maps onto archetype A3 within the standard 'DCB3051'.
+This example maps onto archetype A3 within the standard 'DCB3051'. The service requires medium verification and high authentication. 
 
-The service requires Medium Verification and High Authentication. The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
-`\[“P5.Cp.Cd”, “P5.Cp.Ck” , “P5.Cm”, “P9.Cp.Cd”, “P9.Cp.Ck”, “P9.Cm”\]`
+`[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]`
+
+### Example 3: Partner service provides access to both basic data and sensitive data
+
+This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and high authentication.
+
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+
+`[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]`
+
+A successfully authenticated user can be either medium or high level in terms of identity verification.
+
+The service can offer all functionalities to a user that meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and high authentication only.
+
+When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication (with Single Sign On allowed).
+
+The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
+
+`[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]` 
+
+The user is prompted to undertake a verification step-up journey to take the user verification level from medium to high.
 
 ---
 
-## Single Sign-on
+## Single sign-on (SSO)
 
-If the user’s current session (if any), does not meet the requested Vectors of Trust (vtr) in the incoming request, then the user will be required to sign-in, in order to meet the requested vectors.
+If the user’s current session (if any) does not meet the requested Vectors of Trust (vtr) in the incoming request, then the user will be required to sign-in, to meet the requested vectors.
 
-Also note that Single sign-on behaviour, or to refuse SSO-behaviour, can be controlled using the `prompt` parameter on the initial authorisation request.
+Also note that SSO behaviour, or to refuse SSO behaviour, can be controlled using the `prompt` parameter on the initial authorisation request.
 
 ---
 
-## Trustmark
+## Trust mark
 
-The Trustmark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.
+The trust mark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.
 
-The NHS login Trustmark is self-hosted.
+The NHS login trust mark is self-hosted.
+
+
