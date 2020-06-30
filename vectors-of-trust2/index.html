@@ -433,7 +433,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
 <hr>
 <h2>Requesting Vectors of Trust values</h2>
 <p>The client <strong>may</strong> request a set of acceptable VoT values with the &quot;vtr&quot; (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.</p>
-<p>The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Ck&quot;\]</code> is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Ck&quot; simultaneously are acceptable for this transaction.</p>
+<p>The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Ck&quot;]</code> is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Ck&quot; simultaneously are acceptable for this transaction.</p>
 <p>Vector request values <strong>may</strong> omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.</p>
 <p>Omission of vtr will result in a default value of <code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code> being assumed.</p>
 <hr>
