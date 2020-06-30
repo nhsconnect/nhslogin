@@ -367,7 +367,8 @@
             </h1>
 
             <h2>Managing NHS login</h2>
-<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks. To help users do this NHS login needs partner services to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
+<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks.</p>
+<p>To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
 <h3>NHS login currently allows users to:</h3>
 <ul>
 <li>change their email address</li>
@@ -375,21 +376,16 @@
 <li>change their mobile phone number</li>
 <li>delete their NHS login</li>
 </ul>
-<p>To help users do this, NHS login needs you to create a link from your service to the NHS login settings page:</p>
 <p><img src="nhslogin/images/example_settings_smallest.png" alt="diagram"></p>
 <hr>
 <h2>Technical details</h2>
-<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login Settings” functionality from the partner service without the need for re-authentication.</p>
+<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login settings” functionality from the partner service without the need for re-authentication.</p>
 <ol>
 <li><code>asserted_login_identity</code> will be a querystring parameter</li>
 <li>parameter content is a signed <code>jwt</code></li>
 <li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
 </ol>
-<p>Refer to the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> for technical details. In the context of document :</p>
-<ul>
-<li>RP1 is partner service</li>
-<li>RP2 is NHS login</li>
-</ul>
+<p>See the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> document for technical details. In the context of document, RP1 is partner service and RP2 is NHS login.</p>
 <h3>User settings flow</h3>
 <p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
 <hr>
@@ -397,8 +393,8 @@
 <p><strong>Production:</strong></p>
 <p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
 <p><strong>Other environments:</strong></p>
-<p><code>https://settings.&lt;ENV&gt;.signin.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p>e.g. <code>https://settings.sandpit.signin.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
+<p><code>https://settings.&lt;ENV&gt;.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
+<p>e.g. <code>https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
 
 
      <div class="app-edit-instructions">
