@@ -129,7 +129,7 @@ This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB305
 
 The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
-`\[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”\]`
+`[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]`
 
 ### Example 2: Partner service provides access to basic data (not sensitive)
 
@@ -137,7 +137,7 @@ This example maps onto archetype A3 within the standard 'DCB3051'. The service r
 
 The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
-`\[“P5.Cp.Cd”, “P5.Cp.Ck” , “P5.Cm”, “P9.Cp.Cd”, “P9.Cp.Ck”, “P9.Cm”\]`
+`[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]`
 
 ### Example 3: Partner service provides access to both basic data and sensitive data
 
