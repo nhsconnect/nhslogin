@@ -84,7 +84,7 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
 
 The client **may** request a set of acceptable VoT values with the "vtr" (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.
 
-The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"\]` is stating that either the full set of "P9 AND Cp AND Cd" simultaneously OR the full set of "P9 AND Ck" simultaneously are acceptable for this transaction.
+The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Ck"]` is stating that either the full set of "P9 AND Cp AND Cd" simultaneously OR the full set of "P9 AND Ck" simultaneously are acceptable for this transaction.
 
 Vector request values **may** omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.
 
