@@ -482,11 +482,11 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
 <h3>Example 1: Partner service provides access to sensitive data</h3>
 <p>This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'. The service requires high verification and high authentication.</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
-<p><code>\[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”\]</code></p>
+<p><code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code></p>
 <h3>Example 2: Partner service provides access to basic data (not sensitive)</h3>
 <p>This example maps onto archetype A3 within the standard 'DCB3051'. The service requires medium verification and high authentication.</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
-<p><code>\[“P5.Cp.Cd”, “P5.Cp.Ck” , “P5.Cm”, “P9.Cp.Cd”, “P9.Cp.Ck”, “P9.Cm”\]</code></p>
+<p><code>[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]</code></p>
 <h3>Example 3: Partner service provides access to both basic data and sensitive data</h3>
 <p>This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and high authentication.</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
