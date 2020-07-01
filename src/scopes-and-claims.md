@@ -14,9 +14,10 @@ title: Scopes and Claims
 | GP registration details: <br>`gp_registration_details` | • O.D.S code: `gp_ods_code` | No | Yes | Yes |
 | Client specific metadata for the user account:<br> `client_metadata` | • Client user metadata: `client_user_metadata` | Yes | Yes | Yes |
 
+<dl><dt>1. NHS number is part of a user's claimed identity</dt>
+<dt>2. Available only to IM1 enabled partners</dt></dl>
+
 ### Note:
 
 Scopes and Claims perform differently for partners depending on their levels of user identity verification and their uplift journeys between the levels of verification. Contact the NHS login onboarding team for more information. 
 
-<dl><dt>1. NHS number is part of a user's claimed identity</dt>
-<dt>2. Available only to IM1 enabled partners</dt></dl>
