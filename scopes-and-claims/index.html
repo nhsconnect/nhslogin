@@ -378,56 +378,56 @@
 </thead>
 <tbody>
 <tr>
-<td>OpenID Connect requests, <code>openid</code></td>
-<td>• Issuer identifier for the issuer of the response: <code>iss</code> <br>• Partner service identifier: <code>aud</code> <br>• Subject identifier for the user at the issuer: <code>sub</code></td>
+<td>OpenID Connect requests: <br><code>openid</code></td>
+<td>• Issuer identifier for the issuer of the response: <code>iss</code> <br><br>• Partner service identifier: <code>aud</code> <br><br>• Subject identifier for the user at the issuer: <code>sub</code></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>User's default profile, <code>profile</code></td>
-<td>• NHS number: <code>nhs_number</code> <br> • Surname: <code>family_name</code> <br> • Date of birth: <code>birthdate</code> <br> • Identity proofing level: <code>identity_proofing_level</code></td>
+<td>User's default profile: <br><code>profile</code></td>
+<td>• NHS number: <code>nhs_number</code> <br><br> • Surname: <code>family_name</code> <br><br> • Date of birth: <code>birthdate</code> <br><br> • Identity proofing level: <code>identity_proofing_level</code></td>
 <td>No</td>
 <td>Yes¹</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>User's additional demographic information, <code>profile_extended</code></td>
+<td>User's additional demographic information:<br> <code>profile_extended</code></td>
 <td>• First name from PDS: <code>given_name</code></td>
 <td>No</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Email address, <code>email</code></td>
-<td>• Email address: <code>email</code> <br> • Verified email address: <code>email_verified</code></td>
+<td>Email address:<br> <code>email</code></td>
+<td>• Email address: <code>email</code> <br><br> • Verified email address: <code>email_verified</code></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Phone number, <code>phone</code></td>
-<td>• Phone number: <code>phone</code> <br> • Verified phone number: <code>phone_number_verified</code></td>
+<td>Phone number:<br> <code>phone</code></td>
+<td>• Phone number: <code>phone</code> <br><br> • Verified phone number: <code>phone_number_verified</code></td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes²</td>
 </tr>
 <tr>
-<td>GP surgery information, <code>gp_integration_credentials</code></td>
-<td>• Linkage key: <code>gp_linkage_key</code> <br> • O.D.S. code: <code>gp_ods_code</code> <br> • Account ID: <code>gp_user_id</code></td>
+<td>GP surgery information:<br> <code>gp_integration_credentials</code></td>
+<td>• Linkage key: <code>gp_linkage_key</code> <br><br> • O.D.S. code: <code>gp_ods_code</code> <br><br> • Account ID: <code>gp_user_id</code></td>
 <td>No</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>GP registration details, <code>gp_registration_details</code></td>
+<td>GP registration details: <br><code>gp_registration_details</code></td>
 <td>• O.D.S code: <code>gp_ods_code</code></td>
 <td>No</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Client specific metadata for the user account, <code>client_metadata</code></td>
+<td>Client specific metadata for the user account:<br> <code>client_metadata</code></td>
 <td>• Client user metadata: <code>client_user_metadata</code></td>
 <td>Yes</td>
 <td>Yes</td>
@@ -439,79 +439,6 @@
 <p>Scopes and Claims perform differently for partners depending on their levels of user identity verification and their uplift journeys between the levels of verification. Contact the NHS login onboarding team for more information.</p>
 <dl><dt>1. NHS number is part of a user's claimed identity</dt>
 <dt>2. Available only to IM1 enabled partners</dt></dl>
-<hr>
-<p>Option 2:</p>
-<table>
-<thead>
-<tr>
-<th>Scope</th>
-<th>Claims included</th>
-<th>Low level (P0)</th>
-<th>Medium level (P5)</th>
-<th>High level (P9)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>OpenID Connect requests (openid)</td>
-<td>Issuer identifier for the issuer of the response (iss) <br> Partner service identifier (aud) <br> Subject identifier for the user at the issuer (sub)</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>User's default profile (profile)</td>
-<td>NHS number (nhs_number) <br> Surname (family_name) <br> Date of birth (birthdate) <br> Identity proofing level (identity_proofing_level)</td>
-<td>No</td>
-<td>Yes (NHS number is part of a user's claimed identity)</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>User's additional demographic information (profile_extended)</td>
-<td>First name from PDS (given_name)</td>
-<td>No</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Email address (email)</td>
-<td>Email address (email) <br> Verified email address (email_verified)</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Phone number (phone)</td>
-<td>Phone number (phone) <br> Verified phone number (phone_number_verified)</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes (Available only to IM1 enabled partners)</td>
-</tr>
-<tr>
-<td>GP surgery information (gp_integration_credentials)</td>
-<td>Linkage key (gp_linkage_key) <br> O.D.S. code (gp_ods_code) <br> Account I.D. (gp_user_id)</td>
-<td>No</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>GP registration details (gp_registration_details)</td>
-<td>O.D.S code (gp_ods_code)</td>
-<td>No</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Client specific metadata for the user account (client_metadata)</td>
-<td>Client user metadata (client_user_metadata)</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-<h3>Note:</h3>
-<p>Scopes and Claims perform differently for partners depending on their levels of user identity verification and their uplift journeys between the levels of verification. Contact the NHS login onboarding team for more information.</p>
 
 
      <div class="app-edit-instructions">
