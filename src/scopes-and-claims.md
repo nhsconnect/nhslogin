@@ -19,5 +19,5 @@ title: Scopes and Claims
 
 ### Note:
 
-Scopes and Claims perform differently for partners depending on their levels of user identity verification and their uplift journeys between the levels of verification. Contact the NHS login onboarding team for more information. 
+Scopes and Claims perform differently for partners supporting multiple levels of user identity verification and uplift journeys between the different levels of verification. Contact the NHS login onboarding team for more information.
 
