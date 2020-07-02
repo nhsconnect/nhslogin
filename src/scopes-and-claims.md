@@ -14,10 +14,12 @@ title: Scopes and Claims
 | GP surgery information:<br> `gp_integration_credentials` | • Linkage key: `gp_linkage_key` <br><br> • O.D.S. code: `gp_ods_code` <br><br> • Account ID: `gp_user_id` | No | No | Yes² | 
 | Client specific metadata for the user account:<br> `client_metadata` | • Client user metadata: `client_user_metadata` | Yes | Yes | Yes |
 
-<dl><dt>1. NHS number is part of a user's claimed identity</dt>
+<dl><dt>1. NHS number is part of a user’s claimed identity. The user must not be given or presented with their NHS number as provided by NHS login. NHS login must have a clear understanding of the use case of this claim, so that any issues with using this claim is understood.</dt>
 <dt>2. Available only to IM1 enabled partners</dt></dl>
 
 ### Note:
 
 Scopes and Claims perform differently for partners supporting multiple levels of user identity verification and uplift journeys between the different levels of verification. Contact the NHS login onboarding team for more information.
+
+Please refer to the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) Section 3.4.1.1  and Section 3.6.2.1 for further technical details.
 
