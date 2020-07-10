@@ -77,7 +77,9 @@ NHS login supports two parameters asserted_login_identity and prompt as part of 
 
 Refer to the NHS login Interface Specification – Federation document for technical details. In the context of document : RP1 is partner service, RP2 is NHS login.
 
-### Flow diagram
 
-![P5 - P9 Step up verification flow](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/P5-P9Step-upflow.png "P5 - P9 Step up verification flow")
+
+### Flow diagram 
+
+![P5 - P9 Step up verification flow](nhslogin/images/P5-P9Step-upflow.png "P5 - P9 Step up verification flow")
 
