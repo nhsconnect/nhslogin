@@ -31,7 +31,7 @@ See the [NHS login Interface Specification – Federation](https://nhsconnect.gi
 
 ### User settings flow
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SettingsDiagram_smaller.png "NHS login settings flow diagram")
+![diagram](nhslogin/images/SettingsDiagram_smaller.png "NHS login settings flow diagram")
 
 ---
 
