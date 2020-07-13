@@ -81,4 +81,4 @@ Refer to the NHS login Interface Specification – Federation document for techn
 
 ### Flow diagram 
 
-![diagram](nhslogin/images/P5-P9Step-upflow_smaller.png "P5 - P9 Step up verification flow")
+![diagram](nhslogin/images/P5-P9Step-upflow_small.png "P5 - P9 Step up verification flow")
