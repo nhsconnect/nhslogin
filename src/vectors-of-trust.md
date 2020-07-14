@@ -45,7 +45,7 @@ NHS login supports the following types of authentication credentials. Note that 
 
 ---
 
-## Identity Proofing Levels
+## Identity proofing levels
 
 The NHS login supports the following levels of identification verification. These are based upon [DCB3051 Identity Verification and
 Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
@@ -66,7 +66,7 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
         <td class="nhsuk-table__cell ">A user has verified ownership of an email address and mobile phone number.</td>
       </tr>
       <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Medium (P5) <br>Knowledge-based verification</td>
+        <td class="nhsuk-table__cell">Medium (P5) <br>Basic identity information</td>
         <td class="nhsuk-table__cell "><p>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>.<br>This maps to ‘Verification – Medium’ within DCB3051</p></td>
       </tr>
       <tr class="nhsuk-table__row">
