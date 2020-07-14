@@ -393,7 +393,7 @@
 <p>When a partner service requests medium level identity verification in the ‘vtr’ parameter, successfully authenticated users can either be P5 or P9.</p>
 <p>For high level verified users (P9), all claims corresponding to requested scopes will be populated according to the rules described in the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">external interface specification</a>.</p>
 <p>However, for medium level verified users (P5), not all claims corresponding to requested scopes will be populated, as the user has not been verified to the sufficient level required.</p>
-<h3>Single Sign-On(SSO)</h3>
+<h3>Single Sign-On (SSO)</h3>
 <p>NHS login supports two parameters for <code>asserted_login_identity</code> and prompt as part of the OIDC flow. This allows users to seamlessly access the identity verification step-up journey from a partner service, without the need for re-authentication.</p>
 <ol>
 <li><code>asserted_login_identity</code> will be a querystring parameter</li>
