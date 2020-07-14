@@ -55,7 +55,7 @@ For high level verified users (P9), all claims corresponding to requested scopes
 
 However, for medium level verified users (P5), not all claims corresponding to requested scopes will be populated, as the user has not been verified to the sufficient level required.
 
-### Single Sign-On(SSO)
+### Single Sign-On (SSO)
 
 NHS login supports two parameters for `asserted_login_identity` and prompt as part of the OIDC flow. This allows users to seamlessly access the identity verification step-up journey from a partner service, without the need for re-authentication.
 
