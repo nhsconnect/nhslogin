@@ -15,7 +15,7 @@ title: Scopes and Claims
 | Client specific metadata for the user account:<br> `client_metadata` | • Client user metadata: `client_user_metadata` | Yes | Yes | Yes |
 
 <dl><dt>1. NHS number is part of a user’s claimed identity. The user must not be given or presented with their NHS number as provided by NHS login. NHS login must have a clear understanding of the use case of this claim, so that any issues with using this claim is understood.</dt>
-<dt>2. Available only to IM1 enabled partners</dt></dl>
+<dt>2. Available only to IM1 enabled partners.</dt></dl>
 
 ### Note:
 
