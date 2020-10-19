@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>The OIDC login flow</title>
+<title>What to test</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -381,23 +381,35 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              The OIDC login flow
+              What to test
             </h1>
 
-            <h2>Overview</h2>
-<p>The goal of the OIDC <strong>authorisation code flow</strong> is for the relying party (your service) to obtain an ID Token from the OIDC provider (NHS login).</p>
-<p>The ID Token contains key information, such as <strong>sub</strong> and identifying information about the user (claims), such as family name, date of birth, and NHS number. Further claims can be obtained via the userinfo endpoint.</p>
-<p>The claims returned are based on the scopes specified in the original auth request - <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">see table 11 of the EIS</a> for more information.</p>
-<p>The ID Token also contains information about authentication mechanisms used and the level to which a user’s identity has been verified - these are called vectors of trust, <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">see the EIS for more information</a>.</p>
-<h2>Initiating authorisation flow</h2>
-<p>The first step involves the client sending a request to NHS login with the desired parameters. These include your identifying information, such as client_id, <a href="https://tools.ietf.org/html/rfc8485">Vectors of Trust</a>, and scopes, which will ultimately determine the available claims.</p>
-<h2>Completing authorisation flow</h2>
-<p>NHS login will return an authorisation code, which you then use to obtain the ID Token. This is done by making a request to the NHS login token endpoint. The token endpoint requires authentication via private_key_jwt <a href="https://openid.net/specs/openid-connect-core-1_0.html#ClientAuthentication">method</a>. The returned ID Token must be validated before it can be used within your service.</p>
+            <p>There are functional areas of NHS login that you should consider during testing.</p>
+<p>These include:</p>
+<ul>
+<li>scopes and consent</li>
+<li>NHS login settings</li>
+<li>I.D. verification levels low, medium and high</li>
+</ul>
+<p>Areas to test under I.D. verification include the:</p>
+<ul>
+<li>personal demographic search of PDS</li>
+<li>photo upload process</li>
+<li>video upload process</li>
+</ul>
+<p>The personal demographic search may include:</p>
+<ul>
+<li>NHS number</li>
+<li>date of birth</li>
+<li>first name</li>
+<li>last name</li>
+<li>postcode</li>
+</ul>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/oidc-login-flow.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/what-to-test.md">this page</a> on GitHub
               </p>
       </div>
 
