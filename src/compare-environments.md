@@ -3,7 +3,16 @@ layout: base.njk
 title: Compare NHS login environments
 ---
 
-Compare and understand the differences and transitions between our 3 different environments. 
+Compare and understand the differences and transitions between our 4 different environments. 
+
+## Mock environment
+
+We have developed a lightweight [mock environment](https://oidc.mock.signin.nhs.uk/client) that is a representation of our OIDC endpoints. The mock is entirely self-service and requires no registration.
+
+| Purpose | Essentials | Restrictions |
+| ------- | ---------- | ------------ |
+| Designed to reflect the NHS login External Interface Specification (EIS).<br><br> Familiarise yourself with the technologies you would need to use when integrating with NHS login.<br><br> Allows you to prepare your product or service to consume NHS login identities in a self-service manner.| None. | Only a simple mock environment. |
+
 
 ## Sandpit environment 
 
