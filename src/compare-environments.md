@@ -11,7 +11,7 @@ We have developed a lightweight [mock environment](https://oidc.mock.signin.nhs.
 
 | Purpose | Essentials | Restrictions |
 | ------- | ---------- | ------------ |
-| Designed to reflect the NHS login External Interface Specification (EIS).<br><br> Familiarise yourself with the technologies you would need to use when integrating with NHS login.<br><br> Allows you to prepare your product or service to consume NHS login identities in a self-service manner.| None. | Only a simple mock environment. |
+| Designed to reflect the NHS login External Interface Specification (EIS).<br><br> Get to grips with the technology you will use when integrating with NHS login.| None. | Only a simple mock environment. |
 
 
 ## Sandpit environment 
