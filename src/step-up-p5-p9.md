@@ -29,11 +29,9 @@ When a user with medium level verification attempts to access other features sup
 
 ## Technical details 
 
-Please refer to the [NHS login scopes and claims](https://nhsconnect.github.io/nhslogin/scopes-and-claims/) page for the most up to date technical details.
-
 ### Identity proofing level
 
-The `identity_proofing_level` describes the maximum identity verification level the user has achieved. The claim is included in both the ID token and user info when requesting the `profile` scope.
+The `identity_proofing_level` describes the maximum identity verification level the user has achieved. The claim is included in both the ID token and userinfo when requesting the `profile` scope.
 
 It enables relying parties requesting medium level verification (P5) to determine if other claims returned have been validated to high level (P9), or simply claimed by a medium level (P5) user. This also enables relying parties to initiate the step-up journey from medium to high level verification.
 
