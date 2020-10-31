@@ -320,14 +320,6 @@
                   </li>
                 </ul>
 
-                <h2 class="app-side-nav__heading">Scopes and Claims</h2>
-                <ul class="nhsuk-list app-side-nav__list">
-
-                  <li class="app-side-nav__item">
-                    <a class="app-side-nav__link" href="nhslogin/scopes-and-claims">Scopes and claims</a>
-                  </li>
-                </ul>
-
                 <h2 class="app-side-nav__heading">External Interface Specification</h2>
                 <ul class="nhsuk-list app-side-nav__list">
 
@@ -362,10 +354,13 @@
                     <a class="app-side-nav__link" href="nhslogin/single-sign-on">Single Sign On (SSO)</a>
                   </li>
                   <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/scopes-and-claims">Scopes and claims</a>
+                  </li>
+                  <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="nhslogin/vectors-of-trust">Vectors of Trust</a>
                   </li>
                 </ul>
-                <h2 class="app-side-nav__heading">Examples</h2>
+                <h2 class="app-side-nav__heading">Code examples</h2>
                 <ul class="nhsuk-list app-side-nav__list">
                   <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="nhslogin/example-oidc">Example OIDC clients</a>
@@ -394,9 +389,8 @@
 <p>When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication. The service prompts the user to undertake a verification step-up journey via NHS login, which will take the user verification level from medium to high.</p>
 <hr>
 <h2>Technical details</h2>
-<p>Please refer to the <a href="https://nhsconnect.github.io/nhslogin/scopes-and-claims/">NHS login scopes and claims</a> page for the most up to date technical details.</p>
 <h3>Identity proofing level</h3>
-<p>The <code>identity_proofing_level</code> describes the maximum identity verification level the user has achieved. The claim is included in both the ID token and user info when requesting the <code>profile</code> scope.</p>
+<p>The <code>identity_proofing_level</code> describes the maximum identity verification level the user has achieved. The claim is included in both the ID token and userinfo when requesting the <code>profile</code> scope.</p>
 <p>It enables relying parties requesting medium level verification (P5) to determine if other claims returned have been validated to high level (P9), or simply claimed by a medium level (P5) user. This also enables relying parties to initiate the step-up journey from medium to high level verification.</p>
 <h3>Vector of Trust (VoT)</h3>
 <p>A service will request a set of acceptable VoT values. This should contain one value for the identity verification component, combined with one or more values for the authentication component. The service should request the lowest level of acceptable identity verification within the VoT set.</p>
