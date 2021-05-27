@@ -43,8 +43,8 @@ See the [NHS login Interface Specification – Federation](https://nhsconnect.gi
 
 **Other environments:** 
 
-`https://settings.<ENV>.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
+`https://settings.<ENV>.signin.nhs.uk?asserted_login_identity=ewrffw...wfw`
 
-e.g. `https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw`
+e.g. `https://settings.sandpit.signin.nhs.uk?asserted_login_identity=ewrffw...wfw`
 
 
