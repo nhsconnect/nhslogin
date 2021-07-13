@@ -13,7 +13,7 @@
   "author": "NHS Digital",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
   }
 }
