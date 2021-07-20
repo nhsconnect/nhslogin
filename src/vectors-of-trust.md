@@ -72,7 +72,6 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
       <tr class="nhsuk-table__row">
         <td class="nhsuk-table__cell">High (P9) <br>Physical comparison</td>
         <td class="nhsuk-table__cell "><p>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.
-<p>This maps to ‘Verification – High’ within DCB3051</p></td>
       </tr>
     </tbody>
   </table>
