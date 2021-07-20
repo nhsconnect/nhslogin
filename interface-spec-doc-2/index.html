@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>NHS login user settings</title>
+<title>2 Specification status</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -376,43 +376,31 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              NHS login user settings
+              2 Specification status
             </h1>
 
-            <h2>Managing NHS login</h2>
-<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks.</p>
-<p>To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
-<h3>NHS login currently allows users to:</h3>
+            <h2>2.1 Scope / constraints</h2>
 <ul>
-<li>change their email address</li>
-<li>change their password</li>
-<li>change their mobile phone number</li>
-<li>delete their NHS login</li>
+<li>This document relates to NHS login ‘Federation interface’ during Beta. Further amendments WILL be implemented prior to full rollout – this document is a draft representing intended design, but is subject to clarification.</li>
+<li>The NHS login Platform supports Authentication using the Authorization Code Flow only. Implicit &amp; Hybrid Flows are not supported</li>
+<li>HTTP is not supported - all HTTP-based flows <strong>must</strong> be HTTPS (using TLS v1.2 or above)</li>
 </ul>
-<p><img src="nhslogin/images/example_settings_smallest.png" alt="diagram"></p>
 <hr>
-<h2>Technical details</h2>
-<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login settings” functionality from the partner service without the need for re-authentication.</p>
-<ol>
-<li><code>asserted_login_identity</code> will be a querystring parameter</li>
-<li>parameter content is a signed <code>jwt</code></li>
-<li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
-</ol>
-<p>See the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> document for technical details. In the context of document, RP1 is partner service and RP2 is NHS login.</p>
-<h3>User settings flow</h3>
-<p><img src="nhslogin/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
-<hr>
-<h2>User settings page links</h2>
-<p><strong>Production:</strong></p>
-<p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p><strong>Other environments:</strong></p>
-<p><code>https://settings.&lt;ENV&gt;.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p>e.g. <code>https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
+<h2>2.2 Changes in this version</h2>
+<p>Version 1.9 of this specification includes the following changes:</p>
+<ul>
+<li>Addition of <code>identity_proofing_level</code> claim in the <code>profile</code> scope</li>
+<li>Minor clarification on conditions applicable for requesting scopes</li>
+<li>Updates to Verification of Identity Levels</li>
+<li>Updates to Requesting Vectors of Trust values</li>
+<li>Updates to Client Redirects</li>
+<li>Minor reference changes</li>
+</ul>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/linking-to-settings.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-2.md">this page</a> on GitHub
               </p>
       </div>
 

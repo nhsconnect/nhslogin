@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>NHS login user settings</title>
+<title>7 Partner Services and Security</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -376,43 +376,82 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              NHS login user settings
+              7 Partner Services and Security
             </h1>
 
-            <h2>Managing NHS login</h2>
-<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks.</p>
-<p>To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
-<h3>NHS login currently allows users to:</h3>
+            <h2>7.1 Partner Service Registration</h2>
+<p>Currently, Partner Services will be registered and onboarded into the NHS login Platform using a standard offline process.</p>
+<p>The following information is <strong>required</strong> for the offline registration process:</p>
+<dl><dt>Table 20: Client Metadata - supplied by client</dt></dl>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redirect URIs</td>
+<td>List of Redirection URI values used by the Client. <br>The redirect_uri parameter value used in each Authorization Request <strong>must</strong> exactly match one of these registered Redirection URI values.</td>
+</tr>
+<tr>
+<td>Client Name</td>
+<td>Name of the Client to be presented to the End-User.</td>
+</tr>
+<tr>
+<td>Public Key</td>
+<td>A copy of the client’s public key is supplied. The public key <strong>must</strong> be in PEM format and represent a 2048-bit RSA keypair. <br>An example use of OpenSSL to generate a RSA public/private key pair and then extract the public key is as follows: <br> <code>openssl genpkey -algorithm RSA -out ../keys/private_key.pem -outform PEM -aes-256-cbc -pass file:../keys/password.txt -pkeyopt rsa_keygen_bits:2048</code> <br> <code>openssl rsa -pubout -in ../keys/private_key.pem -out ../keys/public_key.pem -passin file:../keys/password.txt</code></td>
+</tr>
+<tr>
+<td>Scopes</td>
+<td>Required scopes</td>
+</tr>
+</tbody>
+</table>
+<p>On successful registration, the following information will be provided</p>
+<dl><dt>Table 21: Client Metadata - allocated by NHS login</dt></dl>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Req?</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>client_id</code></td>
+<td>mand</td>
+<td>string</td>
+<td>Id for the client, allocated by the NHS login service.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>7.2 Partner Service Authentication</h2>
+<p>Reference:</p>
 <ul>
-<li>change their email address</li>
-<li>change their password</li>
-<li>change their mobile phone number</li>
-<li>delete their NHS login</li>
+<li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core Specification</a>, s9</li>
 </ul>
-<p><img src="nhslogin/images/example_settings_smallest.png" alt="diagram"></p>
+<h3>7.2.1 Confidential Clients</h3>
+<p>Partner Services which are confidential clients will use the following authentication mechanism:</p>
+<ul>
+<li><code>private_key_jwt</code>, as per <a href="https://tools.ietf.org/html/rfc7523">https://tools.ietf.org/html/rfc7523</a></li>
+</ul>
+<p>The authentication mechanism of “none” is not supported for confidential clients.</p>
 <hr>
-<h2>Technical details</h2>
-<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login settings” functionality from the partner service without the need for re-authentication.</p>
-<ol>
-<li><code>asserted_login_identity</code> will be a querystring parameter</li>
-<li>parameter content is a signed <code>jwt</code></li>
-<li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
-</ol>
-<p>See the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> document for technical details. In the context of document, RP1 is partner service and RP2 is NHS login.</p>
-<h3>User settings flow</h3>
-<p><img src="nhslogin/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
-<hr>
-<h2>User settings page links</h2>
-<p><strong>Production:</strong></p>
-<p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p><strong>Other environments:</strong></p>
-<p><code>https://settings.&lt;ENV&gt;.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p>e.g. <code>https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
+<h2>7.3 Client Redirects</h2>
+<p>The NHS login Platform will only allow redirect URIs which have been pre-agreed during the onboarding process.</p>
+<p>Wildcard URIs are not permitted.</p>
+<p>HTTP URIs are NOT permitted</p>
+<p>URIs with querystring parameters are not permitted. (The 'state' parameter described in <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3">3.4 Authorize endpoint</a> is designed to support conveying dynamic request content within the OIDC authentication request.)</p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/linking-to-settings.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-7.md">this page</a> on GitHub
               </p>
       </div>
 

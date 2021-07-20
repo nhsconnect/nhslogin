@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>NHS login user settings</title>
+<title>8 References</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -376,43 +376,35 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              NHS login user settings
+              8 References
             </h1>
 
-            <h2>Managing NHS login</h2>
-<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks.</p>
-<p>To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
-<h3>NHS login currently allows users to:</h3>
-<ul>
-<li>change their email address</li>
-<li>change their password</li>
-<li>change their mobile phone number</li>
-<li>delete their NHS login</li>
+            <ul>
+<li>OpenID Foundation, <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0 incorporating errata set 1</a></li>
+<li>OpenID Connect Foundation, <a href="https://openid.bitbucket.io/iGov/openid-igov-profile-id1.html">International Government Assurance Profile (iGov) for OpenID Connect 1.0</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc8485">RFC8485:Vectors of Trust</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc7519">RFC7519: JSON Web Token (JWT)</a></li>
+<li>OpenID Foundation, <a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">OAuth 2.0 Multiple Response Type Encoding Practices</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc6749">RFC6749 - The OAuth 2.0 Authorization Framework</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc6750">RFC6750: OAuth 2.0 Bearer Token Usage</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://tools.ietf.org/html/rfc7515">RFC7515 - JSON Web Signature (JWS)</a></li>
+<li>Internet Engineering Task Force (IETF), <a href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 - Date and Time on the Internet: Timestamps</a></li>
+<li>OpenID Foundation, <a href="http://openid.net/specs/openid-provider-authentication-policy-extension-1_0.html">OpenID Provider Authentication Policy Extension 1.0</a></li>
+<li>NHS Digital, <a href="https://developer.nhs.uk/apis/spine-core/security_jwt.html">Access Tokens and Audit (JWT)</a></li>
+<li>NHS Digital, <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a></li>
+<li>Cabinet Office, <a href="https://www.gov.uk/government/publications/authentication-credentials-for-online-government-services">GPG44 - Authentication credentials for online government services</a></li>
+<li>Cabinet Office, <a href="https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual">GPG45 - Identity proofing and verification of an individual</a></li>
+<li>FIDO Alliance, <a href="https://fidoalliance.org/specifications/download/">FIDO Universal Authentication Framework</a></li>
+<li>FIDO Alliance, <a href="https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-reg-v1.0-ps-20141208.html">FIDO UAF Registry of Predefined Values</a></li>
+<li>FIDO Alliance, <a href="https://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-authnr-cmds-v1.0-ps-20141208.html">FIDO UAF Authenticator Commands</a></li>
+<li>OpenID Foundation, <a href="http://openid.net/2015/05/26/enhancing-oauth-security-for-mobile-applications-with-pkse/">Enhancing OAuth Security for Mobile Applications with PKCE</a></li>
+<li>NHS Digital, <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a></li>
 </ul>
-<p><img src="nhslogin/images/example_settings_smallest.png" alt="diagram"></p>
-<hr>
-<h2>Technical details</h2>
-<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login settings” functionality from the partner service without the need for re-authentication.</p>
-<ol>
-<li><code>asserted_login_identity</code> will be a querystring parameter</li>
-<li>parameter content is a signed <code>jwt</code></li>
-<li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
-</ol>
-<p>See the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> document for technical details. In the context of document, RP1 is partner service and RP2 is NHS login.</p>
-<h3>User settings flow</h3>
-<p><img src="nhslogin/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
-<hr>
-<h2>User settings page links</h2>
-<p><strong>Production:</strong></p>
-<p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p><strong>Other environments:</strong></p>
-<p><code>https://settings.&lt;ENV&gt;.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p>e.g. <code>https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/linking-to-settings.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-8.md">this page</a> on GitHub
               </p>
       </div>
 

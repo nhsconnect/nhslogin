@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>NHS login user settings</title>
+<title>1 Introduction</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -376,43 +376,35 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              NHS login user settings
+              1 Introduction
             </h1>
 
-            <h2>Managing NHS login</h2>
-<p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks.</p>
-<p>To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
-<h3>NHS login currently allows users to:</h3>
+            <h2>1.1 Purpose of Document</h2>
+<p>NHS login implements OpenID Connect 1.0 OpenID Provider role to assert the identity of the End-User to a Partner Service, as well as enabling the Service to obtain basic profile information about the End-User in an interoperable manner.</p>
+<p>This document defines the interfaces implemented by the Platform and describes the data flows supported by these interfaces.</p>
+<hr>
+<h2>1.2 Audience</h2>
+<p>The primary audiences for this document are:</p>
 <ul>
-<li>change their email address</li>
-<li>change their password</li>
-<li>change their mobile phone number</li>
-<li>delete their NHS login</li>
+<li>NHS login Programme team</li>
+<li>NHS Digital – Digital Delivery Centre</li>
+<li>NHS Digital – Other Delivery teams</li>
+<li>NHS England</li>
+<li>3rd Party Suppliers integrating with the NHS Digital NHS login Platform</li>
 </ul>
-<p><img src="nhslogin/images/example_settings_smallest.png" alt="diagram"></p>
 <hr>
-<h2>Technical details</h2>
-<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login settings” functionality from the partner service without the need for re-authentication.</p>
-<ol>
-<li><code>asserted_login_identity</code> will be a querystring parameter</li>
-<li>parameter content is a signed <code>jwt</code></li>
-<li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
-</ol>
-<p>See the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> document for technical details. In the context of document, RP1 is partner service and RP2 is NHS login.</p>
-<h3>User settings flow</h3>
-<p><img src="nhslogin/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
-<hr>
-<h2>User settings page links</h2>
-<p><strong>Production:</strong></p>
-<p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p><strong>Other environments:</strong></p>
-<p><code>https://settings.&lt;ENV&gt;.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p>e.g. <code>https://settings.sandpit.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
+<h2>1.3 Definitions</h2>
+<p>Where used in this document set, the keywords <strong>must</strong>, <strong>should</strong> and <strong>may</strong> are to be interpreted as follows:</p>
+<ul>
+<li><strong>must</strong>: This word, or the terms &quot;<strong>required</strong>&quot; or &quot;<strong>shall</strong>&quot;, means that the definition is an absolute requirement of the specification.</li>
+<li><strong>should</strong>: This word, or the adjective &quot;<strong>recommended</strong>&quot;, means that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications <strong>must</strong> be understood and carefully weighed before choosing a different course.</li>
+<li><strong>may</strong>: This word, or the adjective &quot;<strong>optional</strong>”, means that an item is truly <strong>optional</strong>. One implementer <strong>may</strong> choose to include the item because a particular implementation requires it or because the implementer feels that it enhances the implementation while another implementer <strong>may</strong> omit the same item. An implementation which does not include a particular option <strong>must</strong> be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option <strong>must</strong> be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides).</li>
+</ul>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/linking-to-settings.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-1.md">this page</a> on GitHub
               </p>
       </div>
 
