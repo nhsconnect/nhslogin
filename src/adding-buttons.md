@@ -15,7 +15,7 @@ The NHS login button is available to download in a variety of different formats.
 
 ![button](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_button.svg "the NHS login button")
 
-[Download the NHS login button package](https://github.com/nhsconnect/nhslogin/raw/master/NHS%20login%20buttons.zip).
+[Download the NHS login button package](https://github.com/nhsconnect/nhslogin/blob/main/NHS%20login%20buttons.zip?raw=true).
 
 ---
 
