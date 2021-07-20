@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>2 Specification status</title>
+<title>User journeys</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -376,31 +376,86 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              2 Specification status
+              User journeys
             </h1>
 
-            <h2>2.1 Scope / constraints</h2>
+            <h2>Low level verification (P0)</h2>
+<p>Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg" alt="diagram" title="Diagram showing how the NHS login button works"></p>
+<p><strong>What the service gets</strong></p>
 <ul>
-<li>This document relates to NHS login ‘Federation interface’ during Beta. Further amendments WILL be implemented prior to full rollout – this document is a draft representing intended design, but is subject to clarification.</li>
-<li>The NHS login Platform supports Authentication using the Authorization Code Flow only. Implicit &amp; Hybrid Flows are not supported</li>
-<li>HTTP is not supported - all HTTP-based flows <strong>must</strong> be HTTPS (using TLS v1.2 or above)</li>
+<li>User verified email and mobile phone number - OTP sent to mobile phone</li>
+</ul>
+<p><strong>What is not provided</strong></p>
+<ul>
+<li>Fully verified user identity</li>
+<li>NHS number</li>
+<li>Checks with the user’s NHS Personal Demographics Service (PDS) record held on Spine</li>
+<li>GP surgery code (O.D.S. code)</li>
+<li>GP surgery online registration information, like a linkage key that allows access to medical records</li>
+</ul>
+<p><strong>What users can do</strong></p>
+<ul>
+<li>Record non-medical data outside the patient record.</li>
+<li>Book appointments.</li>
+<li>Be registered in an online setting, where treatment does not need high level identity assurance or access to an existing medical record.</li>
+<li>Ask about non-medical data outside the patient record.</li>
+<li>Access non-tailored online NHS services and content.</li>
+<li>Add or ask about medical data that is to be held in a separate patient record. For example, recording an enquiry of sexual health information, treatment and prescribing outside the main NHS patient record.</li>
+<li>Add or ask about non-prescription medication to be held in a separate patient record. For example, recording of non-prescription drugs or guidance.</li>
 </ul>
 <hr>
-<h2>2.2 Changes in this version</h2>
-<p>Version 1.9 of this specification includes the following changes:</p>
+<h2>Medium level verification (P5)</h2>
+<p>Users can contact their GP and receive notifications via email or SMS. They cannot access medical records or personal information. Your service cannot disclose sensitive information or medical record data.</p>
+<p>This level of verification is just a claimed identity. If your service wishes to use and rely on the user’s NHS number, you need to request high level verification (P9).</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg" alt="diagram" title="Diagram showing how the NHS login button works"></p>
+<p><strong>What the service gets</strong></p>
 <ul>
-<li>Addition of <code>identity_proofing_level</code> claim in the <code>profile</code> scope</li>
-<li>Minor clarification on conditions applicable for requesting scopes</li>
-<li>Updates to Verification of Identity Levels</li>
-<li>Updates to Requesting Vectors of Trust values</li>
-<li>Updates to Client Redirects</li>
-<li>Minor reference changes</li>
+<li>User verified email and phone number</li>
+<li>User verified full name, date of birth and NHS number – checked with their NHS Personal Demographics Service (PDS) record held on Spine</li>
+<li>User verified area code of their postcode – checked with and ‘fuzzy matched’ to their PDS record held on Spine</li>
+<li>GP surgery code (O.D.S. code)</li>
+</ul>
+<p><strong>What is not provided</strong></p>
+<ul>
+<li>Fully verified user identity</li>
+<li>GP surgery online registration information, like a linkage key that allows access to medical records</li>
+</ul>
+<p><strong>What users can do</strong></p>
+<p>In addition to what users can do with low level verification (P0), users can also record non-medical data (no read capability). For example, users can record data-sharing opt-out preference or record preferred pharmacy (further controls will be needed around collection of controlled medications).</p>
+<hr>
+<h2>High level verification (P9)</h2>
+<p>There are two ways in which a user can acquire high level verification. The user cases and what your service gets are the same, but the user journeys are different.</p>
+<h3>Prove Your Identity (PYI)</h3>
+<p>High level verification is needed when personal, confidential, or sensitive information is being communicated either to or from the user. It is also required when the user can access their medical records. For example, when a user can access their GP record through a third party service.</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg" alt="diagram" title="Diagram showing how the NHS login button works"></p>
+<p><strong>What the service gets</strong></p>
+<ul>
+<li>User verified email and phone number</li>
+<li>Fully verified and authenticated user identity</li>
+<li>User verified full name, date of birth, postcode, and NHS number – checked with their NHS Personal Demographics Service (PDS) record held on Spine</li>
+<li>GP surgery code (O.D.S. code)</li>
+<li>GP surgery online registration information, like a linkage key that allows access to medical records</li>
+</ul>
+<p><strong>What users can do</strong></p>
+<p>In addition to what users can do with medium level verification (P5), users can also:</p>
+<ul>
+<li>read their medical record</li>
+<li>view their NHS number</li>
+<li>order repeat prescriptions</li>
+<li>manage appointments and view their Summary Care Record (SCR)</li>
+<li>view tailored online NHS services and online content</li>
+<li>record medical data into a private healthcare consultation record</li>
+<li>enable delegated access for another validated individual</li>
+<li>register for an online account where treatment requires high level identity assurance or access to an existing medical record</li>
+<li>record new phone numbers or addresses online</li>
+<li>register with a new GP surgery online</li>
 </ul>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/interface-spec-doc-2.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/master/./src/user-journeys.md">this page</a> on GitHub
               </p>
       </div>
 
