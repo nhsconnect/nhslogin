@@ -24,7 +24,7 @@ More 11ty guidance [here](https://www.11ty.dev/docs/getting-started/).
 
 ## Editing on GitHub.com
 
-1. Click on the **src** file [here](https://github.com/nhsconnect/nhslogin/tree/master/src)
+1. Click on the **src** file [here](https://github.com/nhsconnect/nhslogin/tree/main/src)
 2. Find the file that you would like to edit and click into it
 3. Click the **"Edit" icon button** at the top right of the page
 4. When you are finished making your changes, click **Propose file change** at the bottom of the page
@@ -35,7 +35,7 @@ More 11ty guidance [here](https://www.11ty.dev/docs/getting-started/).
 
 ## Creating a new page on GitHub.com
 
-1. Click on the **src** file [here](https://github.com/nhsconnect/nhslogin/tree/master/src)
+1. Click on the **src** file [here](https://github.com/nhsconnect/nhslogin/tree/main/src)
 2. Click the **"Create new file" button** at the top right of the page
 3. Give your file an appropriate name, making sure to end this name with **.md**
 4. When you are finished making your changes, click **Propose new file** at the bottom of the page
