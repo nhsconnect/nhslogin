@@ -7,6 +7,8 @@ title: Using NHS login to create or retrieve GP credentials
 
 If you are an IM1 supplier, you can learn how to use NHS login to create or retrieve GP credentials. This means users do not have to go their GP practice to register for your service.
 
+This feature needs to be used as part of NHS login authentication. **You cannot use NHS login as a one-off linkage key retrieval tool for GP credentials.**
+
 NHS login supports a scope of `gp_integration_credentials` which will allow a relying party (RP) to retrieve the following user claims:
 
 - Account ID
