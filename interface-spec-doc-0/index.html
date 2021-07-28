@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>Compare NHS login environments</title>
+<title>EIS Contents</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -376,87 +376,65 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Compare NHS login environments
+              EIS Contents
             </h1>
 
-            <p>Compare and understand the differences and transitions between our 4 different environments.</p>
-<h2>Mock environment</h2>
-<p>We have developed a lightweight <a href="https://oidc.mock.signin.nhs.uk/client">mock environment</a> that is a representation of our OIDC endpoints. The mock is entirely self-service and requires no registration.</p>
-<table>
-<thead>
-<tr>
-<th>Purpose</th>
-<th>Requirements</th>
-<th>Restrictions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Designed to reflect the NHS login External Interface Specification (EIS).<br><br> Get to grips with the technology you will use when integrating with NHS login.</td>
-<td>None.</td>
-<td>Only a simple mock environment.</td>
-</tr>
-</tbody>
-</table>
-<h2>Sandpit environment</h2>
-<p>Before you apply, you should build a proof of concept and explore the end-to-end journey in our sandpit environment. This copy of our production environment will help you learn how to integrate with NHS login, and understand where it will fit within your service. You should not be performing non-functional testing (NFT) or penetration testing in the sandpit environment.</p>
-<table>
-<thead>
-<tr>
-<th>Purpose</th>
-<th>Requirements</th>
-<th>Restrictions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Explore the NHS login service and complete a proof of concept.</td>
-<td>ClientID and registered public key.</td>
-<td>No integration to other NHS digital APIs (once deployed). For example, spine, GP middleware or automated I.D. verification service.You can explore manual I.D. verification but cannot complete a full journey.<br><br> You can complete a login using the prepared NHS login email and password, and redirect back to your service.<br><br> No load testing.<br><br> Do not use real I.D.</td>
-</tr>
-</tbody>
-</table>
-<h2>Integration environment</h2>
-<p>When you are ready to test, you will move from the sandpit environment to the integration environment, where you will complete some end-to-end testing. You should not be performing non-functional testing (NFT) or penetration testing in the integration environment.</p>
-<table>
-<thead>
-<tr>
-<th>Purpose</th>
-<th>Requirements</th>
-<th>Restrictions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Complete technical conformance testing to go live and support regression testing against NHS login releases.<br><br> Get your conformance report needed for the Supplier Conformance Assessment List (SCAL).</td>
-<td>Integration in the sandpit complete. <br><br> ODS Code and Data Security and Protection Toolkit (DSPT) covering scope of service.</td>
-<td>Integration available to third party services including Spine (connected to INT), GP middleware with the manual I.D. verification and Patient Online verification.<br><br>Manual I.D. verification can be completed in full.<br><br>Test pack of pre-configured NHS numbers and custom test data available.<br><br>No load testing.<br><br>Do not use real I.D.</td>
-</tr>
-</tbody>
-</table>
-<h2>Live production environment</h2>
-<p>Once approved by the Partner Integration Board (PIB) to go live, you will then transition from the integration environment to the live production environment.</p>
-<table>
-<thead>
-<tr>
-<th>Purpose</th>
-<th>Requirements</th>
-<th>Restrictions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Live environment.</td>
-<td>You have completed your readiness activity and signed an agreement.</td>
-<td>A test user can be provided to complete smoke testing. <br><br> No load testing.</td>
-</tr>
-</tbody>
-</table>
+            <h2>Contents</h2>
+<dl>
+<dt><b>1</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-1">Introduction</a></dt>
+<dd><b>1.1</b> Purpose of Document</dd>
+<dd><b>1.2</b> Audience</dd>
+<dd><b>1.3</b> Definitions</dd>
+</dl>
+<dl>
+<dt><b>2</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-2">Specification status</a></dt>
+<dd><b>2.1</b> Scope / Constraints</dd>
+<dd><b>2.2</b> Changes in this version</dd>
+</dl>
+<dl>
+<dt><b>3</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-3">Messages overview</a></dt>
+<dd><b>3.1</b> Authorization code flow</dd>
+<dd><b>3.2</b> Public and confidential cients</dd>
+<dd><b>3.3</b> Endpoints</dd>
+<dd><b>3.4</b> Authorize endpoint</dd>
+<dd><b>3.5</b> Token endpoint</dd>
+<dd><b>3.6</b> UserInfo endpoint</dd>
+</dl>
+<dl>
+<dt><b>4</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-4">Tokens</a></dt>
+<dd><b>4.1</b> JWT header</dd>
+<dd><b>4.2</b> ID token payload</dd>
+<dd><b>4.3</b> Access token payload</dd>
+<dd><b>4.4</b> JOSE signing</dd>
+</dl>
+<dl>
+<dt><b>5</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-5">Data view</a></dt>
+<dd><b>5.1</b> Vectors of trust</dd>
+</dl>
+<dl>
+<dt><b>6</b> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-6">Password-less authentication using FIDO UAF</a></dt>
+<dd><b>6.1</b> Overview</a></dd>
+<dd><b>6.2</b> FIDO UAF registration flow</a></dd>
+<dd><b>6.3</b> FIDO UAF authentication flow</a></dd>
+<dd><b>6.4</b> FIDO UAF deregistration flow</a></dd>
+<dd><b>6.5</b> Platform restrictions</a></dd>
+</dl>
+<dl>
+<p><strong>7</strong> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-7">Partner services and security</a>
+7.1 Partner service registration
+7.2 Partner service authentication
+7.3 Client redirects
+<strong>8</strong> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-8">References</a>
+<strong>9</strong> <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc-9">Document management</a></p>
+<p>NHS login implements OpenID Connect 1.0 OpenID Provider role to assert the identity of the end user to a partner service, as well as enabling the service to obtain basic profile information about the end user in an interoperable manner.</p>
+<p>This document defines the interfaces implemented by the Platform and describes the data flows supported by these interfaces.</p>
+<p><a href="https://github.com/nhsconnect/nhslogin/blob/main/NHS%20login%20-%20Interface%20Specification%20-%20Federation.docx?raw=true">Download the EIS as a word document</a>.</p>
+<p>N.B. We are currently in the process of moving the content from the Word document to this site.</p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/compare-environments.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/interface-spec-doc-0.md">this page</a> on GitHub
               </p>
       </div>
 
