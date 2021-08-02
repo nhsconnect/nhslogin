@@ -7,29 +7,27 @@ title: User journeys
 
 Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg "Diagram showing how the NHS login button works")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Low-level-verification-P0.svg "insert alt text here")
 
 **What the service gets**
 
-- User verified email and mobile phone number - OTP sent to mobile phone
+- User verified email & phone number - one time passcode (OTP) sent to phone
 
 **What is not provided**
 
-- Fully verified user identity
-- NHS number 
-- Checks with the user’s NHS Personal Demographics Service (PDS) record held on Spine 
-- GP surgery code (O.D.S. code) 
-- GP surgery online registration information, like a linkage key that allows access to medical records
+- User identity not fully verified
+- No NHS number 
+- No checks with their NHS Personal Demographics Service (PDS) record, (held on Spine)
+- No GP surgery code (ODS code)
+- No GP surgery online registration information (linkage key - which allows access to medical records)
 
 **What users can do**
 
-- Record non-medical data outside the patient record.
-- Book appointments.
-- Be registered in an online setting, where treatment does not need high level identity assurance or access to an existing medical record.
-- Ask about non-medical data outside the patient record.
-- Access non-tailored online NHS services and content.
-- Add or ask about medical data that is to be held in a separate patient record. For example, recording an enquiry of sexual health information, treatment and prescribing outside the main NHS patient record.
-- Add or ask about non-prescription medication to be held in a separate patient record. For example, recording of non-prescription drugs or guidance.
+- Record non-medical data outside the patient record, e.g. book appointments (not able to view or manage appointments – which may give out information).
+- Be registered in an online setting, where treatment does not require high level identity assurance or access to / adding to existing medical record.
+- Enquire about non-medical data outside the patient record and access non-tailored online NHS services and content.
+- Add / Enquire about medical data which is to be held in a separate patient record, e.g. recording and enquiry of STI / sexual health information, treatment and prescribing outside the main NHS patient record.
+- Add / Enquire about non-prescription medication to be held in a separate patient record, e.g. recording of non-prescription drugs or advice / guidance.
 
 ---
 
