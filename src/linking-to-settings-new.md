@@ -9,6 +9,8 @@ NHS login provides capability for users to change their NHS login account settin
 
 To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.
 
+![diagram](nhslogin/images/Managelogin-NHSApp-small.png)
+
 ### NHS login currently allows users to:
 - change their email address
 - change their password
@@ -16,12 +18,6 @@ To help users do this, partner services need to create a link from their service
 - delete their NHS login
 
 ![diagram](nhslogin/images/example_settings_smallest.png)
-
----
-
-### User settings flow
-
-![diagram](nhslogin/images/SettingsDiagram_smaller.png "NHS login settings flow diagram")
 
 ---
 
