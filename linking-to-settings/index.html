@@ -382,6 +382,7 @@
             <h2>Managing NHS login</h2>
 <p>NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks.</p>
 <p>To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.</p>
+<p><img src="nhslogin/images/Managelogin-NHSApp-small.png" alt="diagram"></p>
 <h3>NHS login currently allows users to:</h3>
 <ul>
 <li>change their email address</li>
@@ -391,23 +392,10 @@
 </ul>
 <p><img src="nhslogin/images/example_settings_smallest.png" alt="diagram"></p>
 <hr>
-<h2>Technical details</h2>
-<p>NHS login supports the parameter <code>asserted_login_identity</code> as part of the OIDC flow. This allows the user to seamlessly access the “Manage NHS login settings” functionality from the partner service without the need for re-authentication.</p>
-<ol>
-<li><code>asserted_login_identity</code> will be a querystring parameter</li>
-<li>parameter content is a signed <code>jwt</code></li>
-<li>the <code>asserted_login_identity</code> token is a one-time token (TTL 60 sec)</li>
-</ol>
-<p>See the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Interface Specification – Federation</a> document for technical details. In the context of document, RP1 is partner service and RP2 is NHS login.</p>
-<h3>User settings flow</h3>
-<p><img src="nhslogin/images/SettingsDiagram_smaller.png" alt="diagram" title="NHS login settings flow diagram"></p>
-<hr>
 <h2>User settings page links</h2>
-<p><strong>Production:</strong></p>
-<p><code>https://settings.login.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p><strong>Other environments:</strong></p>
-<p><code>https://settings.&lt;ENV&gt;.signin.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
-<p>e.g. <code>https://settings.sandpit.signin.nhs.uk?asserted_login_identity=ewrffw...wfw</code></p>
+<p><strong>Production:</strong> <code>https://settings.login.nhs.uk</code></p>
+<p><strong>Sandpit:</strong> <code>https://settings.sandpit.signin.nhs.uk</code></p>
+<p><strong>Integration:</strong> <code>https://settings.aos.signin.nhs.uk</code></p>
 
 
      <div class="app-edit-instructions">
