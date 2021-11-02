@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>User journeys</title>
+<title>NHS login user journeys</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -297,6 +297,9 @@
                     <a class="app-side-nav__link" href="/nhslogin/integration-process">The NHS login integration process</a>
                   </li>
                   <li class="app-side-nav__item">
+                    <a class="app-side-nav__link" href="nhslogin/user-journeys">NHS login user journeys</a>
+                  </li>
+                  <li class="app-side-nav__item">
                     <a class="app-side-nav__link" href="nhslogin/adding-buttons">Adding the NHS login button to your service</a>
                   </li>
                 </ul>
@@ -376,13 +379,14 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              User journeys
+              NHS login user journeys
             </h1>
 
-            <h2>Low level verification (P0)</h2>
+            <p>All of the NHS login user journeys start with the NHS login button on your website or app. These journeys cannot be changed or customised.</p>
+<h2>Low level verification (P0)</h2>
 <p>Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Low-level-verification-P0.svg" alt="diagram" title="insert alt text here"></p>
-<p><strong>What the service gets</strong></p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P0.svg" alt="diagram" title="Diagram showing the P0 user journey"></p>
+<p><strong>What the Partner Service gets</strong></p>
 <ul>
 <li>User verified email &amp; phone number - one time passcode (OTP) sent to phone</li>
 </ul>
@@ -392,7 +396,7 @@
 <li>No NHS number</li>
 <li>No checks with their NHS Personal Demographics Service (PDS) record, (held on Spine)</li>
 <li>No GP surgery code (ODS code)</li>
-<li>No GP surgery online registration information (linkage key - which allows access to medical records)</li>
+<li>No GP surgery online registration information (linkage key) - which allows access to medical records</li>
 </ul>
 <p><strong>What users can do</strong></p>
 <ul>
@@ -404,51 +408,64 @@
 </ul>
 <hr>
 <h2>Medium level verification (P5)</h2>
-<p>Users can contact their GP and receive notifications via email or SMS. They cannot access medical records or personal information. Your service cannot disclose sensitive information or medical record data.</p>
-<p>This level of verification is just a claimed identity. If your service wishes to use and rely on the user’s NHS number, you need to request high level verification (P9).</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg" alt="diagram" title="Diagram showing how the NHS login button works"></p>
-<p><strong>What the service gets</strong></p>
+<p>Users can contact their GP or receive notifications via email or SMS. Users can’t access medical records or personal information, nor should the user transfer sensitive or personal information. The Partner Service can’t disclose sensitive info or medical record data.</p>
+<p>This level of verification is just a claim identity. If a Partner Service wishes to use and rely on the user’s NHS number they need to request a high-level verification (P9).</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P5.svg" alt="diagram" title="Diagram showing the P5 user journey"></p>
+<p><strong>What the Partner Service gets</strong></p>
 <ul>
 <li>User verified email and phone number</li>
-<li>User verified full name, date of birth and NHS number – checked with their NHS Personal Demographics Service (PDS) record held on Spine</li>
-<li>User verified area code of their postcode – checked with and ‘fuzzy matched’ to their PDS record held on Spine</li>
-<li>GP surgery code (O.D.S. code)</li>
+<li>User verified their; date of birth, NHS number, full name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+<li>User verified the area code of their postcode – this information has been checked with and ‘fuzzy matched’ to their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+<li>GP surgery code (ODS code)</li>
 </ul>
 <p><strong>What is not provided</strong></p>
 <ul>
-<li>Fully verified user identity</li>
-<li>GP surgery online registration information, like a linkage key that allows access to medical records</li>
+<li>User identity not fully verified</li>
+<li>No GP surgery online registration information (linkage key) – which allows access to medical records</li>
 </ul>
 <p><strong>What users can do</strong></p>
-<p>In addition to what users can do with low level verification (P0), users can also record non-medical data (no read capability). For example, users can record data-sharing opt-out preference or record preferred pharmacy (further controls will be needed around collection of controlled medications).</p>
+<p>In addition to what users can do with low level verification (P0), users can also:</p>
+<ul>
+<li>Record (no read capability) non-medical data into record, e.g. record data-sharing opt-out preference or record preferred pharmacy (further controls will be needed around collection of controlled medications).</li>
+</ul>
 <hr>
 <h2>High level verification (P9)</h2>
-<p>There are two ways in which a user can acquire high level verification. The user cases and what your service gets are the same, but the user journeys are different.</p>
+<p>There are two ways in which a user can acquire high level verification (P9). The user cases and what the Partner Service gets are the same but the user journey is different.</p>
+<p>High level verification is needed when personal, confidential or sensitive information is being communicated either to or from the user. It is also required when the user can access their medical records e.g. GP record via a 3rd party – such as Co-op Health app, NHS App or TPP Airmid.</p>
 <h3>Prove Your Identity (PYI)</h3>
-<p>High level verification is needed when personal, confidential, or sensitive information is being communicated either to or from the user. It is also required when the user can access their medical records. For example, when a user can access their GP record through a third party service.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_overview.svg" alt="diagram" title="Diagram showing how the NHS login button works"></p>
-<p><strong>What the service gets</strong></p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P9PYI.svg" alt="diagram" title="Diagram showing the P9 PYI user journey"></p>
+<h3>Patient Online (POL)</h3>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P9POL.svg" alt="diagram" title="Diagram showing the P9 POL user journey"></p>
+<p><strong>What the Partner Service gets</strong></p>
 <ul>
-<li>User verified email and phone number</li>
-<li>Fully verified and authenticated user identity</li>
-<li>User verified full name, date of birth, postcode, and NHS number – checked with their NHS Personal Demographics Service (PDS) record held on Spine</li>
-<li>GP surgery code (O.D.S. code)</li>
-<li>GP surgery online registration information, like a linkage key that allows access to medical records</li>
+<li>User verified their email and phone number</li>
+<li>User ID fully authenticated</li>
+<li>User also verified their; date of birth, NHS number, full name and postcode – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+<li>GP surgery code (ODS code)</li>
+<li>GP surgery online information (linkage key) – which allows access to medical records</li>
 </ul>
 <p><strong>What users can do</strong></p>
 <p>In addition to what users can do with medium level verification (P5), users can also:</p>
 <ul>
-<li>read their medical record</li>
-<li>view their NHS number</li>
-<li>order repeat prescriptions</li>
-<li>manage appointments and view their Summary Care Record (SCR)</li>
-<li>view tailored online NHS services and online content</li>
-<li>record medical data into a private healthcare consultation record</li>
-<li>enable delegated access for another validated individual</li>
-<li>register for an online account where treatment requires high level identity assurance or access to an existing medical record</li>
-<li>record new phone numbers or addresses online</li>
-<li>register with a new GP surgery online</li>
+<li>Enquire against official record, e.g. read medical record, view NHS number, order repeat prescriptions, view SCR or detailed record, manage / view appointments, view tailored online NHS services and online content.</li>
+<li>Record medical data into private healthcare consultation record.</li>
+<li>Enable delegated access for another validated individual.</li>
+<li>Register for online account where treatment requires high level identity assurance or access to / adding to existing medical record.</li>
+<li>Record new phone number or new address online.</li>
+<li>Register patient to a new GP through a purely online mechanism.</li>
 </ul>
+<hr>
+<h2>Step-up from mid-level (P5) to high-level verification (P9)</h2>
+<p>Here, the user has a mid-level (P5) verification but wants to uplift to a high (P9) level to access additional services or functionality. In this journey the user does NOT need to verify their demographic information as this has already been completed.
+A person needs to prove their identity to have it fully verified and checked with the record on PDS.</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P5UpliftP9.svg" alt="diagram" title="Diagram showing the P5 to P9 uplift user journey"></p>
+<hr>
+<h2>IDVM (P9)</h2>
+<p>IDVM is a P9 proofing method (an alternative to PYI and POL).
+Available to services with P5 authentication level, and it is only applicable to P5 users who are registered for POL at their GP. If their phone number matches the one against their GP record, then we can uplift them to P9.</p>
+<p><img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P9IDVM.svg" alt="diagram" title="Diagram showing the IDVM uplift user journey"></p>
+<hr>
+<p>Download the <a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/discovery#download-the-nhs-login-user-journey-visuals-presentation">NHS login User Journey Visuals presentation</a>.</p>
 
 
      <div class="app-edit-instructions">
