@@ -10,7 +10,7 @@ All of the NHS login user journeys start with the NHS login button on your websi
 
 Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P0.svg "Diagram showing the P0 user journey")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P0_Journey.svg "Diagram showing the P0 user journey")
 
 **What the Partner Service gets**
 
@@ -40,7 +40,7 @@ Users can contact their GP or receive notifications via email or SMS. Users can�
 
 This level of verification is just a claim identity. If a Partner Service wishes to use and rely on the user’s NHS number they need to request a high-level verification (P9).
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P5.svg "Diagram showing the P5 user journey")
+![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P5_Journey.svg "Diagram showing the P5 user journey")
 
 **What the Partner Service gets**
 
@@ -70,11 +70,11 @@ High level verification is needed when personal, confidential or sensitive infor
 
 ### Prove Your Identity (PYI)
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P9PYI.svg "Diagram showing the P9 PYI user journey") 
+![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_PYI_Journey.svg "Diagram showing the P9 PYI user journey") 
 
  ### Patient Online (POL)
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P9POL.svg "Diagram showing the P9 POL user journey") 
+![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_POL_Journey.svg "Diagram showing the P9 POL user journey") 
 
 **What the Partner Service gets**
 
@@ -101,7 +101,7 @@ In addition to what users can do with medium level verification (P5), users can 
 Here, the user has a mid-level (P5) verification but wants to uplift to a high (P9) level to access additional services or functionality. In this journey the user does NOT need to verify their demographic information as this has already been completed.
 A person needs to prove their identity to have it fully verified and checked with the record on PDS.
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P5UpliftP9.svg "Diagram showing the P5 to P9 uplift user journey") 
+![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P5-P9_Journey.svg "Diagram showing the P5 to P9 uplift user journey") 
 
 ---
 
@@ -110,7 +110,7 @@ A person needs to prove their identity to have it fully verified and checked wit
 IDVM is a P9 proofing method (an alternative to PYI and POL).
 Available to services with P5 authentication level, and it is only applicable to P5 users who are registered for POL at their GP. If their phone number matches the one against their GP record, then we can uplift them to P9.
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/UserJourney_P9IDVM.svg "Diagram showing the IDVM uplift user journey") 
+![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_IDVM_Journey.svg "Diagram showing the IDVM uplift user journey") 
 
 ---
 
