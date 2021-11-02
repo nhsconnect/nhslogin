@@ -11,7 +11,11 @@ title: Adding the NHS login button to your service
 
 ## NHS login button
 
-The NHS login button is available to download in a variety of different formats. **This button must always be visible.**
+The NHS login button is available to download in a variety of different formats. **This button must always be visible and up front.**
+
+The button must adhere to our button guidelines. It is not customisable, and must have the same visibility as any other login mechanism if present.
+
+We will check in with you periodically to make sure you are aligning with our guidelines, and to review the placement and visibility of the NHS login button on your website or app.
 
 ![button](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_button.svg "the NHS login button")
 
