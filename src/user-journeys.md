@@ -10,7 +10,7 @@ All of the NHS login user journeys start with the NHS login button on your websi
 
 Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P0_Journey.svg "Diagram showing the P0 user journey")
+![diagram](nhslogin/images/P0_Journey.svg "Diagram showing the P0 user journey")
 
 **What the Partner Service gets**
 
@@ -70,7 +70,7 @@ High level verification is needed when personal, confidential or sensitive infor
 
 ### Prove Your Identity (PYI)
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_PYI_Journey.svg "Diagram showing the P9 PYI user journey") 
+![diagram](nhslogin/images/P9_PYI_Journey.svg "Diagram showing the P9 PYI user journey") 
 
  ### Patient Online (POL)
 
