@@ -10,7 +10,7 @@ title: Scopes and Claims
 | User's basic demographics: <br>`basic_demographics`<span style="vertical-align:super;font-size:70%">2</span> | • Surname: `family_name` <br><br> • Date of birth: `birthdate` <br><br> • Identity proofing level: `identity_proofing_level` | No | Yes | Yes |
 | User's additional demographic information:<br> `profile_extended` | • First name from PDS: `given_name` | No | Yes | Yes |
 | Email address:<br> `email` | • Email address: `email` <br><br> • Verified email address: `email_verified` | Yes | Yes | Yes |
-| Phone number:<br> `phone` | • Phone number: `phone` <br><br> • Verified phone number: `phone_number_verified` <br><br> • Phone number matched to PDS: `phone_number_pds_matched`<span style="vertical-align:super;font-size:70%">3</span> | Yes | Yes | Yes |
+| Phone number:<br> `phone` | • Phone number: `phone_number` <br><br> • Verified phone number: `phone_number_verified` <br><br> • Phone number matched to PDS: `phone_number_pds_matched`<span style="vertical-align:super;font-size:70%">3</span> | Yes | Yes | Yes |
 | GP registration details: <br>`gp_registration_details`<span style="vertical-align:super;font-size:70%">4</span> | • O.D.S code: `gp_ods_code` | No | Yes | Yes |
 | GP surgery information:<br> `gp_integration_credentials` | • Linkage key: `gp_linkage_key` <br><br> • O.D.S. code: `gp_ods_code` <br><br> • Account ID: `gp_user_id` | No | No | Yes<span style="vertical-align:super;font-size:70%">5</span> | 
 | Client specific metadata for the user account:<br> `client_metadata`<span style="vertical-align:super;font-size:70%">6</span> | • Client user metadata: `client_user_metadata` | Yes | Yes | Yes |
