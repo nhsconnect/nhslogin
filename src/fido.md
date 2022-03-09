@@ -3,7 +3,7 @@ layout: base.njk
 title: Biometric FIDO Authentication
 ---
 
-Partners interested in using biometric authentication for NHS login, will need a FIDO client that works with our server.
+Partners interested in using biometric authentication for NHS login, will need a FIDO client that works with our FIDO server.
 
 [NHS client code for Android](https://github.com/nhsconnect/nhsapp-fido-client-android)
 
