@@ -10,3 +10,5 @@ Partners interested in using biometric authentication for NHS login, will need a
 [NHS client code for iOS](https://github.com/nhsconnect/nhsapp-fido-client-ios)
 
 Partners can use this code to install their own client or reference it to create their own FIDO client.
+
+You can find out more about our use of FIDO by reading the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) (EIS).
