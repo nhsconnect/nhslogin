@@ -98,5 +98,16 @@ These scenarios should be completed by all suppliers that support a proofing lev
 ### PYI (Optional and for awareness only)
 * Suppliers should be aware of the PYI journey to be able to provide basic support to their users.
  
+---
 
+### Glossary of Terms
+
+| VTR | Vector of Trust |
+| PYI | Prove your Identity |
+| POL | Patient Online |
+| IM1 | Interface Mechanisms |
+| P0 | Proofing level 0 |
+| P5 | Proofing level 5 |
+| P9 | Proofing level 9 |
+| Service/s | Supplier service either a website or Mobile App "
 
