@@ -102,6 +102,8 @@ These scenarios should be completed by all suppliers that support a proofing lev
 
 ### Glossary of Terms
 
+| Syntax      | Description |
+| :---        | :---        |
 | VTR | Vector of Trust |
 | PYI | Prove your Identity |
 | POL | Patient Online |
@@ -109,5 +111,5 @@ These scenarios should be completed by all suppliers that support a proofing lev
 | P0 | Proofing level 0 |
 | P5 | Proofing level 5 |
 | P9 | Proofing level 9 |
-| Service/s | Supplier service either a website or Mobile App "
+| Service/s | Supplier service either a website or Mobile App |
 
