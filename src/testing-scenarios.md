@@ -104,7 +104,7 @@ These scenarios should be completed by all suppliers that support a proofing lev
 
 | Syntax      | Description |
 | :---        | :---        |
-| VOT | Vector of Trust |
+| VoT | Vector of Trust |
 | PYI | Prove your Identity |
 | POL | Patient Online |
 | IM1 | Interface Mechanisms |
