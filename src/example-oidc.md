@@ -28,3 +28,8 @@ The links below contain examples of different implementations and integrations o
 
 [Sample NodeJS Webclient](https://github.com/rikitikitaco/nhs-login-nodejs-example)
 
+
+**AWS Cognito Integration Instructionsn**
+
+[AWS Cognito Integration Instructions](aws-cognito-instructions.md)
+
