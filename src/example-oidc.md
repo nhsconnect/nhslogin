@@ -31,5 +31,5 @@ The links below contain examples of different implementations and integrations o
 
 **AWS Cognito Integration Instructionsn**
 
-[AWS Cognito Integration Instructions](aws-cognito-instructions.md)
+[AWS Cognito Integration Instructions](/nhslogin/aws-cognito-instructions)
 
