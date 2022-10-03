@@ -5,9 +5,9 @@ title: Adding the NHS login button to your service
 
 ## How the button works
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/diagram-behind-button.png "Diagram showing how NHS login checks to see what journey a user should go down")
+<img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/diagram-behind-button.png">
 
-When a user selects the NHS login button they are asked to enter their email. At this point, NHS login will check to see if they exist on our database. If they do, they can enter their password, if not, they will sign up as part of their journey. 
+After a user enters their email, NHS login will check to see if they exist on our database. If they do, they can enter their password, if not, they will sign up as part of their journey. 
 
 After entering their password, NHS login will check to see what level of verification the user has, and match that against what level of verification your service is requesting. If the user does not have the same or higher level of verification as requested, they need to uplift to that level of verification.
 
