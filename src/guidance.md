@@ -3,6 +3,15 @@ layout: base.njk
 title: Adding the NHS login button to your service
 ---
 
+With multiple partners we have to make sure that the button stays consistent and recognisable across our partners. 
+
+Our guidance has been put together through our own research and using GDS standards. You will need to provide evidence that you comply with that standard in order to integrate with NHS login.
+
+We will check in with you periodically to make sure you are aligning with our guidelines, and to review the placement and visibility of the NHS login button on your website or app.
+ 
+---
+
+
 ## How the button works
 
 <img src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/diagram-behind-button.png">
@@ -21,7 +30,6 @@ For example, **do not** use "Log in", this will confuse the user if they need to
 
 The button must adhere to our button guidelines. It is not customisable, and must have the same visibility as any other login mechanism if present.
 
-We will check in with you periodically to make sure you are aligning with our guidelines, and to review the placement and visibility of the NHS login button on your website or app.
 
 The NHS login button is available to download in a variety of different formats.
 
