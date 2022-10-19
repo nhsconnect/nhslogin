@@ -22,7 +22,7 @@ Before you apply, you should build a proof of concept and explore the end-to-end
 | --------- | ----------- | ------------- |
 |Explore the NHS login service and complete a proof of concept. | ClientID and registered public key. | No integration to other NHS digital APIs (once deployed). For example, spine, GP middleware or automated I.D. verification service.You can explore manual I.D. verification but cannot complete a full journey.<br><br> You can complete a login using the prepared NHS login email and password, and redirect back to your service.<br><br> No load testing.<br><br> Do not use real I.D.|
 
-## Integration environment
+## Test integration environment
 
 When you are ready to test, you will move from the sandpit environment to the integration environment, where you will complete some end-to-end testing. You should not be performing non-functional testing (NFT) or penetration testing in the integration environment.
 
