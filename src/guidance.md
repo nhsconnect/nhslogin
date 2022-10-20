@@ -4,14 +4,16 @@ title: Adding the NHS login button to your service
 ---
 
 <p>With multiple partners integrated with NHS login, we must make sure that the NHS login button stays consistent and recognisable across our partners. </p>
+
+<p>We will check in with you periodically to make sure that you are aligning to the guidelines, and to review the placement and visibility of the NHS login button on your website or app.</p>
+
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <p>You will need to provide evidence that you align to these guidelines in order to integrate with NHS login.</p>
+  <p>If you are found to be non compliant, we will <b>XXX</b>. </p>
 </div>
 
-We will check in with you periodically to make sure that you are aligning to the guidelines, and to review the placement and visibility of the NHS login button on your website or app.
 
-If you are found to be non compliant, we will **XXXX**.
  
 ---
 
@@ -53,6 +55,25 @@ If you are found to be non compliant, we will **XXXX**.
 
 ---
 
+<h2 id=content-around-button>Content around the button</h2>
+
+Sometimes, it may be necessary to add some content around the NHS login button in order to reassure a user of what will happen upon selecting the button. 
+
+
+<div class="nhsuk-do-dont-list">
+  <h3 class="nhsuk-do-dont-list__label">Example</h3>
+  <ul class="nhsuk-list nhsuk-list--tick">
+    <li><img class="nhsuk-image__img" src="Guidance-example-1.png" alt="Example showing how to place the NHS login button">
+  <figcaption class="nhsuk-image__caption">
+   NHS login allows you to access your health and care websites and apps with one set of login details. We will check if you have an NHS login. If not, you can set one up.
+  </figcaption>
+    </li>
+  </ul>
+</div>
+
+
+
+<!-- 
 ## Button placement
 
 
@@ -124,7 +145,7 @@ We are working with the NHSD design system to create a button that can be a reus
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
-      View code for this button
+      View JavaScript for this button
     </span>
   </summary>
   <div class="nhsuk-details__text">
