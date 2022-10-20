@@ -523,14 +523,80 @@
   <p>Do not place any content around the NHS login button that specifies a users journey as you cannot guarantee what journey that will be. For more information on this, see <a href="/nhslogin/guidance#content-around-button">content around the button</a>.</p>
 </div>
 <hr>
+<h2 id=button-types>The NHS login button</h2>
+<p>There are three different types of NHS login buttons, which button your service will use is defined by the type of service you are.</p>
+<div class="nhsuk-do-dont-list">
+  <h3 class="nhsuk-do-dont-list__label">Services that are using the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a>.</h3>
+  <ul class="nhsuk-list">
+    <div class="nhsuk-grid-column-one-half">
+    <li><img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-1.png" alt="Example of content around the NHS login button">
+    </div>
+  <figcaption class="nhsuk-image__caption">
+  <b>This version is only to be used by services that are using the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a>.</b>
+  <ul class="nhsuk-list nhsuk-image__caption">
+  <li>minimal use of "NHS login"</li>
+  <li>no NHS lozenge</li>
+  <li>action driven call to action on the button</li>
+  <li>NHS blue button</li>
+  </ul>
+  </figcaption>
+    </li>
+  </ul>
+</div>
+<figure class="nhsuk-image">
+  <img class="nhsuk-image__img" src="#" alt="NHS login button for services using the NHS Design System">
+  <figcaption class="nhsuk-image__caption">
+    <a href="#download">Download the NHS login button package for services that use the NHS Design System</a>.
+  </figcaption>
+</figure>
+<p>We are working with the NHSD design system to create a button that can be a reusable component.</p>
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      View JavaScript for this button
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+<pre style="
+    background-color: white;
+    padding: 30px;
+    overflow:auto;
+    font-size:12px
+    ">
+<code>
+.nhslogin-button {
+  background-color: darken($color_nhsuk-blue, 1%);
+  box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 20%); // s0
+  &:hover {
+    background-color: darken($color_nhsuk-blue, 12%);
+    cursor: default;
+  }
+  &:focus {
+    outline: none;
+    background-color: darken($color_nhsuk-blue, 12%);
+  }
+  &:active {
+    box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 12%); // s0
+    top: 0;
+  }
+}   
+</code>
+</pre>
+  </div>
+</details>
+<hr>
 <h2 id=content-around-button>Content around the button</h2>
 <p>Sometimes, it may be necessary to add some content around the NHS login button in order to reassure a user of what will happen upon selecting the button.</p>
 <div class="nhsuk-do-dont-list">
   <h3 class="nhsuk-do-dont-list__label">Example</h3>
-  <ul class="nhsuk-list nhsuk-list--tick">
-    <li><img class="nhsuk-image__img" src="Guidance-example-1.png" alt="Example showing how to place the NHS login button">
+  <ul class="nhsuk-list">
+    <div class="nhsuk-grid-column-one-half">
+    <li><img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-1.png" alt="Example of content around the NHS login button">
+    </div>
   <figcaption class="nhsuk-image__caption">
-   NHS login allows you to access your health and care websites and apps with one set of login details. We will check if you have an NHS login. If not, you can set one up.
+  <b>Content:</b><br><br>
+  NHS login allows you to access your health and care websites and apps with one set of login details.<br>
+  We will check if you have an NHS login. If not, you can set one up.
   </figcaption>
     </li>
   </ul>
@@ -582,65 +648,6 @@
 
 ---
 
-
-## NHS login button types
-
-<p>There are three different types of NHS login buttons, which button your service will use is defined by the type of service you are.</p>
-
-### Version 1
-This version is to be used by services that are using the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a>.
-
-- minimal use of "NHS login"
-- no lozenge
-- action driven button
-- NHS blue
-
-<figure class="nhsuk-image">
-  <img class="nhsuk-image__img" src="#" alt="NHS login button for services using the NHS Design System">
-  <figcaption class="nhsuk-image__caption">
-    <a href="#download">Download the NHS login button package for services that use the NHS Design System</a>.
-  </figcaption>
-</figure>
-
-We are working with the NHSD design system to create a button that can be a reusable component.
-
-<details class="nhsuk-details">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">
-      View JavaScript for this button
-    </span>
-  </summary>
-  <div class="nhsuk-details__text">
-<pre style="
-    background-color: white;
-    padding: 30px;
-    overflow:auto;
-    font-size:12px
-    ">
-<code>
-.nhslogin-button {
-  background-color: darken($color_nhsuk-blue, 1%);
-  box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 20%); // s0
-  &:hover {
-    background-color: darken($color_nhsuk-blue, 12%);
-    cursor: default;
-  }
-  &:focus {
-    outline: none;
-    background-color: darken($color_nhsuk-blue, 12%);
-  }
-  &:active {
-    box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 12%); // s0
-    top: 0;
-  }
-}   
-</code>
-</pre>
-
-  </div>
-</details>
-
-<br>
 
 ### Version 2
 This version is to be used by services that are do not use the NHS design system, but has NHS branding **on the same screen** as the NHS login button.
