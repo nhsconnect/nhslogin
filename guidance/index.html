@@ -487,12 +487,12 @@
             </h1>
 
             <p>With multiple partners integrated with NHS login, we must make sure that the NHS login button stays consistent and recognisable across our partners. </p>
+<p>We will check in with you periodically to make sure that you are aligning to the guidelines, and to review the placement and visibility of the NHS login button on your website or app.</p>
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <p>You will need to provide evidence that you align to these guidelines in order to integrate with NHS login.</p>
+  <p>If you are found to be non compliant, we will <b>XXX</b>. </p>
 </div>
-<p>We will check in with you periodically to make sure that you are aligning to the guidelines, and to review the placement and visibility of the NHS login button on your website or app.</p>
-<p>If you are found to be non compliant, we will <strong>XXXX</strong>.</p>
 <hr>
 <!-- 
 <dl>
@@ -523,9 +523,25 @@
   <p>Do not place any content around the NHS login button that specifies a users journey as you cannot guarantee what journey that will be. For more information on this, see <a href="/nhslogin/guidance#content-around-button">content around the button</a>.</p>
 </div>
 <hr>
-<h2>Button placement</h2>
+<h2 id=content-around-button>Content around the button</h2>
+<p>Sometimes, it may be necessary to add some content around the NHS login button in order to reassure a user of what will happen upon selecting the button.</p>
+<div class="nhsuk-do-dont-list">
+  <h3 class="nhsuk-do-dont-list__label">Example</h3>
+  <ul class="nhsuk-list nhsuk-list--tick">
+    <li><img class="nhsuk-image__img" src="Guidance-example-1.png" alt="Example showing how to place the NHS login button">
+  <figcaption class="nhsuk-image__caption">
+   NHS login allows you to access your health and care websites and apps with one set of login details. We will check if you have an NHS login. If not, you can set one up.
+  </figcaption>
+    </li>
+  </ul>
+</div>
+<!-- 
+## Button placement
+
+
 <div class="nhsuk-do-dont-list">
 <div class="nhsuk-grid-row">
+
 <div class="nhsuk-grid-column-one-half">
     <h3 class="nhsuk-do-dont-list__label">Don't</h3>
 <ul class="nhsuk-list nhsuk-list--cross">
@@ -537,8 +553,10 @@
       <img class="nhsuk-image__img" src="#" alt="Example showing how to place the NHS login button">
   <figcaption class="nhsuk-image__caption">
     Do not place any forms on the same screen as the NHS login button.
+
   </figcaption>
 </div>
+
   <div class="nhsuk-grid-column-one-half">
     <h3 class="nhsuk-do-dont-list__label">Do</h3>
 <ul class="nhsuk-list nhsuk-list--cross">
@@ -551,32 +569,45 @@
    Explain to the users what NHS login is
   </figcaption>
 </div>
+
+
 </div>
 </div>
-<h3>Exceptions to the rules</h3>
-<p><strong>The NHS login button must always be visible and up front.</strong></p>
-<hr>
-<h2>NHS login button types</h2>
+
+### Exceptions to the rules
+
+
+**The NHS login button must always be visible and up front.**
+
+
+---
+
+
+## NHS login button types
+
 <p>There are three different types of NHS login buttons, which button your service will use is defined by the type of service you are.</p>
-<h3>Version 1</h3>
-<p>This version is to be used by services that are using the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a>.</p>
-<ul>
-<li>minimal use of &quot;NHS login&quot;</li>
-<li>no lozenge</li>
-<li>action driven button</li>
-<li>NHS blue</li>
-</ul>
+
+### Version 1
+This version is to be used by services that are using the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a>.
+
+- minimal use of "NHS login"
+- no lozenge
+- action driven button
+- NHS blue
+
 <figure class="nhsuk-image">
   <img class="nhsuk-image__img" src="#" alt="NHS login button for services using the NHS Design System">
   <figcaption class="nhsuk-image__caption">
     <a href="#download">Download the NHS login button package for services that use the NHS Design System</a>.
   </figcaption>
 </figure>
-<p>We are working with the NHSD design system to create a button that can be a reusable component.</p>
+
+We are working with the NHSD design system to create a button that can be a reusable component.
+
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
-      View code for this button
+      View JavaScript for this button
     </span>
   </summary>
   <div class="nhsuk-details__text">
@@ -605,81 +636,142 @@
 }   
 </code>
 </pre>
+
   </div>
 </details>
+
 <br>
-<h3>Version 2</h3>
-<p>This version is to be used by services that are do not use the NHS design system, but has NHS branding <strong>on the same screen</strong> as the NHS login button.</p>
-<ul>
-<li>no lozenge</li>
-<li>Full CTA</li>
-<li>NHS blue</li>
-</ul>
+
+### Version 2
+This version is to be used by services that are do not use the NHS design system, but has NHS branding **on the same screen** as the NHS login button.
+
+- no lozenge
+- Full CTA
+- NHS blue
+
 <figure class="nhsuk-image">
   <img class="nhsuk-image__img" src="#" alt="NHS login button for services that has NHS branding on the same screen as the NHS login button">
   <figcaption class="nhsuk-image__caption">
     <a href="#download">Download the NHS login button package for services that has NHS branding <b>on the same screen</b> as the NHS login button</a>.
   </figcaption>
 </figure>
-<h3>Version 3</h3>
-<p>This version is to be used by all other services that do not fall into the above categories.</p>
-<ul>
-<li>NHS lozenge</li>
-<li>Full CTA</li>
-<li>NHS blue</li>
-</ul>
+
+
+
+
+### Version 3
+This version is to be used by all other services that do not fall into the above categories.
+
+- NHS lozenge
+- Full CTA
+- NHS blue
+
 <figure class="nhsuk-image">
   <img class="nhsuk-image__img" src="#" alt="NHS login button for all other services">
   <figcaption class="nhsuk-image__caption">
     <a href="#download">Download the NHS login button package for all other services</a>.
   </figcaption>
 </figure>
-<p>Special cases:</p>
-<h3>If your service has its own (non NHS) design system</h3>
-<p>NHS login button can match in shape and font, but must be NHS blue (or white background with the blue text).</p>
-<hr>
-<h3>Size</h3>
-<p>You can scale the button as needed for different devices and screen sizes, but you must keep the aspect ratio the same so that the NHS logo is not stretched. When scaling the button, you must ensure that the writing is still clear and readable.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_size.svg" alt="example" title="size example"></p>
+
+Special cases:
+
+### If your service has its own (non NHS) design system
+
+NHS login button can match in shape and font, but must be NHS blue (or white background with the blue text).
+
+
+---
+
+### Size
+
+You can scale the button as needed for different devices and screen sizes, but you must keep the aspect ratio the same so that the NHS logo is not stretched. When scaling the button, you must ensure that the writing is still clear and readable.
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_size.svg "size example")
+
+
+
+
+
+
 <h2 id="content-around-button">Content around the button</h2>
-<p>NHS login button</p>
-<p>The NHS login button is available to download in a variety of different formats.</p>
-<h1>If your service uses the NHS design system</h1>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_button.svg" alt="button" title="the NHS login button"></p>
-<p><a href="https://github.com/nhsconnect/nhslogin/blob/main/NHS%20login%20buttons.zip?raw=true">Download the NHS login button package</a>.</p>
+
+
+
+ NHS login button
+
+The NHS login button is available to download in a variety of different formats. 
+
+# If your service uses the NHS design system
+
+![button](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_button.svg "the NHS login button")
+
+[Download the NHS login button package](https://github.com/nhsconnect/nhslogin/blob/main/NHS%20login%20buttons.zip?raw=true).
+
+---
+
+## Colour
+
+The NHS login button is available in NHS blue and in a light version. When the button is placed on a background that is darker than 50% grey, the light version of the button should be used for legibility.
+
+Changing the colour of the button to anything other than the original and light version is not allowed.
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_colour.svg "colour example") 
+
+---
+
+## Clear and visible
+
+The NHS login button must always be as clear and visible as any other third party login options. All login buttons should be the same size and have a similar visual weight.
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_clear.svg "clear and visible example")
+
+---
+
+## Matching your own style
+
+To allow users to recognise the NHS login option quickly, we strongly recommend using the standard NHS blue version of the button, with the call to action ‘**Continue with NHS login**’.
+
+If you want to adapt the button design or translate the text to match the style of your website or app, continue reading these guidelines.
+
+---
+
+### Call to action text
+
+To encourage users to click the button, we recommend using ‘**Continue with NHS login**’ as the call to action text. This may need to change depending on the context and environment. 
+
+If you need to change the text, you should make it clear to the user that they are either signing up or logging in to your app or website with their NHS login credentials. 
+
+These examples show which calls to action work best.
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_cta.svg "call to action examples")
+
+---
+
+### Condensed version
+
+If for any reason you need to have the call to action outside of the button, please use our condensed version. When you use this version, you must not change the text. NHS login is the name of the service and is separate from the NHS logo, so using the word ‘login’ on its own with the NHS logo is not allowed.
+
+This condensed version is only to be used at times when you cannot comfortably display the call to action text within the button, or it is not appropriate to do so due to surrounding copy.
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_condensed.svg "condensed version example")
+
+---
+
+### Line breaking
+
+The call to action text should be placed on one line to keep the design of the button consistent. Whichever call to action you choose to use, do not break the text onto more than one line.
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_linebreaking.svg "line breaking example")
+
+---
+
+### Padding
+
+If the width of the button needs to change, the padding to the left and right of the text should be 16dp + *x*. The logo should be 67.05dp x 28dp and there should be 16dp between the logo and the button text. The padding above and below the logo should always be 12dp. The padding around the NHS login button should be equal to at least half of its height. 
+
+![example](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_padding.svg "padding example")
+ -->
 <hr>
-<h2>Colour</h2>
-<p>The NHS login button is available in NHS blue and in a light version. When the button is placed on a background that is darker than 50% grey, the light version of the button should be used for legibility.</p>
-<p>Changing the colour of the button to anything other than the original and light version is not allowed.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_colour.svg" alt="example" title="colour example"></p>
-<hr>
-<h2>Clear and visible</h2>
-<p>The NHS login button must always be as clear and visible as any other third party login options. All login buttons should be the same size and have a similar visual weight.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_clear.svg" alt="example" title="clear and visible example"></p>
-<hr>
-<h2>Matching your own style</h2>
-<p>To allow users to recognise the NHS login option quickly, we strongly recommend using the standard NHS blue version of the button, with the call to action ‘<strong>Continue with NHS login</strong>’.</p>
-<p>If you want to adapt the button design or translate the text to match the style of your website or app, continue reading these guidelines.</p>
-<hr>
-<h3>Call to action text</h3>
-<p>To encourage users to click the button, we recommend using ‘<strong>Continue with NHS login</strong>’ as the call to action text. This may need to change depending on the context and environment.</p>
-<p>If you need to change the text, you should make it clear to the user that they are either signing up or logging in to your app or website with their NHS login credentials.</p>
-<p>These examples show which calls to action work best.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_cta.svg" alt="example" title="call to action examples"></p>
-<hr>
-<h3>Condensed version</h3>
-<p>If for any reason you need to have the call to action outside of the button, please use our condensed version. When you use this version, you must not change the text. NHS login is the name of the service and is separate from the NHS logo, so using the word ‘login’ on its own with the NHS logo is not allowed.</p>
-<p>This condensed version is only to be used at times when you cannot comfortably display the call to action text within the button, or it is not appropriate to do so due to surrounding copy.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_condensed.svg" alt="example" title="condensed version example"></p>
-<hr>
-<h3>Line breaking</h3>
-<p>The call to action text should be placed on one line to keep the design of the button consistent. Whichever call to action you choose to use, do not break the text onto more than one line.</p>
-<p><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_linebreaking.svg" alt="example" title="line breaking example"></p>
-<hr>
-<h3>Padding</h3>
-<p>If the width of the button needs to change, the padding to the left and right of the text should be 16dp + <em>x</em>. The logo should be 67.05dp x 28dp and there should be 16dp between the logo and the button text. The padding above and below the logo should always be 12dp. The padding around the NHS login button should be equal to at least half of its height.</p>
-<h2><img src="https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/example_padding.svg" alt="example" title="padding example">
---&gt;</h2>
 <h2>Related links</h2>
 <p>For detailed technical guidance on who can use NHS and NHS Digital identities, including how and where they should be correctly applied, please visit:</p>
 <p><a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/" title="NHS Identity Guidelines">NHS Identity Guidelines</a></p>
