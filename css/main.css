@@ -3020,6 +3020,10 @@ b {
 .nhsuk-details__summary-text {
     text-decoration: underline;
 }
+.nhsuk-details__summary-text-small {
+    text-decoration: underline;
+    font-size: 16px;
+}
 .nhsuk-details__summary::-webkit-details-marker {
     display: none;
 }
@@ -3221,19 +3225,23 @@ b {
 @media print {
     .nhsuk-do-dont-list__label {
         background: none;
-        color: #212b32;
+        color: #fff;
         top: 0;
     }
 }
 @media print {
     .nhsuk-do-dont-list__label {
-        color: #212b32;
-        fill: #212b32;
+        color: #fff;
+        fill: #fff;
     }
-    .nhsuk-do-dont-list__label:active,
-    .nhsuk-do-dont-list__label:focus,
+    .nhsuk-do-dont-list__label:active {
+        color:#fff;
+    }
+    .nhsuk-do-dont-list__label:focus {
+        color:#fff;
+    }
     .nhsuk-do-dont-list__label:visited {
-        color: #212b32;
+        color: #fff
     }
 }
 .nhsuk-error-message {
@@ -5195,6 +5203,13 @@ b {
 }
 .nhsuk-input--width-2 {
     max-width: 5.4ex;
+}
+.nhsuk-inset-text-grey {
+    border-left: 6px solid #E8EDEE;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 1px;
 }
 .nhsuk-inset-text {
     max-width: 44em;
@@ -8495,4 +8510,16 @@ h1 + .nhsuk-lede-text {
     .nhsuk-header__menu-toggle {
         margin-top: 0;
     }
+}
+
+
+
+.divider-thick {
+    border-bottom: 3px solid #d8dde0;
+    margin-bottom: 16px;
+    margin-top: 26px;
+}
+
+.nhsuk-inside-box-text {
+    font-size: 16px;
 }
