@@ -16,7 +16,8 @@ We have developed a lightweight [mock environment](https://oidc.mock.signin.nhs.
 
 ## Sandpit environment 
 
-Before you apply, you should build a proof of concept and explore the end-to-end journey in our sandpit environment. This copy of our production environment will help you learn how to integrate with NHS login, and understand where it will fit within your service. You should not be performing non-functional testing (NFT) or penetration testing in the sandpit environment.
+Before you apply, you should build a proof of concept and explore the end-to-end journey in our sandpit environment. This will help you learn how to integrate with NHS login, and understand where it will fit within your service. 
+You should not be performing non-functional testing (NFT) or penetration testing in the sandpit environment.
 
 | Purpose | Requirements | Restrictions |
 | --------- | ----------- | ------------- |
