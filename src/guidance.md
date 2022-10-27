@@ -59,42 +59,76 @@ title: Adding the NHS login button to your service
 
 ---
 
-<h2 id="button-placement">I am an NHS service that uses the NHS Design System</h2>
   <div class="nhsuk-grid-row">
-
-  <div class="nhsuk-grid-column-one-quarter">
-  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHSDS.png" alt="NHS login button for services that use the NHS Design System">
-  </div>
-  <div class="nhsuk-grid-column-three-quarters">
+  <div class="nhsuk-grid-column-one-half">
+  <h2 id="button-placement">I am an NHS service that uses the NHS Design System</h2>
   <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version.</p>
   </div>
-<ul class="nhsuk-inside-box-text" style="max-width:none;">
+  <div class="nhsuk-grid-column-one-half">
+  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHSDS.png" alt="NHS login button for services that use the NHS Design System">
+  </div>
+  </div>
+
+  <br>
+
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Notes
+    </span>
+  </summary>
+  <div class="nhsuk-details__text">
+   <ul class="nhsuk-inside-box-text" style="max-width:none;">
 <li>This version of the NHS login button has minimal use of the term "NHS login". Instead, we would suggest using 'Continue' as the call to action.</li>
   <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the logo on the NHS login button.</li>
   <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS bright blue</a>.</li>
   <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
   <li>We are working with the NHS Design System to create a button that can be a reusable component within the Design System.</li>
   </ul>
+</details>
 
-  <details class="nhsuk-details nhsuk-expander">
+<details class="nhsuk-details nhsuk-expander">
   <summary class="nhsuk-details__summary">
     <span class="nhsuk-details__summary-text">
-      Aligning to the users mental model
+      Aligning to the user's mental model
+    </span>
+  </summary>
+  <div class="nhsuk-details__text nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+   <ul class="nhsuk-inside-box-text" style="max-width:none;">
+NHS login has over 40million users and so it is very likely that your users will already have an NHS login account. The easiest route for the user to sign up or log in to your service would be to use their NHS login details.<br><br>
+If you have any other native or third-party log in or register options, the NHS login button must appear as the first option, and always be as clear and visible as other options.<br><br>
+Ideally you should use linked text but if a button is necessary, the secondary button must be used.<br><br>
+If you have a <b>clear user need</b> why this isn't possible, you will need to provide proof of this. We will then review and decide if we can support this.
+  </ul>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-options-NHSDS.png" alt="Example of NHS login button alongside other log in or register options">
+</div>
+</details>
+
+<details class="nhsuk-details nhsuk-expander">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">
+      Add content around the button if needed
     </span>
   </summary>
   <div class="nhsuk-details__text">
-    <div class="nhsuk-grid-column-three-quarters">
-    NHS login has over 40million users and so it is very likely that your users will already have an NHS login account. The easiest route for the user to sign up or log in to your service would be to use their NHS login details.<br><br> 
-If you have any other native or third-party log in or register options, the NHS login button must appear as the first option, and always be as clear and visible as other options.<br><br>
-If you have a <b>clear user need</b> why this isn't possible, you will need to provide proof of this. We will then review and decide if we can support this.
+   <ul class="nhsuk-inside-box-text" style="max-width:none;">
+Sometimes it may be necessary to add content around the NHS login button to reassure a user what happens when they select it.<br><br>
+Suggested content:
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Suggested content: </span>
+NHS login allows you to access your health and care websites and apps with one set of login details.<br><br>
+We will check if you have an NHS login. If not, you can set one up.
 </div>
-  </div>
+  </ul>
 </details>
 
 ---
 
 
-
+<!-- 
 <div id="NHS-DS">
 <details class="nhsuk-details nhsuk-expander">
   <summary class="nhsuk-details__summary">
@@ -294,21 +328,6 @@ If you have a <b>clear user need</b> why this isn't possible, you will need to p
 
 <h2 id="button-placement">How to place the button on your service</h2>
 
-<p>The NHS login button must always be visible and up front on your service. When placing the button on your service, you must follow these rules:</p>
-
-<hr>
-
-<div class="nhsuk-grid-row">
-<div class="nhsuk-grid-column-one-half">
-<h3 id="align">Aligning to the users mental model</h3>
-</div>
-
-<div class="nhsuk-grid-column-one-half">
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-mentalmodel.png" alt="Example of NHS login button alongside other log in or register options">
-</div>
-</div>
-
-<hr>
 
 <div class="nhsuk-grid-row">
 <div class="nhsuk-grid-column-one-half">
