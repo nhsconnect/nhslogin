@@ -30,12 +30,12 @@ title: Adding the NHS login button to your service
 
 <h2 id="journey">User journey behind the button</h2>
 
-  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/diagram-behind-button.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to getting authorised by NHS login and back to the service.">
+  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/diagram-behind-button.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the service.">
 <!--   <figcaption class="nhsuk-image__caption">
     It can affect large areas of the body or limbs.
   </figcaption> -->
 <br>
-<p>After a user enters their email, NHS login will check if they are on our database. If they are not, they will need to register.</p>
+<p>After a user enters their email, NHS login will check if they are already registered. If they are not, they will need to register.</p>
 
 <p>If they are, they can enter their password. NHS login then checks which level of verification they have and matches that against the level your service is requesting.</p>
 
@@ -59,7 +59,7 @@ title: Adding the NHS login button to your service
 ---
 <!-- NHS DESIGN SYSTEM USERS -->
   <h2 id="NHS-DS">I am a NHS service that uses the NHS Design System</h2>
-  <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, e.g. <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
+  <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, suchas <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHSDS.png" alt="NHS login button for services that use the NHS Design System">
@@ -165,8 +165,8 @@ We will check if you have an NHS login. If not, you can set one up.</i>
 ---
 <!-- NHS LOGO SERVICES -->
   <h2 id="NHS">I am a service that uses the NHS logo</h2>
-        <p>Use this version if your service has the NHS logo <b>on the same screen</b> as the NHS login button, e.g. <a href="https://heypharmacist.co.uk/">Hey Pharmacist</a>.</p>
-        <p>If your service has NHS branding but the NHS logo is not on the same screen as the NHS login button you will need to use <a href="/nhslogin/guidance#others">the version for services that do not use NHS logo</a>.</p>
+        <p>Use this version if your service has the NHS logo <b>on the same screen</b> as the NHS login button, suchas <a href="https://heypharmacist.co.uk/">Hey Pharmacist</a>.</p>
+        <p>If your service has NHS branding, but the NHS logo is not on the same screen as the NHS login button, you will need to use <a href="/nhslogin/guidance#others">the version for services that do not use NHS logo</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHS.png" alt="NHS login button for services that use NHS branding">
@@ -318,7 +318,7 @@ If the width of the button needs to change:
 
 <!-- OTHER SERVICES -->
   <h2 id="other">I am a service that does not use the NHS logo</h2>
-<p>Use this version if you do not have the NHS logo <b>on the same screen</b> as the NHS login button and you don't use the NHS Design System, e.g. <a href="https://www.eredbook.org.uk/">eRedbook</a>. This applies even if your service is part of the NHS.</p>
+<p>Use this version if you do not have the NHS logo <b>on the same screen</b> as the NHS login button and you don't use the NHS Design System, suchas <a href="https://www.eredbook.org.uk/">eRedbook</a>. This applies even if your service is part of the NHS.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-other.png" alt="NHS login button for services that do not use the NHS Design System or have NHS branding">
