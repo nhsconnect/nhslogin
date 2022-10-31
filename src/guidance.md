@@ -16,11 +16,12 @@ title: Adding the NHS login button to your service
 ---
 
 <h2 id="journey">User journey behind the button</h2>
-
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-userjourney.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+    Open this user journey flow in new window
+  </a>
+  <div class="code-embed">
   <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-userjourney.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the service.">
-<!--   <figcaption class="nhsuk-image__caption">
-    It can affect large areas of the body or limbs.
-  </figcaption> -->
+  </div>
 <br>
 <p>After a user enters their email, NHS login will check if they are already registered. If they are not, they will need to register.</p>
 
@@ -41,6 +42,39 @@ title: Adding the NHS login button to your service
 
 <p>There are three different types of NHS login button. The button you use depends on the type of service you are.</p>
 
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="/nhslogin/guidance#NHS-DS">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">I am a NHS service that uses the NHS Design System</span>
+  </a>
+</div>
+
+
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="/nhslogin/guidance#NHS">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">I am a service that uses the NHS logo</span>
+  </a>
+</div>
+
+
+<div class="nhsuk-action-link">
+  <a class="nhsuk-action-link__link" href="/nhslogin/guidance#other">
+    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+    </svg>
+    <span class="nhsuk-action-link__text">I am a service that does not use the NHS logo</span>
+  </a>
+</div>
+
+
 ---
 
 <!-- NHS DESIGN SYSTEM USERS -->
@@ -49,7 +83,9 @@ title: Adding the NHS login button to your service
   <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, such as <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
+    <div class="code-embed">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHSDS.png" alt="NHS login button for services that use the NHS Design System">
+      </div>
     </div>
     <div class="nhsuk-grid-column-two-thirds">
       <ul>
@@ -63,7 +99,7 @@ title: Adding the NHS login button to your service
   </div>
   <br><br>
 
-  <h3>How to place the button on your service</h3>
+  <h3>How to place this button on your service</h3>
 
 <div class="design-example">
   <a href="/nhslogin/example-NHSDS" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
@@ -338,7 +374,7 @@ We will check if you have an NHS login. If not, you can set one up.</i>
   </ul>
 </details>
 
-<a href="#download">Download the NHS login button package for services that use the NHS Design System</a>.<br><br>
+<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS-Design-System">Download the NHS login button package for services that use the NHS Design System</a>.<br><br>
 
 ---
 
@@ -348,7 +384,9 @@ We will check if you have an NHS login. If not, you can set one up.</i>
         <p>If your service has NHS branding, but the NHS logo is not on the same screen as the NHS login button, you will need to use <a href="/nhslogin/guidance#others">the version for services that do not use NHS logo</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
+        <div class="code-embed">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHS.png" alt="NHS login button for services that use NHS branding">
+      </div>
     </div>
     <div class="nhsuk-grid-column-two-thirds">
       <ul>
@@ -361,7 +399,7 @@ We will check if you have an NHS login. If not, you can set one up.</i>
   </div>
   <br><br>
 
-  <h3>How to place the button on your service</h3>
+  <h3>How to place this button on your service</h3>
 
   <div class="design-example">
   <a href="/nhslogin/example-NHS" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
@@ -682,7 +720,7 @@ If the width of the button needs to change:
   </ul>
 </details>
 
-<a href="#download">Download the NHS login button package for services that use NHS branding</a>.<br><br>
+<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS">Download the NHS login button package for services that use NHS branding</a>.<br><br>
 
 ---
 
@@ -691,7 +729,9 @@ If the width of the button needs to change:
 <p>Use this version if you do not have the NHS logo <b>on the same screen</b> as the NHS login button and you don't use the NHS Design System, such as <a href="https://www.eredbook.org.uk/">eRedbook</a>. This applies even if your service is part of the NHS.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
+        <div class="code-embed">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-other.png" alt="NHS login button for services that do not use the NHS Design System or have NHS branding">
+      </div>
     </div>
     <div class="nhsuk-grid-column-two-thirds">
       <ul>
@@ -704,7 +744,7 @@ If the width of the button needs to change:
   </div>
   <br><br>
 
-  <h3>How to place the button on your service</h3>
+  <h3>How to place this button on your service</h3>
 
   <div class="design-example">
   <a href="/nhslogin/example-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
@@ -736,10 +776,16 @@ If the width of the button needs to change:
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">
                 <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
-                <pre><code class=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+          <pre><code class=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button nhslogin-button-logo"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button-logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhsuk-logo"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 40 16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"27"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"67"</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhsuk-logo__background"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#fff"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M0 0h40v16H0z"</span> <span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhsuk-logo__text"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#005eb8"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"</span> <span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span> 
+    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   Continue to NHS login
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-              </div>
+        </div>
               <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
                 Close
               </a>
@@ -917,6 +963,17 @@ If the width of the button needs to change:
     <span class="hljs-tag">}
     .ie8 .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
       outline: <span class="hljs-string">1px dotted #003087</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button-logo {</span>
+    display: <span class="hljs-string">flex</span>;
+    align-items: <span class="hljs-string">center</span>;
+    justify-content: <span class="hljs-string">center</span>;
+    <span class="hljs-tag">}
+    .button-logo {</span>
+        padding-right: <span class="hljs-string">16px</span>;
+        display: <span class="hljs-string">flex</span>;
+        align-items: <span class="hljs-string">center</span>;
+        justify-content: <span class="hljs-string">center</span>;
     <span class="hljs-tag">}</span>
     </code></pre>
               </div>
@@ -1024,7 +1081,7 @@ If the width of the button needs to change:
   </ul>
 </details>
 
-<a href="#download">Download the NHS login button package for services that do not use the NHS logo</a>.<br><br>
+<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other">Download the NHS login button package for services that do not use the NHS logo</a>.<br><br>
 
 ---
 
