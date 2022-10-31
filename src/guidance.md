@@ -46,7 +46,7 @@ title: Adding the NHS login button to your service
 <!-- NHS DESIGN SYSTEM USERS -->
   <h2 id="NHS-DS">I am a NHS service that uses the NHS Design System</h2>
 
-  <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, suchas <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
+  <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, such as <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-NHSDS.png" alt="NHS login button for services that use the NHS Design System">
@@ -344,7 +344,7 @@ We will check if you have an NHS login. If not, you can set one up.</i>
 
 <!-- NHS LOGO SERVICES -->
   <h2 id="NHS">I am a service that uses the NHS logo</h2>
-        <p>Use this version if your service has the NHS logo <b>on the same screen</b> as the NHS login button, suchas <a href="https://heypharmacist.co.uk/">Hey Pharmacist</a>.</p>
+        <p>Use this version if your service has the NHS logo <b>on the same screen</b> as the NHS login button, such as <a href="https://heypharmacist.co.uk/">Hey Pharmacist</a>.</p>
         <p>If your service has NHS branding, but the NHS logo is not on the same screen as the NHS login button, you will need to use <a href="/nhslogin/guidance#others">the version for services that do not use NHS logo</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
@@ -688,7 +688,7 @@ If the width of the button needs to change:
 
 <!-- OTHER SERVICES -->
   <h2 id="other">I am a service that does not use the NHS logo</h2>
-<p>Use this version if you do not have the NHS logo <b>on the same screen</b> as the NHS login button and you don't use the NHS Design System, suchas <a href="https://www.eredbook.org.uk/">eRedbook</a>. This applies even if your service is part of the NHS.</p>
+<p>Use this version if you do not have the NHS logo <b>on the same screen</b> as the NHS login button and you don't use the NHS Design System, such as <a href="https://www.eredbook.org.uk/">eRedbook</a>. This applies even if your service is part of the NHS.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
       <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-button-other.png" alt="NHS login button for services that do not use the NHS Design System or have NHS branding">
@@ -698,7 +698,7 @@ If the width of the button needs to change:
                 <li>To keep the NHS login brand recognisable to users, this button should have the NHS logo and use the call to acton <b>Continue to NHS login</b>.</li>
                 <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
                 <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
-                <li>If you'd like to align the button to your service's own design system, you will need to provide proof it. Bear in mind the difference between a design system and branding. We will then review this and decide if we can allow any of your requested changes to the NHS login button. You should not change anything on the button without our approval.</li>
+                <li>If you'd like to align the button to your service's own design system, you will need to provide proof of it. Bear in mind the difference between a design system and branding. We will then review this and decide if we can allow any of your requested changes to the NHS login button. You should not change anything on the button without our approval.</li>
       </ul>
     </div>
   </div>
