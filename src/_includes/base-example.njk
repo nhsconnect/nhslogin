@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/nhslogin">
+     <link rel="stylesheet"  href="nhslogin/css/main.css">
+     <link rel="shortcut icon" href="{{ "/images/favicon.ico" | url }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ "/images/favicon.ico" | url }}" type="image/x-icon">
+<link rel="apple-touch-icon" href="{{ "/images/apple-touch-icon-180x180.png" | url }}">
+<link rel="mask-icon" href="{{ "/images/favicon.svg" | url }}" color="#005eb8">
+<link rel="icon" sizes="192x192" href="{{ "/images/favicon-192x192.png" | url }}">
+    <script src="nhslogin/js/main.min.js" ></script> 
+
+<title>{{title}}</title>
+  </head>
+  <body>
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+
+            {{ content | safe }}
+
+      </div>
+    </div>
+  </main>
+</div>
+<script src="nhslogin/js/iframeResizer.contentWindow.js" ></script>
+
+</body>
+</html>

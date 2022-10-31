@@ -13,24 +13,11 @@ title: Adding the NHS login button to your service
   <p>If you fail to comply and we cannot agree a solution, we will remove NHS login from your service.</p>
 </div>
 
-
- 
 ---
-
-<!-- <h2>Contents</h2>
-<dl>
-<dt><a href="/nhslogin/guidance#journey">User journey behind the button</a></dt>
-<dt><a href="/nhslogin/guidance#NHS-login-buttons">The NHS login button</a></dt>
-<dd>- <a href="/nhslogin/guidance#NHS-DS">Services that use the NHS Design System</a></dd>
-<dd>- <a href="/nhslogin/guidance#NHS">Services that use NHS branding</a></dd>
-<dd>- <a href="/nhslogin/guidance#other">All other services</a></dd>
-<dt><a href="/nhslogin/guidance#related-links">Related links</a></dt>
-
-<hr> -->
 
 <h2 id="journey">User journey behind the button</h2>
 
-  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/diagram-behind-button.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the service.">
+  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-user-journey.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the service.">
 <!--   <figcaption class="nhsuk-image__caption">
     It can affect large areas of the body or limbs.
   </figcaption> -->
@@ -41,14 +28,12 @@ title: Adding the NHS login button to your service
 
 <p>If the user does not have the same or a higher level of verification, they need to uplift to that level.</p>
 
-
 <div class="nhsuk-warning-callout">
   <h3 class="nhsuk-warning-callout__label">
     Important<span class="nhsuk-u-visually-hidden">:</span>
   </h3>
   <p>Do not place any content around the NHS login button that describes how users will progress through the service. You cannot guarantee what that journey will be.</p>
 </div>
-
 
 ---
 
@@ -57,8 +42,10 @@ title: Adding the NHS login button to your service
 <p>There are three different types of NHS login button. The button you use depends on the type of service you are.</p>
 
 ---
+
 <!-- NHS DESIGN SYSTEM USERS -->
   <h2 id="NHS-DS">I am a NHS service that uses the NHS Design System</h2>
+
   <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, suchas <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-one-third">
@@ -68,7 +55,7 @@ title: Adding the NHS login button to your service
       <ul>
         <li>This version of the NHS login button has minimal use of the term "NHS login". Instead, we would suggest using 'Continue' as the call to action.</li>
         <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the logo on the NHS login button.</li>
-        <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS bright blue</a>.</li>
+        <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
         <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
         <li>We are working with the NHS Design System to create a button that can be a reusable component within the Design System.</li>
       </ul>
@@ -77,6 +64,232 @@ title: Adding the NHS login button to your service
   <br><br>
 
   <h3>How to place the button on your service</h3>
+
+<div class="design-example">
+  <a href="/nhslogin/example-NHSDS" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+    Open this example in new window
+  </a>
+  <div class="code-embed">
+  <iframe title="default" src="/nhslogin/example-NHSDS?fullpage=undefined&amp;blankpage=undefined" class="design-example-frame" id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
+  </div>
+<div class="code-snippet">
+          <ul class="app-tabs" role="tablist">
+              <li class="app-tabs__item" role="presentation" data-index="ex-1">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  HTML
+                </a>
+              </li>
+              <li class="app-tabs__item" role="presentation" data-index="ex-2">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  CSS
+                </a>
+              </li>
+          </ul>
+        <div class="app-tabs__container js-tabs__container" id="default-example" role="tabpanel">
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  HTML
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-1">
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+                <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+                <pre><code class=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button nhslogin-button--reverse"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+  Continue
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+              </div>
+              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
+                Close
+              </a>
+            </div>
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  CSS
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
+                <div class="code-snippet__macro">
+                </div>
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+                              <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+              <pre><code class=""><span class="hljs-tag">.</span><span class="hljs-tag">nhslogin-button </span><span class="hljs-tag">{</span>
+      font-weight: <span class="hljs-string">400</span>;
+      font-size: <span class="hljs-string">16px</span>;
+      font-size: <span class="hljs-string">1rem</span>;
+      line-height:<span class="hljs-string"> 1.5</span>;
+      margin-bottom: <span class="hljs-string">28px</span>;
+      -webkit-appearance: <span class="hljs-string">none</span>;
+      appearance: <span class="hljs-string">none</span>;
+      background-color: <span class="hljs-string">#005eb8</span>;
+      border: <span class="hljs-string">2px solid transparent</span>;
+      border-radius: <span class="hljs-string">4px</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      box-sizing: <span class="hljs-string">border-box</span>;
+      color: <span class="hljs-string">#fff</span>;
+      cursor: <span class="hljs-string">pointer</span>;
+      display: <span class="hljs-string">inline-block</span>;
+      font-weight: <span class="hljs-string">600</span>;
+      margin-top: <span class="hljs-string">0</span>;
+      padding: <span class="hljs-string">12px 16px</span>;
+      position: <span class="hljs-string">relative</span>;
+      text-align: <span class="hljs-string">center</span>;
+      vertical-align: <span class="hljs-string">top</span>;
+      width: <span class="hljs-string">auto</span>;
+    <span class="hljs-tag">}
+    @media </span><span class="hljs-attr">(min-width:</span> <span class="hljs-string">40.0625em</span>) <span class="hljs-tag">{
+        .nhslogin-button {</span>
+        font-size: <span class="hljs-string">19px</span>;
+        font-size: <span class="hljs-string">1.1875rem</span>;
+        line-height: <span class="hljs-string">1.47368</span>;
+      <span class="hljs-tag">}
+    }
+    @media</span> print <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        font-size: <span class="hljs-string">14pt</span>;
+        line-height: <span class="hljs-string">1.15</span>;
+      <span class="hljs-tag">}
+    }
+    @media </span>(min-width: <span class="hljs-string">40.0625em</span>) <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        margin-bottom: <span class="hljs-string">36px</span>;
+      <span class="hljs-tag">}
+    }
+    @media </span>(max-width: <span class="hljs-string">40.0525em</span>) <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        padding: <span class="hljs-string">8px 16px</span>;
+      <span class="hljs-tag">}
+    }
+    .nhslogin-button</span>:link,
+    <span class="hljs-tag">.nhslogin-button</span>:visited,
+    <span class="hljs-tag">.nhslogin-button</span>:active,
+    <span class="hljs-tag">.nhslogin-button</span>:hover <span class="hljs-tag">{</span>
+      color: <span class="hljs-string">#fff</span>;
+      text-decoration: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>::-moz-focus-inner <span class="hljs-tag">{</span>
+      border: <span class="hljs-string">0</span>;
+      padding: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:hover {
+      background-color: <span class="hljs-string">#1e569b</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#ffeb3b</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#003087</span>;
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:active <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#1e569b</span>;
+      box-shadow: <span class="hljs-string">none</span>;
+      color: <span class="hljs-string">#fff</span>;
+      top: <span class="hljs-string">4px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>::before <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">transparent</span>;
+      bottom: <span class="hljs-string">-6px</span>;
+      content: <span class="hljs-string">""</span>;
+      display: <span class="hljs-string">block</span>;
+      left: <span class="hljs-string">-2px</span>;
+      position: <span class="hljs-string">absolute</span>;
+      right: <span class="hljs-string">-2px</span>;
+      top: <span class="hljs-string">-2px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:active::before <span class="hljs-tag">{</span>
+      top: <span class="hljs-string">-6px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#f2f2f2</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:focus <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#ffeb3b</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#003087</span>;
+      outline: <span class="hljs-string">4px solid transparent</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:active <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#f2f2f2</span>;
+      box-shadow: <span class="hljs-string">none</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+      top: <span class="hljs-string">4px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:link <span class="hljs-tag">{</span>
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse.nhsuk-button--disabled {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse.nhsuk-button--disabled</span>:focus <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#fff</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled,
+    .nhslogin-button[disabled="disabled"],
+    .nhslogin-button[disabled] {</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      opacity: <span class="hljs-string">0.5</span>;
+      pointer-events: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:hover,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:hover,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      cursor: <span class="hljs-string">default</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:focus,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:focus,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:focus <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:active,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:active,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:active <span class="hljs-tag">{</span>
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      top: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"],
+    .nhslogin-button--reverse[disabled] {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      opacity: <span class="hljs-string">0.5</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:hover,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      cursor: <span class="hljs-string">default</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:focus,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:focus <span class="hljs-tag">{</span>
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:active,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:active <span class="hljs-tag">{</span>
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      top: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .ie8 .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
+      outline: <span class="hljs-string">1px dotted #003087</span>;
+    <span class="hljs-tag">}</span>
+    </code></pre>
+              </div>
+              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
+                Close
+              </a>
+            </div>
+        </div>
+  </div>
+</div>
+
   <p>The NHS login button must always be visible and up front on your service. When placing the button on your service, you must follow these rules:</p>
 
 <details class="nhsuk-details nhsuk-expander">
@@ -95,10 +308,10 @@ If you have a <b>clear user need</b> why this isn't possible, you will need to p
   </ul>
   </div>
   <div class="nhsuk-grid-column-one-half">
+              <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-options-NHSDS.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-options-NHSDS.png" alt="Example of NHS login button alongside other log in or register options">
-          <figcaption class="nhsuk-image__caption">
-            <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-options-NHSDS.png" target="_blank">View this example full screen</a>
-          </figcaption>
+    </div>
 </div>
 </details>
 
@@ -117,52 +330,18 @@ Suggested content:<br><br>
 We will check if you have an NHS login. If not, you can set one up.</i>
 </div>
   <div class="nhsuk-grid-column-one-half">
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-content-NHSDS.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-content-NHSDS.png" alt="Example of content around the NHS login button">
-          <figcaption class="nhsuk-image__caption">
-            <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-content-NHSDS.png" target="_blank">View this example full screen</a>
-                      </figcaption>
-
+</div>
 </div>
   </ul>
 </details>
 
-<details class="nhsuk-details">
-              <summary class="nhsuk-details__summary">
-                <span class="nhsuk-details__summary-text">View JavaScript for this button</span>
-              </summary>
-              <div class="nhsuk-details__text">
-                <pre style="
-                      background-color: white;
-                      padding: 30px;
-                      overflow:auto;
-                      font-size:12px
-                      ">
-                  <code>
-.nhslogin-button {
-  background-color: darken($color_nhsuk-blue, 1%);
-  box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 20%); // s0
-  &:hover {
-    background-color: darken($color_nhsuk-blue, 12%);
-    cursor: default;
-  }
-  &:focus {
-    outline: none;
-    background-color: darken($color_nhsuk-blue, 12%);
-  }
-  &:active {
-    box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 12%); // s0
-    top: 0;
-  }
-}   
-                  </code>
-                </pre>
-              </div>
-            </details>
-
 <a href="#download">Download the NHS login button package for services that use the NHS Design System</a>.<br><br>
 
-
 ---
+
 <!-- NHS LOGO SERVICES -->
   <h2 id="NHS">I am a service that uses the NHS logo</h2>
         <p>Use this version if your service has the NHS logo <b>on the same screen</b> as the NHS login button, suchas <a href="https://heypharmacist.co.uk/">Hey Pharmacist</a>.</p>
@@ -175,7 +354,7 @@ We will check if you have an NHS login. If not, you can set one up.</i>
       <ul>
         <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the logo on the NHS login button.</li>
         <li>The call to action on this button should always be <b>Continue to NHS login</b>.</li>
-        <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS bright blue</a>.</li>
+        <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
         <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
       </ul>
     </div>
@@ -183,6 +362,230 @@ We will check if you have an NHS login. If not, you can set one up.</i>
   <br><br>
 
   <h3>How to place the button on your service</h3>
+
+  <div class="design-example">
+  <a href="/nhslogin/example-NHS" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+    Open this example in new window
+  </a>
+  <div class="code-embed">
+  <iframe title="default" src="/nhslogin/example-NHS?fullpage=undefined&amp;blankpage=undefined" class="design-example-frame" id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
+  </div>
+<div class="code-snippet">
+          <ul class="app-tabs" role="tablist">
+              <li class="app-tabs__item" role="presentation" data-index="ex-1">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  HTML
+                </a>
+              </li>
+              <li class="app-tabs__item" role="presentation" data-index="ex-2">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  CSS
+                </a>
+              </li>
+          </ul>
+        <div class="app-tabs__container js-tabs__container" id="default-example" role="tabpanel">
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  HTML
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-1">
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+                <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+                <pre><code class=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+  Continue to NHS login
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+              </div>
+              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
+                Close
+              </a>
+            </div>
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  CSS
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
+                <div class="code-snippet__macro">
+                </div>
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+                              <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+              <pre><code class=""><span class="hljs-tag">.</span><span class="hljs-tag">nhslogin-button </span><span class="hljs-tag">{</span>
+      font-weight: <span class="hljs-string">400</span>;
+      font-size: <span class="hljs-string">16px</span>;
+      font-size: <span class="hljs-string">1rem</span>;
+      line-height:<span class="hljs-string"> 1.5</span>;
+      margin-bottom: <span class="hljs-string">28px</span>;
+      -webkit-appearance: <span class="hljs-string">none</span>;
+      appearance: <span class="hljs-string">none</span>;
+      background-color: <span class="hljs-string">#005eb8</span>;
+      border: <span class="hljs-string">2px solid transparent</span>;
+      border-radius: <span class="hljs-string">4px</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      box-sizing: <span class="hljs-string">border-box</span>;
+      color: <span class="hljs-string">#fff</span>;
+      cursor: <span class="hljs-string">pointer</span>;
+      display: <span class="hljs-string">inline-block</span>;
+      font-weight: <span class="hljs-string">600</span>;
+      margin-top: <span class="hljs-string">0</span>;
+      padding: <span class="hljs-string">12px 16px</span>;
+      position: <span class="hljs-string">relative</span>;
+      text-align: <span class="hljs-string">center</span>;
+      vertical-align: <span class="hljs-string">top</span>;
+      width: <span class="hljs-string">auto</span>;
+    <span class="hljs-tag">}
+    @media </span><span class="hljs-attr">(min-width:</span> <span class="hljs-string">40.0625em</span>) <span class="hljs-tag">{
+        .nhslogin-button {</span>
+        font-size: <span class="hljs-string">19px</span>;
+        font-size: <span class="hljs-string">1.1875rem</span>;
+        line-height: <span class="hljs-string">1.47368</span>;
+      <span class="hljs-tag">}
+    }
+    @media</span> print <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        font-size: <span class="hljs-string">14pt</span>;
+        line-height: <span class="hljs-string">1.15</span>;
+      <span class="hljs-tag">}
+    }
+    @media </span>(min-width: <span class="hljs-string">40.0625em</span>) <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        margin-bottom: <span class="hljs-string">36px</span>;
+      <span class="hljs-tag">}
+    }
+    @media </span>(max-width: <span class="hljs-string">40.0525em</span>) <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        padding: <span class="hljs-string">8px 16px</span>;
+      <span class="hljs-tag">}
+    }
+    .nhslogin-button</span>:link,
+    <span class="hljs-tag">.nhslogin-button</span>:visited,
+    <span class="hljs-tag">.nhslogin-button</span>:active,
+    <span class="hljs-tag">.nhslogin-button</span>:hover <span class="hljs-tag">{</span>
+      color: <span class="hljs-string">#fff</span>;
+      text-decoration: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>::-moz-focus-inner <span class="hljs-tag">{</span>
+      border: <span class="hljs-string">0</span>;
+      padding: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:hover {
+      background-color: <span class="hljs-string">#1e569b</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#ffeb3b</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#003087</span>;
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:active <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#1e569b</span>;
+      box-shadow: <span class="hljs-string">none</span>;
+      color: <span class="hljs-string">#fff</span>;
+      top: <span class="hljs-string">4px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>::before <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">transparent</span>;
+      bottom: <span class="hljs-string">-6px</span>;
+      content: <span class="hljs-string">""</span>;
+      display: <span class="hljs-string">block</span>;
+      left: <span class="hljs-string">-2px</span>;
+      position: <span class="hljs-string">absolute</span>;
+      right: <span class="hljs-string">-2px</span>;
+      top: <span class="hljs-string">-2px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:active::before <span class="hljs-tag">{</span>
+      top: <span class="hljs-string">-6px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#f2f2f2</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:focus <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#ffeb3b</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#003087</span>;
+      outline: <span class="hljs-string">4px solid transparent</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:active <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#f2f2f2</span>;
+      box-shadow: <span class="hljs-string">none</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+      top: <span class="hljs-string">4px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:link <span class="hljs-tag">{</span>
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse.nhsuk-button--disabled {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse.nhsuk-button--disabled</span>:focus <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#fff</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled,
+    .nhslogin-button[disabled="disabled"],
+    .nhslogin-button[disabled] {</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      opacity: <span class="hljs-string">0.5</span>;
+      pointer-events: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:hover,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:hover,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      cursor: <span class="hljs-string">default</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:focus,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:focus,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:focus <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:active,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:active,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:active <span class="hljs-tag">{</span>
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      top: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"],
+    .nhslogin-button--reverse[disabled] {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      opacity: <span class="hljs-string">0.5</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:hover,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      cursor: <span class="hljs-string">default</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:focus,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:focus <span class="hljs-tag">{</span>
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:active,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:active <span class="hljs-tag">{</span>
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      top: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .ie8 .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
+      outline: <span class="hljs-string">1px dotted #003087</span>;
+    <span class="hljs-tag">}</span>
+    </code></pre>
+              </div>
+              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
+                Close
+              </a>
+            </div>
+        </div>
+  </div>
+</div>
+
   <p>The NHS login button must always be visible and up front on your service. When placing the button on your service, you must follow these rules:</p>
 
 <details class="nhsuk-details nhsuk-expander">
@@ -200,10 +603,10 @@ If you have a <b>clear user need</b> why this isn't possible, you will need to p
   </ul>
   </div>
   <div class="nhsuk-grid-column-one-half">
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-options-NHS.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-options-NHS.png" alt="Example of NHS login button alongside other log in or register options">
-          <figcaption class="nhsuk-image__caption">
-            <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-options-NHS.png" target="_blank">View this example full screen</a>
-                      </figcaption>
+</div>
 </div>
 </details>
 
@@ -222,10 +625,10 @@ Suggested content:<br><br>
 We will check if you have an NHS login. If not, you can set one up.</i>
 </div>
   <div class="nhsuk-grid-column-one-half">
+    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-content-NHS.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-content-NHS.png" alt="Example of content around the NHS login button">
-          <figcaption class="nhsuk-image__caption">
-            <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-content-NHS.png" target="_blank">View this example full screen</a>
-                      </figcaption>
+</div>
 </div>
   </ul>
 </details>
@@ -243,10 +646,10 @@ The button directs users to the NHS login service that allows users to log in or
 <b>If there is a user need</b> to have a form on the same screen as the button, you should place NHS login at the top. You should then create a clear distinction between the NHS login button and your form.
 </div>
   <div class="nhsuk-grid-column-one-half">
+      <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-forms-NHS.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-forms-NHS.png" alt="Example showing forms on the same screen as NHS login button">
-          <figcaption class="nhsuk-image__caption">
-            <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-forms-NHS.png" target="_blank">View this example full screen</a>
-                      </figcaption>
+</div>
 </div>
   </ul>
 </details>
@@ -271,46 +674,13 @@ If the width of the button needs to change:
 </ul>
 </div>
   <div class="nhsuk-grid-column-one-half">
+        <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-resizing-NHS.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-resizing-NHS.png" alt="Example showing the button sizing and padding">
-          <figcaption class="nhsuk-image__caption">
-        <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-resizing-NHS.png" target="_blank">View this example full screen</a>
-                  </figcaption>
+</div>
 </div>
   </ul>
 </details>
-
-<details class="nhsuk-details">
-              <summary class="nhsuk-details__summary">
-                <span class="nhsuk-details__summary-text">View JavaScript for this button</span>
-              </summary>
-              <div class="nhsuk-details__text">
-                <pre style="
-                      background-color: white;
-                      padding: 30px;
-                      overflow:auto;
-                      font-size:12px
-                      ">
-                  <code>
-.nhslogin-button {
-  background-color: darken($color_nhsuk-blue, 1%);
-  box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 20%); // s0
-  &:hover {
-    background-color: darken($color_nhsuk-blue, 12%);
-    cursor: default;
-  }
-  &:focus {
-    outline: none;
-    background-color: darken($color_nhsuk-blue, 12%);
-  }
-  &:active {
-    box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 12%); // s0
-    top: 0;
-  }
-}   
-                  </code>
-                </pre>
-              </div>
-            </details>
 
 <a href="#download">Download the NHS login button package for services that use NHS branding</a>.<br><br>
 
@@ -326,7 +696,7 @@ If the width of the button needs to change:
     <div class="nhsuk-grid-column-two-thirds">
       <ul>
                 <li>To keep the NHS login brand recognisable to users, this button should have the NHS logo and use the call to acton <b>Continue to NHS login</b>.</li>
-                <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS bright blue</a>.</li>
+                <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
                 <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
                 <li>If you'd like to align the button to your service's own design system, you will need to provide proof it. Bear in mind the difference between a design system and branding. We will then review this and decide if we can allow any of your requested changes to the NHS login button. You should not change anything on the button without our approval.</li>
       </ul>
@@ -335,6 +705,229 @@ If the width of the button needs to change:
   <br><br>
 
   <h3>How to place the button on your service</h3>
+
+  <div class="design-example">
+  <a href="/nhslogin/example-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+    Open this example in new window
+  </a>
+  <div class="code-embed">
+  <iframe title="default" src="/nhslogin/example-other?fullpage=undefined&amp;blankpage=undefined" class="design-example-frame" id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
+  </div>
+<div class="code-snippet">
+          <ul class="app-tabs" role="tablist">
+              <li class="app-tabs__item" role="presentation" data-index="ex-1">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  HTML
+                </a>
+              </li>
+              <li class="app-tabs__item" role="presentation" data-index="ex-2">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  CSS
+                </a>
+              </li>
+          </ul>
+        <div class="app-tabs__container js-tabs__container" id="default-example" role="tabpanel">
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  HTML
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-1">
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+                <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+                <pre><code class=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+  Continue to NHS login
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+              </div>
+              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
+                Close
+              </a>
+            </div>
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  CSS
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
+                <div class="code-snippet__macro">
+                </div>
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+                              <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+              <pre><code class=""><span class="hljs-tag">.</span><span class="hljs-tag">nhslogin-button </span><span class="hljs-tag">{</span>
+      font-weight: <span class="hljs-string">400</span>;
+      font-size: <span class="hljs-string">16px</span>;
+      font-size: <span class="hljs-string">1rem</span>;
+      line-height:<span class="hljs-string"> 1.5</span>;
+      margin-bottom: <span class="hljs-string">28px</span>;
+      -webkit-appearance: <span class="hljs-string">none</span>;
+      appearance: <span class="hljs-string">none</span>;
+      background-color: <span class="hljs-string">#005eb8</span>;
+      border: <span class="hljs-string">2px solid transparent</span>;
+      border-radius: <span class="hljs-string">4px</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      box-sizing: <span class="hljs-string">border-box</span>;
+      color: <span class="hljs-string">#fff</span>;
+      cursor: <span class="hljs-string">pointer</span>;
+      display: <span class="hljs-string">inline-block</span>;
+      font-weight: <span class="hljs-string">600</span>;
+      margin-top: <span class="hljs-string">0</span>;
+      padding: <span class="hljs-string">12px 16px</span>;
+      position: <span class="hljs-string">relative</span>;
+      text-align: <span class="hljs-string">center</span>;
+      vertical-align: <span class="hljs-string">top</span>;
+      width: <span class="hljs-string">auto</span>;
+    <span class="hljs-tag">}
+    @media </span><span class="hljs-attr">(min-width:</span> <span class="hljs-string">40.0625em</span>) <span class="hljs-tag">{
+        .nhslogin-button {</span>
+        font-size: <span class="hljs-string">19px</span>;
+        font-size: <span class="hljs-string">1.1875rem</span>;
+        line-height: <span class="hljs-string">1.47368</span>;
+      <span class="hljs-tag">}
+    }
+    @media</span> print <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        font-size: <span class="hljs-string">14pt</span>;
+        line-height: <span class="hljs-string">1.15</span>;
+      <span class="hljs-tag">}
+    }
+    @media </span>(min-width: <span class="hljs-string">40.0625em</span>) <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        margin-bottom: <span class="hljs-string">36px</span>;
+      <span class="hljs-tag">}
+    }
+    @media </span>(max-width: <span class="hljs-string">40.0525em</span>) <span class="hljs-tag">{
+      .nhslogin-button {</span>
+        padding: <span class="hljs-string">8px 16px</span>;
+      <span class="hljs-tag">}
+    }
+    .nhslogin-button</span>:link,
+    <span class="hljs-tag">.nhslogin-button</span>:visited,
+    <span class="hljs-tag">.nhslogin-button</span>:active,
+    <span class="hljs-tag">.nhslogin-button</span>:hover <span class="hljs-tag">{</span>
+      color: <span class="hljs-string">#fff</span>;
+      text-decoration: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>::-moz-focus-inner <span class="hljs-tag">{</span>
+      border: <span class="hljs-string">0</span>;
+      padding: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:hover {
+      background-color: <span class="hljs-string">#1e569b</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#ffeb3b</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#003087</span>;
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:active <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#1e569b</span>;
+      box-shadow: <span class="hljs-string">none</span>;
+      color: <span class="hljs-string">#fff</span>;
+      top: <span class="hljs-string">4px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>::before <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">transparent</span>;
+      bottom: <span class="hljs-string">-6px</span>;
+      content: <span class="hljs-string">""</span>;
+      display: <span class="hljs-string">block</span>;
+      left: <span class="hljs-string">-2px</span>;
+      position: <span class="hljs-string">absolute</span>;
+      right: <span class="hljs-string">-2px</span>;
+      top: <span class="hljs-string">-2px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button</span>:active::before <span class="hljs-tag">{</span>
+      top: <span class="hljs-string">-6px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#f2f2f2</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:focus <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#ffeb3b</span>;
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      color: <span class="hljs-string">#003087</span>;
+      outline: <span class="hljs-string">4px solid transparent</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:active <span class="hljs-tag">{</span>
+      background: <span class="hljs-string">#f2f2f2</span>;
+      box-shadow: <span class="hljs-string">none</span>;
+      color: <span class="hljs-string">#005eb8</span>;
+      top: <span class="hljs-string">4px</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse</span>:link <span class="hljs-tag">{</span>
+      color: <span class="hljs-string">#005eb8</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse.nhsuk-button--disabled {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse.nhsuk-button--disabled</span>:focus <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#fff</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled,
+    .nhslogin-button[disabled="disabled"],
+    .nhslogin-button[disabled] {</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      opacity: <span class="hljs-string">0.5</span>;
+      pointer-events: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:hover,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:hover,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      cursor: <span class="hljs-string">default</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:focus,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:focus,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:focus <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#005eb8</span>;
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--disabled</span>:active,
+    <span class="hljs-tag">.nhslogin-button[disabled="disabled"]</span>:active,
+    <span class="hljs-tag">.nhslogin-button[disabled]</span>:active <span class="hljs-tag">{</span>
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      top: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"],
+    .nhslogin-button--reverse[disabled] {</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      opacity: <span class="hljs-string">0.5</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:hover,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:hover <span class="hljs-tag">{</span>
+      background-color: <span class="hljs-string">#fff</span>;
+      cursor: <span class="hljs-string">default</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:focus,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:focus <span class="hljs-tag">{</span>
+      outline: <span class="hljs-string">none</span>;
+    <span class="hljs-tag">}
+    .nhslogin-button--reverse[disabled="disabled"]</span>:active,
+    <span class="hljs-tag">.nhslogin-button--reverse[disabled]</span>:active <span class="hljs-tag">{</span>
+      box-shadow: <span class="hljs-string">0 4px 0 #003087</span>;
+      top: <span class="hljs-string">0</span>;
+    <span class="hljs-tag">}
+    .ie8 .nhslogin-button</span>:focus <span class="hljs-tag">{</span>
+      outline: <span class="hljs-string">1px dotted #003087</span>;
+    <span class="hljs-tag">}</span>
+    </code></pre>
+              </div>
+              <a class="app-link--close" href="javascript:void(0);" aria-live="assertive">
+                Close
+              </a>
+            </div>
+        </div>
+  </div>
+</div>
+
   <p>The NHS login button must always be visible and up front on your service. When placing the button on your service, you must follow these rules:</p>
 
 <details class="nhsuk-details nhsuk-expander">
@@ -352,10 +945,10 @@ If you have a <b>clear user need</b> why this isn't possible, you will need to p
   </ul>
   </div>
   <div class="nhsuk-grid-column-one-half">
+          <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-options-other.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-options-other.png" alt="Example of NHS login button alongside other log in or register options">
-          <figcaption class="nhsuk-image__caption">
-        <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-options-other.png" target="_blank">View this example full screen</a>
-                  </figcaption>
+</div>
 </div>
 </details>
 
@@ -374,10 +967,10 @@ Suggested content:<br><br>
 We will check if you have an NHS login. If not, you can set one up.</i>
 </div>
   <div class="nhsuk-grid-column-one-half">
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-content-other.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-content-other.png" alt="Example of content around the NHS login button">
-          <figcaption class="nhsuk-image__caption">
-        <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-content-other.png" target="_blank">View this example full screen</a>
-                  </figcaption>
+</div>
 </div>
   </ul>
 </details>
@@ -395,10 +988,10 @@ The button directs users to the NHS login service that allows users to log in or
 <b>If there is a user need</b> to have a form on the same screen as the button, you should place NHS login at the top. You should then create a clear distinction between the NHS login button and your form.
 </div>
   <div class="nhsuk-grid-column-one-half">
+    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-forms-other.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-forms-other.png" alt="Example showing forms on the same screen as NHS login button">
-          <figcaption class="nhsuk-image__caption">
-        <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-forms-other.png" target="_blank">View this example full screen</a>
-        </figcaption>
+</div>
 </div>
   </ul>
 </details>
@@ -423,59 +1016,23 @@ If the width of the button needs to change:
 </ul>
 </div>
   <div class="nhsuk-grid-column-one-half">
+      <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-resizing-other.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+    <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Guidance-example-resizing-other.png" alt="Example showing the button sizing and padding">
-      <figcaption class="nhsuk-image__caption">
-    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Guidance-example-resizing-other.png" target="_blank">View this example full screen</a>
-  </figcaption>
+</div>
 </div>
   </ul>
 </details>
 
-<details class="nhsuk-details">
-              <summary class="nhsuk-details__summary">
-                <span class="nhsuk-details__summary-text">View JavaScript for this button</span>
-              </summary>
-              <div class="nhsuk-details__text">
-                <pre style="
-                      background-color: white;
-                      padding: 30px;
-                      overflow:auto;
-                      font-size:12px
-                      ">
-                  <code>
-.nhslogin-button {
-  background-color: darken($color_nhsuk-blue, 1%);
-  box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 20%); // s0
-  &:hover {
-    background-color: darken($color_nhsuk-blue, 12%);
-    cursor: default;
-  }
-  &:focus {
-    outline: none;
-    background-color: darken($color_nhsuk-blue, 12%);
-  }
-  &:active {
-    box-shadow: 0 $button-shadow-size 0 darken($color_nhsuk-blue, 12%); // s0
-    top: 0;
-  }
-}   
-                  </code>
-                </pre>
-              </div>
-            </details>
-
 <a href="#download">Download the NHS login button package for services that do not use the NHS logo</a>.<br><br>
-
-
 
 ---
 
 <h2 id="related-links">Related links</h2>
 
-For detailed technical guidance on who can use NHS and NHS Digital identities and how and where to apply them, visit: 
+For detailed technical guidance on who can use NHS and NHS Digital identities and how and where to apply them, visit:
 
 [NHS Identity Guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/ "NHS Identity Guidelines")
 
 [NHS Digital Style Guidelines](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines "NHS Digital Style Guidelines")
-
 
