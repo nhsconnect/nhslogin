@@ -48,7 +48,7 @@ title: Adding the NHS login button to your service
       <path d="M0 0h24v24H0z" fill="none"></path>
       <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
     </svg>
-    <span class="nhsuk-action-link__text">I am a NHS service that uses the NHS Design System</span>
+    <span class="nhsuk-action-link__text">I am an NHS service that uses the NHS Design System</span>
   </a>
 </div>
 
@@ -78,7 +78,7 @@ title: Adding the NHS login button to your service
 ---
 
 <!-- NHS DESIGN SYSTEM USERS -->
-  <h2 id="NHS-DS">I am a NHS service that uses the NHS Design System</h2>
+  <h2 id="NHS-DS">I am an NHS service that uses the NHS Design System</h2>
 
   <p>The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces. Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version, such as <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
   <div class="nhsuk-grid-row">
