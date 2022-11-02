@@ -498,7 +498,12 @@
 <p>These three pieces of information are required by IM1 paired services to create an IM1 token, which is then used by the RP to invoke the GP system patient facing APIs.</p>
 <p>The RP (service) must be IM1 enabled to allow this scope in the production environment.</p>
 <p>Retrieving these items of information via NHS login removes the need for the user to enter them manually. It also allows for the seamless registration of previously unregistered GP Online users, preventing the need to visit to a GP Practice.</p>
-<p><img src="nhslogin/images/gp-credentials-diagram.png" alt="Diagram"></p>
+<div class="design-example">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/gp-credentials-diagram.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/gp-credentials-diagram.png" alt="Diagram illustrating GP credentials request and validation">
+</div>
+</div>
 <p>This diagram illustrates:</p>
 <ol>
 <li>how NHS login processes a request from an RP for <code>gp_integration_credentials</code> via the <strong>/userinfo</strong> endpoint</li>
