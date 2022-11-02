@@ -10,7 +10,7 @@ title: Adding the NHS login button to your service
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <p>To integrate with, or continue using NHS login on your service, you will need to provide evidence that you align to these guidelines.</p>
-  <p>If you fail to comply and we cannot agree a solution, we will remove NHS login from your service.</p>
+  <p>If you fail to comply and we cannot agree a solution, we may remove NHS login from your service.</p>
 </div>
 
 ---
@@ -132,9 +132,6 @@ title: Adding the NHS login button to your service
               <div class="app-code-snippet__container">
                 <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
                 <pre><code class=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
-  Continue
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nhslogin-button nhslogin-button--reverse"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
   Continue
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
               </div>
@@ -374,7 +371,7 @@ We will check if you have an NHS login. If not, you can set one up.</i>
   </ul>
 </details>
 
-<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS-Design-System">Download the NHS login button package for services that use the NHS Design System</a>.<br><br>
+<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS-Design-System" target="_blank">Download the NHS login button package for services that use the NHS Design System</a>.<br><br>
 
 ---
 
@@ -720,7 +717,7 @@ If the width of the button needs to change:
   </ul>
 </details>
 
-<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS">Download the NHS login button package for services that use NHS branding</a>.<br><br>
+<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS" target="_blank">Download the NHS login button package for services that use NHS branding</a>.<br><br>
 
 ---
 
@@ -1081,7 +1078,7 @@ If the width of the button needs to change:
   </ul>
 </details>
 
-<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other">Download the NHS login button package for services that do not use the NHS logo</a>.<br><br>
+<a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other" target="_blank">Download the NHS login button package for services that do not use the NHS logo</a>.<br><br>
 
 ---
 

@@ -3,9 +3,15 @@ layout: base.njk
 title: The NHS login integration process
 ---
 
-<img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/IntegrationProcess-Oct22.png" alt="Diagram showing the process for partners integrating with NHS login.">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/IntegrationProcess-Oct22.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+    Open this diagram in new window
+  </a>
+  <div class="code-embed">
+  <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/IntegrationProcess-Oct22.png" alt="Diagram showing the process for partners integrating with NHS login">
+  </div>
 
-<p style="font-size:14px"><a href="https://github.com/nhsconnect/nhslogin/raw/main/src/images/IntegrationProcess-Oct22.png">Download the integration process diagram</a></p>
+
+<br>
 
 The [NHS login integration toolkit](https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit) explains the full process in more detail.
 
