@@ -63,4 +63,10 @@ NHS login supports two parameters for `asserted_login_identity` and prompt as pa
 
 ### Flow diagram
 
-![diagram](nhslogin/images/P5-P9Step-upflow_small.png "P5 - P9 Step up verification flow")
+<div class="design-example">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/P5-P9Step-upflow_small.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/P5-P9Step-upflow_small.png" alt="P5 - P9 Step up verification flow">
+</div>
+</div>
+

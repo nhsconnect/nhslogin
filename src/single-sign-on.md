@@ -59,14 +59,29 @@ A non-normative example `jwt` payload section is as follows:
 
 User requests RP1 login - OIDC flow - Authorisation code flow
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step1_smaller.png "Step 1: login to RP1 diagram")
+<div class="design-example">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Step1_smaller.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Step1_smaller.png" alt="Step 1: login to RP1 diagram">
+</div>
+</div>
 
 ### Step 2: SSO from RP1 to RP2
 
 User transitions from RP1 to RP2 - Single Sign On - Asserted token flow
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/Step2_smaller.png "Step 2: SSO from RP1 to RP2 diagram")
+<div class="design-example">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Step2_smaller.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Step2_smaller.png" alt="Step 2: SSO from RP1 to RP2 diagram">
+</div>
+</div>
 
 ### SSO sequence diagram
 
-![diagram](https://github.com/nhsconnect/nhslogin/raw/files-into-markdown/src/images/SequenceDiagram_smaller.png "SSO sequence diagram")
+<div class="design-example">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/SequenceDiagram_smaller.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/SequenceDiagram_smaller.png" alt="Step 2: SSO from RP1 to RP2 diagram">
+</div>
+</div>
