@@ -191,20 +191,17 @@ High level verification is needed when personal, confidential or sensitive infor
 IDVM is only available to P5 users who are registered for POL at their GP and their phone number matches the one against their GP record.
 
 <div class="design-example">
+    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_IDVM.png" class="design-example__pop-out" target="_blank">Open the P9 IDVM journey in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_IDVM.png" alt="Diagram showing the P9 IDVM user journey">
   <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_PYI.png" class="design-example__pop-out" target="_blank">Open the P9 PYI journey in new window</a>
     <div class="code-embed">
-    <h3 style="padding: 16px">Prove your identity (PYI)</h3>
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_PYI.png" alt="Diagram showing the P9 PYI user journey">
   </div>
     <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_POL.png" class="design-example__pop-out" target="_blank">Open the P9 POL journey in new window</a>
     <div class="code-embed">
-    <h3 style="padding: 16px">Patient Online (POL)</h3>
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_POL.png" alt="Diagram showing the P9 POL user journey">
   </div>
-    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_IDVM.png" class="design-example__pop-out" target="_blank">Open the P9 IDVM journey in new window</a>
-    <div class="code-embed">
-        <h3 style="padding: 16px">Identity verification via mobile (IDVM)</h3>
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_IDVM.png" alt="Diagram showing the P9 IDVM user journey">
   </div>
 <div class="code-snippet">
           <ul class="app-tabs" role="tablist">
