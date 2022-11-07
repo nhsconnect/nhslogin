@@ -44,9 +44,9 @@ All of the NHS login user journeys start with the NHS login button on your websi
 Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.
 
 <div class="design-example">
-  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/P0_Journey.svg" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P0.svg" class="design-example__pop-out" target="_blank">Open the P0 user journey in new window</a>
     <div class="code-embed">
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/P0_Journey.svg" alt="Diagram showing the P0 user journey">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P0.png" alt="Diagram showing the P0 user journey">
   </div>
 <div class="code-snippet">
           <ul class="app-tabs" role="tablist">
@@ -119,9 +119,9 @@ Users can contact their GP or receive notifications via email or SMS. Users can�
 This level of verification is just a claim identity. If a Partner Service wishes to use and rely on the user’s NHS number they need to request a high-level verification (P9).
 
 <div class="design-example">
-  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/P5_Journey.svg" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P5.png" class="design-example__pop-out" target="_blank">Open the P5 user journey in new window</a>
     <div class="code-embed">
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/P5_Journey.svg" alt="Diagram showing the P5 user journey">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P5.png" alt="Diagram showing the P5 user journey">
   </div>
 <div class="code-snippet">
           <ul class="app-tabs" role="tablist">
@@ -191,20 +191,20 @@ High level verification is needed when personal, confidential or sensitive infor
 IDVM is only available to P5 users who are registered for POL at their GP and their phone number matches the one against their GP record.
 
 <div class="design-example">
-  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/P9_PYI_Journey.svg" class="design-example__pop-out" target="_blank">Open the P9 PYI journey in new window</a>
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_PYI.png" class="design-example__pop-out" target="_blank">Open the P9 PYI journey in new window</a>
     <div class="code-embed">
     <h3 style="padding: 16px">Prove your identity (PYI)</h3>
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_PYI_Journey.svg" alt="Diagram showing the P9 PYI user journey">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_PYI.png" alt="Diagram showing the P9 PYI user journey">
   </div>
-    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/P9_POL_Journey.svg" class="design-example__pop-out" target="_blank">Open the P9 POL journey in new window</a>
+    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_POL.png" class="design-example__pop-out" target="_blank">Open the P9 POL journey in new window</a>
     <div class="code-embed">
     <h3 style="padding: 16px">Patient Online (POL)</h3>
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_POL_Journey.svg" alt="Diagram showing the P9 POL user journey">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_POL.png" alt="Diagram showing the P9 POL user journey">
   </div>
-    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/P9_IDVM_Journey.svg" class="design-example__pop-out" target="_blank">Open the P9 IDVM journey in new window</a>
+    <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_IDVM.png" class="design-example__pop-out" target="_blank">Open the P9 IDVM journey in new window</a>
     <div class="code-embed">
         <h3 style="padding: 16px">Identity verification via mobile (IDVM)</h3>
-    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/P9_IDVM_Journey.svg" alt="Diagram showing the P9 IDVM user journey">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P9_IDVM.png" alt="Diagram showing the P9 IDVM user journey">
   </div>
 <div class="code-snippet">
           <ul class="app-tabs" role="tablist">
