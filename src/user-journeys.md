@@ -114,6 +114,8 @@ Only the user’s email address and phone number are required to register for a 
 
 <h2 id="p5">Medium level verification (P5)</h2>
 
+To gain a medium level verification, the user must first complete a low level verification journey. 
+
 Users can contact their GP or receive notifications via email or SMS. Users can’t access medical records or personal information, nor should the user transfer sensitive or personal information. The Partner Service can’t disclose sensitive info or medical record data.
 
 This level of verification is just a claim identity. If a Partner Service wishes to use and rely on the user’s NHS number they need to request a high-level verification (P9).
@@ -184,6 +186,8 @@ In addition to what users can do with low level verification (P0), users can als
 
 <h2 id="p9">High level verification (P9)</h2>
 
+To gain a high level verification, the user must first complete a low and medium level verification journey. 
+
 There are three ways in which a user can acquire high level verification (P9). The user cases and what the Partner Service gets are the same but the user journey is different.
 
 High level verification is needed when personal, confidential or sensitive information is being communicated either to or from the user. It is also required when the user can access their medical records e.g. GP record via a 3rd party – such as Co-op Health app, NHS App or TPP Airmid.
@@ -235,7 +239,7 @@ IDVM is only available to P5 users who are registered for POL at their GP and th
 
 <h3>What users can do at P9</h3>
 
-In addition to what users can do with low level verification (P5), users can also:
+In addition to what users can do with medium level verification (P5), users can also:
 <ul>
 <li>Enquire against official record, e.g. read medical record, view NHS number, order repeat prescriptions, view SCR or detailed record, manage / view appointments, view tailored online NHS services and online content.</li>
 <li>Record medical data into private healthcare consultation record.</li>
