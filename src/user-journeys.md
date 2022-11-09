@@ -5,43 +5,26 @@ title: NHS login user journeys
 
 All of the NHS login user journeys start with the NHS login button on your website or app. These journeys cannot be changed or customised.
 
-<div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="/nhslogin/user-journeys/#p0">
-    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-    </svg>
-    <span class="nhsuk-action-link__text">Low level verification (P0)</span>
-  </a>
-</div>
-
-
-<div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="/nhslogin/user-journeys/#p5">
-    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-    </svg>
-    <span class="nhsuk-action-link__text">Medium level verification (P5)</span>
-  </a>
-</div>
-
-
-<div class="nhsuk-action-link">
-  <a class="nhsuk-action-link__link" href="/nhslogin/user-journeys/#p9">
-    <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="36" height="36">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
-    </svg>
-    <span class="nhsuk-action-link__text">High level verification (P9)</span>
-  </a>
-</div>
+<nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+  <h2 class="nhsuk-u-visually-hidden">Contents</h2>
+  <ol class="nhsuk-contents-list__list">
+    <li class="nhsuk-contents-list__item">
+      <a class="nhsuk-contents-list__link" href="/nhslogin/user-journeys/#p0">Low level verification (P0)</a>
+    </li>
+    <li class="nhsuk-contents-list__item">
+      <a class="nhsuk-contents-list__link" href="/nhslogin/user-journeys/#p5">Medium level verification (P5)</a>
+    </li>
+    <li class="nhsuk-contents-list__item">
+      <a class="nhsuk-contents-list__link" href="/nhslogin/user-journeys/#p9">High level verification (P9)</a>
+    </li>
+  </ol>
+</nav>
 
 ---
 
 <h2 id="p0">Low level verification (P0)</h2>
 
-Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP.
+Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP (one time password).
 
 <div class="design-example">
   <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P0.svg" class="design-example__pop-out" target="_blank">Open the P0 user journey in new window</a>
@@ -85,7 +68,7 @@ Only the user’s email address and phone number are required to register for a 
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">
               <ul>
-              <li>User identity not fully verified</li>
+              <li>User identity not verified</li>
                 <li>No NHS number </li>
                 <li>No checks with their NHS Personal Demographics Service (PDS) record, (held on Spine)</li>
                 <li>No GP surgery code (ODS code)</li>
@@ -116,9 +99,10 @@ Only the user’s email address and phone number are required to register for a 
 
 To gain a medium level verification, the user must first complete a low level verification journey. 
 
-Users can contact their GP or receive notifications via email or SMS. Users can’t access medical records or personal information, nor should the user transfer sensitive or personal information. The Partner Service can’t disclose sensitive info or medical record data.
+Users can’t access medical records or personal information, nor should the user transfer sensitive or personal information. The Partner Service can’t disclose sensitive info or medical record data.
 
-This level of verification is just a claim identity. If a Partner Service wishes to use and rely on the user’s NHS number they need to request a high-level verification (P9).
+This level of verification is just a claimed identity. If a Partner Service wishes to use and rely on the user’s NHS number they need to request a high-level verification (P9).
+
 
 <div class="design-example">
   <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P5.png" class="design-example__pop-out" target="_blank">Open the P5 user journey in new window</a>
@@ -149,7 +133,7 @@ This level of verification is just a claim identity. If a Partner Service wishes
               <div class="app-code-snippet__container">
               <ul>
               <li>User verified email and phone number</li>
-                <li>User verified their; date of birth, NHS number, full name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+                <li>User verified date of birth, NHS number, first name and last name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
                 <li>User verified the area code of their postcode – this information has been checked with and ‘fuzzy matched’ to their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
                 <li>GP surgery code (ODS code)</li>
                 </ul>
@@ -166,7 +150,7 @@ This level of verification is just a claim identity. If a Partner Service wishes
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">
               <ul>
-              <li>User identity not fully verified</li>
+              <li>User identity based only on claimed credentials</li>
                 <li>No GP surgery online registration information (linkage key) – which allows access to medical records</li>
                 </ul>
               </div>
@@ -180,6 +164,10 @@ This level of verification is just a claim identity. If a Partner Service wishes
 In addition to what users can do with low level verification (P0), users can also:
 <ul>
 <li>Record (no read capability) non-medical data into record, e.g. record data-sharing opt-out preference or record preferred pharmacy (further controls will be needed around collection of controlled medications)</li>
+<li>Submit an online consultation to their GP</li>
+<li>Record medical data to submit to their GP or consultant - such as blood pressure readings</li>
+<li>Contact their GP or receive notifications via email or SMS</li>
+
 </ul>
 
 ---
@@ -188,11 +176,12 @@ In addition to what users can do with low level verification (P0), users can als
 
 To gain a high level verification, the user must first complete a low and medium level verification journey. 
 
-There are three ways in which a user can acquire high level verification (P9). The user cases and what the Partner Service gets are the same but the user journey is different.
+There are three ways in which a user can acquire high level verification (P9). The use cases and what the Partner Service gets are the same but the user journey is different.
 
 High level verification is needed when personal, confidential or sensitive information is being communicated either to or from the user. It is also required when the user can access their medical records e.g. GP record via a 3rd party – such as Co-op Health app, NHS App or TPP Airmid.
 
-IDVM is only available to P5 users who are registered for POL at their GP and their phone number matches the one against their GP record.
+Identity verification via mobile (IDVM) is only available to P5 users who are registered for Patient Online (POL) at their GP and their phone number matches the one against their GP record.
+
 
 <div class="design-example">
     <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P9_IDVM.png" class="design-example__pop-out" target="_blank">Open the P9 IDVM journey in new window</a>
@@ -225,9 +214,9 @@ IDVM is only available to P5 users who are registered for POL at their GP and th
               <div class="app-code-snippet__macro"></div>
               <div class="app-code-snippet__container">
               <ul>
-                <li>User verified their email and phone number</li>
                 <li>User ID fully authenticated</li>
-                <li>User also verified their; date of birth, NHS number, full name and postcode – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+                <li>User verified email and phone number</li>
+                <li>User also verified date of birth, NHS number, first name, last name and postcode – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
                 <li>GP surgery code (ODS code)</li>
                 <li>GP surgery online information (linkage key) – which allows access to medical records</li>
                 </ul>
@@ -245,8 +234,9 @@ In addition to what users can do with medium level verification (P5), users can 
 <li>Record medical data into private healthcare consultation record.</li>
 <li>Enable delegated access for another validated individual.</li>
 <li>Register for online account where treatment requires high level identity assurance or access to / adding to existing medical record.</li>
-<li>Record new phone number or new address online.</li>
-<li>Register patient to a new GP through a purely online mechanism.</li>
+<li>Record new phone number or new email address online.</li>
+<li>Submit a request to register at a new GP surgery.</li>
+
 </ul> 
 
 ---
