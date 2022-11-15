@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>Medium (P5) to high (P9) verification step-up journey</title>
+<title>Offering users medium (P5) and high (P9) verification</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -483,20 +483,16 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Medium (P5) to high (P9) verification step-up journey
+              Offering users medium (P5) and high (P9) verification
             </h1>
 
-            <p>NHS login supports multiple levels of identity verification (low, medium and high). These are based upon <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a>.</p>
-<h3>Medium level verification</h3>
-<p>For medium level identity verification (P5) users are expected to provide only basic identity related information, such as their date of birth and NHS number. Users who do not know their NHS number can use their full name and postcode instead.</p>
-<p>This information is checked to correspond to a record on PDS (Personal Demographic Service) and confirm the user’s identity to medium level. This level of verification minimises friction within registration processes, often experienced by partners that deliver services with non-sensitive data.</p>
-<p>If required, NHS login offers partners functionality to initiate the step-up journey from medium level (P5) to high level (P9) verification.</p>
+            <p>NHS login supports <a href="https://nhsconnect.github.io/nhslogin/user-journeys">multiple levels of identity verification (low, medium and high)</a>. These are based upon <a href="http://digital.nhs.uk/isce/publication/dcb3051">DCB3051 Identity Verification and Authentication Standard for Digital Health and Care Services</a>.</p>
 <hr>
-<h2>Partner service provides access to both basic data and sensitive data</h2>
+<h2>If your service provides access to both basic and sensitive data</h2>
 <p>A service may offer multiple features to users, where some require basic user data and others require sensitive user data.</p>
-<p>The service would request NHS login for medium level verification (P5) and high level authentication. Successfully authenticated users can be either medium (P5) or high level (P9) in terms of identity verification.</p>
-<p>With high level verification (P9) the service can offer all functionalities, as the user meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification (P5) at their initial login, as they meet the service requirements of medium verification and high authentication only.</p>
-<p>When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication. The service prompts the user to undertake a verification step-up journey via NHS login, which will take the user verification level from medium to high.</p>
+<p>The service would request NHS login for medium (P5) and high (P9) authentication. Successfully authenticated users can be either medium (P5) or high (P9) level in terms of identity verification.</p>
+<p>At high level verification (P9) the service can offer all functionalities, as the user meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification (P5) at their initial login, as they meet the service requirements of medium verification and high authentication only.</p>
+<p>When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication. The service prompts the user to undertake a <strong>verification step-up journey</strong> via NHS login, which will take the user verification level from medium (P5) to high (P9).</p>
 <hr>
 <h2>Technical details</h2>
 <h3>Identity proofing level</h3>
