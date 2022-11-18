@@ -10,5 +10,3 @@ NHS login implements OpenID Connect 1.0 OpenID Provider role to assert the ident
 This document defines the interfaces implemented by the Platform and describes the data flows supported by these interfaces.
 
 [The specification document is available here](https://github.com/nhsconnect/nhslogin/blob/main/NHS%20login%20-%20Interface%20Specification%20-%20Federation.docx?raw=true).
-
-N.B. We are currently in the process of moving the content from the Word document to this site.
