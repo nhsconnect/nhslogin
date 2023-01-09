@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>OIDC clients used for NHS login</title>
+<title>Sharing a user&#39;s NHS login information with your service</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -488,26 +488,26 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              OIDC clients used for NHS login
+              Sharing a user&#39;s NHS login information with your service
             </h1>
 
-            <p>The links below contain examples of different implementations and integrations of NHS login.</p>
-<h2>Client Github Repository Links</h2>
-<p><strong>DotNET</strong></p>
-<p><a href="https://github.com/initialspark/nhs-login-dotnet-core-example">Initial Spark</a></p>
-<p><strong>Dart and Flutter</strong></p>
-<p><a href="https://github.com/TinyMedicalApps/NHS-Login-for-Dart-and-Flutter">Tiny Medical Apps</a></p>
-<p><strong>JavaScript</strong></p>
-<p><a href="https://github.com/carepenny/nhs-login-js-example">Care Penny</a></p>
-<p><strong>Java</strong></p>
-<p><a href="https://github.com/rikitikitaco/nhs-login-java-spring-boot-example">Java Demo</a></p>
-<p><strong>NodeJS Webclient</strong></p>
-<p><a href="https://github.com/rikitikitaco/nhs-login-nodejs-example">Sample NodeJS Webclient</a></p>
+            <p>Users need to agree to share their NHS login information with the partner service to access the service.</p>
+<p>If a user does not agree to share their NHS login information, the partner service will need to display a clear message telling them they will be unable to use the service.</p>
+<h2>How to place this message on your service</h2>
+<p>To ensure consistency across partner services we have created an example page for you to use in your service.</p>
+<p>The “go back to NHS login” link in the body text should return the user to the consent page on NHS login. This allows users to agree to share their information without having to restart the log in process.</p>
+<p>Insert updated screenshot below.</p>
+<div class="design-example">
+<a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/gp-credentials-diagram.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/XXX.png" alt="Example screen to be shown if a user does not agree to share their NHS login information">
+</div>
+</div>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/example-oidc.md">this page</a> on GitHub
+              <p>Edit <a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/sharing-users-information.md">this page</a> on GitHub
               </p>
       </div>
 
