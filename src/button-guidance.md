@@ -702,8 +702,7 @@ You can scale the button as needed for different devices and screen sizes, but y
 The padding around the NHS login button should always be equal to at least half of its height.<br><br>
 If the width of the button needs to change:
 <ul class="nhsuk-inside-box-text">
-<li>there should always be 16dp between the logo and the text</li>
-<li>the padding to the left and right of the button content should be atleast 16dp, and equal on both sides</li>
+<li>the padding to the left and right of the button content should be at least 16dp, and equal on both sides</li>
 <li>the padding above and below the button content should always be 14dp</li>
 <li>the shadow below the button should always be 14dp</li>
 </ul>
@@ -1064,7 +1063,7 @@ The padding around the NHS login button should always be equal to at least half 
 If the width of the button needs to change:
 <ul class="nhsuk-inside-box-text">
 <li>there should always be 16dp between the logo and the text</li>
-<li>the padding to the left and right of the button content should be atleast 16dp, and equal on both sides</li>
+<li>the padding to the left and right of the button content should be at least 16dp, and equal on both sides</li>
 <li>the padding above and below the button content should always be 14dp</li>
 <li>the shadow below the button should always be 14dp</li>
 </ul>
