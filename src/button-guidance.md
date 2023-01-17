@@ -29,7 +29,7 @@ title: Adding the NHS login button to your website or app
 
 <p>If the user does not have the same or a higher level of verification, NHS login will help the user gain that level of verification in the same journey.</p>
 
-<p>View <a href="">NHS login user journeys</a> for more detail.</p>
+<p>View <a href="/nhslogin/user-journeys">NHS login user journeys</a> for more detail.</p>
 
 <div class="nhsuk-warning-callout">
   <h3 class="nhsuk-warning-callout__label">
