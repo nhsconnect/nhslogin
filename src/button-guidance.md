@@ -768,7 +768,7 @@ title: Adding the NHS login button to your website or app
 
 
 
-<div class="nhsuk-card nhsuk-card" id="NHS">
+<div class="nhsuk-card nhsuk-card" id="other">
   <div class="nhsuk-card__content">
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
