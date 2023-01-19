@@ -36,8 +36,8 @@ title: Adding the NHS login button to your website or app
     Important<span class="nhsuk-u-visually-hidden">:</span>
   </h3>
   <p>Do not tell your users what will happen after they select the NHS login button. You cannot guarantee what the user's journey will be.</p>
-  <p>For example, a user may have previously gained a medium level verification, and so may not need to enter any demographics information in order to gain a high level verification for a different website or app.</p>
-  <p>NHS login may also introduce new features or change current functionality. For example, not all users will require photo ID in order to prove their identity to a high level.</p>
+  <p>For example, a user may already have a medium level verification, and so may not need to enter any demographics information to get a high level verification for a different website or app.</p>
+  <p>NHS login may also introduce new features or change current functionality. For example, not all users will need photo ID to prove their identity to a high level.</p>
 </div>
 
 ---
@@ -1128,8 +1128,8 @@ title: Adding the NHS login button to your website or app
 </div>
 
 
-<p>If you use the wrong version of the NHS login button on your website or app, you will be asked to change to the correct one.</p>
-<p>If you are unsure which version of the NHS login is right for your website or app, please get in contact and we will clarify.</p> 
+<p>If you use the wrong version of the NHS login button on your website or app, we will ask you to change to the correct one.</p>
+<p>Contact us if you are unsure which version of the NHS login is right for your website or app.</p> 
 
 ---
 

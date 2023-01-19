@@ -3,9 +3,9 @@ layout: base.njk
 title: Session management
 ---
 
-The NHS login platform does not support user session management and user logout functionality.  Both are client responsibilities.
+The NHS login platform does not support user session management and user logout functionality.  Both are partner responsibilities.
 
-However, NHS login's session management model follows standards set by the National Institute of Standards and Technology (NIST).
+However, NHS login follows standards set by the National Institute of Standards and Technology (NIST).
 
 Therefore, connected services that use NHS login as an Identity Provider (IdP) and Authentication Service must align to the following NIST standards.
  
