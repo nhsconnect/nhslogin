@@ -3,7 +3,11 @@ layout: base.njk
 title: Session management
 ---
 
- NHS login's session management model is underpinned against standards such as the National Institute of Standards and Technology (NIST), as such, Connected Service who use NHS login as an Identity Provider (IdP) and Authentication Service must implement controls which align to the following NIST standards.
+The NHS login platform does not support user session management and user logout functionality.  Both are client responsibilities.
+
+However, NHS login's session management model follows standards set by the National Institute of Standards and Technology (NIST).
+
+Therefore, connected services that use NHS login as an Identity Provider (IdP) and Authentication Service must align to the following NIST standards.
  
  [NIST 800- 63C Digital Identity Guidelines: Federation and Assertions (nist.gov)](https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fnvlpubs.nist.gov%2Fnistpubs%2FSpecialPublications%2FNIST.SP.800-63c.pdf&data=05%7C01%7Cbrendan.plant1%40nhs.net%7C331c3500f34d492d3ff808dad120bb8d%7C37c354b285b047f5b22207b48d774ee3%7C0%7C0%7C638052235748476884%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=YrDvEUd%2FAdQcHwRpprfmxMBgjxb06Eau2v0D4gIK2zc%3D&reserved=0) is used to provide guidance around the NHS login use of and operation of OIDC, with further detail within the NHS login External Interface Specification.
  
