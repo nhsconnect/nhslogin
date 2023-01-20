@@ -72,7 +72,7 @@ title: Adding the NHS login button to your website or app
                 NHS services that use the NHS Design System
               </h2>
               <p class="nhsuk-card__description">The NHS Design System uses styles, components and patterns that help to build consistent, accessible user interfaces.</p>
-              <p class="nhsuk-card__description">Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system">NHS Design System</a> can use this version of the NHS login button, such as <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
+              <p class="nhsuk-card__description">Only NHS services that use the <a href="https://service-manual.nhs.uk/design-system" target="_blank">NHS Design System</a> can use this version of the NHS login button, such as <a href="https://www.nhs.uk/nhs-app/" target="_blank">NHS App</a>.</p>
               <hr>
               <!-- 
               <div class="nhsuk-action-link">
@@ -100,8 +100,8 @@ title: Adding the NHS login button to your website or app
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
         <li>This version of the NHS login button has minimal use of the term "NHS login". Instead, we would suggest using 'Continue' as the call to action.</li>
-        <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the NHS logo on the NHS login button.</li>
-        <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
+        <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/" target="_blank">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the NHS logo on the NHS login button.</li>
+        <li>To keep the NHS login brand clear, the button should be <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/" target="_blank">NHS blue</a>.</li>
         <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
         <li>We are working with the NHS Design System to create a button that can be a reusable component within the Design System.</li>
       </ul>
@@ -408,7 +408,7 @@ title: Adding the NHS login button to your website or app
               <h2>
                 Websites or apps that use the NHS logo
               </h2>
-              <p class="nhsuk-card__description">Use this version of the NHS login button if your website or app has the NHS logo visible to users <strong>on the same screen as the NHS login button</strong>, such as <a href="https://heypharmacist.co.uk/">Hey Pharmacist</a>.</p>
+              <p class="nhsuk-card__description">Use this version of the NHS login button if your website or app has the NHS logo visible to users <strong>on the same screen as the NHS login button</strong>, such as <a href="https://heypharmacist.co.uk/" target="_blank">Hey Pharmacist</a>.</p>
               <p class="nhsuk-card__description">If your website or app uses the NHS logo, but it is not <strong>on the same screen as the NHS login button</strong>, you will need to use <a href="/nhslogin/button-guidance#other">the NHS login button version for websites or apps that do not use NHS logo</a>.</p>
               <hr>
             </div>
@@ -425,9 +425,9 @@ title: Adding the NHS login button to your website or app
       <div class="nhsuk-details__text nhsuk-grid-row">
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
-        <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the logo on the NHS login button.</li>
+        <li>To align with the <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/" target="_blank">NHS Identity Guidelines</a>, there should only be one NHS logo on a screen at once. Do not repeat the logo on the NHS login button.</li>
         <li>The call to action on this button should always be <b>Continue to NHS login</b>.</li>
-        <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
+        <li>To keep the NHS login brand clear, the button should be <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/" target="_blank">NHS blue</a>.</li>
         <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
       </ul>
       <hr>
@@ -774,7 +774,7 @@ title: Adding the NHS login button to your website or app
               <h2>
                 Websites or apps that do not use the NHS logo
               </h2>
-              <p class="nhsuk-card__description">Use this version if your website or app does not have the NHS logo <b>on the same screen</b> as the NHS login button, such as <a href="https://www.eredbook.org.uk/">eRedbook</a>.</p>
+              <p class="nhsuk-card__description">Use this version if your website or app does not have the NHS logo <b>on the same screen</b> as the NHS login button, such as <a href="https://www.eredbook.org.uk/" target="_blank">eRedbook</a>.</p>
               <p class="nhsuk-card__description">This applies even if your website or app:</p>
               <ul>
                 <li>is part of or partnered with the NHS,</li>
@@ -797,7 +797,7 @@ title: Adding the NHS login button to your website or app
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
           <li>To keep the NHS login brand recognisable to users, this button should have the NHS logo and use the call to acton <b>Continue to NHS login</b>.</li>
-          <li>To keep the NHS login brand clear, the button should be <a href="https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines/how-we-look/colour-palette">NHS blue</a>.</li>
+          <li>To keep the NHS login brand clear, the button should be <a href="https://www.england.nhs.uk/nhsidentity/identity-guidelines/colours/" target="_blank">NHS blue</a>.</li>
           <li>When the NHS login button is on a background that is darker than 50% grey, you should use the light version of the button for legibility. Do not change the colour of the button to anything other than the original and light version.</li>
           <li>If your website or app has it's own branding that you would like to align the NHS login button to, you will need to request a change. We will then review this and decide if we can allow any of your requested changes to the NHS login button. For example, if your website or app uses buttons with straight corners, you might want also want straight corners on the NHS login button. You should contact us as soon as possible if you want to make any changes to the NHS login button. <strong>You should not change anything on the button without our approval</strong>.</li>
       </ul>
