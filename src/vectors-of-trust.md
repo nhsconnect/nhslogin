@@ -13,69 +13,105 @@ Your service should include a vector value in the query string as part of the in
 
 NHS login supports the following types of authentication credentials. Note that the credential component may occur more than once.
 
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">NHS login Authentication Context Class</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Authentication type</th>
-        <th class="nhsuk-table__header" scope="col">Basic description</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cp - Email address and password</td>
-        <td class="nhsuk-table__cell ">The user is asked to provide their email address and a password.</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cd - Registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device that has been associated with their NHS login. The association can be made with a One Time Password (OTP) text message, or a remembered browser.</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Ck - Shared cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device that has been associated with their NHS login. The delivery or use of the device is by a shared key. <br> <i>This is yet to be implemented but is anticipated to be MFA app registration.</i></p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Cm - Asymmetric Cryptographic key within a registered device</td>
-        <td class="nhsuk-table__cell "><p>The user is in possession of a device that has been associated with their NHS login. The delivery or use of the device is by cryptographic proof of key possession using asymmetric key, like a FIDO-compliant device.</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table role="table" class="nhsuk-table-responsive">
+  <caption class="nhsuk-table__caption">NHS login Authentication Context Class</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a> Ref
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Authentication type
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Basic description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a> Ref </span>Low
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication type </span>Cp - Email address and password
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user is asked to provide their email address and a password.
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a> Ref </span>Low
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication type </span>Cd - Registered device
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user is in possession of a device that has been associated with their NHS login. The association can be made with a One Time Password (OTP) text message, or a remembered browser.
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a> Ref </span>High
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication type </span>Cm - Asymmetric Cryptographic key within a registered device
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user is in possession of a device that has been associated with their NHS login. The delivery or use of the device is by cryptographic proof of key possession using asymmetric key, like a FIDO-compliant device.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
-## Identity proofing levels
+## Identity verification levels
 
 The NHS login supports the following levels of identification verification. These are based upon [DCB3051 Identity Verification and
 Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
 
 
-<div class="nhsuk-table-responsive">
-  <table class="nhsuk-table">
-    <caption class="nhsuk-table__caption">Levels of identification verification</caption>
-    <thead class="nhsuk-table__head">
-      <tr class="nhsuk-table__row">
-        <th class="nhsuk-table__header" scope="col">Proofing level</th>
-        <th class="nhsuk-table__header" scope="col">Basic description</th>
-      </tr>
-    </thead>
-    <tbody class="nhsuk-table__body">
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Low (P0) <br>Low identity proofing</td>
-        <td class="nhsuk-table__cell ">A user has verified ownership of an email address and mobile phone number.</td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">Medium (P5) <br>Basic identity information</td>
-        <td class="nhsuk-table__cell "><p>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>.<br>This maps to ‘Verification – Medium’ within DCB3051</p></td>
-      </tr>
-      <tr class="nhsuk-table__row">
-        <td class="nhsuk-table__cell">High (P9) <br>Physical comparison</td>
-        <td class="nhsuk-table__cell "><p>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.<br> This maps to ‘Verification – High’ within DCB3051</p></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table role="table" class="nhsuk-table-responsive">
+  <caption class="nhsuk-table__caption">NHS login identity verification levels</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Proofing level
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Basic description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Proofing level </span>Low (P0) <br>Low identity proofing
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>A user has verified ownership of an email address and mobile phone number.
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Proofing level </span>Medium (P5) <br>Basic identity information
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>.<br>This maps to ‘Verification – Medium’ within <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a>.
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Proofing level </span>High (P9) <br>Physical comparison
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.<br> This maps to ‘Verification – High’ within <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a>.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -111,16 +147,118 @@ The body of the token is signed using JOSE, as per the OpenID Connect specificat
 
 ## Profiles
 
-Vectors can be combined to create profiles.
+A profile is defined as the combination of Vectors of Trust that you can request in the vector of trust request (VTR). The NHS login profiles available for you to select are described below.
 
-| Vector     | Description                                                                                                                    |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| “P0.Cp”    | No identity verification, user authenticated using password                                                                    |
-| “P5.Cp.Cd” | Medium identity verification, user authenticated using password and enrolled device (2FA)                                      |
-| “P5.Cp.Ck” | Medium identity verification, user authenticated using password and shared key within a device (2FA)                           |
-| “P9.Cp.Cd” | High identity verification, user authenticated using password and enrolled device (2FA)                                        |
-| “P9.Cp.Ck” | High identity verification, user authenticated using password and shared key within a device (2FA)                             |
-| “P9.Cm”    | High identity verification, user authenticated via asymmetric key within a device (2FA) (for example, FIDO UAF authentication) |
+<table role="table" class="nhsuk-table-responsive">
+  <caption class="nhsuk-table__caption">NHS login identity verification levels</caption>
+  <thead role="rowgroup" class="nhsuk-table__head">
+    <tr role="row">
+      <th role="columnheader" class="" scope="col">
+        Authentication &<br> verification level
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Archetype
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Vector
+      </th>
+      <th role="columnheader" class="" scope="col">
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tbody class="nhsuk-table__body">
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Low : Low
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Archetype </span>A8 and A11
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Vector </span>“P0.Cp”
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>No identity verification, user authenticated using password
+      </td>
+    </tr>
+        <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Medium : High
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Archetype </span>A3
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Vector </span>“P5.Cp.Cd”
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>Medium identity verification, user authenticated using password and enrolled device (2FA)
+      </td>
+    </tr>
+        <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Low : Low
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Medium : High </span>A3
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Vector </span>“P5.Cp.Ck”
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>Medium identity verification, user authenticated using password and shared key within a device (2FA)
+      </td>
+    </tr>
+        <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cp.Cd”
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>High identity verification, user authenticated using password and enrolled device (2FA)
+      </td>
+    </tr>
+        <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cp.Ck”
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>High identity verification, user authenticated using password and shared key within a device (2FA)
+      </td>
+    </tr>
+        <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cm”
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Description </span>High identity verification, user authenticated via asymmetric key within a device (2FA) (for example, FIDO UAF authentication)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+<br>
+NHS login offers a level of identity verification. NHS login does not support archetypes A2 and A9 (no identity verification / low authentication). If your features map to A2 and A9 contact us to ask for guidance via <a href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>.
+</p>
 
 ### Example 1: Partner service provides access to sensitive data
 
