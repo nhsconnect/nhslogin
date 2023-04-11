@@ -56,6 +56,18 @@ NHS login supports the following types of authentication credentials. Note that 
         <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a> Ref </span>High
       </td>
       <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Authentication type </span>Ck - Shared cryptographic key within a registered device
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user is in posession of a device that has been associated with their NHS login. The delivery or use of the device is shared by a key.<br>
+        <em>This is yet to be implemented.</em>
+      </td>
+    </tr>
+    <tr role="row" class="nhsuk-table__row">
+      <td role="cell" class="nhsuk-table__cell">
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DCB3501</a> Ref </span>High
+      </td>
+      <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Cm - Asymmetric Cryptographic key within a registered device
       </td>
       <td role="cell" class="nhsuk-table__cell">
