@@ -27,7 +27,7 @@ All of the NHS login user journeys start with the NHS login button on your websi
 Only the user’s email address and phone number are required to register for a service. Users can log in with an email address and password, with or without the need for an OTP (one time password).
 
 <div class="design-example">
-  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P0.svg" class="design-example__pop-out" target="_blank">Open the P0 user journey in a new window</a>
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Journey_P0.png" class="design-example__pop-out" target="_blank">Open the P0 user journey in a new window</a>
     <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Journey_P0.png" alt="Diagram showing the P0 user journey">
   </div>
