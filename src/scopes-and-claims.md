@@ -39,7 +39,7 @@ title: Scopes and claims
 
 <h3 id="openid">OpenID Connect requests</h3>
 
-<code>openid</code>
+<code>openid</code><span style="vertical-align:super;font-size:70%">1</span>
 
 <dl class="nhsuk-summary-list">
 
@@ -111,6 +111,8 @@ title: Scopes and claims
   </div>
 
 </dl>
+
+1. The OpenID scope is a mandatory requirement for all partners.
 
 
 <hr class="nhsuk-section-break nhsuk-section-break--l">
@@ -186,7 +188,7 @@ title: Scopes and claims
             <dt class="nhsuk-summary-list__value">
         </dt>
     <dd class="nhsuk-summary-list__value">
-      Yes<span style="vertical-align:super;font-size:70%">1</span>
+      Yes<span style="vertical-align:super;font-size:70%">2</span>
     </dd>
   </div>
 
@@ -203,14 +205,14 @@ title: Scopes and claims
 
 </dl>
 
-1. NHS number is part of a user’s claimed identity. The user must not be given or presented with the NHS number which has been traced by NHS login. NHS login must have a clear understanding of the use case of the NHS number, and will confirm that the use of this is within the tolerance level of the NHS login service.
+2. NHS number is part of a user’s claimed identity. The user must not be given or presented with the NHS number which has been traced by NHS login. NHS login must have a clear understanding of the use case of the NHS number, and will confirm that the use of this is within the tolerance level of the NHS login service.
 
 
 <hr class="nhsuk-section-break nhsuk-section-break--l">
 
 <h3 id="basic_demographics">User's basic demographics</h3>
 
-<code>basic_demographics</code><span style="vertical-align:super;font-size:70%">2</span>
+<code>basic_demographics</code><span style="vertical-align:super;font-size:70%">3</span>
 
 <dl class="nhsuk-summary-list">
 
@@ -283,7 +285,7 @@ title: Scopes and claims
 
 </dl>
 
-2. User basic demographics and default profile scopes are mutually exclusive. Both cannot be requested together.
+3. User basic demographics and default profile scopes are mutually exclusive. Both cannot be requested together.
 
 <hr class="nhsuk-section-break nhsuk-section-break--l">
 
@@ -451,7 +453,7 @@ title: Scopes and claims
         Phone number matched to PDS:
     </dt>
     <dd class="nhsuk-summary-list__value">
-        <code>phone_number_pds_matched</code><span style="vertical-align:super;font-size:70%">3</span>
+        <code>phone_number_pds_matched</code><span style="vertical-align:super;font-size:70%">4</span>
     </dd>
   </div>
 
@@ -490,7 +492,7 @@ title: Scopes and claims
 
 </dl>
 
-3. This claim  will be `true` if the phone a used for 2FA matches a contact number on PDS.
+4. This claim  will be `true` if the phone a used for 2FA matches a contact number on PDS.
 
 
 <hr class="nhsuk-section-break nhsuk-section-break--l">
@@ -499,7 +501,7 @@ title: Scopes and claims
 
 <h3 id="gp_registration_details">GP registration details</h3>
 
-<code>gp_registration_details</code><span style="vertical-align:super;font-size:70%">4</span>
+<code>gp_registration_details</code><span style="vertical-align:super;font-size:70%">5</span>
 
 <dl class="nhsuk-summary-list">
 
@@ -550,7 +552,7 @@ title: Scopes and claims
 
 </dl>
 
-4. This scope is not required if the `gp_integration_credentials` scope is requested.
+5. This scope is not required if the `gp_integration_credentials` scope is requested.
 
 
 <hr class="nhsuk-section-break nhsuk-section-break--l">
@@ -614,7 +616,7 @@ title: Scopes and claims
             <dt class="nhsuk-summary-list__value">
         </dt>
     <dd class="nhsuk-summary-list__value">
-      Yes<span style="vertical-align:super;font-size:70%">5</span>
+      Yes<span style="vertical-align:super;font-size:70%">6</span>
     </dd>
   </div>
 
@@ -631,7 +633,7 @@ title: Scopes and claims
 
 </dl>
 
-5. Available only to IM1 enabled partners and protected by high level of authentication.
+6. Available only to IM1 enabled partners and protected by high level of authentication.
 
 
 
@@ -640,7 +642,7 @@ title: Scopes and claims
 
 <h3 id="client_metadata">Client specific metadata for the user account</h3>
 
-<code>client_metadata</code><span style="vertical-align:super;font-size:70%">6</span>
+<code>client_metadata</code><span style="vertical-align:super;font-size:70%">7</span>
 
 <dl class="nhsuk-summary-list">
 
@@ -691,7 +693,7 @@ title: Scopes and claims
 
 </dl>
 
-6. This is a bespoke scope which should only be selected once agreed by NHS login.
+7. This is a bespoke scope which should only be selected once agreed by NHS login.
 
 
 <hr class="nhsuk-section-break nhsuk-section-break--l">
