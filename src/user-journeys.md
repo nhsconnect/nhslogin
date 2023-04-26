@@ -55,6 +55,8 @@ Only the user’s email address and phone number are required to register for a 
               <div class="app-code-snippet__container">
               <ul>
               <li>User verified email & phone number</li>
+              </ul>
+              Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
               </div>
             </div>
               <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
@@ -137,6 +139,7 @@ This level of verification is just a claimed identity. If a Partner Service wish
               <li>User verified the area code of their postcode – this information has been checked with and ‘fuzzy matched’ to their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
               <li>GP surgery code (ODS code)</li>
                 </ul>
+                              Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
               </div>
             </div>
               <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
@@ -220,6 +223,7 @@ Identity verification via mobile (IDVM) is only available to medium level verifi
                 <li>GP surgery code (ODS code)</li>
                 <li>GP surgery online information (linkage key) – which allows access to medical records</li>
                 </ul>
+                              Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
               </div>
             </div>
         </div>
