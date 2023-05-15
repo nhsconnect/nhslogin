@@ -135,7 +135,7 @@ title: Scopes and claims
       <td class="nhsuk-table__cell ">Yes<span style="vertical-align:super;font-size:70%">6</span></td>
     </tr>
         <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell" id="client_metadata">Client specific metadata for the user account: <code>client_metadata</code><span style="vertical-align:super;font-size:70%">6</span></td>
+      <td class="nhsuk-table__cell" id="client_metadata">Client specific metadata for the user account: <code>client_metadata</code><span style="vertical-align:super;font-size:70%">7</span></td>
       <td class="nhsuk-table__cell ">• Client user metadata: <code>client_user_metadata</code></td>
       <td class="nhsuk-table__cell ">Yes</td>
       <td class="nhsuk-table__cell ">Yes</td>
