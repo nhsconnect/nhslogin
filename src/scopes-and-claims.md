@@ -157,7 +157,7 @@ title: Scopes and claims
 1. The OpenID scope is a mandatory requirement for all partners.
 2. NHS number is part of a user’s claimed identity. The user must not be given or presented with the NHS number which has been traced by NHS login. NHS login must have a clear understanding of the use case of the NHS number, and will confirm that the use of this is within the tolerance level of the NHS login service.
 3. User basic demographics and default profile scopes are mutually exclusive. Both cannot be requested together.
-4. This claim  will be `true` if the phone a used for 2FA matches a contact number on PDS.
+4. This claim  will be `true` if the phone used for 2FA matches a contact number on PDS.
 5. This scope is not required if the `gp_integration_credentials` scope is requested.
 6. Available only to IM1 enabled partners and protected by high level of authentication.
 7. This is a bespoke scope which should only be selected once agreed by NHS login.
