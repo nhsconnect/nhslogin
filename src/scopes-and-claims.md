@@ -159,7 +159,7 @@ title: Scopes and claims
 3. User basic demographics and default profile scopes are mutually exclusive. Both cannot be requested together.
 4. This claim  will be `true` if the phone used for 2FA matches a contact number on PDS.
 5. This scope is not required if the `gp_integration_credentials` scope is requested.
-6. Available only to IM1 enabled partners and protected by high level of authentication.
+6. Available only to [NHS England IM1 enabled partners](https://digital.nhs.uk/services/gp-it-futures-systems/im1-pairing-integration) and partners connected to IM1 via an approved third party supplier. This does not include GP suppliers’ own Patient Facing Services (PFS) API. The scope is protected by a high level of authentication.
 7. This is a bespoke scope which should only be selected once agreed by NHS login.
 
 <hr>
