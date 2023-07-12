@@ -3,7 +3,7 @@ layout: base.njk
 title: How do I integrate to the sandpit?
 ---
 
- You will need to complete and submit the [Sandpit Environment Request Form](https://forms.office.com/Pages/ResponsePage.aspx?id=Hwf2UP67GkCIA2c3SOYp4uJkON3kMNVHktlWAnhMAvNURFFXNjMxM1FaS05GODhSM0VCS1Y0VzUzMCQlQCN0PWcu) so that we can set up your service in the NHS login sandpit.
+ You will need to complete and submit the [Sandpit Environment Request Form](https://forms.office.com/e/HaKHCGFBxP) so that we can set up your service in the NHS login sandpit.
 
  Required information:
 
