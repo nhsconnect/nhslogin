@@ -9,4 +9,4 @@ As per the [EIS documentation](https://nhsconnect.github.io/nhslogin/interface-s
 
 The value in the “state” parameter will be returned to the partner as-it-is in the authentication response.
 
-NHS login will only maintain one re-direct URI and, based on the value returned the partner, can redirect further accordingly. This keeps the partner service loosely coupled with NHS login and allows partners to effectively manage operational changes.
+NHS login can only support up to 10 re-direct URIs. If you need over 10, you need to implement the "state" parameter and, based on the value returned, add redirects accordingly. This keeps the partner service loosely coupled with NHS login and allows partners to effectively manage operational changes.
