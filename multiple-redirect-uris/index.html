@@ -521,7 +521,7 @@
               Multiple redirect URIs
             </h1>
 
-            <p>We advise partners who have a need for multiple redirect URIs to use a “state” parameter to populate an identifier. This will help to identify different redirections.</p>
+            <p>We advise partners who have a need for more than 10 (multiple) redirect URIs to use a “state” parameter to populate an identifier. This will help to identify different redirections.</p>
 <p>As per the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">EIS documentation</a> “state” is an opaque value used to maintain state between the request and the call back.</p>
 <p>The value in the “state” parameter will be returned to the partner as-it-is in the authentication response.</p>
 <p>NHS login will only maintain one re-direct URI and, based on the value returned the partner, can redirect further accordingly. This keeps the partner service loosely coupled with NHS login and allows partners to effectively manage operational changes.</p>
