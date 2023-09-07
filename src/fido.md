@@ -2,13 +2,16 @@
 layout: base.njk
 title: Biometric FIDO Authentication
 ---
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    Important<span class="nhsuk-u-visually-hidden">:</span>
+  </h3>
+  <p>We're upgrading our authentication system to FIDO2 for enhanced security and usability.</p>
+  <p>During this transition, please refrain from implementing any FIDO authentication to your service until the work is complete.</p>
+</div>
 
-Partners interested in using biometric authentication for NHS login, will need a FIDO client that works with our FIDO server.
+Partners interested in using biometric authentication for NHS login, should wait for the work to be carried out on our FIDO server.
 
-[NHS client code for Android](https://github.com/nhsconnect/nhsapp-fido-client-android)
-
-[NHS client code for iOS](https://github.com/nhsconnect/nhsapp-fido-client-ios)
-
-Partners can use this code to install their own client or reference it to create their own FIDO client.
+FIDO2 will offer a secure method of authentication, allowing users to access NHS services by using biometrics, PINs, or security keys instead of traditional passwords. 
 
 Find out more about how we use FIDO by reading the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) (EIS).
