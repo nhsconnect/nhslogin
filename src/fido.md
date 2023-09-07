@@ -6,8 +6,8 @@ title: Biometric FIDO Authentication
   <h3 class="nhsuk-warning-callout__label">
     Important<span class="nhsuk-u-visually-hidden">:</span>
   </h3>
-  <p>We're in the process of adding FIDO2 authentication to NHS login for enhanced security and usability.</p>
-  <p>During this transition, please refrain from implementing any FIDO authentication to your service until the work is complete.</p>
+  <p>To improve security and usability, we are adding FIDO2 authentication to NHS login.</p>
+  <p>Until we complete this work, you should avoid adding any FIDO authentication to your service.</p>
 </div>
 
 Partners interested in using biometric authentication for NHS login, should wait for the work to be carried out on our FIDO server.
