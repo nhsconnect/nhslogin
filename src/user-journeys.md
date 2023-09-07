@@ -219,7 +219,7 @@ Identity verification via mobile (IDVM) is only available to medium level verifi
               <ul>
                 <li>User ID fully authenticated</li>
                 <li>User verified email and phone number</li>
-                <li>User verified date of birth, NHS number, first name, last name and postcode – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+                <li>User verified date of birth, NHS number, first name and last name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
                 <li>GP surgery code (ODS code)</li>
                 <li>GP surgery online information (linkage key) – which allows access to medical records</li>
                 </ul>
