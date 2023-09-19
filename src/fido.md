@@ -14,4 +14,4 @@ title: Biometric FIDO Authentication
 
 If you're interested in adding FIDO2 authentication and would like to be involved in our testing, contact us via [Slack](https://nhs-login-support-slack-invite.herokuapp.com) or email <a href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>.
 
-You can find out more about how we currently use FIDO by reading the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) (EIS). </p>
+You can find out more about how we use FIDO by reading the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) (EIS). </p>
