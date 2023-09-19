@@ -6,12 +6,12 @@ title: Biometric FIDO Authentication
   <h3 class="nhsuk-warning-callout__label">
     Important<span class="nhsuk-u-visually-hidden">:</span>
   </h3>
-  <p>To improve security and usability, we are adding FIDO2 authentication to NHS login.</p>
-  <p>Until we complete this work, you should avoid adding any FIDO authentication to your service.</p>
+  <p>We are currently adding FIDO2 authentication to NHS login.</p>
+  <p>You should avoid adding our existing biometric capabilities to your service as FIDO2 will replace this.</p>
 </div>
 
-Partners interested in using biometric authentication for NHS login, should wait for the work to be carried out on our FIDO server.
+<p class="nhsuk-body">FIDO2 will offer a secure method of authentication, allowing users to access NHS services by using biometrics, PIN, or security keys instead of traditional passwords.
 
-FIDO2 will offer a secure method of authentication, allowing users to access NHS services by using biometrics, PIN, or security keys instead of traditional passwords. 
+If you're interested in adding FIDO2 authentication and would like to be involved in our testing, contact us via [Slack](https://nhs-login-support-slack-invite.herokuapp.com) or email <a href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>.
 
-Find out more about how we use FIDO by reading the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) (EIS).
+You can find out more about how we use FIDO by reading the [external interface specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/) (EIS). </p>
