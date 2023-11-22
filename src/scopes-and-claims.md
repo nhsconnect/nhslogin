@@ -131,7 +131,7 @@ title: Scopes and claims
 • ODS code: <code>gp_ods_code</code><br>
 • Account ID: <code>gp_user_id</code></td>
       <td class="nhsuk-table__cell ">No</td>
-      <td class="nhsuk-table__cell ">Yes</td>
+      <td class="nhsuk-table__cell ">No</td>
       <td class="nhsuk-table__cell ">Yes<span style="vertical-align:super;font-size:70%">6</span></td>
     </tr>
         <tr role="row" class="nhsuk-table__row">
