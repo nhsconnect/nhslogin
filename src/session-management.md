@@ -15,16 +15,16 @@ Therefore, connected services that use NHS login as an Identity Provider (IdP) a
 
  --- 
 
-## Session Management and Refresh Tokens## 
+## Session Management and Refresh Tokens  
 
-# Definitions #
+### Definitions
  - Standalone web application - a partner's own independently accessed web application, intended for consumption by users via any web browser (regardless of device type)
  - standalone mobile application - a partner's own independently accessed mobile application, intended for installation and consumption by users on a mobile phone or tablet device
  - user-to-app authentication - a biometric or PIN prompt that validates repeat-access to a mobile application after a full authentication journey has been completed on initial access to the app. <br><br>Note: this is distinct from the action taken by the user to unlock their device. Although the application may use the same operating system-level mechanism to implement a biometrics or a PIN, this is an additional check after the user has unlocked the device
 
 <hr>
 
- # Guidance #
+### Guidance
  <br>
  
  **A) For standalone web applications, and standalone mobile applications that do not implement user-to-app authentication:**
