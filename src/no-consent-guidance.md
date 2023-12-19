@@ -3,8 +3,8 @@ layout: base.njk
 title: Sharing a user's NHS login information with your service
 ---
 
-<p>For users to access your service they need to agree to share their NHS login information with you. In order for user information to be received by your service, and ID token or autorisation code, containing the user information, must be passed from NHS login to your service. This can only be done with ther user's consent.</p>
-<p>If a user does not agree to share their NHS login information, your service should display a clear message telling them what they can do to continue their journey, or that they will be unable to use your service.</p>
+<p>For users to access your service they need to agree to share their NHS login information with you. An ID token or authorisation code, containing the user information, must be passed from NHS login to your service. This can only happen with the user's consent.</p>
+<p>If a user does not agree to share their NHS login information, your service should display a clear message telling them they can either continue their journey or cannot use your service.</p>
 
 ---
 
@@ -16,7 +16,7 @@ title: Sharing a user's NHS login information with your service
   <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-userjourney-consent.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the partner service.">
   </div>
 <br>
-<p>We ask users to agree to share their NHS login information with your service when they use your service to:</p>
+<p>We ask users to agree to share their NHS login information with your service when they:</p>
 <ul>
   <li>register a new level of verification</li>
   <li>sign into NHS login for the first time</li>
@@ -30,21 +30,21 @@ title: Sharing a user's NHS login information with your service
 <h3>No-consent flow</h3>
 
 <p>If a user does not agree to share their NHS login information, they can go back from the confirmation screen to amend their decision. They can then continue to your service.</p>
-<p>If the user still does not agree to share their NHS login information, they will be redirected to your service without passing an ID token or authorisation code.</p>
+<p>If the user still does not agree to share their NHS login information, they are redirected to your service without passing an ID token or authorisation code.</p>
 <p>Their information is not passed to your service and you need to display a no-consent error screen.</p>
-<p>How the user is able to continue to your website or app depends on how you handle them. For example, you may have a guest process or alternative authentication journey.</p>
+<p>How the user can continue to your website or app depends on how you handle them. For example, you may have a guest process or alternative authentication journey.</p>
 
 
-<p>The suggested content on the no-consent error screen differs,depending on the type of service you are.</p>
+<p>The suggested content on the no-consent error screen differs, depending on if you are:</p>
 <ul>
-  <li>Services that use Wayfinder</li>
-  <li>Services that have alternative journeys or processes</li>
-  <li>All other services</li>
+  <li>a services that use Wayfinder</li>
+  <li>a service that has alternative journeys or processes</li>
+  <li>any other type of service</li>
 </ul>
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>Though the no-consent error screen is the responsibility of your service, the solution does not require a technically complex implementation and only requires tailored content to adjust user expectations.</p>
+  <p>Although the no-consent error screen is the responsibility of your service, the solution does not need a complex implementation and only needs tailored content to adjust user expectations.</p>
 </div>
 
 ---
@@ -79,7 +79,7 @@ title: Sharing a user's NHS login information with your service
               <h2>
                 Services that use Wayfinder
               </h2>
-              <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder, such as <a href="" target="_blank">Health Call</a>.</p>
+              <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder, such as Health Call.</p>
               <hr>
       </div>
       <div class="nhsuk-grid-column-one-third">
@@ -197,7 +197,7 @@ title: Sharing a user's NHS login information with your service
                 <h2>
                   Services that have alternative user verification processes
                 </h2>
-                <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app can send obtain the user information for verification in an alternative manner, such as <a href="" target="_blank">111 online</a>.</p>
+                <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app can get user information for verification in an alternative way, such as 111 online.</p>
         </div>
     </div>
     <hr>
