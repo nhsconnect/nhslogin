@@ -3,8 +3,8 @@ layout: base.njk
 title: Sharing a user's NHS login information with your service
 ---
 
-<p>For users to access your service they need to agree to share their NHS login information with you. In order for user information to be received by your service, and ID token or autorisation code, containing the user information, must be passed from NHS login to your service. This can only be done with ther user's consent.</p>
-<p>If a user does not agree to share their NHS login information, your service should display a clear message telling them what they can do to continue their journey, or that they will be unable to use your service.</p>
+<p>For users to access your service they need to agree to share their NHS login information with you. An ID token or authorisation code, containing the user information, must be passed from NHS login to your service. This can only happen with the user's consent.</p>
+<p>If a user does not agree to share their NHS login information, your service should display a clear message telling them they can either continue their journey or cannot use your service.</p>
 
 ---
 
@@ -16,7 +16,7 @@ title: Sharing a user's NHS login information with your service
   <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-userjourney-consent.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the partner service.">
   </div>
 <br>
-<p>We ask users to agree to share their NHS login information with your service when they use your service to:</p>
+<p>We ask users to agree to share their NHS login information with your service when they:</p>
 <ul>
   <li>register a new level of verification</li>
   <li>sign into NHS login for the first time</li>
@@ -30,12 +30,12 @@ title: Sharing a user's NHS login information with your service
 <h3>No-consent flow</h3>
 
 <p>If a user does not agree to share their NHS login information, they can go back from the confirmation screen to amend their decision. They can then continue to your service.</p>
-<p>If the user still does not agree to share their NHS login information, they will be redirected to your service without passing an ID token or authorisation code.</p>
-<p>Their information is not passed to your service and you need to display a no-consent error screen.</p>
+<p>If the user still does not agree to share their NHS login information, they are redirected to your service without passing an ID token or authorisation code.</p>
+<p>Their information is not passed to your service, and you need to display a no-consent error screen.</p>
 <p>How the user is able to continue to your website or app depends on how you handle them. For example, you may have a guest process or alternative authentication journey.</p>
 
 
-<p>The suggested content on the no-consent error screen differs,depending on the type of service you are.</p>
+<p>The suggested content on the no-consent error screen differs, depending on if you are:</p>
 <ul>
   <li>a service that uses Wayfinder</li>
   <li>a service that has alternative journeys or processes</li>
@@ -44,7 +44,7 @@ title: Sharing a user's NHS login information with your service
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>Though the no-consent error screen is the responsibility of your service, the solution does not require a technically complex implementation and only requires tailored content to adjust user expectations.</p>
+  <p>Although the no-consent error screen is the responsibility of your service, the solution does not need a complex implementation and only needs tailored content to adjust user expectations.</p>
 </div>
 
 ---
@@ -79,7 +79,10 @@ title: Sharing a user's NHS login information with your service
               <h2>
                 Services that use Wayfinder
               </h2>
-              <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder, such as <a href="" target="_blank">Health Call</a>.</p>
+              <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder, such as Health Call.</p>
+              <a href="/nhslogin/images/Guidance-example-wayfinder.png" target="_blank" rel="noopener noreferrer">
+          Open this example in new window
+        </a>
               <hr>
       </div>
       <div class="nhsuk-grid-column-one-third">
@@ -95,18 +98,19 @@ title: Sharing a user's NHS login information with your service
       <div class="nhsuk-details__text nhsuk-grid-row">
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
-        <li>This version of the no-consent error screen refers to your service as "The service provider". This should remain unchanged. Do not use the name of your service as it may not make sense to the user in their journey.</li>
-        <li>To align with all other services that use Wayfinder, only use the content provided and do not change it.</li>
+        <li>This version of the no-consent error screen refers to your service as 'The service provider'. 
+This should remain unchanged. Do not use the name of your service as it may not make sense to the user in their journey.</li>
+        <li>To align with other services that use Wayfinder, only use the content provided and do not change it.</li>
         <li>To minimise clinical risk, make sure all anchor tags to emergency services are operational and implemented as suggested.</li>
-        <li>You can use your service font and styling on this page, but it must follow our styling suggestions.</li>
+        <li>You can use your service font, headers, footers and styling on this page, but it must follow our styling suggestions.</li>
       </ul>
       <hr>
       <h3>How to display content for the no-consent error screen</h3>
       <p>Here is an example of the Wayfinder no-consent error page. You can copy the content and code by selecting the HTML tab below this diagram.</p>
       <p>You will need to apply your own CSS to the code. You should not add any other content to this screen.</p>
       <div class="design-example">
-        <a href="/nhslogin/images/Guidance-example-wayfinder.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
-          Open this image in new window
+        <a href="/nhslogin/example-no-consent-content-wayfinder" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+          Open this example in new window
         </a>
         <div class="code-embed">
         <iframe title="default" src="/nhslogin/example-no-consent-content-wayfinder" class="design-example-frame" id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
@@ -199,7 +203,7 @@ title: Sharing a user's NHS login information with your service
                 <h2>
                   Services that have alternative user verification processes
                 </h2>
-                <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app can send obtain the user information for verification in an alternative manner, such as <a href="" target="_blank">111 online</a>.</p>
+                <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app can get user information for verification in an alternative way, such as 111 online.</p>
         </div>
     </div>
     <hr>
@@ -256,6 +260,9 @@ title: Sharing a user's NHS login information with your service
                 All other services
               </h2>
               <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if the previous options did not describe your service.</p>
+              <a href="/nhslogin/images/Guidance-example-other.png" target="_blank" rel="noopener noreferrer">
+          Open this example in new window
+        </a>
               <hr>
       </div>
       <div class="nhsuk-grid-column-one-third">
@@ -271,18 +278,18 @@ title: Sharing a user's NHS login information with your service
       <div class="nhsuk-details__text nhsuk-grid-row">
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
-        <li>TIn this version we recommend that you insert the name of your service in the [Your service name] placeholder.</li>
+        <li>In this version we recommend that you insert the name of your service in the [Service name] placeholder.</li>
         <li>The "dynamic content" placeholder text indicates variable text where you may insert your own copy.</li>
         <li>To minimise clinical risk, make sure all anchor tags to emergency services are operational and implemented as suggested.</li>
-        <li>You can use your service font and styling on this page, but it must follow our styling suggestions.</li>
+         <li>You can use your service font, headers, footers and styling on this page, but it must follow our styling suggestions.</li>
       </ul>
       <hr>
       <h3>How to display content for the no-consent error screen</h3>
       <p>Here is an example of the no-consent error page. You can copy the content and code by selecting the HTML tab below this diagram.</p>
       <p>You will need to apply your own CSS to the code.</p>
       <div class="design-example">
-        <a href="/nhslogin/images/Guidance-example-other.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
-          Open this image in new window
+        <a href="/nhslogin/example-no-consent-content-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+          Open this example in new window
         </a>
         <div class="code-embed">
         <iframe title="default" src="/nhslogin/example-no-consent-content-other" class="design-example-frame" id="iFrameResizer1" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
@@ -306,7 +313,7 @@ title: Sharing a user's NHS login information with your service
                     <div class="app-code-snippet__container">
                       <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
                       <pre><code class=""><span class="hljs-tag">&lt;h1&gt;</span>You cannot continue without sharing your information <span class="hljs-tag">&lt;/h1&gt;</span>
-<span class="hljs-tag">&lt;p&gt;</span>[Your service name] needs your NHS login information to verify your identity.<span class="hljs-tag">&lt;/p&gt;</span>
+<span class="hljs-tag">&lt;p&gt;</span>[Service name] needs your NHS login information to verify your identity.<span class="hljs-tag">&lt;/p&gt;</span>
 <span class="hljs-tag">&lt;p&gt;</span>Dynamic content.<span class="hljs-tag">&lt;/p&gt;</span>
 <span class="hljs-tag">&lt;p&gt;</span>If you need medical help, go to <span class="hljs-tag">&lt;a <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://111.nhs.uk/&quot;</span>&gt;</span>111.nhs.uk<span class="hljs-tag">&lt;/a&gt;</span> or call<span class="hljs-tag">&lt;a <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;tel:111</span><span class="hljs-string">&quot;</span>&gt;</span>111<span class="hljs-tag">&lt;/a&gt;</span> or your GP.<span class="hljs-tag">&lt;/p&gt;</span>
 <span class="hljs-tag">&lt;p&gt;</span>Call <span class="hljs-tag">&lt;a <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;tel:999</span><span class="hljs-string">&quot;</span>&gt;</span>999<span class="hljs-tag">&lt;/a&gt;</span> if it's a life-threatening emergency.<span class="hljs-tag">&lt;/p&gt;</span> 

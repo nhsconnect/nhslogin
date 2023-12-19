@@ -5,7 +5,7 @@ title: NHS login button for NHS services that use the Design System
 
 <h1>You cannot continue without sharing your information</h1>
 
-<p>[Your service name] needs your NHS login information to verify your identity.</p>
+<p>[Service name] needs your NHS login information to verify your identity.</p>
 
 <p>Dynamic content.</p>
 
