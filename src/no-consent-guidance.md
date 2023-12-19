@@ -37,9 +37,9 @@ title: Sharing a user's NHS login information with your service
 
 <p>The suggested content on the no-consent error screen differs,depending on the type of service you are.</p>
 <ul>
-  <li>Services that use Wayfinder</li>
-  <li>Services that have alternative journeys or processes</li>
-  <li>All other services</li>
+  <li>a service that uses Wayfinder</li>
+  <li>a service that has alternative journeys or processes</li>
+  <li>any other type of service</li>
 </ul>
 
 <div class="nhsuk-inset-text">
@@ -95,10 +95,10 @@ title: Sharing a user's NHS login information with your service
       <div class="nhsuk-details__text nhsuk-grid-row">
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
-        <li>This version of the no-consent error screen refers to your service as "The service provider". We suggest that this remains unchanged and that the name of your service is not used as it may not make sense to the user in their journey.</li>
-        <li>To align with all other services that use Wayfinder, only use the content provided and do not tailor it.</li>
-        <li>To ensure that clinical risk is minimised, ensure that the anchor tags to the emergency services are operational and implemented as suggested.</li>
-        <li>You may use your service font and styling on this page, within the bounds of the styling suggestions we provide.</li>
+        <li>This version of the no-consent error screen refers to your service as "The service provider". This should remain unchanged. Do not use the name of your service as it may not make sense to the user in their journey.</li>
+        <li>To align with all other services that use Wayfinder, only use the content provided and do not change it.</li>
+        <li>To minimise clinical risk, make sure all anchor tags to emergency services are operational and implemented as suggested.</li>
+        <li>You can use your service font and styling on this page, but it must follow our styling suggestions.</li>
       </ul>
       <hr>
       <h3>How to display content for the no-consent error screen</h3>
@@ -145,18 +145,20 @@ title: Sharing a user's NHS login information with your service
 
 <strong>Styling suggestions</strong>
   <ul>
-          <li style="max-width:none;">The heading font size should be no smaller than 20px.</li>
-          <li style="max-width:none;">The body copy should be no smaller than 16px.</li>
-          <li style="max-width:none;">Ensure that the emergency contact numbers and links are not static text, but hyperlinks as advised.</li>
+          <li style="max-width:none;">heading font size should be no smaller than 20px.</li>
+          <li style="max-width:none;">body copy should be no smaller than 16px.</li>
+          <li style="max-width:none;">hyperlink emergency contact numbers as advised.</li>
   </ul>
 
 <strong>The functionality of the back navigation in the NHS App</strong>
- <p>The user will be able to return to a previous point in their journey in the NHS App, using the native back-button. Depending where they have come from, the user can select the NHS App back-button and return to an earlier point in their journey for them to continue. The two places from which the user may have entered into the journey are:</p>
+ <p>Depending on where they came from, a user can return to a previous point in their journey in the NHS App by using the native back link. </p>
+ <p>The two places from which the user may have entered into the journey are the:
+</p>
  <ul>
-          <li style="max-width:none;">The message hub</li>
-          <li style="max-width:none;">The appointment aggregator screen </li>
+          <li style="max-width:none;">message hub</li>
+          <li style="max-width:none;">appointment aggregator screen </li>
   </ul>
-<p>The reason that the user will return to a point this early in the journey, rather than the consent screen directly, is due to the fact that the user information (in the form of an ID token or autorisation code) is not passed to your service in the no-consent flow.</p>
+<p>Rather than returning to the consent screen, a user will return to a point this early in the journey, because their ID token or authorisation code were not passed to your service in the no-consent flow.</p>
 
 </div>
 </div>
@@ -269,10 +271,10 @@ title: Sharing a user's NHS login information with your service
       <div class="nhsuk-details__text nhsuk-grid-row">
       <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">
-        <li>This version of the no-consent error screen recommend that you inser the name of your service in the [Your service name] placeholder.</li>
-        <li>The italics placeholder text indicates variable text where you may insert your own copy.</li>
-        <li>To ensure that clinical risk is minimised, ensure that the anchor tags to the emergency services are operational and implemented as suggested.</li>
-        <li>You may use your service font and styling on this page, within the bounds of the styling suggestions we provide.</li>
+        <li>TIn this version we recommend that you insert the name of your service in the [Your service name] placeholder.</li>
+        <li>The "dynamic content" placeholder text indicates variable text where you may insert your own copy.</li>
+        <li>To minimise clinical risk, make sure all anchor tags to emergency services are operational and implemented as suggested.</li>
+        <li>You can use your service font and styling on this page, but it must follow our styling suggestions.</li>
       </ul>
       <hr>
       <h3>How to display content for the no-consent error screen</h3>
@@ -283,7 +285,7 @@ title: Sharing a user's NHS login information with your service
           Open this image in new window
         </a>
         <div class="code-embed">
-        <iframe title="default" src="/nhslogin/example-no-consent-content-other" class="design-example-frame" id="iFrameResizer0" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
+        <iframe title="default" src="/nhslogin/example-no-consent-content-other" class="design-example-frame" id="iFrameResizer1" scrolling="no" style="overflow: hidden; height: 156px;"></iframe>
         </div>
       <div class="code-snippet">
                 <ul class="app-tabs" role="tablist">
@@ -320,13 +322,13 @@ title: Sharing a user's NHS login information with your service
 
 <strong>Styling suggestions</strong>
   <ul>
-          <li style="max-width:none;">The heading font size should be no smaller than 20px.</li>
-          <li style="max-width:none;">The body copy should be no smaller than 16px.</li>
-          <li style="max-width:none;">Ensure that the emergency contact numbers and links are not static text, but hyperlinks as advised.</li>
+          <li style="max-width:none;">heading font size should be no smaller than 20px.</li>
+          <li style="max-width:none;">body copy should be no smaller than 16px.</li>
+          <li style="max-width:none;">hyperlink emergency contact numbers as advised.</li>
   </ul>
 
 <strong>Dynamic content suggestions</strong>
- <p>We suggest that you only add your own content when you have additional information that may be of value to the user to either navigate away from the no-consent error page, or to troubleshoot, i.e. a contact email or number.</p>
+ <p>Only add your own content when you have information that might be of value to the user to either navigate away from the no-consent error page, or to correct any errors. For example, a contact email or number.</p>
 
 </div>
 </div>
