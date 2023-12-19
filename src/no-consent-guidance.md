@@ -37,15 +37,9 @@ title: Sharing a user's NHS login information with your service
 
 <p>The suggested content on the no-consent error screen differs,depending on the type of service you are.</p>
 <ul>
-<<<<<<< Updated upstream
-  <li>Services that use Wayfinder</li>
-  <li>Services that have alternative journeys or processes</li>
-  <li>All other services</li>
-=======
   <li>a service that uses Wayfinder</li>
   <li>a service that has alternative journeys or processes</li>
   <li>any other type of service</li>
->>>>>>> Stashed changes
 </ul>
 
 <div class="nhsuk-inset-text">
