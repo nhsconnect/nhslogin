@@ -532,10 +532,11 @@
   <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-userjourney-consent.png" alt="Diagram showing the flow that a user goes down from selecting the NHS button to being authorised by NHS login and back to the partner service.">
   </div>
 <br>
-<p>We ask users to agree to share their NHS login information with your service when they:</p>
+<p>We ask users to agree to share their NHS login information with your service when:</p>
 <ul>
-  <li>register a new level of verification</li>
-  <li>sign into NHS login for the first time</li>
+  <li>they register a new level of verification</li>
+  <li>they sign into NHS login for the first time</li>
+  <li>your service has an update to the scope of information required from the user</li>
 </ul>
 <h3>Consent flow</h3>
 <p>When a user agrees to share their NHS login information, they can continue to your website or app and use the service they need.</p>
@@ -545,11 +546,11 @@
 <p>If the user still does not agree to share their NHS login information, they are redirected to your service without passing an ID token or authorisation code.</p>
 <p>Their information is not passed to your service, and you need to display a no-consent error screen.</p>
 <p>How the user is able to continue to your website or app depends on how you handle them. For example, you may have a guest process or alternative authentication journey.</p>
-<p>The suggested content on the no-consent error screen differs, depending on if you are:</p>
+<p>The suggested content on the no-consent error screen differs, depending on the category of service that you belong to:</p>
 <ul>
-  <li>a service that uses Wayfinder</li>
-  <li>a service that has alternative journeys or processes</li>
-  <li>any other type of service</li>
+  <li><a href="#wayfinder">services that use Wayfinder</a></li>
+  <li><a href="#alternative">services that have alternative user verification processes</a></li>
+  <li><a href="#other">all other services</a></li>
 </ul>
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -580,7 +581,7 @@
   <div class="nhsuk-card__content">
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
-              <h2>
+              <h2 id="wayfinder">
                 Services that use Wayfinder
               </h2>
               <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder, such as Health Call.</p>
@@ -692,7 +693,7 @@ This should remain unchanged. Do not use the name of your service as it may not 
   <div class="nhsuk-card__content">
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
-                <h2>
+                <h2 id="alternative">
                   Services that have alternative user verification processes
                 </h2>
                 <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app can get user information for verification in an alternative way, such as 111 online.</p>
@@ -738,7 +739,7 @@ This should remain unchanged. Do not use the name of your service as it may not 
   <div class="nhsuk-card__content">
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
-              <h2>
+              <h2 id="other">
                 All other services
               </h2>
               <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if the previous options did not describe your service.</p>
