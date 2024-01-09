@@ -20,7 +20,7 @@ title: Sharing a user's NHS login information with your service
 <ul>
   <li>they register a new level of verification</li>
   <li>they sign into NHS login for the first time</li>
-  <li>your service has an update to the scope of information required from the user</li>
+  <li>your service has an update to the user information required</li>
 </ul>
 
 <h3>Consent flow</h3>
