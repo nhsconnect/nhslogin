@@ -38,9 +38,9 @@ title: Sharing a user's NHS login information with your service
 
 <p>The suggested content on the no-consent error screen differs, depending on the category of service that you belong to:</p>
 <ul>
-  <li><a href="#wayfinder">services that use Wayfinder</a></li>
-  <li><a href="#alternative">services that have alternative user verification processes</a></li>
-  <li><a href="#other">all other services</a></li>
+  <li><a href="nhslogin/no-consent-guidance/#wayfinder">services that use Wayfinder</li>
+  <li><a href="nhslogin/no-consent-guidance/#alternative">services that have alternative user verification processes</a></li>
+  <li><a href="nhslogin/no-consent-guidance/#other">all other services</a></li>
 </ul>
 
 <div class="nhsuk-inset-text">
