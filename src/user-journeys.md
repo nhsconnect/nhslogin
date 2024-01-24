@@ -179,7 +179,7 @@ In addition to what users can do with low level verification (P0), users can als
 
 To gain a high level verification, the user must first complete a low and medium level verification (P0 & P5) journey. 
 
-There are 3 ways in which a user can acquire high level verification (P9). The use cases and what the Partner Service gets are the same but the user journey is different.
+There are three ways in which a user can acquire high level verification (P9). The use cases and what the Partner Service gets are the same but the user journey is different.
 
 High level verification (P9) is needed when personal, confidential or sensitive information is being communicated either to or from the user. It is also required when the user can access their medical records e.g. GP record via a 3rd party – such as Co-op Health app, NHS App or TPP Airmid.
 
