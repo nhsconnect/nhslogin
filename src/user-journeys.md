@@ -136,7 +136,7 @@ This level of verification is just a claimed identity. If a Partner Service wish
               <ul>
               <li>User verified email and phone number</li>
               <li>User verified date of birth, NHS number, first name and last name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
-              <li>User verified the area code of their postcode – this information has been checked with and ‘fuzzy matched’ to their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
+              
               <li>GP surgery code (ODS code)</li>
                 </ul>
                               Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
@@ -221,7 +221,7 @@ Identity verification via mobile (IDVM) is only available to medium level verifi
                 <li>User verified email and phone number</li>
                 <li>User verified date of birth, NHS number, first name, last name and postcode – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
                 <li>GP surgery code (ODS code)</li>
-                <li>GP surgery online information (linkage key) – which allows access to medical records</li>
+                <li>GP surgery online information (linkage key) – which allows access to medical records (IM1 PFS API connected services only)</li>
                 </ul>
                               Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
               </div>
@@ -235,7 +235,7 @@ Identity verification via mobile (IDVM) is only available to medium level verifi
 In addition to what users can do with medium level verification (P5), users can also:
 <ul>
 <li>Enquire against official record, e.g. read medical record, view NHS number, order repeat prescriptions, view SCR or detailed record, manage / view appointments, view tailored online NHS services and online content</li>
-<li>Record medical data into private healthcare consultation record</li>
+<li>Record medical data into healthcare consultation record (can include GP record or an NHS commissioned service healthcare record)</li>
 <li>Enable delegated access for another validated individual</li>
 <li>Register for online account where treatment requires high level identity assurance or access to / adding to existing medical record</li>
 <li>Record new phone number or new email address online</li>
