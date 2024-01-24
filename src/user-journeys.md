@@ -136,7 +136,6 @@ This level of verification is just a claimed identity. If a Partner Service wish
               <ul>
               <li>User verified email and phone number</li>
               <li>User verified date of birth, NHS number, first name and last name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
-              
               <li>GP surgery code (ODS code)</li>
                 </ul>
                               Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
