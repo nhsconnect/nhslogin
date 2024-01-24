@@ -635,29 +635,29 @@
               <ul>
               <li>User verified email and phone number</li>
               <li>User verified date of birth, NHS number, first name and last name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
-              <li>User verified the area code of their postcode – this information has been checked with and ‘fuzzy matched’ to their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
-              <li>GP surgery code (ODS code)</li>
-                </ul>
-                              Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
-              </div>
-            </div>
-              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
-                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
-                  Not provided to Partner Service
-                </a>
-              </div>
-            <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
-                <div class="code-snippet__macro">
-                </div>
-              <div class="app-code-snippet__macro"></div>
-              <div class="app-code-snippet__container">
-              <ul>
-              <li>User identity based only on claimed credentials</li>
-              <li>No GP surgery online registration information (linkage key) – which allows access to medical records</li>
-                </ul>
-              </div>
-            </div>
-        </div>
+<pre><code>          &lt;li&gt;GP surgery code (ODS code)&lt;/li&gt;
+            &lt;/ul&gt;
+                          Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. &lt;a href=&quot;/nhslogin/scopes-and-claims/&quot;&gt;View scopes and claims for more information&lt;/a&gt;.
+          &lt;/div&gt;
+        &lt;/div&gt;
+          &lt;div class=&quot;app-tabs__item app-tabs__item--mobile&quot; role=&quot;presentation&quot; data-index=&quot;ex-2&quot;&gt;
+            &lt;a href=&quot;&quot; role=&quot;tab&quot; aria-controls=&quot;default-example&quot; data-track=&quot;tab-html&quot; aria-selected=&quot;true&quot;&gt;
+              Not provided to Partner Service
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;div class=&quot;code-snippet__preformatted js-hidden&quot; data-index=&quot;ex-2&quot;&gt;
+            &lt;div class=&quot;code-snippet__macro&quot;&gt;
+            &lt;/div&gt;
+          &lt;div class=&quot;app-code-snippet__macro&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;app-code-snippet__container&quot;&gt;
+          &lt;ul&gt;
+          &lt;li&gt;User identity based only on claimed credentials&lt;/li&gt;
+          &lt;li&gt;No GP surgery online registration information (linkage key) – which allows access to medical records&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</code></pre>
   </div>
 </div>
 <h3>What users can do at P5</h3>
@@ -709,7 +709,7 @@
                 <li>User verified email and phone number</li>
                 <li>User verified date of birth, NHS number, first name and last name – this information has been checked with their NHS Personal Demographics Service (PDS) record (held on Spine)</li>
                 <li>GP surgery code (ODS code)</li>
-                <li>GP surgery online information (linkage key) – which allows access to medical records</li>
+                <li>GP surgery online information (linkage key) – which allows access to medical records (IM1 PFS API connected services only)</li>
                 </ul>
                               Claims are not automatically provided to the partner service. Some claims will need to be requested and then approved by NHS login. <a href="/nhslogin/scopes-and-claims/">View scopes and claims for more information</a>.
               </div>
@@ -721,7 +721,7 @@
 <p>In addition to what users can do with medium level verification (P5), users can also:</p>
 <ul>
 <li>Enquire against official record, e.g. read medical record, view NHS number, order repeat prescriptions, view SCR or detailed record, manage / view appointments, view tailored online NHS services and online content</li>
-<li>Record medical data into private healthcare consultation record</li>
+<li>Record medical data into healthcare consultation record (can include GP record or an NHS commissioned service healthcare record)</li>
 <li>Enable delegated access for another validated individual</li>
 <li>Register for online account where treatment requires high level identity assurance or access to / adding to existing medical record</li>
 <li>Record new phone number or new email address online</li>
