@@ -12,7 +12,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '13.5.0'
+          node-version: '16.x'
       - name: Install npm packages
         run: npm ci
       - name: Build Deployment Package
@@ -22,4 +22,4 @@ jobs:
         env:
           PUBLISH_DIR: _site
           PUBLISH_BRANCH: gh-pages
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN  }}
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
