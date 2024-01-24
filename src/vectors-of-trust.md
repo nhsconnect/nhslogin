@@ -3,28 +3,15 @@ layout: base.njk
 title: Introduction to Vectors of Trust
 ---
 
-Vectors of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.
+Vectors of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows you to request the appropriate levels of authentication and identity verification required for users to gain access to your service. This will be determined by the transactions the user performs in your service.
 
-Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.
-
-<div class="nhsuk-inset-text">
-  <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>A partner must specify the minimum authentication requirements in line with the required verification levels.</p>
-  <p>We recommend using Medium or High authentication to make sure users can login.</p>
-</div>
+Your service should include a vector value in the query string as part of the initialisation of the OIDC flow. 
 
 ---
 
 ## Authentication credentials
 
 NHS login supports the following types of authentication credentials. Note that the credential component may occur more than once.
-
-<div class="nhsuk-warning-callout">
-  <h3 class="nhsuk-warning-callout__label">
-    Important<span class="nhsuk-u-visually-hidden">:</span>
-  </h3>
-  <p>If you do not provide the right level of authentication for your service, or you fail to specify a query string, the user may need to sign-in via NHS login to meet the required level.</p>
-</div>
 
 <table role="table" class="nhsuk-table-responsive">
   <caption class="nhsuk-table__caption">NHS login Authentication Context Class</caption>

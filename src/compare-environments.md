@@ -3,7 +3,81 @@ layout: base.njk
 title: Compare NHS login environments
 ---
 
-Compare and understand the differences and transitions between our 3 different environments.
+Compare and understand the differences and transitions between our 4 different environments.
+
+---
+
+
+
+<div id="mock" class="design-example">
+
+<h2>Mock environment</h2>
+<p>We have developed a lightweight <a href="https://oidc.mock.signin.nhs.uk/client" target="_blank">mock environment</a> that is a representation of our OIDC endpoints. The mock is entirely self-service and requires no registration.</p>
+
+<div class="code-snippet">
+          <ul class="app-tabs" role="tablist">
+              <li class="app-tabs__item app-tabs__item--current" role="presentation" data-index="ex-1">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                Purpose
+                </a>
+              </li>
+              <li class="app-tabs__item" role="presentation" data-index="ex-2">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                Requirements
+                </a>
+              </li>
+            <li class="app-tabs__item" role="presentation" data-index="ex-3">
+                <a href="javascript:void(0);" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                Restrictions
+                </a>
+              </li>
+          </ul>
+        <div class="app-tabs__container js-tabs__container" id="default-example" role="tabpanel">
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-1">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  Purpose
+                </a>
+              </div>
+            <div class="code-snippet__preformatted" data-index="ex-1">
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+              <ul>
+              <li>Explore the NHS login service and complete a proof of concept</li>
+              </div>
+            </div>
+              <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-2">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                Requirements
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-2">
+                <div class="code-snippet__macro">
+                </div>
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+              <ul>
+              <li>ClientID and registered public key</li>
+                </ul>
+              </div>
+            </div>
+            <div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="ex-3">
+                <a href="" role="tab" aria-controls="default-example" data-track="tab-html" aria-selected="true">
+                  Restrictions
+                </a>
+              </div>
+            <div class="code-snippet__preformatted js-hidden" data-index="ex-3">
+                <div class="code-snippet__macro">
+                </div>
+              <div class="app-code-snippet__macro"></div>
+              <div class="app-code-snippet__container">
+              <ul>
+              <li>Only a simple mock environment</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
 
 ---
 

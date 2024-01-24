@@ -30,9 +30,6 @@ title: Scopes and claims
       <a class="nhsuk-contents-list__link" href="/nhslogin/scopes-and-claims#phone">Phone number</a>
     </li>
     <li class="nhsuk-contents-list__item">
-      <a class="nhsuk-contents-list__link" href="/nhslogin/scopes-and-claims#landline">Landline number</a>
-    </li>
-    <li class="nhsuk-contents-list__item">
       <a class="nhsuk-contents-list__link" href="/nhslogin/scopes-and-claims#gp_registration_details">GP registration details</a>
     </li>
     <li class="nhsuk-contents-list__item">
@@ -121,17 +118,6 @@ title: Scopes and claims
       <td class="nhsuk-table__cell ">Yes</td>
       <td class="nhsuk-table__cell ">Yes</td>
     </tr>
-    </tr>
-        </tr>
-        <tr role="row" class="nhsuk-table__row">
-      <td class="nhsuk-table__cell" id="landline">Landline number: <code>landline</code></td>
-      <td class="nhsuk-table__cell ">• Landline number: <code>landline_number</code><br>
-        • Verified landline number: <code>landline_number_verified</code><br></code>
-      </td>
-      <td class="nhsuk-table__cell ">Yes</td>
-      <td class="nhsuk-table__cell ">Yes</td>
-      <td class="nhsuk-table__cell ">Yes</td>
-    </tr>
         <tr role="row" class="nhsuk-table__row">
       <td class="nhsuk-table__cell" id="gp_registration_details">GP registration details: <code>gp_registration_details</code><span style="vertical-align:super;font-size:70%">5</span></td>
       <td class="nhsuk-table__cell ">• ODS code: <code>gp_ods_code</code></td>
@@ -145,7 +131,7 @@ title: Scopes and claims
 • ODS code: <code>gp_ods_code</code><br>
 • Account ID: <code>gp_user_id</code></td>
       <td class="nhsuk-table__cell ">No</td>
-      <td class="nhsuk-table__cell ">No</td>
+      <td class="nhsuk-table__cell ">Yes</td>
       <td class="nhsuk-table__cell ">Yes<span style="vertical-align:super;font-size:70%">6</span></td>
     </tr>
         <tr role="row" class="nhsuk-table__row">
