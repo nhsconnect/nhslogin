@@ -80,7 +80,7 @@ title: Sharing a user's NHS login information with your service
               <h2 id="wayfinder">
                 Services that use Wayfinder
               </h2>
-              <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder, such as Health Call.</p>
+              <p class="nhsuk-card__description">Use this version of the no-consent error screen content guidance if your website or app uses Wayfinder.</p>
               <a href="/nhslogin/images/Guidance-example-wayfinder.png" target="_blank" rel="noopener noreferrer">
           Open this example in new window
         </a>
