@@ -12,10 +12,16 @@ To help users do this, partner services need to create a link from their service
 ![diagram](nhslogin/images/Managelogin-NHSApp-small.png)
 
 ### NHS login currently allows users to:
-- change their email address
-- change their password
-- change their mobile phone number
-- delete their NHS login
+- change email
+- change password
+- add and change mobile phone number
+- add and change landline number
+- set up a passkey
+- remove a passkey
+
+### Higher level verification (P9) access allows users to:
+- update email address in Personal Demographics Service (PDS)
+- update mobile phone number in Personal Demographics Service (PDS)
 
 ![diagram](nhslogin/images/example_settings_smallest.png)
 
