@@ -519,16 +519,17 @@
               Biometric FIDO Authentication
             </h1>
 
-            <div class="nhsuk-warning-callout">
-  <h3 class="nhsuk-warning-callout__label">
-    Important<span class="nhsuk-u-visually-hidden">:</span>
-  </h3>
-  <p>We are currently adding FIDO2 authentication to NHS login.</p>
-  <p>You should avoid adding our existing biometric capabilities to your service as FIDO2 will replace this.</p>
-</div>
-<p class="nhsuk-body">FIDO2 will offer a secure method of authentication, allowing users to access NHS services by using biometrics, PIN, or security keys instead of traditional passwords.
-<p>If you're interested in adding FIDO2 authentication and would like to be involved in our testing, contact us via <a href="https://nhs-login-support-slack-invite.herokuapp.com">Slack</a> or email <a href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>.</p>
-<p>You can find out more about how we currently use FIDO by reading the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">external interface specification</a> (EIS). </p></p>
+            <p class="nhsuk-body">NHS login offers both FIDO1 and FIDO2 (passkeys).
+<p>Passkeys are a secure method of authentication, allowing users to access NHS services by using biometrics, PIN, or security keys.</p>
+<p>The main advantage of FIDO2 is that it enables FIDO credentials to roam across multiple devices. This allows users to register once and authenticate seamlessly on different devices. In contrast, FIDO1 is typically tied to a single device.</p>
+<h3>FIDO2 on WebView apps</h3>
+<p>WebViews do not support FIDO2 passkeys. If a mobile app uses WebViews instead of the native app, users will not be able to add a passkey or use their existing passkeys to log in.</p>
+<p>Further information on this issue and other ways an app browser can support passkeys:</p>
+<ul>
+<li><a href="https://www.corbado.com/blog/native-app-passkeys">Native App Passkeys: Native vs. WebView Implementation</a></li>
+<li><a href="https://help.duo.com/s/article/8433?language=en_US">Guide to iOS and Android WebAuthn Support for Native Applications</a></li> 
+</ul>
+<p>If your app does not support FIDO2 and you want to implement FIDO1, find out how we currently use FIDO on our <a href="http://localhost:8080/nhslogin/fido/">NHS login Interface Specification</a>.</p>
 
 
      <div class="app-edit-instructions">
