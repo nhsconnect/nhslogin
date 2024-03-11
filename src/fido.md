@@ -21,4 +21,4 @@ Further information on this issue and other ways an app browser can support pass
 <li><a href="https://help.duo.com/s/article/8433?language=en_US">Guide to iOS and Android WebAuthn Support for Native Applications</a></li> 
 </ul>
 
-If your app does not support FIDO2 and you want to implement FIDO1, find out how we currently use FIDO on our <a href="http://localhost:8080/nhslogin/fido/">NHS login Interface Specification</a>.
+If your app does not support FIDO2 and you want to implement FIDO1, find out how we currently use FIDO on our <a href="/nhslogin/interface-spec-doc/">NHS login Interface Specification</a>.
