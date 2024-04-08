@@ -7,6 +7,8 @@ title: Adding the NHS login button to your website or app
 
 <p>We will have regular checks with you to make sure you are aligning to these guidelines. We will also review the placement and visibility of the NHS login button on your website or app.</p>
 
+<p>All references to NHS login must be with a lower case L.</p>
+
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
   <p>To integrate with, or continue using NHS login on your website or app, you will need to provide evidence that you align to these guidelines.</p>

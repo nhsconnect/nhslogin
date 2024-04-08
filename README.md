@@ -18,7 +18,7 @@ To run locally:
 
 ```npm install```
 
-```npx @11ty/eleventy --serve```
+``npx @11ty/eleventy --serve````
 
 More 11ty guidance [here](https://www.11ty.dev/docs/getting-started/).
 
