@@ -523,11 +523,11 @@
 <p>If a user does not agree to share their NHS login information, your service should display a clear message telling them they can either continue their journey or cannot use your service.</p>
 <hr>
 <h2 id="journey">User journey asking users to share their NHS login information</h2>
-<a href="/nhslogin/images/Guidance-userjourney-no-consent.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+<a href="/nhslogin/images/Guidance-user-journey-no-consent.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
     Open this user journey flow in new window
   </a>
   <div class="code-embed">
-  <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-userjourney-no-consent.png" alt="Diagram showing the flow that a user goes down when they do not agree to share their NHS login information with your service">
+  <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-user-journey-no-consent.png" alt="Diagram showing the flow that a user goes down when they do not agree to share their NHS login information with your service">
   </div>
 <br>
 <p>We ask users to agree to share their NHS login information with your service when:</p>
@@ -658,10 +658,18 @@ This should remain unchanged. Do not use the name of your service as it may not 
         </div>
 </div>
 <p><strong>Behaviour of the back button in the browser</strong></p>
- <p>When a user selects the back button in the browser, the preferred action for your service's no-consent error screen is to reload. </p>
- <p>Current guidance instructs the user to close your service's no-consent error screen tab to return to the NHS App in the browser.
+<p>Current guidance instructs the user to close your service's no-consent error screen tab to return to the NHS App in the browser.
 </p>
 <p>Do not add your own back button to this page.</p>
+ <p>When a user selects the back button in the browser, the preferred action for your service's no-consent error screen is to reload. In a service where this is not possible, NHS login has implemented a technical solution to prevent users from entering the service again by means of the back button in the browser.</p>
+ <p>This solution means that if users go back using the browser back button and do not have either NHS authorisation cookies, or an ID token in place, they will be directed to an error screen within NHS login.</p>
+   <a href="/nhslogin/images/no-consent-guard-login-error-screen.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
+      Open this example of the NHS login internal error screen in new window
+    </a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="/nhslogin/images/no-consent-guard-login-error-screen.png" alt="Diagram showing the internal NHS login error screen shown to a user who does not have NHS authorisation cookies or an ID token in place">
+    </div>
+  <p style="margin-top: 24px">This error screen will be the responsibility of NHS login and no additional steps need to be taken by your service.</p>
 <h4 id="mobile">Services that use NHS App in the mobile application</h4>
 <div class="design-example">
         <a href="/nhslogin/example-no-consent-content-wayfinder" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">
