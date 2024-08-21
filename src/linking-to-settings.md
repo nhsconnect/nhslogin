@@ -7,8 +7,7 @@ title: NHS login user settings
 
 NHS login provides capability for users to change their NHS login account settings online, help reducing calls into partner service support desks. 
 
-To help users do this, partner services need to create a link from their service to the NHS login settings page. Users will need to be logged into the partner service to use this link.
-
+To enable this, users must be logged into the partner service. The partner service needs to create a Single Sign On (SSO) link from their service to the NHS login settings page. Users must not need to re-authenticate to access the settings page.
 ![diagram](nhslogin/images/Managelogin-NHSApp-small.png)
 
 ### NHS login currently allows users to:
