@@ -17,8 +17,7 @@ Password managers only work when the domain can be identified by the OS. In a We
 This is the same reason password managers don't – the browser can't trust/see the domain that is being used in an embedded window
 
 ### Embedded views are insecure
-Google prevented services using their Identity Provider (Google Sign In) using this approach in Sept 2021: https://developers.googleblog.com/2021/06/upcoming-security-changes-to-
-googles-oauth-2.0-authorization-endpoint.html
+Google prevented services using their Identity Provider (Google Sign In) using this approach in Sept 2021: https://developers.googleblog.com/2021/06/upcoming-security-changes-to-googles-oauth-2.0-authorization-endpoint.html
 
 ### Cookies are not persisted
 This results in the user having to accept cookies every time and can prevent "remember my device" feature working
