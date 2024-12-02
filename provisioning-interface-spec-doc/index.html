@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>Technical Conformance</title>
+<title>Provision Account External Interface Specification</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -520,36 +520,17 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Technical Conformance
+              Provision Account External Interface Specification
             </h1>
 
-            <p>During onboarding you will be provided with access to an Integration Environment to test a production-like setup.</p>
-<h2>IM1 Suppliers</h2>
-<p>IM1 suppliers have the option to test the GP Online and online identity verification journey in the Integration Environment.</p>
-<ul>
-<li>NHS login provide a set of patient records that exist on the Spine Integration Environment which IM1 suppliers can use</li>
-<li>IM1 suppliers should create new records in their local GP system based on the patient details provided by NHS login</li>
-<li>IM1 suppliers should then create linkage key, account ID and ODS code details against the records created in the local GP system. These details should then be shared with NHS login</li>
-<li>IM1 suppliers should also create new NHS login accounts by registering with an email and password</li>
-<li>NHS login will update the linkage key, account ID, ODS code and IM1 token in the Integration Environment</li>
-<li>IM1 suppliers should then be able to login successfully and proceed through either the GP Online or the online identity verification journey</li>
-<li>Once submitted suppliers should notify NHS login to approve the requests</li>
-<li>IM1 suppliers should be able to login successfully and be redirect to the supplier's service with patient record which exists in the local GP system</li>
-</ul>
-<h2>Non-IM1 Suppliers</h2>
-<p>Non-IM1 suppliers can choose to use the basic patient records provided to proceed through the online identity verification journey. Non-IM1 suppliers now also have the abiliy to test the GP online journey.</p>
-<ul>
-<li>NHS login provide a set of patient records that exist in the Integration Environment, the details include linkage Key, account ID and ODS code</li>
-<li>Non-IM1 suppliers can create new NHS login accounts and proceed through the GP Online Journey by providing valid details from the Integration Environment</li>
-<li>NHS login accounts verified against the Integration Environment are successfully redirected to the supplier's service</li>
-</ul>
-<h2>Testing FIDO UAF flow</h2>
-<p>Please get in touch if you would like to add FIDO UAF (TouchID etc.) to your app. You can find FIDO clients for iOS and Android <a href="https://github.com/nhsconnect?utf8=%E2%9C%93&amp;q=fido&amp;type=&amp;language=">here</a>.</p>
+            <h2>The purpose of this document</h2>
+<p>NHS login uses OAuth 2.0 to send basic profile information about the end user to partner services.</p>
+<p>This <a href="https://github.com/nhsconnect/nhslogin/blob/main/NHS%25login%25-%25Interface%25Specification%25-%25Provision%Account%25v1.0.docx">specification document</a> defines the provision account interface implemented by NHS login and describes the data flow supported by this interface.</p>
 
 
      <div class="app-edit-instructions">
               <hr />
-              <p><a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/technical-conformance.md">Edit this page</a> on GitHub
+              <p><a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/provisioning-interface-spec-doc.md">Edit this page</a> on GitHub
               </p>
       </div>
 
