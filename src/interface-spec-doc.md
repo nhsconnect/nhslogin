@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: External Interface Specification 
+title: Identity Federation External Interface Specification 
 ---
 
 ## The purpose of this document
