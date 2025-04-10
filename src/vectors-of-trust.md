@@ -179,10 +179,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
       <th role="columnheader" class="" scope="col">
-        Authentication &<br> verification level
-      </th>
-      <th role="columnheader" class="" scope="col">
-        Archetype
+        Verification &<br> authentication level
       </th>
       <th role="columnheader" class="" scope="col">
         Vector
@@ -195,10 +192,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Low : Low
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A8 and A11
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>Low : Weak
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P0.Cp”
@@ -209,10 +203,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Medium : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A3
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Medium
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P5.Cp.Cd”
@@ -223,10 +214,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Low : Low
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Medium : High </span>A3
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>Low : Weak
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P5.Cp.Ck”
@@ -237,10 +225,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cp.Cd”
@@ -251,10 +236,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cp.Ck”
@@ -265,10 +247,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cm”
@@ -280,14 +259,12 @@ A profile is defined as the combination of Vectors of Trust that you can request
   </tbody>
 </table>
 
-<p>
 <br>
-NHS login offers a level of identity verification. NHS login does not support archetypes A2 and A9 (no identity verification / low authentication). If your features map to A2 and A9 contact us to ask for guidance via <a href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>.
-</p>
+
 
 ### Example 1: Partner service provides access to sensitive data
 
-This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'. The service requires high verification and high authentication. 
+This example service requires high verification and strong authentication. 
 
 The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
@@ -295,7 +272,7 @@ The service sends the following as acceptable Vectors in the ‘vtr’ parameter
 
 ### Example 2: Partner service provides access to basic data (not sensitive)
 
-This example maps onto archetype A3 within the standard 'DCB3051'. The service requires medium verification and high authentication. 
+This example service requires medium verification and strong authentication. 
 
 The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
@@ -303,7 +280,7 @@ The service sends the following as acceptable Vectors in the ‘vtr’ parameter
 
 ### Example 3: Partner service provides access to both basic data and sensitive data
 
-This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and high authentication.
+This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and strong authentication.
 
 The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
@@ -311,9 +288,9 @@ The service sends the following as acceptable Vectors in the ‘vtr’ parameter
 
 A successfully authenticated user can be either medium or high level in terms of identity verification.
 
-The service can offer all functionalities to a user that meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and high authentication only.
+The service can offer all functionalities to a user that meets the service requirements of high verification and strong authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and strong authentication only.
 
-When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication (with Single Sign On allowed).
+When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and strong authentication (with Single Sign On allowed).
 
 The service sends the following as acceptable Vectors in the ‘vtr’ parameter:
 
