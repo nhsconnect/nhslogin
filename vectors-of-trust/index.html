@@ -683,10 +683,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
       <th role="columnheader" class="" scope="col">
-        Authentication &<br> verification level
-      </th>
-      <th role="columnheader" class="" scope="col">
-        Archetype
+        Verification &<br> authentication level
       </th>
       <th role="columnheader" class="" scope="col">
         Vector
@@ -699,10 +696,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Low : Low
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A8 and A11
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>Low : Weak
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P0.Cp”
@@ -713,10 +707,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Medium : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A3
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Medium
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P5.Cp.Cd”
@@ -727,10 +718,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>Low : Low
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Medium : High </span>A3
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>Low : Weak
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P5.Cp.Ck”
@@ -741,10 +729,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cp.Cd”
@@ -755,10 +740,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cp.Ck”
@@ -769,10 +751,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
     </tr>
         <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Authentication & verification level </span>High : High
-      </td>
-      <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Archetype </span>A1, A4, A5, A6, and A7
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>High : Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P9.Cm”
@@ -783,25 +762,22 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
     </tr>
   </tbody>
 </table>
-<p>
 <br>
-NHS login offers a level of identity verification. NHS login does not support archetypes A2 and A9 (no identity verification / low authentication). If your features map to A2 and A9 contact us to ask for guidance via <a href="mailto:engage.nhslogin@nhs.net">engage.nhslogin@nhs.net</a>.
-</p>
 <h3>Example 1: Partner service provides access to sensitive data</h3>
-<p>This example maps onto archetypes A1, A4, A5, A6, A7 within the standard 'DCB3051'. The service requires high verification and high authentication.</p>
+<p>This example service requires high verification and strong authentication.</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code></p>
 <h3>Example 2: Partner service provides access to basic data (not sensitive)</h3>
-<p>This example maps onto archetype A3 within the standard 'DCB3051'. The service requires medium verification and high authentication.</p>
+<p>This example service requires medium verification and strong authentication.</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”]</code></p>
 <h3>Example 3: Partner service provides access to both basic data and sensitive data</h3>
-<p>This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and high authentication.</p>
+<p>This example maps onto a service offering multiple features, of which some require basic user data, and some require sensitive user data. The service requires medium verification and strong authentication.</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>[“P5.Cp.Cd”,“P5.Cp.Ck”,“P5.Cm”,“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code></p>
 <p>A successfully authenticated user can be either medium or high level in terms of identity verification.</p>
-<p>The service can offer all functionalities to a user that meets the service requirements of high verification and high authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and high authentication only.</p>
-<p>When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and high authentication (with Single Sign On allowed).</p>
+<p>The service can offer all functionalities to a user that meets the service requirements of high verification and strong authentication. The service can only offer basic features to users with medium level verification at their initial login, as they meet the service requirements of medium verification and strong authentication only.</p>
+<p>When a user with medium level verification attempts to access other features supported by sensitive data, the service then requires high verification and strong authentication (with Single Sign On allowed).</p>
 <p>The service sends the following as acceptable Vectors in the ‘vtr’ parameter:</p>
 <p><code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code></p>
 <p>The user is prompted to undertake a verification step-up journey to take the user verification level from medium to high.</p>
