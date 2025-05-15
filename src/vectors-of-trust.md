@@ -22,7 +22,7 @@ Multi-factor authentication (MFA), also known as two-step verification or two-fa
 This typically includes:
 <ul>
   <li>something the user knows, usually a password or PIN </li>
-  <li>something they have, such as phone that can recieve one-time passcodes (OTPs) by text</li>
+  <li>something they have, such as phone that can recieve one-time passcodes (OTPs) by SMS text</li>
   <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
 </ul>
 
@@ -35,7 +35,6 @@ Secure ways to send OTPs include:
   <li>SMS messages sent to the user’s registered phone number</li>
   <li>hardware security keys, for example USB devices that can generate passcodes</li>
 </ul>
-
 
 ---
 
