@@ -9,22 +9,39 @@ Your service should include a vector value in the query string as part of the in
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>A partner must specify the minimum authentication requirements in line with the required verification levels.</p>
-  <p>We recommend using Medium or High authentication to make sure users can login.</p>
+
+You need to decide the identity authentication and verification level for your product, based on the examples in [Appendix D of the DAPB3051 Identity Verification and
+Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/binaries/content/assets/website-assets/data-and-information/information-standards/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services/3051572024specificationimplementationxx.pdf).
+
+For example, if you need High : Strong authentication, then your product must have multi-factor authentication. </p>
 </div>
+
+## Multi-factor authentication (MFA)
+Multi-factor authentication (MFA), also known as two-step verification or two-factor authentication (2FA), requires users to provide at least two types of authentication. 
+
+This typically includes:
+<ul>
+  <li>something the user knows, usually a password or PIN </li>
+  <li>something they have, such as phone that can recieve one-time passcodes (OTPs) by text</li>
+  <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
+</ul>
+
+### Sending one-time passcodes (OTPs)
+One-time passcodes (OTPs) must be sent through a separate channel to the one a user registered with. This prevents bad actors, who may have a user’s email and password, accessing their account. 
+
+Secure ways to send OTPs include:  
+<ul>
+  <li>authenticator apps which generate time-limited OTPs on a separate device</li>
+  <li>SMS messages sent to the user’s registered phone number</li>
+  <li>hardware security keys, for example USB devices that can generate passcodes</li>
+</ul>
+
 
 ---
 
 ## Authentication credentials
 
 NHS login supports the following types of authentication credentials. Note that the credential component may occur more than once.
-
-<div class="nhsuk-warning-callout">
-  <h3 class="nhsuk-warning-callout__label">
-    Important<span class="nhsuk-u-visually-hidden">:</span>
-  </h3>
-  <p>If you do not provide the right level of authentication for your service, or you fail to specify a query string, the user may need to sign-in via NHS login to meet the required level.</p>
-</div>
 
 <table role="table" class="nhsuk-table-responsive">
   <caption class="nhsuk-table__caption">NHS login Authentication Context Class</caption>
@@ -44,7 +61,7 @@ NHS login supports the following types of authentication credentials. Note that 
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Weak
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Basic
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Cp - Email address and password
@@ -55,7 +72,7 @@ NHS login supports the following types of authentication credentials. Note that 
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Weak
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Basic
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Cd - Registered device
@@ -94,7 +111,7 @@ NHS login supports the following types of authentication credentials. Note that 
 
 ## Identity verification levels
 
-The NHS login supports the following levels of identification verification. These are based upon [DCB3051 Identity Verification and
+The NHS login supports the following levels of identification verification. These are based upon [DAPB3051 Identity Verification and
 Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
 
 
@@ -192,7 +209,7 @@ A profile is defined as the combination of Vectors of Trust that you can request
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>Low : Weak
+        <span class="nhsuk-table-responsive__heading">Verification & authentication level </span>Low : Basic
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Vector </span>“P0.Cp”
