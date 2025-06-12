@@ -1,9 +1,9 @@
 ---
 layout: base.njk
-title: Artificial intelligence
+title: Artificial intelligence (AI)
 ---
 
-<p>If your service uses Artificial intelligence (AI), we'll need to understand and approve its use of any data provided by us.</p>
+<p>If your service uses artificial intelligence (AI), we'll need to understand and approve how it uses any data provided by us.</p>
 
 <p>This includes any learning or downstream usage of data provided by NHS login</p>
 
