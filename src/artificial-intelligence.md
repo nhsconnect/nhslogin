@@ -3,9 +3,9 @@ layout: base.njk
 title: Artificial intelligence
 ---
 
-<p>If your service uses Artificial intelligence (AI), we'll need to understand and assure how it uses any data provided by us.</p>
+<p>If your service uses Artificial intelligence (AI), we'll need to understand and approve its use of any data provided by us.</p>
 
-<p>This includes any learning or downstream usage of NHS login data.</p>
+<p>This includes any learning or downstream usage of data provided by NHS login</p>
 
 <p>We follow the National Cyber Security Centre (NCSC) definition of AI as ‘Any computer system that can perform tasks usually requiring human intelligence’.</p>
 
