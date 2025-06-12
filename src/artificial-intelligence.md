@@ -9,12 +9,13 @@ title: Artificial intelligence
 
 <p>We follow the National Cyber Security Centre (NCSC) definition of AI as ‘Any computer system that can perform tasks usually requiring human intelligence’.</p>
 
-<p>This could include:.</p>
+<p>This can include, for example:</p>
 <ul>
   <li>text generation</li>
   <li>speech recognition</li>
-  <li>visual perception</li>
   <li>translation between languages</li>
+  <li>visual perception</li>
+  
 </ul>
 
 <p>For more information, read the <a href="https://www.ncsc.gov.uk/guidance/ai-and-cyber-security-what-you-need-to-know" target="_blank"> NCSC guidance on AI and cyber security</a>.</p>
