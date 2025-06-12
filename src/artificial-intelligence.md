@@ -19,4 +19,4 @@ title: Artificial intelligence (AI)
 
 <p>For more information, read the <a href="https://www.ncsc.gov.uk/guidance/ai-and-cyber-security-what-you-need-to-know" target="_blank"> NCSC guidance on AI and cyber security</a>.</p>
 
-<p>If your service does use AI we’ll ask you about it at your <a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/apply-for-nhs-login#application-review-call" target="_blank">Application Review Call.</p> 
+<p>If your service does use AI we’ll ask you about it at your <a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/apply-for-nhs-login#application-review-call" target="_blank">Application Review Call</a>.</p> 
