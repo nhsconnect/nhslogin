@@ -5,7 +5,7 @@ title: Artificial intelligence (AI)
 
 <p>If your service uses artificial intelligence (AI), we'll need to understand and approve its use of any data provided by us.</p>
 
-<p>This includes any learning or downstream usage of data provided by NHS login</p>
+<p>This includes any learning or downstream usage of data provided by NHS login.</p>
 
 <p>We follow the National Cyber Security Centre (NCSC) definition of AI as ‘any computer system that can perform tasks usually requiring human intelligence’.</p>
 
