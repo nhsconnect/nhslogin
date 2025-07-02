@@ -46,7 +46,7 @@ If the RP determines that the claims returned from `gp_integration_credentials` 
 
 ## GP integration credentials are no longer valid
 
-The GP credentials might no longer be valid due to:
+The GP credentials might no longer be valid if:
 
 1. the user has moved GP surgery
 2. the GP surgery has changed GP systems
