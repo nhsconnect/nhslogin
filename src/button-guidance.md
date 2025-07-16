@@ -1130,7 +1130,7 @@ title: Adding the NHS login button to your website or app
 
 
 <p>If you use the wrong version of the NHS login button on your website or app, we will ask you to change to the correct one.</p>
-<p>Email us at engage.nhslogin@nhs.net if you are unsure which version of the NHS login button to use.</p> 
+<p>Contact us at engage.nhslogin@nhs.net if you are unsure which version of the NHS login button to use.</p> 
 
 ---
 
