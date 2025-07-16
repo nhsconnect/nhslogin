@@ -1121,7 +1121,7 @@ title: Adding the NHS login button to your website or app
   </div>
 </div>
 
-<p><a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other" target="_blank">Download the NHS login button package for webistes or apps that do not use the NHS logo</a>.</p>
+<p><a href="https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other" target="_blank">Download the NHS login button package for websites or apps that do not use the NHS logo</a>.</p>
 
 </div>
 </div>
@@ -1130,7 +1130,7 @@ title: Adding the NHS login button to your website or app
 
 
 <p>If you use the wrong version of the NHS login button on your website or app, we will ask you to change to the correct one.</p>
-<p>Contact us if you are unsure which version of the NHS login is right for your website or app.</p> 
+<p>Email us at engage.nhslogin@nhs.net if you are unsure which version of the NHS login button to use.</p> 
 
 ---
 
