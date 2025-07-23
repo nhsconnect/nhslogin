@@ -74,8 +74,8 @@ For example, a user's GP access may be revoked due to multiple failed login atte
           </span>
         </summary>
       <ul class="nhsuk-inside-box-text" style="max-width:none;">    
-EMIS Web accounts can be reset, either by:
-          
+
+EMIS Web accounts can be reset, either by: 
 <ul>
 <li>the user</li>
 <li>the GP practice (for example, when suspicious activity is detected)</li>
