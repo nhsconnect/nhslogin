@@ -611,51 +611,13 @@
 <li>RP should cater for a user journey which prevents the user getting into an endless “retrieve GP credential” loop if the credentials genuinely can’t be retrieved.</li>
 </ul>
 <hr>
-<div class="nhsuk-card nhsuk-card" id="NHSDS">
-  <div class="nhsuk-card__content">
-<h2> Guidance for EMIS systems</h2>
-      <details class="nhsuk-details nhsuk-expander--no-outline">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Handling account resets and restrictions
-          </span>
-        </summary>
-      <ul class="nhsuk-inside-box-text" style="max-width:none;">    
-<p>EMIS Web accounts can be reset, either by:</p>
+<h2>GP systems coverage</h2>
+<p>The platforms that NHS login provides coverage for GP login credentials are:</p>
 <ul>
-<li>the user</li>
-<li>the GP practice (for example, when suspicious activity is detected)</li>
+<li>EMIS: 100%</li>
+<li>TPP: 100%</li>
+<li>Vision: 100% (250 in total)</li>
 </ul>
-<p>After a reset, the account enters a “Restricted” state until the user reauthenticates via NHS login.</p>
-<p>To resolve this, if your POST /Session response includes: <code>ApplicationLinkLevel:&quot;Restricted&quot;</code> redirect the user back to NHS login.</p>
-<p>They will be prompted to reauthenticate, lifting the restriction on their account.</p>
-<details class="nhsuk-details nhsuk-expander--no-outline">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-            Avoiding unnecessary calls to me/applications 
-          </span>
-        </summary>
-      <div class="nhsuk-details__text nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full width">
-      <ul class="nhsuk-inside-box-text" style="max-width:none;">    
-<p>Some partners are triggering unecessary <code>me_applications</code> on every NHS login. This results in a confirmation email being sent to the user each time.</p>
-<p>To avoid this, follow these steps:</p>
-<p>Initial login:</p>
-<ul>
-<li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
-<li>Use this linkage key to call `me_applications` and obtain the Access Identity GUID.</li>
-<li>Store both the linkage key and the Access Identity GUID securely.</li>
-</ul>
-<p>Subsequent logins:</p>
-<ul>
-<li>On each login, compare the returned linkage key with the one you've stored.</li>
-<li>If it's the same: use the stored GUID to establish the user session.</li>
-<li>If it's different: use the new linkage key to retrieve a fresh GUID via me/applications, then update your stored values.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 
 
      <div class="app-edit-instructions">
