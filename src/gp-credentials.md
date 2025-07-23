@@ -64,8 +64,6 @@ For example, a user's GP access may be revoked due to multiple failed login atte
 
 <div class="nhsuk-card nhsuk-card" id="NHSDS">
   <div class="nhsuk-card__content">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
               <h2>
                Guidance for EMIS systems
               </h2>
@@ -75,8 +73,6 @@ For example, a user's GP access may be revoked due to multiple failed login atte
             Handling account resets and restrictions
           </span>
         </summary>
-      <div class="nhsuk-details__text nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full width">
       <ul class="nhsuk-inside-box-text" style="max-width:none;">    
 EMIS Web accounts can be reset, either by:
           
@@ -128,13 +124,3 @@ Subsequent logins:
 </div>
 </div>
 </div>
-
----
-
-<h2>GP systems coverage</h2>
-
-The platforms that NHS login provides coverage for GP login credentials are:
-
-- EMIS: 100%
-- TPP: 100%
-- Vision: 100% (250 in total)
