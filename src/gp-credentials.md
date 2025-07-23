@@ -64,9 +64,7 @@ For example, a user's GP access may be revoked due to multiple failed login atte
 
 <div class="nhsuk-card nhsuk-card" id="NHSDS">
   <div class="nhsuk-card__content">
-              <h2>
-               Guidance for EMIS systems
-              </h2>
+<h2> Guidance for EMIS systems</h2>
       <details class="nhsuk-details nhsuk-expander--no-outline">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
@@ -86,11 +84,6 @@ After a reset, the account enters a “Restricted” state until the user reauth
 To resolve this, if your POST /Session response includes: `ApplicationLinkLevel:"Restricted"` redirect the user back to NHS login. 
 
 They will be prompted to reauthenticate, lifting the restriction on their account.
-
-</div>
-</div>
-</div>
-</div>
 
 <details class="nhsuk-details nhsuk-expander--no-outline">
         <summary class="nhsuk-details__summary">
