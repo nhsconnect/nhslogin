@@ -567,7 +567,7 @@
               Introduction to Vectors of Trust
             </h1>
 
-            <p>Vectors of Trust <a href="https://tools.ietf.org/html/rfc8485">(VoT RFC 8485)</a> allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.</p>
+            <p>A Vector of Trust <a href="https://tools.ietf.org/html/rfc8485">(VoT RFC 8485)</a> allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.</p>
 <p>Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.</p>
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -580,7 +580,7 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
 <p>This typically includes:</p>
 <ul>
   <li>something the user knows, usually a password or PIN </li>
-  <li>something they have, such as phone that can recieve one-time passcodes (OTPs) by SMS text</li>
+  <li>something they have, such as a phone that can recieve one-time passcodes (OTPs)</li>
   <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
 </ul>
 <h3>Sending one-time passcodes (OTPs)</h3>
@@ -705,7 +705,8 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
 <p>The client <strong>may</strong> request a set of acceptable VoT values with the &quot;vtr&quot; (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.</p>
 <p>The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Cm&quot;]</code> is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Cm&quot; simultaneously are acceptable for this transaction.</p>
 <p>Vector request values <strong>may</strong> omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.</p>
-<p>Omission of vtr will result in a default value of <code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code> being assumed.</p>
+<p>Omission of the &quot;vtr&quot; will result in a default value of <code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code> being assumed.
+<strong>Note:</strong> a VoT must be submitted in your SCAL and in your Environment Request Forms.</p>
 <hr>
 <h2>Returned Vectors of Trust values</h2>
 <p>The vector is sent as a string within the &quot;vot&quot; (vector of trust) claim in the ID and Access tokens. The trustmark that applies to this vector is sent as an HTTPS URL in the &quot;vtm&quot; (vector trust mark) claim to provide context to the vector.</p>
