@@ -22,7 +22,7 @@ Multi-factor authentication (MFA), also known as two-step verification or two-fa
 This typically includes:
 <ul>
   <li>something the user knows, usually a password or PIN </li>
-  <li>something they have, such as a phone that can recieve one-time passcodes (OTPs)</li>
+  <li>something they have, such as a phone that can receive one-time passcodes (OTPs)</li>
   <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
 </ul>
 
