@@ -3,7 +3,7 @@ layout: base.njk
 title: Introduction to Vectors of Trust
 ---
 
-Vectors of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.
+A Vector of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.
 
 Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.
 
@@ -22,7 +22,7 @@ Multi-factor authentication (MFA), also known as two-step verification or two-fa
 This typically includes:
 <ul>
   <li>something the user knows, usually a password or PIN </li>
-  <li>something they have, such as phone that can recieve one-time passcodes (OTPs) by SMS text</li>
+  <li>something they have, such as a phone that can recieve one-time passcodes (OTPs)</li>
   <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
 </ul>
 
@@ -164,7 +164,8 @@ The component values within each vector are ANDed together while the separate ve
 
 Vector request values **may** omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.
 
-Omission of vtr will result in a default value of `[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]` being assumed.
+Omission of the "vtr" will result in a default value of `[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]` being assumed. 
+**Note:** a VoT must be submitted in your SCAL and in your Environment Request Forms.
 
 ---
 
