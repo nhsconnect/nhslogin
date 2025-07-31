@@ -1134,11 +1134,6 @@ title: Adding the NHS login button to your website or app
 
 ---
 
-<h2 id="related-links">Related links</h2>
+<h2 id="related-links">Using the NHS Identity</h2>
 
-For detailed technical guidance on who can use NHS and NHS England Digital identities and how and where to apply them, visit:
-
-[NHS Identity Guidelines](https://www.england.nhs.uk/nhsidentity/identity-guidelines/ "NHS Identity Guidelines")
-
-[NHS England Digital Style Guidelines](https://digital.nhs.uk/about-nhs-digital/corporate-information-and-documents/nhs-digital-style-guidelines "NHS Digital Style Guidelines")
-
+Read the [NHS Identity guidelines](https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/) for detailed information on using the NHS brand in your service.
