@@ -71,15 +71,18 @@ The platforms that NHS login provides coverage for GP login credentials are:
 
 ---
 
+
 <div class="nhsuk-card nhsuk-card" id="NHSDS">
   <div class="nhsuk-card__content">
    <h2>Guidance for EMIS systems</h2>
-<details class="nhsuk-details nhsuk-expander--no-outline">
+  <details class="nhsuk-details nhsuk-expander--no-outline">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
            Handling account resets and restrictions
           </span>
         </summary>
+         <div class="nhsuk-details__text nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full width"> 
 <p>EMIS Web accounts can be reset, either by:</p>
  <ul>
 <li>the user</li>
@@ -88,16 +91,18 @@ The platforms that NHS login provides coverage for GP login credentials are:
 <h3>What do do in your application</h3>
 <p>If your POST /Session response includes: "ApplicationLinkLevel": "Restricted", redirect the user back to NHS login.
 
-They will be prompted to re-authenticate, lifting the restriction on their account.</p></div></div>
+They will be prompted to re-authenticate, lifting the restriction on their account.</p>
+</div></div>
   <details class="nhsuk-details nhsuk-expander--no-outline">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
            Avoiding unnecessary calls to me/applications
           </span>
         </summary>
+         <div class="nhsuk-details__text nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full width"> 
 <p>Some partners are triggering unnecessary me/applications on every NHS login. This results in a confirmation email being sent to the user each time.</p>
 To avoid this, follow these steps:
-          
 <h3>Initial login</h3>
       <ol>
         <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
@@ -110,4 +115,6 @@ To avoid this, follow these steps:
        <li>If it's different: use the new linkage key to retrieve a fresh GUID via me/applications, then update your stored values.</li></ol>         
 </div>
 </div>
-</div>
+
+---
+
