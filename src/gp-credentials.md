@@ -80,8 +80,6 @@ The platforms that NHS login provides coverage for GP login credentials are:
            Handling account resets and restrictions
           </span>
         </summary>
-         <div class="nhsuk-details__text nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full width"> 
 <p>EMIS Web accounts can be reset, either by:</p>
  <ul>
 <li>the user</li>
@@ -97,8 +95,6 @@ They will be prompted to re-authenticate, lifting the restriction on their accou
            Avoiding unnecessary calls to me/applications
           </span>
         </summary>
-         <div class="nhsuk-details__text nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full width"> 
 <p>Some partners are triggering unnecessary me/applications on every NHS login. This results in a confirmation email being sent to the user each time.</p>
 To avoid this, follow these steps:
           
