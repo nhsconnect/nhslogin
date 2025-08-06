@@ -69,4 +69,48 @@ The platforms that NHS login provides coverage for GP login credentials are:
 - EMIS: 100%
 - TPP: 100%
 
+---
 
+<div class="nhsuk-card nhsuk-card" id="NHSDS">
+  <div class="nhsuk-card__content">
+   <h2>Guidance for EMIS systems</h2>
+     <details class="nhsuk-details nhsuk-expander--no-outline">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Handling account resets and restrictions
+          </span>
+        </summary>
+         <div class="nhsuk-details__text nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full width"> 
+          <p>EMIS Web accounts can be reset, either by:</p>
+      <ul class="nhsuk-inside-box-text" style="max-width:none;">
+        <li>the user</li>
+        <li>the GP practice (for example, when suspicious activity is detected)</li> </ul>
+<p>After a reset, the account enters a “Restricted” state until the user re-authenticates via NHS login.</div>
+<h3>What do do in your application</h3>
+<p>If your POST /Session response includes: "ApplicationLinkLevel": "Restricted", redirect the user back to NHS login.
+
+They will be prompted to re-authenticate, lifting the restriction on their account.</p>
+</div></div>
+  <details class="nhsuk-details nhsuk-expander--no-outline">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+           Avoiding unnecessary calls to me/applications
+          </span>
+        </summary>
+         <div class="nhsuk-details__text nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full width"> 
+<p>Some partners are triggering unnecessary me/applications on every NHS login. This results in a confirmation email being sent to the user each time.</p>
+To avoid this, follow these steps:
+<h3>Initial login</h3>
+      <ol class="nhsuk-inside-box-text" style="max-width:none;">
+        <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
+        <li>Use this linkage key to call me/applications and obtain the Access Identity GUID.</li> 
+       <li>Store both the linkage key and the Access Identity GUID securely.</li></ol>
+<h3>Subsequent logins</h3>
+ <ol class="nhsuk-inside-box-text" style="max-width:none;">
+        <li>Compare the returned linkage key with the one you've stored</li>
+        <li>If it's the same: use the stored GUID to establish the user session.</li> 
+       <li>SIf it's different: use the new linkage key to retrieve a fresh GUID via me/applications, then update your stored values.</li></ol>         
+</div>
+</div>
