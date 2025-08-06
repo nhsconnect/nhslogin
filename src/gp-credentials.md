@@ -77,7 +77,7 @@ The platforms that NHS login provides coverage for GP login credentials are:
   <details class="nhsuk-details nhsuk-expander--no-outline">
         <summary class="nhsuk-details__summary">
           <span class="nhsuk-details__summary-text">
-           Avoiding unnecessary calls to me/applications
+           Handling account resets and restrictions
           </span>
         </summary>
          <div class="nhsuk-details__text nhsuk-grid-row">
