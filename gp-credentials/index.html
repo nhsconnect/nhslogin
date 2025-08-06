@@ -616,8 +616,76 @@
 <ul>
 <li>EMIS: 100%</li>
 <li>TPP: 100%</li>
-<li>Vision: 100% (250 in total)</li>
 </ul>
+<h2 class="nhsd-t-heading-xl" data-uipath="website.contentblock.section.title">
+Guidance for EMIS systems
+            </h2>
+            <div data-uipath="website.contentblock.section.content">
+            </div>
+        </div>
+    <div class="nhsd-m-expander nhsd-!t-margin-bottom-6" >
+        <div class= "nhsd-a-box
+                nhsd-a-box--bg-light-grey
+"
+        >
+            <details>
+                <summary class="nhsd-m-expander__heading-container" aria-label="TPP SystmOne: how to provide GP Online registration details">
+                    <span class="nhsd-m-expander__icon nhsd-!t-margin-right-1">
+                        <span class="nhsd-a-icon nhsd-a-icon--size-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16"  width="100%" height="100%">
+                                <path d="M12,8l-6.5,7L4,13.5L9.2,8L4,2.5L5.5,1L12,8z"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="nhsd-m-expander__heading nhsd-t-body">
+                            Handling account resets and restrictions
+                    </span>
+                </summary>
+                <div class="nhsd-m-expander__content-container">
+<p class="nhsd-t-body">EMIS Web accounts can be reset, either by:</p> <ul class="nhsd-t-list nhsd-t-list--bullet">
+ <li class="nhsd-t-body">the user</li>
+ <li class="nhsd-t-body">the GP practice (for example, when suspicious activity is detected)</li></ul> 
+ <h3 class="nhsd-t-heading-l">What do do in your application</h3> <p class="nhsd-t-body">If your POST /Session response includes:`ApplicationLinkLevel`: `Restricted`, redirect the user back to NHS login.</p>
+<p class="nhsd-t-body">They will be prompted to re-authenticate, lifting the restriction on their account.</p>
+</p>                </div>
+            </details>
+        </div>
+    </div>
+    <div class="nhsd-m-expander nhsd-!t-margin-bottom-6" >
+        <div class= "nhsd-a-box
+                nhsd-a-box--bg-light-grey
+"
+        >
+            <details>
+                <summary class="nhsd-m-expander__heading-container" aria-label="EMIS: how to provide GP Online registration details">
+                    <span class="nhsd-m-expander__icon nhsd-!t-margin-right-1">
+                        <span class="nhsd-a-icon nhsd-a-icon--size-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" viewBox="0 0 16 16"  width="100%" height="100%">
+                                <path d="M12,8l-6.5,7L4,13.5L9.2,8L4,2.5L5.5,1L12,8z"/>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="nhsd-m-expander__heading nhsd-t-body">
+                          Avoiding unnecessary calls to me/applications
+                    </span>
+                </summary>
+                <div class="nhsd-m-expander__content-container">
+<p class="nhsd-t-body">Some partners are triggering unecessary `me/applications` on every NHS login. This results in a confirmation email being sent to the user each time.</p>
+<p class="nhsd-t-body">To avoid this, follow these steps:</p>
+<h3 class="nhsd-t-heading-l">First login</h3>
+<ol class="nhsd-t-list nhsd-t-list--number">
+ <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
+ <li>Use this linkage key to call `me/applications` and obtain the Access Identity GUID.</li>
+ <li>Store both the linkage key and the Access Identity GUID securely.</li></ol>
+ <h3 class="nhsd-t-heading-l">Subsequent logins</h3>
+<ol class="nhsd-t-list nhsd-t-list--number">
+ <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
+ <li>Use this linkage key to call `me/applications` and obtain the Access Identity GUID.</li>
+ <li>Store both the linkage key and the Access Identity GUID securely.</li>
+</ol>
+<pre><code>    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 
      <div class="app-edit-instructions">
