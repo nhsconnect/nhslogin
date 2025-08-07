@@ -69,52 +69,107 @@ The platforms that NHS login provides coverage for GP login credentials are:
 - EMIS: 100%
 - TPP: 100%
 
----
-
-
-<div class="nhsuk-card nhsuk-card" id="NHSDS">
-  <div class="nhsuk-card__content">
-   <h2>Guidance for EMIS systems</h2>
-  <details class="nhsuk-details nhsuk-expander--no-outline">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-           Handling account resets and restrictions
-          </span>
-        </summary>
-         <div class="nhsuk-details__text nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full width"> 
-<p>EMIS Web accounts can be reset, either by:</p>
- <ul>
-<li>the user</li>
-<li>the GP practice (for example, when suspicious activity is detected)</li> </ul>
-<p>After a reset, the account enters a “Restricted” state until the user re-authenticates via NHS login.</div>
-<h3>What do do in your application</h3>
-<p>If your POST /Session response includes: "ApplicationLinkLevel": "Restricted", redirect the user back to NHS login.
-
-They will be prompted to re-authenticate, lifting the restriction on their account.</p>
-</div></div>
-  <details class="nhsuk-details nhsuk-expander--no-outline">
-        <summary class="nhsuk-details__summary">
-          <span class="nhsuk-details__summary-text">
-           Avoiding unnecessary calls to me/applications
-          </span>
-        </summary>
-         <div class="nhsuk-details__text nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full width"> 
-<p>Some partners are triggering unnecessary me/applications on every NHS login. This results in a confirmation email being sent to the user each time.</p>
-To avoid this, follow these steps:
-<h3>Initial login</h3>
-      <ol>
-        <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
-        <li>Use this linkage key to call me/applications and obtain the Access Identity GUID.</li> 
-       <li>Store both the linkage key and the Access Identity GUID securely.</li></ol>
-<h3>Subsequent logins</h3>
- <ol>
-        <li>Compare the returned linkage key with the one you've stored</li>
-        <li>If it's the same: use the stored GUID to establish the user session.</li> 
-       <li>If it's different: use the new linkage key to retrieve a fresh GUID via me/applications, then update your stored values.</li></ol>         
+<hr>
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full width">
+               <div class="nhsuk-card">
+                    <div class="nhsuk-card__content">
+                        <div class="nhsuk-grid-row">
+                            <div class="nhsuk-grid-column-full width">
+                                <h2>Guidance for EMIS systems</h2>
+                                <hr>
+                            </div>
+                        </div>
+                       <details class="nhsuk-details nhsuk-expander--no-outline">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">
+                                    Handling account resets and restrictions
+                                </span>
+                            </summary>
+                            <div class="nhsuk-details__text">
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-full width">
+                                        <p>EMIS Web accounts can be reset, either by:</p>
+                                        <ul>
+                                          <li>the user</li>
+                                          <li>the GP practice (for example, when suspicious activity is detected)</li>
+                                        </ul>
+                                        <p>After a reset, the account enters a “Restricted” state until the user re-authenticates via NHS login.</p>  
+                                        <h3>What to do in your application</h3>
+                                        If your <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> POST /Session</code> response includes: <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;">"ApplicationLinkLevel": "Restricted"</code>, redirect the user back to NHS login.<br><br>
+                                        They will be prompted to re-authenticate, lifting the restriction on their account.
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="nhsuk-details nhsuk-expander--no-outline">
+                            <summary class="nhsuk-details__summary">
+                                <span class="nhsuk-details__summary-text">
+                                    Avoiding unnecessary calls to me/applications
+                                </span>
+                            </summary>
+                            <div class="nhsuk-details__text">
+                                <div class="nhsuk-grid-row">
+                                    <div class="nhsuk-grid-column-full width">
+                                    <p>Some partners are triggering unnecessary <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code> on every NHS login. This results in a confirmation email being sent to the user each time.<br><br>To avoid this, follow these steps:</p>
+                                    <h3>Initial login</h3>
+                                        <ol class="nhsuk-inside-box-text" style="max-width:none;">
+                                            <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
+                                            <li>Use this linkage key to call <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 0.9em;"> me/applications</code> and obtain the Access Identity GUID.</li>
+                                            <li>Store both the linkage key and the Access Identity GUID securely.</li>
+                                        </ol>
+                                        <h3>Subsequent logins</h3>
+                                        <ol class="nhsuk-inside-box-text" style="max-width:none;">
+                                            <li>Compare the returned linkage key with the one you've stored.</li>
+                                            <li>If it's the same: use the stored GUID to establish the user session.</li>
+                                            <li>If it's different: use the new linkage key to retrieve a fresh GUID via <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 0.9em;"> me/applications</code>, then update your stored values.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
 </div>
 </div>
 
----
+
+
+      
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
