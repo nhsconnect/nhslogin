@@ -662,16 +662,16 @@
                                     <div class="nhsuk-grid-column-full width">
                                     <p>Some partners are triggering unnecessary <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code> on every NHS login. This results in a confirmation email being sent to the user each time.<br><br>To avoid this, follow these steps:</p>
                                     <h3>Initial login</h3>
-                                        <ol class="nhsuk-inside-box-text" style="max-width:none;">
+                                        <ol>
                                             <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
-                                            <li>Use this linkage key to call <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 0.9em;"> me/applications</code> and obtain the Access Identity GUID.</li>
+                                            <li>Use this linkage key to call <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code> and obtain the Access Identity GUID.</li>
                                             <li>Store both the linkage key and the Access Identity GUID securely.</li>
                                         </ol>
                                         <h3>Subsequent logins</h3>
-                                        <ol class="nhsuk-inside-box-text" style="max-width:none;">
+                                        <ol>
                                             <li>Compare the returned linkage key with the one you've stored.</li>
                                             <li>If it's the same: use the stored GUID to establish the user session.</li>
-                                            <li>If it's different: use the new linkage key to retrieve a fresh GUID via <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 0.9em;"> me/applications</code>, then update your stored values.</li>
+                                            <li>If it's different: use the new linkage key to retrieve a fresh GUID via <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code>, then update your stored values.</li>
                                         </ol>
                                     </div>
                                 </div>
