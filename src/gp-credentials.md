@@ -66,8 +66,10 @@ For example, a user's GP access may be revoked due to multiple failed login atte
 
 The platforms that NHS login provides coverage for GP login credentials are: 
 
-- EMIS: 100%
+- Optum: 100%
 - TPP: 100%
+
+**Note:** NHS login is working with Medicus to enable a way Medicus practices can provision an account. We expect this to be live in late 2025.
 
 <hr>
         <div class="nhsuk-grid-row">
@@ -76,7 +78,7 @@ The platforms that NHS login provides coverage for GP login credentials are:
                     <div class="nhsuk-card__content">
                         <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-full width">
-                                <h2>Guidance for EMIS systems</h2>
+                                <h2>Guidance for Optum systems</h2>
                                 <hr>
                             </div>
                         </div>
@@ -89,7 +91,7 @@ The platforms that NHS login provides coverage for GP login credentials are:
                             <div class="nhsuk-details__text">
                                 <div class="nhsuk-grid-row">
                                     <div class="nhsuk-grid-column-full width">
-                                        <p>EMIS Web accounts can be reset, either by:</p>
+                                        <p>Optum Web accounts can be reset, either by:</p>
                                         <ul>
                                           <li>the user</li>
                                           <li>the GP practice (for example, when suspicious activity is detected)</li>
@@ -112,8 +114,8 @@ The platforms that NHS login provides coverage for GP login credentials are:
                             <div class="nhsuk-details__text">
                                 <div class="nhsuk-grid-row">
                                     <div class="nhsuk-grid-column-full width">
-                                    <p>Some partners are triggering unnecessary <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code> on every NHS login. This results in a confirmation email being sent to the user each time.<br><br>To avoid this, follow these steps:</p>
-                                    <h3>Initial login</h3>
+                                        <p>Some partners are triggering unnecessary <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code> on every NHS login. This results in a confirmation email being sent to the user each time.<br><br>To avoid this, follow these steps:</p>
+                                        <h3>Initial login</h3>
                                         <ol>
                                             <li>When a user logs in via NHS login for the first time, you'll receive a linkage key.</li>
                                             <li>Use this linkage key to call <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code> and obtain the Access Identity GUID.</li>
@@ -126,11 +128,19 @@ The platforms that NHS login provides coverage for GP login credentials are:
                                             <li>If it's different: use the new linkage key to retrieve a fresh GUID via <code style="background-color: #f8f8f8; color: #d14; padding: 2px 4px; border-radius: 3px; font-family: 'frutiger', monospace'; font-size: 1em;"> me/applications</code>, then update your stored values.</li>
                                         </ol>
                                     </div>
-                                </div>
+                                </div>  
                             </div>
-                        </details>
-</div>
-</div>
+                            </details>
+                            <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+              <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Optum-IM1token-flow.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+              <div class="code-embed">
+              <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Optum-IM1token-flow.png" alt="Flow diagram of error handling within Optum">
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
 
 
 
