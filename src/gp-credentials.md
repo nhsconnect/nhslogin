@@ -66,7 +66,7 @@ For example, a user's GP access may be revoked due to multiple failed login atte
 
 The platforms that NHS login provides coverage for GP login credentials are: 
 
-- Optum: 100%
+- EMIS Web: 100%
 - TPP: 100%
 
 **Note:** NHS login is working with Medicus to enable a way Medicus practices can provision an account. We expect this to be live in late 2025.
@@ -78,7 +78,7 @@ The platforms that NHS login provides coverage for GP login credentials are:
                     <div class="nhsuk-card__content">
                         <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-full width">
-                                <h2>Additional guidance from Optum</h2>
+                                <h2>Additional guidance from EMIS Web</h2>
                                 <hr>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ The platforms that NHS login provides coverage for GP login credentials are:
                             <div class="nhsuk-details__text">
                                 <div class="nhsuk-grid-row">
                                     <div class="nhsuk-grid-column-full width">
-                                        <p>Optum Web accounts can be reset, either by:</p>
+                                        <p>EMIS Web accounts can be reset, either by:</p>
                                         <ul>
                                           <li>the user</li>
                                           <li>the GP practice (for example, when suspicious activity is detected)</li>
@@ -133,9 +133,9 @@ The platforms that NHS login provides coverage for GP login credentials are:
                             </details>
                             <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
-              <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Optum-IM1token-flow.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
+              <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/EMIS-error-handling-IM1-token-flow.png" class="design-example__pop-out" target="_blank">Open this example in new window</a>
               <div class="code-embed">
-              <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Optum-IM1token-flow.png" alt="Flow diagram of error handling within Optum">
+              <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images EMIS-error-handling-IM1-token-flow.png" alt="Flow diagram of error handling within Optum">
         </div>
       </div>
     </div>
