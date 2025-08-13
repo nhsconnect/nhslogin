@@ -21,6 +21,8 @@ The RP (service) must be IM1 enabled to allow this scope in the production envir
 
 Retrieving these items of information via NHS login removes the need for the user to enter them manually. It also allows for the seamless registration of previously unregistered GP Online users, preventing the need to visit to a GP Practice.
 
+### gp_integration_credentials (GPIC) scope processing
+
 <div class="design-example">
 <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/gp-credentials-diagram.png" class="design-example__pop-out" target="_blank">Open this diagram in new window</a>
     <div class="code-embed">
