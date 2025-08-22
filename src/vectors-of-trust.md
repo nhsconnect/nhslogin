@@ -11,7 +11,7 @@ Your service should include a vector value in the query string as part of the in
   <span class="nhsuk-u-visually-hidden">Information: </span>
 
 You need to decide the identity authentication and verification level for your product, based on the examples in [Appendix D of the DAPB3051 Identity Verification and
-Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/binaries/content/assets/website-assets/data-and-information/information-standards/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services/3051572024specificationimplementationxx.pdf).
+Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
 
 For example, if you need High : Strong authentication, then your product must have multi-factor authentication. </p>
 </div>
@@ -47,7 +47,7 @@ NHS login supports the following types of authentication credentials. Note that 
   <thead role="rowgroup" class="nhsuk-table__head">
     <tr role="row">
       <th role="columnheader" class="" scope="col">
-        <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref
+        <a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref
       </th>
       <th role="columnheader" class="" scope="col">
         Authentication type
@@ -60,7 +60,7 @@ NHS login supports the following types of authentication credentials. Note that 
   <tbody class="nhsuk-table__body">
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Basic
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Basic
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Cp - Email address and password
@@ -71,7 +71,7 @@ NHS login supports the following types of authentication credentials. Note that 
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Basic
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Basic
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Cd - Registered device
@@ -82,7 +82,7 @@ NHS login supports the following types of authentication credentials. Note that 
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Strong
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Ck - Shared cryptographic key within a registered device
@@ -94,7 +94,7 @@ NHS login supports the following types of authentication credentials. Note that 
     </tr>
     <tr role="row" class="nhsuk-table__row">
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Strong
+        <span class="nhsuk-table-responsive__heading"><a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a> Ref </span>Strong
       </td>
       <td role="cell" class="nhsuk-table__cell">
         <span class="nhsuk-table-responsive__heading">Authentication type </span>Cm - Asymmetric Cryptographic key within a registered device
@@ -111,7 +111,7 @@ NHS login supports the following types of authentication credentials. Note that 
 ## Identity verification levels
 
 The NHS login supports the following levels of identification verification. These are based upon [DAPB3051 Identity Verification and
-Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
+Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
 
 
 <table role="table" class="nhsuk-table-responsive">
@@ -140,7 +140,7 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
         <span class="nhsuk-table-responsive__heading">Proofing level </span>Medium (P5) <br>Basic identity information
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Basic description </span>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>.<br>This maps to ‘Verification – Medium’ within <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a>.
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user has provided some information that has been checked to correspond to a record on <a href="https://digital.nhs.uk/services/demographics">PDS</a>.<br>This maps to ‘Verification – Medium’ within <a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a>.
       </td>
     </tr>
     <tr role="row" class="nhsuk-table__row">
@@ -148,7 +148,7 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
         <span class="nhsuk-table-responsive__heading">Proofing level </span>High (P9) <br>Physical comparison
       </td>
       <td role="cell" class="nhsuk-table__cell">
-        <span class="nhsuk-table-responsive__heading">Basic description </span>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.<br> This maps to ‘Verification – High’ within <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a>.
+        <span class="nhsuk-table-responsive__heading">Basic description </span>The user has completed an online or offline identity verification process where physical comparison between the photographic identity and the person asserting their identity has occurred.<br> This maps to ‘Verification – High’ within <a href="https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services">DAPB3051</a>.
       </td>
     </tr>
   </tbody>
