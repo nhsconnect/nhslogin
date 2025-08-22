@@ -3,7 +3,7 @@ layout: base.njk
 title: Offering users medium (P5) and high (P9) verification
 ---
 
-NHS login supports [multiple levels of identity verification (low, medium and high)](https://nhsconnect.github.io/nhslogin/user-journeys). These are based upon [DAPB3051 Identity Verification and Authentication Standard for Digital Health and Care Services](http://digital.nhs.uk/isce/publication/dcb3051).
+NHS login supports [multiple levels of identity verification (low, medium and high)](https://nhsconnect.github.io/nhslogin/user-journeys). These are based upon the [DAPB3051 Identity Verification and Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
 
 ---
 
