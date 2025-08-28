@@ -48,7 +48,7 @@ Healthcare staff use the Provisioning API to start the process. Here's what happ
 
 
 <div class="design-example">
-  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-one.png" class="design-example__pop-out" target="_blank">Open the healthcare professional flow in a new window</a>
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-one.png" class="design-example__pop-out" target="_blank">Open the Healthcare Professional Flow in a new window</a>
     <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Provisioning-journey-one.png" alt="Diagram showing the healthcare professional journey flow">
   </div>
@@ -73,7 +73,7 @@ Once the patient receives the email, they follow a short journey to activate the
 
 
 <div class="design-example">
-  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-two.png" class="design-example__pop-out" target="_blank">Open the patient claiming flow in a new window</a>
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-two.png" class="design-example__pop-out" target="_blank">Open the Patient Claiming Flow in a new window</a>
     <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Provisioning-journey-two.png" alt="Diagram showing the patient claiming journey flow">
   </div>
