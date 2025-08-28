@@ -571,9 +571,22 @@
 <p>Account provisioning enables GP practices to set up an NHS login on behalf of a patient.</p>
 <p>Instead of patients registering and verifying their identity themselves, authorised staff can create a <a href="https://nhsconnect.github.io/nhslogin/user-journeys/#p9">high-level verified account (known as P9)</a> on their behalf.</p>
 <p>This makes it easier for patients to access digital health services and reduces the need for support.</p>
+<hr>
+<h2>Requirements</h2>
+<p>For the process to work, the GP practice must:</p>
+<ul>
+<li>have a registered and authorised ODS code</li>
+<li>use a GP system that supports provisioning (currently EMIS and TPP are integrated)</li>
+</ul>
+<p>The patient must:</p>
+<ul>
+<li>have an active <a href="https://digital.nhs.uk/services/personal-demographics-service">PDS record</a> with NHS number, phone number, and other demographics</li>
+<li>not already have a P9-level NHS login account</li>
+<li>have a mobile number that matches their PDS record</li>
+</ul>
+<hr>
 <h2>How it works</h2>
 <p>There are two parts to the account provisioning process:</p>
-<hr>
 <h3>1. Healthcare professional flow</h3>
 <p>Healthcare staff use the CID Provisioning API to start the process. Here's what happens:</p>
 <ol>
