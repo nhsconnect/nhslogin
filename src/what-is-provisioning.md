@@ -34,7 +34,7 @@ There are two parts to the account provisioning process:
 
 <h3>1. Healthcare professional flow</h3>
 
-Healthcare staff use the CID Provisioning API to start the process. Here's what happens:
+Healthcare staff use the Provisioning API to start the process. Here's what happens:
 
 1. The GP system authenticates using an access token  
 2. The patient’s demographic details and the organisation’s ODS code are submitted  
@@ -75,4 +75,4 @@ Once the patient receives the email, they follow a short journey to activate the
 
 ### Developer documentation
 
-For technical details about how the CID Provisioning API works, see the [Provision Account External Interface Specification](https://nhsconnect.github.io/nhslogin/provision-account-external-interface/).
+For technical details about how the Provisioning API works, see the [Provision Account External Interface Specification](https://nhsconnect.github.io/nhslogin/provision-account-external-interface/).
