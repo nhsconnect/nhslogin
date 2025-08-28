@@ -11,13 +11,28 @@ Instead of patients registering and verifying their identity themselves, authori
 
 This makes it easier for patients to access digital health services and reduces the need for support.
 
-## How it works
+<hr>
 
-There are two parts to the account provisioning process:
+<h2>Requirements</h2>
+
+For the process to work, the GP practice must:
+
+* have a registered and authorised ODS code  
+* use a GP system that supports provisioning (currently EMIS and TPP are integrated)
+
+The patient must:  
+* have an active [PDS record](https://digital.nhs.uk/services/personal-demographics-service) with NHS number, phone number, and other demographics  
+* not already have a P9-level NHS login account  
+* have a mobile number that matches their PDS record 
 
 <hr>
 
-### 1. Healthcare professional flow
+<h2>How it works</h2>
+
+There are two parts to the account provisioning process:
+
+
+<h3>1. Healthcare professional flow</h3>
 
 Healthcare staff use the CID Provisioning API to start the process. Here's what happens:
 
@@ -38,7 +53,7 @@ Healthcare staff use the CID Provisioning API to start the process. Here's what 
 
 
 
-### 2. Patient claiming flow
+<h3>2. Patient claiming flow</h3>
 
 Once the patient receives the email, they follow a short journey to activate their account:
 
