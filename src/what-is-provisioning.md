@@ -42,6 +42,8 @@ Healthcare staff use the CID Provisioning API to start the process. Here's what 
 4. A response is returned with either a provisioning ID or an error  
 5. An email is sent to the patient with instructions to complete their account setup  
 
+</br>
+
 <h3>Visual diagram: Healthcare professional flow</h3>
 
 
@@ -52,6 +54,7 @@ Healthcare staff use the CID Provisioning API to start the process. Here's what 
   </div>
 
 <hr>
+
 
 <h3>2. Patient claiming flow</h3>
 
@@ -64,13 +67,18 @@ Once the patient receives the email, they follow a short journey to activate the
 5. The patient sets a password  
 6. They can now use NHS login to access services  
 
+</br>
+
 <h3>Visual diagram: Patient claiming flow</h3>
+
 
 <div class="design-example">
   <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-two.png" class="design-example__pop-out" target="_blank">Open the patient claiming flow in a new window</a>
     <div class="code-embed">
     <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Provisioning-journey-two.png" alt="Diagram showing the patient claiming journey flow">
   </div>
+
+<hr>
 
 
 ### Developer documentation
