@@ -567,12 +567,13 @@
               What is provisioning
             </h1>
 
-            <h1>What is account provisioning?</h1>
+            <h2>What is account provisioning?</h2>
 <p>Account provisioning enables GP practices to set up an NHS login on behalf of a patient.</p>
 <p>Instead of patients registering and verifying their identity themselves, authorised staff can create a <a href="https://nhsconnect.github.io/nhslogin/user-journeys/#p9">high-level verified account (known as P9)</a> on their behalf.</p>
 <p>This makes it easier for patients to access digital health services and reduces the need for support.</p>
 <h2>How it works</h2>
 <p>There are two parts to the account provisioning process:</p>
+<hr>
 <h3>1. Healthcare professional flow</h3>
 <p>Healthcare staff use the CID Provisioning API to start the process. Here's what happens:</p>
 <ol>
@@ -582,8 +583,12 @@
 <li>A response is returned with either a provisioning ID or an error</li>
 <li>An email is sent to the patient with instructions to complete their account setup</li>
 </ol>
-<p><strong>Visual diagram: Healthcare professional flow</strong></p>
-<p><img src="https://github.com/nhsconnect/nhslogin/blob/main/src/images/Provisioning%20journey%201.png?raw=true" alt="Diagram showing the healthcare professional flow"></p>
+<h3>Visual diagram: Healthcare professional flow</h3>
+<div class="design-example">
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-one.png" class="design-example__pop-out" target="_blank">Open the healthcare professional flow in a new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Provisioning-journey-one.png" alt="Diagram showing the healthcare professional journey flow">
+  </div>
 <h3>2. Patient claiming flow</h3>
 <p>Once the patient receives the email, they follow a short journey to activate their account:</p>
 <ol>
@@ -594,8 +599,12 @@
 <li>The patient sets a password</li>
 <li>They can now use NHS login to access services</li>
 </ol>
-<p><strong>Visual diagram: Patient claiming flow</strong></p>
-<p><img src="https://github.com/nhsconnect/nhslogin/blob/main/src/images/Provisioning%20journey%202.png?raw=true" alt="Diagram showing the patient claiming flow"></p>
+<h3>Visual diagram: Patient claiming flow</h3>
+<div class="design-example">
+  <a href="https://raw.githubusercontent.com/nhsconnect/nhslogin/main/src/images/Provisioning-journey-two.png" class="design-example__pop-out" target="_blank">Open the patient claiming flow in a new window</a>
+    <div class="code-embed">
+    <img class="nhsuk-image__img" src="https://github.com/nhsconnect/nhslogin/raw/main/src/images/Provisioning-journey-two.png" alt="Diagram showing the patient claiming journey flow">
+  </div>
 <h2>Developer documentation</h2>
 <p>For technical details about how the CID Provisioning API works, see the <a href="https://nhsconnect.github.io/nhslogin/provision-account-external-interface/">Provision Account External Interface Specification</a>.</p>
 
