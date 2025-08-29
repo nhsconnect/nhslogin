@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: What is account provisioning
+title: What is account provisioning?
 ---
 
 Account provisioning enables GP practices to set up an NHS login on behalf of a patient.
