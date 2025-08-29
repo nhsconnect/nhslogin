@@ -589,7 +589,6 @@
 <h3>1. Healthcare professional flow</h3>
 <p>Healthcare staff use the Provisioning API to start the process. Here's what happens:</p>
 <ol>
-<li>The GP system authenticates using an access token</li>
 <li>The patient’s demographic details and the organisation’s ODS code are submitted</li>
 <li>The system checks eligibility and validates the patient’s details against the Personal Demographics Service (PDS)</li>
 <li>A response is returned with either a provisioning ID or an error</li>
@@ -607,10 +606,10 @@
 <p>Once the patient receives the email, they follow a short journey to activate their account:</p>
 <ol>
 <li>The patient selects the link in the email</li>
-<li>They receive a one-time passcode (OTP) and enter it</li>
+<li>They receive a one-time passcode (OTP) to their mobile number and enter it</li>
 <li>Their details are checked again against PDS</li>
+<li>The patient creates or enters their password</li>
 <li>If everything matches, the account is created or upgraded to P9 level</li>
-<li>The patient sets a password</li>
 <li>They can now use NHS login to access services</li>
 </ol>
 </br>
