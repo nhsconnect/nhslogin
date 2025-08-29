@@ -3,11 +3,11 @@ layout: base.njk
 title: What is account provisioning?
 ---
 
-Account provisioning enables healthcare practitioners to set up or upgrade a patient's NHS login on their behalf.
+Account provisioning lets healthcare staff create or upgrade a patient’s NHS login account to the [highest level of verification (P9)](https://nhsconnect.github.io/nhslogin/user-journeys/#p9).
 
-Instead of patients registering and verifying their identity themselves, authorised staff can create a [high-level verified account (known as P9)](https://nhsconnect.github.io/nhslogin/user-journeys/#p9) for them. 
+This avoids users having to [prove who they are](https://help.login.nhs.uk/provewhoyouare) by using photo ID or other details. Instead, the healthcare practitioner does it for them.
 
-The patient is then only required to select a link, and log in to their account. 
+The patient then just needs to click a link and log in to claim the account.
 
 <hr>
 
