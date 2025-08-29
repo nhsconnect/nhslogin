@@ -28,11 +28,10 @@ There are two parts to the account provisioning process:
 
 Healthcare staff use the Provisioning API to start the process. Here's what happens:
 
-1. The GP system authenticates using an access token  
-2. The patient’s demographic details and the organisation’s ODS code are submitted  
-3. The system checks eligibility and validates the patient’s details against the Personal Demographics Service (PDS)  
-4. A response is returned with either a provisioning ID or an error  
-5. An email is sent to the patient with instructions to complete their account setup  
+1. The patient’s demographic details and the organisation’s ODS code are submitted  
+2. The system checks eligibility and validates the patient’s details against the Personal Demographics Service (PDS)  
+3. A response is returned with either a provisioning ID or an error  
+4. An email is sent to the patient with instructions to complete their account setup  
 
 </br>
 
@@ -53,10 +52,10 @@ Healthcare staff use the Provisioning API to start the process. Here's what happ
 Once the patient receives the email, they follow a short journey to activate their account:
 
 1. The patient selects the link in the email  
-2. They receive a one-time passcode (OTP) and enter it  
+2. They receive a one-time passcode (OTP) to their mobile number and enter it  
 3. Their details are checked again against PDS  
-4. If everything matches, the account is created or upgraded to P9 level  
-5. The patient sets a password  
+4. The patient creates or enters their password
+5. If everything matches, the account is created or upgraded to P9 level    
 6. They can now use NHS login to access services  
 
 </br>
