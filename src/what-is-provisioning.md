@@ -3,22 +3,16 @@ layout: base.njk
 title: What is account provisioning?
 ---
 
-Account provisioning enables GP practices to set up an NHS login on behalf of a patient.
+Account provisioning enables healthcare practitioners to set up an NHS login on behalf of a patient.
 
-Instead of patients registering and verifying their identity themselves, authorised staff can create a [high-level verified account (known as P9)](https://nhsconnect.github.io/nhslogin/user-journeys/#p9) for them.
-
-This makes it easier for patients to access digital health services and reduces the need for support.
+Instead of patients registering and verifying their identity themselves, authorised staff can create a [high-level verified account (known as P9)](https://nhsconnect.github.io/nhslogin/user-journeys/#p9) for them. The patient is then only required to claim the account as theirs. 
 
 <hr>
 
 <h2>Requirements</h2>
 
-For the process to work, the GP practice must:
+For the process to work, the the patient must:  
 
-* have a registered and authorised ODS code  
-* use a GP system that supports provisioning (currently EMIS and TPP are integrated)
-
-The patient must:  
 * have an active [PDS record](https://digital.nhs.uk/services/personal-demographics-service) with NHS number, phone number, and other demographics  
 * not already have a P9-level NHS login account  
 * have a mobile number that matches their PDS record 
