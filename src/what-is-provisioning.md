@@ -13,9 +13,9 @@ This avoids patients having to [prove who they are](https://help.login.nhs.uk/pr
 
 For the process to work, the patient must:  
 
-* have an active [PDS record](https://digital.nhs.uk/services/personal-demographics-service) with NHS number, phone number, and other demographics  
+* have an active [Personal Demographics Service (PDS) record](https://digital.nhs.uk/services/personal-demographics-service) with an NHS number and mobile phone number
 * not already have a P9-level NHS login account  
-* have a mobile number that matches their PDS record 
+* have a mobile phone number that matches their PDS record 
 
 <hr>
 
@@ -23,13 +23,12 @@ For the process to work, the patient must:
 
 There are two parts to the account provisioning process:
 
-
 <h3>1. Healthcare professional flow</h3>
 
 Healthcare staff use the Provisioning API to start the process. Here's what happens:
 
 1. The patient’s demographic details and the organisation’s ODS code are submitted  
-2. The system checks eligibility and validates the patient’s details against the Personal Demographics Service (PDS)  
+2. The system checks eligibility and validates the patient’s details against PDS  
 3. A response is returned with either a provisioning ID or an error  
 4. An email is sent to the patient with instructions to complete their account setup  
 
