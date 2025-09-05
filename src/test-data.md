@@ -31,24 +31,24 @@ We’ve built a tool to handle all test data requests from suppliers. It uses te
 **Email address** 
 Must be the email used to create the test account in the target environment.
 
-**First / Middle / Last Name** 
+**First / middle / last name** 
 Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
 Middle name is optional.
 
-**Date of Birth**
+**Date of birth**
 Format must be either `DD/MM/YYYY` or `YYYY-MM-DD`.
 Preferably matches a valid PDS record.
 
-**Phone Number**
+**Phone number**
 Must be a valid UK number starting with `+44` or `07`.
 
-**Phone Number PDS Matched**
+**Phone number PDS matched**
 Set to `true` if you want the phone number to be treated as matched to PDS.
 This is used for testing Identity Verification via Mobile (IDVM).
 
 > If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked—no need for ID re-checking.
 
-**NHS Number**
+**NHS number**
 Must be a valid 10-digit number that passes the checksum.
 Ideally matches a valid PDS record.
 Use [Data Gorilla](https://data-gorilla.uk/en/healthcare/nhs-number/) to validate the number.
@@ -57,14 +57,14 @@ Use [Data Gorilla](https://data-gorilla.uk/en/healthcare/nhs-number/) to validat
 Set to `true` to skip sending a real OTP and use the static test OTP `190696`.
 Set to `false` to send a real OTP to the registered mobile number.
 
-**Disable PDS Trace**
+**Disable PDS trace**
 Set to `true` to prevent NHS login from automatically syncing user data with PDS during login.
 This avoids test data being overwritten and preserves GP IM1 details.
 
-**GP ODS Code**
-Provide a valid GP ODS Code, ideally one that matches a PDS record.
+**GP ODS code**
+Provide a valid GP ODS code, ideally one that matches a PDS record.
 
-### GP IM1 Details (Optional)
+### GP IM1 details (optional)
 
 Only needed if you're testing IM1 integration and syncing with a GP system.  
 More info: [GP Credentials Guide](https://nhsconnect.github.io/nhslogin/gp-credentials/)
