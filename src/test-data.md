@@ -78,8 +78,8 @@ If left blank, default values will be used.
 
 ### Before you submit
 
-• Ensure the account is created with a valid email.
-• Confirm that the OTP has been sent and verified via email.
+- Ensure the account is created with a valid email.
+- Confirm that the OTP has been sent and verified via email.
 
 Send any feedback or issues to: [support.nhslogin@nhs.net](mailto:support.nhslogin@nhs.net)
 
