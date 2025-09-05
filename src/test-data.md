@@ -45,7 +45,7 @@ Must be a valid UK number starting with `+44` or `07`.
 Set to `true` if you want the phone number to be treated as matched to PDS.
 This is used for testing Identity Verification via Mobile (IDVM).
 
-> If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked—no need for ID re-checking.
+> If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked - no need for ID re-checking.
 
 **NHS number**
 Must be a valid 10-digit number that passes the checksum.
