@@ -30,41 +30,41 @@ We’ve built a tool to handle all test data requests from suppliers. It uses te
 
 ### Required Fields
 
-### Email Address
-- Must be the email used to create the test account in the target environment.
+**Email address** 
+• Must be the email used to create the test account in the target environment.
 
-### First / Middle / Last Name
-- Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
-- Middle name is optional.
+**First / Middle / Last Name** 
+• Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
+• Middle name is optional.
 
-### Date of Birth
-- Format must be either `DD/MM/YYYY` or `YYYY-MM-DD`.
-- Preferably matches a valid PDS record.
+**Date of Birth**
+• Format must be either `DD/MM/YYYY` or `YYYY-MM-DD`.
+• Preferably matches a valid PDS record.
 
-### Phone Number
-- Must be a valid UK number starting with `+44` or `07`.
+**Phone Number**
+• Must be a valid UK number starting with `+44` or `07`.
 
-### Phone Number PDS Matched
-- Set to `true` if you want the phone number to be treated as matched to PDS.
-- This is used for testing Identity Verification via Mobile (IDVM).
+**Phone Number PDS Matched**
+• Set to `true` if you want the phone number to be treated as matched to PDS.
+• This is used for testing Identity Verification via Mobile (IDVM).
 
 > If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked—no need for ID re-checking.
 
-### NHS Number
-- Must be a valid 10-digit number that passes the checksum.
-- Ideally matches a valid PDS record.
-- Use [Data Gorilla](https://data-gorilla.uk/en/healthcare/nhs-number/) to validate the number.
+**NHS Number**
+• Must be a valid 10-digit number that passes the checksum.
+• Ideally matches a valid PDS record.
+• Use [Data Gorilla](https://data-gorilla.uk/en/healthcare/nhs-number/) to validate the number.
 
-### Disable OTP
-- Set to `true` to skip sending a real OTP and use the static test OTP `190696`.
-- Set to `false` to send a real OTP to the registered mobile number.
+**Disable OTP**
+• Set to `true` to skip sending a real OTP and use the static test OTP `190696`.
+• Set to `false` to send a real OTP to the registered mobile number.
 
-### Disable PDS Trace
-- Set to `true` to prevent NHS login from automatically syncing user data with PDS during login.
-- This avoids test data being overwritten and preserves GP IM1 details.
+**Disable PDS Trace**
+• Set to `true` to prevent NHS login from automatically syncing user data with PDS during login.
+• This avoids test data being overwritten and preserves GP IM1 details.
 
-### GP ODS Code
-- Provide a valid GP ODS Code, ideally one that matches a PDS record.
+**GP ODS Code**
+• Provide a valid GP ODS Code, ideally one that matches a PDS record.
 
 ---
 
@@ -75,17 +75,17 @@ More info: [GP Credentials Guide](https://nhsconnect.github.io/nhslogin/gp-crede
 
 If left blank, default values will be used.
 
-- GP Account ID – Ideally generated from a test GP system  
-- GP Connection Token – Ideally generated from a test GP system  
-- GP Linkage Key – Ideally generated from a test GP system  
-- Manually Confirmed – Must be set to `true`. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.
+• GP Account ID – Ideally generated from a test GP system  
+• GP Connection Token – Ideally generated from a test GP system  
+• GP Linkage Key – Ideally generated from a test GP system  
+• Manually Confirmed – Must be set to `true`. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.
 
 ---
 
 ### Before You Submit
 
-- Ensure the account is created with a valid email.
-- Confirm that the OTP has been sent and verified via email.
+• Ensure the account is created with a valid email.
+• Confirm that the OTP has been sent and verified via email.
 
 ---
 
