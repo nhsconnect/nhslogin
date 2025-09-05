@@ -24,7 +24,7 @@ We can provide you with an existing test user in live to enable smoke testing. T
 
 ## Supplier test data requests 
 
-We’ve built a tool to handle all test data requests from suppliers. It reads a spreadsheet containing account details that need to be uplifted to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.
+We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a spreadsheet for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.
 
 ---
 
