@@ -66,7 +66,7 @@ Provide a valid GP ODS code, ideally one that matches a PDS record.
 ### GP IM1 details (optional)
 
 Only needed if you're testing IM1 integration and syncing with a GP system.  
-More info: [GP Credentials Guide](https://nhsconnect.github.io/nhslogin/gp-credentials/)
+[Read more about syncing with GP systems](https://nhsconnect.github.io/nhslogin/gp-credentials/)
 
 If left blank, default values will be used.
 
