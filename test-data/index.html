@@ -582,11 +582,78 @@
 <p>If your service uses the NHS Digital IM1 interface to access patient facing services, we can also provide predefined test data for successful connection to GP middleware. You can ask for specific GP linkage details to be used during testing.</p>
 <h2>Live production environment</h2>
 <p>We can provide you with an existing test user in live to enable smoke testing. The user will have already been verified and therefore will allow a successful redirect back to your service. This does not include any clinical data.</p>
-<h2>Supplier test data requests</h2>
-<p>NHS login have produced a tool for all test data requests from suppliers. It uses test data added to a spreadsheet for accounts that need uplifting to either P5 or P9. The spreadsheet has guidance around the requirements for each field.</p>
-<p>Before we can uplift them, suppliers need to create the accounts with a valid email address and the OTP code sent to the email address.</p>
-<p>Send feedback on this process to the NHS login support mailbox – <a href="mailto:support.nhslogin@nhs.net">support.nhslogin@nhs.net</a></p>
-<p><a href="https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true">Download the supplier test data requests spreadsheet</a></p>
+<h1>NHS Login Test Data Uplift Tool – Supplier Guide</h1>
+<p>We’ve built a tool to handle all test data requests from suppliers. It reads a spreadsheet containing account details that need to be uplifted to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.</p>
+<hr>
+<h2>Required Fields</h2>
+<h3>Email Address</h3>
+<ul>
+<li>Must be the email used to create the test account in the target environment.</li>
+</ul>
+<h3>First / Middle / Last Name</h3>
+<ul>
+<li>Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.</li>
+<li>Middle name is optional.</li>
+</ul>
+<h3>Date of Birth</h3>
+<ul>
+<li>Format must be either <code>DD/MM/YYYY</code> or <code>YYYY-MM-DD</code>.</li>
+<li>Preferably matches a valid PDS record.</li>
+</ul>
+<h3>Phone Number</h3>
+<ul>
+<li>Must be a valid UK number starting with <code>+44</code> or <code>07</code>.</li>
+</ul>
+<h3>Phone Number PDS Matched</h3>
+<ul>
+<li>Set to <code>true</code> if you want the phone number to be treated as matched to PDS.</li>
+<li>This is used for testing Identity Verification via Mobile (IDVM).</li>
+</ul>
+<blockquote>
+<p>If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked—no need for ID re-checking.</p>
+</blockquote>
+<h3>NHS Number</h3>
+<ul>
+<li>Must be a valid 10-digit number that passes the checksum.</li>
+<li>Ideally matches a valid PDS record.</li>
+<li>Use <a href="https://data-gorilla.uk/en/healthcare/nhs-number/">Data Gorilla</a> to validate the number.</li>
+</ul>
+<h3>Disable OTP</h3>
+<ul>
+<li>Set to <code>true</code> to skip sending a real OTP and use the static test OTP <code>190696</code>.</li>
+<li>Set to <code>false</code> to send a real OTP to the registered mobile number.</li>
+</ul>
+<h3>Disable PDS Trace</h3>
+<ul>
+<li>Set to <code>true</code> to prevent NHS login from automatically syncing user data with PDS during login.</li>
+<li>This avoids test data being overwritten and preserves GP IM1 details.</li>
+</ul>
+<h3>GP ODS Code</h3>
+<ul>
+<li>Provide a valid GP ODS Code, ideally one that matches a PDS record.</li>
+</ul>
+<hr>
+<h2>GP IM1 Details (Optional)</h2>
+<p>Only needed if you're testing IM1 integration and syncing with a GP system.<br>
+More info: <a href="https://nhsconnect.github.io/nhslogin/gp-credentials/">GP Credentials Guide</a></p>
+<p>If left blank, default values will be used.</p>
+<ul>
+<li>GP Account ID – Ideally generated from a test GP system</li>
+<li>GP Connection Token – Ideally generated from a test GP system</li>
+<li>GP Linkage Key – Ideally generated from a test GP system</li>
+<li>Manually Confirmed – Must be set to <code>true</code>. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.</li>
+</ul>
+<hr>
+<h2>Before You Submit</h2>
+<ul>
+<li>Ensure the account is created with a valid email.</li>
+<li>Confirm that the OTP has been sent and verified via email.</li>
+</ul>
+<hr>
+<h2>Feedback</h2>
+<p>Send any feedback or issues to: <a href="mailto:support.nhslogin@nhs.net">support.nhslogin@nhs.net</a></p>
+<h2>Spreadsheet</h2>
+<p>Download the official supplier test data request spreadsheet to submit your data.</p>
 
 
      <div class="app-edit-instructions">
