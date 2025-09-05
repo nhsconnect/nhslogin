@@ -582,10 +582,10 @@
 <p>If your service uses the NHS Digital IM1 interface to access patient facing services, we can also provide predefined test data for successful connection to GP middleware. You can ask for specific GP linkage details to be used during testing.</p>
 <h2>Live production environment</h2>
 <p>We can provide you with an existing test user in live to enable smoke testing. The user will have already been verified and therefore will allow a successful redirect back to your service. This does not include any clinical data.</p>
-<h1>NHS Login Test Data Uplift Tool – Supplier Guide</h1>
+<h2>Supplier test data requests</h2>
 <p>We’ve built a tool to handle all test data requests from suppliers. It reads a spreadsheet containing account details that need to be uplifted to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.</p>
 <hr>
-<h2>Required Fields</h2>
+<h3>Required Fields</h3>
 <h3>Email Address</h3>
 <ul>
 <li>Must be the email used to create the test account in the target environment.</li>
@@ -633,7 +633,7 @@
 <li>Provide a valid GP ODS Code, ideally one that matches a PDS record.</li>
 </ul>
 <hr>
-<h2>GP IM1 Details (Optional)</h2>
+<h3>GP IM1 Details (Optional)</h3>
 <p>Only needed if you're testing IM1 integration and syncing with a GP system.<br>
 More info: <a href="https://nhsconnect.github.io/nhslogin/gp-credentials/">GP Credentials Guide</a></p>
 <p>If left blank, default values will be used.</p>
@@ -644,13 +644,13 @@ More info: <a href="https://nhsconnect.github.io/nhslogin/gp-credentials/">GP Cr
 <li>Manually Confirmed – Must be set to <code>true</code>. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.</li>
 </ul>
 <hr>
-<h2>Before You Submit</h2>
+<h3>Before You Submit</h3>
 <ul>
 <li>Ensure the account is created with a valid email.</li>
 <li>Confirm that the OTP has been sent and verified via email.</li>
 </ul>
 <hr>
-<h2>Feedback</h2>
+<h3>Feedback</h3>
 <p>Send any feedback or issues to: <a href="mailto:support.nhslogin@nhs.net">support.nhslogin@nhs.net</a></p>
 <h2>Spreadsheet</h2>
 <p>Download the official supplier test data request spreadsheet to submit your data.</p>
