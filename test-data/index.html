@@ -587,33 +587,33 @@
 <h3>Required fields</h3>
 <p><strong>Email address</strong>
 Must be the email used to create the test account in the target environment.</p>
-<p><strong>First / Middle / Last Name</strong>
+<p><strong>First / middle / last name</strong>
 Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
 Middle name is optional.</p>
-<p><strong>Date of Birth</strong>
+<p><strong>Date of birth</strong>
 Format must be either <code>DD/MM/YYYY</code> or <code>YYYY-MM-DD</code>.
 Preferably matches a valid PDS record.</p>
-<p><strong>Phone Number</strong>
+<p><strong>Phone number</strong>
 Must be a valid UK number starting with <code>+44</code> or <code>07</code>.</p>
-<p><strong>Phone Number PDS Matched</strong>
+<p><strong>Phone number PDS matched</strong>
 Set to <code>true</code> if you want the phone number to be treated as matched to PDS.
 This is used for testing Identity Verification via Mobile (IDVM).</p>
 <blockquote>
 <p>If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked—no need for ID re-checking.</p>
 </blockquote>
-<p><strong>NHS Number</strong>
+<p><strong>NHS number</strong>
 Must be a valid 10-digit number that passes the checksum.
 Ideally matches a valid PDS record.
 Use <a href="https://data-gorilla.uk/en/healthcare/nhs-number/">Data Gorilla</a> to validate the number.</p>
 <p><strong>Disable OTP</strong>
 Set to <code>true</code> to skip sending a real OTP and use the static test OTP <code>190696</code>.
 Set to <code>false</code> to send a real OTP to the registered mobile number.</p>
-<p><strong>Disable PDS Trace</strong>
+<p><strong>Disable PDS trace</strong>
 Set to <code>true</code> to prevent NHS login from automatically syncing user data with PDS during login.
 This avoids test data being overwritten and preserves GP IM1 details.</p>
-<p><strong>GP ODS Code</strong>
-Provide a valid GP ODS Code, ideally one that matches a PDS record.</p>
-<h3>GP IM1 Details (Optional)</h3>
+<p><strong>GP ODS code</strong>
+Provide a valid GP ODS code, ideally one that matches a PDS record.</p>
+<h3>GP IM1 details (optional)</h3>
 <p>Only needed if you're testing IM1 integration and syncing with a GP system.<br>
 More info: <a href="https://nhsconnect.github.io/nhslogin/gp-credentials/">GP Credentials Guide</a></p>
 <p>If left blank, default values will be used.</p>
