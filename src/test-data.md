@@ -26,7 +26,7 @@ We can provide you with an existing test user in live to enable smoke testing. T
 
 We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a spreadsheet for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.
 
-### Required Fields
+### Required fields
 
 **Email address** 
 Must be the email used to create the test account in the target environment.
@@ -71,15 +71,15 @@ More info: [GP Credentials Guide](https://nhsconnect.github.io/nhslogin/gp-crede
 
 If left blank, default values will be used.
 
-GP Account ID – Ideally generated from a test GP system  
-GP Connection Token – Ideally generated from a test GP system  
-GP Linkage Key – Ideally generated from a test GP system  
-Manually Confirmed – Must be set to `true`. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.
+**GP Account ID** Ideally generated from a test GP system  
+**GP Connection Token** Ideally generated from a test GP system  
+**GP Linkage Key** Ideally generated from a test GP system  
+**Manually Confirmed** Must be set to `true`. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.
 
-### Before You Submit
+### Before you submit
 
-Ensure the account is created with a valid email.
-Confirm that the OTP has been sent and verified via email.
+• Ensure the account is created with a valid email.
+• Confirm that the OTP has been sent and verified via email.
 
 Send any feedback or issues to: [support.nhslogin@nhs.net](mailto:support.nhslogin@nhs.net)
 
