@@ -26,8 +26,6 @@ We can provide you with an existing test user in live to enable smoke testing. T
 
 We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a spreadsheet for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.
 
----
-
 ### Required Fields
 
 **Email address** 
@@ -66,8 +64,6 @@ This avoids test data being overwritten and preserves GP IM1 details.
 **GP ODS Code**
 Provide a valid GP ODS Code, ideally one that matches a PDS record.
 
----
-
 ### GP IM1 Details (Optional)
 
 Only needed if you're testing IM1 integration and syncing with a GP system.  
@@ -80,19 +76,12 @@ GP Connection Token – Ideally generated from a test GP system
 GP Linkage Key – Ideally generated from a test GP system  
 Manually Confirmed – Must be set to `true`. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.
 
----
-
 ### Before You Submit
 
 Ensure the account is created with a valid email.
 Confirm that the OTP has been sent and verified via email.
 
----
-
-### Feedback
-
 Send any feedback or issues to: [support.nhslogin@nhs.net](mailto:support.nhslogin@nhs.net)
 
-## Spreadsheet
+Download the supplier  [test data request spreadsheet]([mailto:support.nhslogin@nhs.net](https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true))
 
-Download the official supplier test data request spreadsheet to submit your data.
