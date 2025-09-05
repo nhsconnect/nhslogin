@@ -21,7 +21,6 @@ If your service uses the NHS Digital IM1 interface to access patient facing serv
 
 We can provide you with an existing test user in live to enable smoke testing. The user will have already been verified and therefore will allow a successful redirect back to your service. This does not include any clinical data.
 
-
 ## Supplier test data requests 
 
 We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a spreadsheet for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.
