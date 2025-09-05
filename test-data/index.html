@@ -587,46 +587,46 @@
 <hr>
 <h3>Required Fields</h3>
 <p><strong>Email address</strong>
-• Must be the email used to create the test account in the target environment.</p>
+Must be the email used to create the test account in the target environment.</p>
 <p><strong>First / Middle / Last Name</strong>
-• Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
-• Middle name is optional.</p>
+Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
+Middle name is optional.</p>
 <p><strong>Date of Birth</strong>
-• Format must be either <code>DD/MM/YYYY</code> or <code>YYYY-MM-DD</code>.
-• Preferably matches a valid PDS record.</p>
+Format must be either <code>DD/MM/YYYY</code> or <code>YYYY-MM-DD</code>.
+Preferably matches a valid PDS record.</p>
 <p><strong>Phone Number</strong>
-• Must be a valid UK number starting with <code>+44</code> or <code>07</code>.</p>
+Must be a valid UK number starting with <code>+44</code> or <code>07</code>.</p>
 <p><strong>Phone Number PDS Matched</strong>
-• Set to <code>true</code> if you want the phone number to be treated as matched to PDS.
-• This is used for testing Identity Verification via Mobile (IDVM).</p>
+Set to <code>true</code> if you want the phone number to be treated as matched to PDS.
+This is used for testing Identity Verification via Mobile (IDVM).</p>
 <blockquote>
 <p>If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked—no need for ID re-checking.</p>
 </blockquote>
 <p><strong>NHS Number</strong>
-• Must be a valid 10-digit number that passes the checksum.
-• Ideally matches a valid PDS record.
-• Use <a href="https://data-gorilla.uk/en/healthcare/nhs-number/">Data Gorilla</a> to validate the number.</p>
+Must be a valid 10-digit number that passes the checksum.
+Ideally matches a valid PDS record.
+Use <a href="https://data-gorilla.uk/en/healthcare/nhs-number/">Data Gorilla</a> to validate the number.</p>
 <p><strong>Disable OTP</strong>
-• Set to <code>true</code> to skip sending a real OTP and use the static test OTP <code>190696</code>.
-• Set to <code>false</code> to send a real OTP to the registered mobile number.</p>
+Set to <code>true</code> to skip sending a real OTP and use the static test OTP <code>190696</code>.
+Set to <code>false</code> to send a real OTP to the registered mobile number.</p>
 <p><strong>Disable PDS Trace</strong>
-• Set to <code>true</code> to prevent NHS login from automatically syncing user data with PDS during login.
-• This avoids test data being overwritten and preserves GP IM1 details.</p>
+Set to <code>true</code> to prevent NHS login from automatically syncing user data with PDS during login.
+This avoids test data being overwritten and preserves GP IM1 details.</p>
 <p><strong>GP ODS Code</strong>
-• Provide a valid GP ODS Code, ideally one that matches a PDS record.</p>
+Provide a valid GP ODS Code, ideally one that matches a PDS record.</p>
 <hr>
 <h3>GP IM1 Details (Optional)</h3>
 <p>Only needed if you're testing IM1 integration and syncing with a GP system.<br>
 More info: <a href="https://nhsconnect.github.io/nhslogin/gp-credentials/">GP Credentials Guide</a></p>
 <p>If left blank, default values will be used.</p>
-<p>• GP Account ID – Ideally generated from a test GP system<br>
-• GP Connection Token – Ideally generated from a test GP system<br>
-• GP Linkage Key – Ideally generated from a test GP system<br>
-• Manually Confirmed – Must be set to <code>true</code>. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.</p>
+<p>GP Account ID – Ideally generated from a test GP system<br>
+GP Connection Token – Ideally generated from a test GP system<br>
+GP Linkage Key – Ideally generated from a test GP system<br>
+Manually Confirmed – Must be set to <code>true</code>. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.</p>
 <hr>
 <h3>Before You Submit</h3>
-<p>• Ensure the account is created with a valid email.
-• Confirm that the OTP has been sent and verified via email.</p>
+<p>Ensure the account is created with a valid email.
+Confirm that the OTP has been sent and verified via email.</p>
 <hr>
 <h3>Feedback</h3>
 <p>Send any feedback or issues to: <a href="mailto:support.nhslogin@nhs.net">support.nhslogin@nhs.net</a></p>
