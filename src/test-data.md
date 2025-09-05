@@ -22,13 +22,13 @@ If your service uses the NHS Digital IM1 interface to access patient facing serv
 We can provide you with an existing test user in live to enable smoke testing. The user will have already been verified and therefore will allow a successful redirect back to your service. This does not include any clinical data.
 
 
-# NHS Login Test Data Uplift Tool – Supplier Guide
+## Supplier test data requests 
 
 We’ve built a tool to handle all test data requests from suppliers. It reads a spreadsheet containing account details that need to be uplifted to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly.
 
 ---
 
-## Required Fields
+### Required Fields
 
 ### Email Address
 - Must be the email used to create the test account in the target environment.
@@ -68,7 +68,7 @@ We’ve built a tool to handle all test data requests from suppliers. It reads a
 
 ---
 
-## GP IM1 Details (Optional)
+### GP IM1 Details (Optional)
 
 Only needed if you're testing IM1 integration and syncing with a GP system.  
 More info: [GP Credentials Guide](https://nhsconnect.github.io/nhslogin/gp-credentials/)
@@ -82,14 +82,14 @@ If left blank, default values will be used.
 
 ---
 
-## Before You Submit
+### Before You Submit
 
 - Ensure the account is created with a valid email.
 - Confirm that the OTP has been sent and verified via email.
 
 ---
 
-## Feedback
+### Feedback
 
 Send any feedback or issues to: [support.nhslogin@nhs.net](mailto:support.nhslogin@nhs.net)
 
