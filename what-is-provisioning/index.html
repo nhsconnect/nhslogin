@@ -574,14 +574,13 @@
             </h1>
 
             <p>Account provisioning allows healthcare staff to create or upgrade an NHS login account on behalf of a patient.</p>
-<p>This provides patients with a <a href="https://nhsconnect.github.io/nhslogin/user-journeys/#p9">fully verified (P9) account</a>, without them having to <a href="https://help.login.nhs.uk/provewhoyouare">prove who they are</a> themselves.</p>
-<hr>
+<p>This provides them with a <a href="https://nhsconnect.github.io/nhslogin/user-journeys/#p9">fully verified (P9) account</a>, without them having to create it themselves through the <a href="(https://help.login.nhs.uk/provewhoyouare)">prove who you are process</a>.</p>
 <h2>Requirements</h2>
 <p>For the process to work, the patient must:</p>
 <ul>
-<li>have an active <a href="https://digital.nhs.uk/services/personal-demographics-service">Personal Demographics Service (PDS) record</a> with an NHS number and mobile phone number</li>
 <li>not already have a P9-level NHS login account</li>
-<li>have a mobile phone number that matches their PDS record</li>
+<li>have a valid email address and mobile phone number</li>
+<li>have an active <a href="https://digital.nhs.uk/services/personal-demographics-service">Personal Demographics Service (PDS) record</a>, with a matching mobile phone number</li>
 </ul>
 <hr>
 <h2>How it works</h2>
@@ -592,7 +591,7 @@
 <li>The patient’s demographic details and the organisation’s ODS code are submitted</li>
 <li>The system checks eligibility and validates the patient’s details against PDS</li>
 <li>A response is returned with either a provisioning ID or an error</li>
-<li>An email is sent to the patient with instructions to complete their account setup</li>
+<li>If successful, an email is sent to the patient with a link to complete setting up their account</li>
 </ol>
 </br>
 <h3>Visual diagram: Healthcare professional flow</h3>
