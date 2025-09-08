@@ -5,18 +5,15 @@ title: What is account provisioning?
 
 Account provisioning allows healthcare staff to create or upgrade an NHS login account on behalf of a patient. 
 
-This provides patients with a [fully verified (P9) account](https://nhsconnect.github.io/nhslogin/user-journeys/#p9), without them having to [prove who they are](https://help.login.nhs.uk/provewhoyouare) themselves.
-
-<hr>
+This provides them with a [fully verified (P9) account](https://nhsconnect.github.io/nhslogin/user-journeys/#p9), without them having to create it themselves through the [prove who you are process]((https://help.login.nhs.uk/provewhoyouare)). 
 
 <h2>Requirements</h2>
 
 For the process to work, the patient must:  
 
-* have an active [Personal Demographics Service (PDS) record](https://digital.nhs.uk/services/personal-demographics-service) with an NHS number and mobile phone number
 * not already have a P9-level NHS login account  
-* have a mobile phone number that matches their PDS record 
-
+* have a valid email address and mobile phone number
+* have an active [Personal Demographics Service (PDS) record](https://digital.nhs.uk/services/personal-demographics-service), with a matching mobile phone number
 <hr>
 
 <h2>How it works</h2>
@@ -30,7 +27,7 @@ Healthcare staff use the Provisioning API to start the process. Here's what happ
 1. The patient’s demographic details and the organisation’s ODS code are submitted  
 2. The system checks eligibility and validates the patient’s details against PDS  
 3. A response is returned with either a provisioning ID or an error  
-4. An email is sent to the patient with instructions to complete their account setup  
+4. If successful, an email is sent to the patient with a link to complete setting up their account
 
 </br>
 
