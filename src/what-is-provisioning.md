@@ -15,7 +15,7 @@ For the process to work, the patient must:
 
 * not already have a P9-level NHS login account  
 * have a valid email address and mobile phone number
-* have an active [Personal Demographics Service (PDS) record](https://digital.nhs.uk/services/personal-demographics-service), with a matching mobile phone number
+* have an active [Personal Demographics Service (PDS) record](https://digital.nhs.uk/services/personal-demographics-service)
 <hr>
 
 <h2>How it works</h2>
