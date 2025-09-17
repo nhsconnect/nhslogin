@@ -81,5 +81,5 @@ If left blank, default values will be used.
 
 Send any feedback or issues to: [support.nhslogin@nhs.net](mailto:support.nhslogin@nhs.net)
 
-Download the supplier  [test data request spreadsheet]([https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true)
+Download the supplier  [test data request spreadsheet](https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true)
 
