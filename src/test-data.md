@@ -23,7 +23,7 @@ We can provide you with an existing test user in live to enable smoke testing. T
 
 ## Supplier test data requests 
 
-We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a [spreadsheet]([mailto:support.nhslogin@nhs.net](https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true)) for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly:
+We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a [spreadsheet](https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true) for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly:
 
 ### Required fields
 
@@ -81,5 +81,5 @@ If left blank, default values will be used.
 
 Send any feedback or issues to: [support.nhslogin@nhs.net](mailto:support.nhslogin@nhs.net)
 
-Download the supplier  [test data request spreadsheet]([mailto:support.nhslogin@nhs.net](https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true))
+Download the supplier  [test data request spreadsheet]([https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true)
 
