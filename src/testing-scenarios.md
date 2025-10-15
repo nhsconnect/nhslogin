@@ -2,7 +2,7 @@
 layout: base.njk
 title: Testing scenarios
 ---
-The following testing scenarios should be used as part of the [integration process](https://nhsconnect.github.io/nhslogin/integration-process/) of your product. 
+The following testing scenarios should be used as part of the [technical integration](https://nhsconnect.github.io/nhslogin/integration-process/) of your product. 
 
 Any test data requests to support these scenarios can be requested via the [NHS login Developer Support Slack](https://nhs-login-support-slack-invite.herokuapp.com/).
 
