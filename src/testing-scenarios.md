@@ -1,21 +1,25 @@
 ---
 layout: base.njk
-title: Testing Scenarios
+title: Testing scenarios
 ---
+The following testing scenarios should be used as part of the [technical integration](https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/integrate#technical-integration-of-your-product) of your product. 
 
-For further information regarding VoT (Vectors of Trust), Proofing Levels or user journeys, refer to the [NHS login Integration Toolkit](https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/discovery).
+Any test data requests to support these scenarios can be requested via the [NHS login Developer Support Slack](https://nhs-login-support-slack-invite.herokuapp.com/).
 
-Any test data requests to support these scenarios can be requested from NHS login via the [NHS login Developer Support Slack](https://nhs-login-support-slack-invite.herokuapp.com/).
+## Vector of Trust check
+We use a [Vector of Trust (VoT)](https://nhsconnect.github.io/nhslogin/vectors-of-trust/) check to ensure that the VoT that is sent in an authentication request by a supplier matches the one registered against the client ID.
+
+If it does not match then the authentication request will be rejected.
 
 Note: If you support more than one VoT, ensure you complete the test scenarios for each.
 
 ---
 
-## Testing Scenarios for P0
+## Testing scenarios for P0
 
 These scenarios should be completed by all suppliers that support a proofing level of P0. 
 
-### Generic Scenarios (Mandatory)
+### Generic scenarios (Mandatory)
 * Confirm access to NHS login settings page
 * Test the scenario where a user chooses to not accept consent to share with NHS login and ensure a suitable message is displayed to the user from the service.
 * Supplier to request scopes that are not supported by their service and ensure invalid scope error returned to the user.
@@ -38,11 +42,11 @@ These scenarios should be completed by all suppliers that support a proofing lev
 
 ---
 
-## Testing Scenarios for P5
+## Testing scenarios for P5
 
 These scenarios should be completed by all suppliers that support a proofing level of P5. 
 
-### Generic Scenarios (Mandatory)
+### Generic scenarios (Mandatory)
 
 * Confirm access to NHS login settings page
 * Test the scenario where a user chooses to not accept consent to share with NHS login and ensure a suitable message is displayed to the user from the service.
@@ -66,11 +70,11 @@ These scenarios should be completed by all suppliers that support a proofing lev
 
 ---
 
-## Testing Scenarios for P9
+## Testing scenarios for P9
 
 These scenarios should be completed by all suppliers that support a proofing level of P9. 
 
-### Generic Scenarios (Mandatory)
+### Generic scenarios (Mandatory)
 * Confirm access to NHS login settings page
 * Test the scenario where a user chooses to not accept consent to share with NHS login and ensure a suitable message is displayed to the user from the service.
 * Supplier to request scopes that are not supported by their service, invalid scope error returned to the user.
