@@ -7,7 +7,7 @@ The following testing scenarios should be used as part of the [technical integra
 Any test data requests to support these scenarios can be requested via the [NHS login Developer Support Slack](https://nhs-login-support-slack-invite.herokuapp.com/).
 
 ## Vector of Trust check
-We use a [Vector of Trust (VoT)](https://nhsconnect.github.io/nhslogin/vectors-of-trust/) check to ensure that the VoT that is sent in an authentication request by a supplier matches the one registered against the client ID.
+We use a [Vector of Trust (VoT)](https://nhsconnect.github.io/nhslogin/vectors-of-trust/) check to ensure that the VoT sent in an authentication request by a supplier matches the one registered against the client ID.
 
 If it does not match then the authentication request will be rejected.
 
