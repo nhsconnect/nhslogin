@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
 <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-<title>Testing Scenarios</title>
+<title>Testing scenarios</title>
   </head>
   <body>
       <header class="nhsuk-header" role="banner">
@@ -585,16 +585,19 @@
           <div class="app-pane__main-content">
 
             <h1 class="app-page-heading">
-              Testing Scenarios
+              Testing scenarios
             </h1>
 
-            <p>For further information regarding VoT (Vectors of Trust), Proofing Levels or user journeys, refer to the <a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/discovery">NHS login Integration Toolkit</a>.</p>
-<p>Any test data requests to support these scenarios can be requested from NHS login via the <a href="https://nhs-login-support-slack-invite.herokuapp.com/">NHS login Developer Support Slack</a>.</p>
+            <p>The following testing scenarios should be used as part of the <a href="https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/integrate#technical-integration-of-your-product">technical integration</a> of your product.</p>
+<p>Any test data requests to support these scenarios can be requested via the <a href="https://nhs-login-support-slack-invite.herokuapp.com/">NHS login Developer Support Slack</a>.</p>
+<h2>Vector of Trust check</h2>
+<p>We use a <a href="https://nhsconnect.github.io/nhslogin/vectors-of-trust/">Vector of Trust (VoT)</a> check to ensure that the VoT that is sent in an authentication request by a supplier matches the one registered against the client ID.</p>
+<p>If it does not match then the authentication request will be rejected.</p>
 <p>Note: If you support more than one VoT, ensure you complete the test scenarios for each.</p>
 <hr>
-<h2>Testing Scenarios for P0</h2>
+<h2>Testing scenarios for P0</h2>
 <p>These scenarios should be completed by all suppliers that support a proofing level of P0.</p>
-<h3>Generic Scenarios (Mandatory)</h3>
+<h3>Generic scenarios (Mandatory)</h3>
 <ul>
 <li>Confirm access to NHS login settings page</li>
 <li>Test the scenario where a user chooses to not accept consent to share with NHS login and ensure a suitable message is displayed to the user from the service.</li>
@@ -618,9 +621,9 @@
 <li>Suppliers should be aware of the PYI journey to be able to provide basic support to their users.</li>
 </ul>
 <hr>
-<h2>Testing Scenarios for P5</h2>
+<h2>Testing scenarios for P5</h2>
 <p>These scenarios should be completed by all suppliers that support a proofing level of P5.</p>
-<h3>Generic Scenarios (Mandatory)</h3>
+<h3>Generic scenarios (Mandatory)</h3>
 <ul>
 <li>Confirm access to NHS login settings page</li>
 <li>Test the scenario where a user chooses to not accept consent to share with NHS login and ensure a suitable message is displayed to the user from the service.</li>
@@ -644,9 +647,9 @@
 <li>Suppliers should be aware of the PYI journey to be able to provide basic support to their users.</li>
 </ul>
 <hr>
-<h2>Testing Scenarios for P9</h2>
+<h2>Testing scenarios for P9</h2>
 <p>These scenarios should be completed by all suppliers that support a proofing level of P9.</p>
-<h3>Generic Scenarios (Mandatory)</h3>
+<h3>Generic scenarios (Mandatory)</h3>
 <ul>
 <li>Confirm access to NHS login settings page</li>
 <li>Test the scenario where a user chooses to not accept consent to share with NHS login and ensure a suitable message is displayed to the user from the service.</li>
