@@ -594,6 +594,8 @@
 <li>Partner services can control who they share SSO with</li>
 </ul>
 <p>NHS login supports two parameters <code>asserted_login_identity</code> and <code>prompt</code> as part of the OIDC flow. This allows for seamless login between two relying parties (RP1 and RP2).</p>
+<p>Before partners are able to test SSO between two relying parties or even between the same party as part of an uplift journey, SSO configuration needs to be setup by NHS login.</p>
+<p>To enable us to do this we will need to understand your SSO requirement as well as the client IDs being used. Please either send this information to the <a href="https://nhs-login-support-slack-invite.herokuapp.com">Developer Support Slack</a> or by sending an email to <a href="mailto:england.support.nhslogin@nhs.net">england.support.nhslogin@nhs.net</a>.</p>
 <hr>
 <h2>Technical details</h2>
 <p>Please refer to NHS login <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">external interface specification</a> for most up-to-date technical details.</p>
@@ -617,7 +619,7 @@
 </tr>
 <tr>
 <td><code>&quot;login&quot;</code></td>
-<td>The service will request the user to log in, regardless of a session <br> already existing.</td>
+<td>The service will request the user to log in, regardless of a session already existing.</td>
 </tr>
 </tbody>
 </table>
