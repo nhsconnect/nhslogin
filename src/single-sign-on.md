@@ -9,6 +9,10 @@ NHS login supports Single Sign On (SSO) based on an asserted token exchange betw
 
 NHS login supports two parameters `asserted_login_identity` and `prompt` as part of the OIDC flow. This allows for seamless login between two relying parties (RP1 and RP2).
 
+Before partners are able to test SSO between two relying parties or even between the same party as part of an uplift journey, SSO configuration needs to be setup by NHS login.
+
+To enable us to do this we will need to understand your SSO requirement as well as the client IDs being used. Please either send this information to the [Developer Support Slack](https://nhs-login-support-slack-invite.herokuapp.com) or by sending an email to [england.support.nhslogin@nhs.net](mailto:england.support.nhslogin@nhs.net).
+
 ---
 
 ## Technical details
@@ -23,7 +27,7 @@ This is an optional parameter. It requests that NHS login forces the user to sig
 | -------------|---------------------------------------------- |        
 | `<blank>`    | The service will SSO the user if they still have a valid session, <br> otherwise the user will be requested to log in. |
 | `"none"`     | The service will SSO the user if they still have a valid session, <br> otherwise an error code is returned. |
-| `"login"`    | The service will request the user to log in, regardless of a session <br> already existing. |
+| `"login"`    | The service will request the user to log in, regardless of a session already existing. |
 
 ### parameter: asserted_login_identity
 
