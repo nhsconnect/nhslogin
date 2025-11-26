@@ -588,11 +588,10 @@
               What is the Users Endpoint V2?
             </h1>
 
-            <h1>What is the Users Endpoint V2?</h1>
-<p>The Users Endpoint V2 lets approved services look up NHS login users and retrieve basic profile information in a secure and consistent way.</p>
+            <p>The Users Endpoint V2 lets approved services look up NHS login users and retrieve basic profile information in a secure and consistent way.</p>
 <p>It replaces an older version of the endpoint and now supports more fields and can return more than one user in a single response.</p>
 <hr>
-<h1>What the endpoint does</h1>
+<h2>What the endpoint does</h2>
 <p>The endpoint lets your service:</p>
 <ul>
 <li>search for NHS login users using an NHS number, an email address, or both</li>
@@ -602,7 +601,7 @@
 </ul>
 <p>The endpoint is read-only.</p>
 <hr>
-<h1>When to use it</h1>
+<h2>When to use it</h2>
 <p>You might use the Users Endpoint V2 to:</p>
 <ul>
 <li>match an existing record in your system to an NHS login account</li>
@@ -611,7 +610,7 @@
 <li>support GP-integrated journeys that require GP linkage information</li>
 </ul>
 <hr>
-<h1>What information you can receive</h1>
+<h2>What information you can receive</h2>
 <p>The information depends on the access your service has been approved for. Common examples include:</p>
 <ul>
 <li>account ID and whether the account is active</li>
@@ -623,7 +622,7 @@
 </ul>
 <p>You will only receive the information covered by your approved scopes.</p>
 <hr>
-<h1>How it works</h1>
+<h2>How it works</h2>
 <ol>
 <li>Your service securely authenticates with NHS login.</li>
 <li>NHS login issues a short-lived access token.</li>
@@ -631,7 +630,7 @@
 <li>The endpoint returns any matching users and the information you’re approved to receive.</li>
 </ol>
 <hr>
-<h1>Constraints</h1>
+<h2>Constraints</h2>
 <ul>
 <li>read-only (GET requests only)</li>
 <li>HTTPS required</li>
@@ -640,7 +639,7 @@
 <li>access tokens expire quickly for security</li>
 </ul>
 <hr>
-<h1>Developer documentation</h1>
+<h2>Developer documentation</h2>
 <p>For technical details about how Users Endpoint V2 works, see the <em>Users Endpoint V2 Interface Specification</em>.</p>
 
 
