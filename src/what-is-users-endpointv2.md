@@ -3,7 +3,7 @@ layout: base.njk
 title: What is Users Endpoint V2?
 ---
 
-Users Endpoint V2 lets approved services look up NHS login users and retrieve basic profile information in a secure and consistent way.
+The Users Endpoint V2 interface lets approved services look up NHS login users and retrieve basic profile information in a secure and consistent way.
 
 It replaces an older version of the endpoint and now supports more fields and can return more than one user in a single response.
 
@@ -24,7 +24,7 @@ The endpoint is read-only.
 
 ## When to use it
 
-You might use the Users Endpoint V2 to:
+You might use the Users Endpoint V2 interface to:
 
 - match an existing record in your system to an NHS login account
 - pre-fill user information during onboarding
