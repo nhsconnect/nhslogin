@@ -69,4 +69,4 @@ You will only receive the information covered by your approved scopes.
 
 ## Developer documentation
 
-For technical details about how Users Endpoint V2 works, see the [Users Endpoint V2 Interface Specification](https://nhsconnect.github.io/nhslogin/provision-account-external-interface/).
+For technical details about how Users Endpoint V2 works, see the [Users Endpoint V2 Interface Specification](https://nhsconnect.github.io/nhslogin/users-endpointv2-external-interface/).
