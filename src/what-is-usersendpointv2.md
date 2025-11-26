@@ -3,15 +3,13 @@ layout: base.njk
 title: What is the Users Endpoint V2?
 ---
 
-# What is the Users Endpoint V2?
-
 The Users Endpoint V2 lets approved services look up NHS login users and retrieve basic profile information in a secure and consistent way.
 
 It replaces an older version of the endpoint and now supports more fields and can return more than one user in a single response.
 
 ---
 
-# What the endpoint does
+## What the endpoint does
 
 The endpoint lets your service:
 
@@ -24,7 +22,7 @@ The endpoint is read-only.
 
 ---
 
-# When to use it
+## When to use it
 
 You might use the Users Endpoint V2 to:
 
@@ -35,7 +33,7 @@ You might use the Users Endpoint V2 to:
 
 ---
 
-# What information you can receive
+## What information you can receive
 
 The information depends on the access your service has been approved for. Common examples include:
 
@@ -50,7 +48,7 @@ You will only receive the information covered by your approved scopes.
 
 ---
 
-# How it works
+## How it works
 
 1. Your service securely authenticates with NHS login.
 2. NHS login issues a short-lived access token.
@@ -59,7 +57,7 @@ You will only receive the information covered by your approved scopes.
 
 ---
 
-# Constraints
+## Constraints
 
 - read-only (GET requests only)
 - HTTPS required
@@ -69,6 +67,6 @@ You will only receive the information covered by your approved scopes.
 
 ---
 
-# Developer documentation
+## Developer documentation
 
 For technical details about how Users Endpoint V2 works, see the *Users Endpoint V2 Interface Specification*.
