@@ -2,6 +2,24 @@
 layout: base.njk
 title: Developer Support
 ---
-We have a Slack Workspace where you can contact us. To get access to Slack, send an email request to england.support.nhslogin@nhs.net or you can get access via the [sandpit request form](https://nhsconnect.github.io/nhslogin/integrating-to-sandpit/)
+## Developer support
 
-The Slack instance does not provide support for live issues. Refer to the following page for information - [https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/go-live-and-support#support-after-you-go-live](https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/go-live-and-support#support-after-you-go-live)
+We provide support for developers through our public Slack workspace.
+
+### Join our Slack workspace
+
+To request access to Slack, email **england.support.nhslogin@nhs.net**
+
+You can also request Slack access when you submit a request form for either the **Sandpit** or **Integration test** environment.
+
+### Using Slack for support
+
+Use Slack to get support with:
+- onboarding and integration
+- Sandpit and Integration test environments
+- documentation and known issues
+
+Slack does **not** provide support for live (production) issues.
+
+For support after you go live, see  
+[NHS login: Go live and support – Support after you go live](https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/go-live-and-support#support-after-you-go-live)
