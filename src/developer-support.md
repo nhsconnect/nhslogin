@@ -2,8 +2,6 @@
 layout: base.njk
 title: Developer Support
 ---
-## Developer support
-
 We provide support for developers through our public Slack workspace.
 
 ### Join our Slack workspace
