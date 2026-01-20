@@ -6,7 +6,7 @@ We provide support for developers through our public Slack workspace.
 
 ### Join our Slack workspace
 
-To request access to Slack, email **england.support.nhslogin@nhs.net**
+To request access to Slack, contact us at **england.support.nhslogin@nhs.net**.
 
 You can also request Slack access when you submit a request form for either the **Sandpit** or **Integration test** environment.
 
@@ -21,3 +21,5 @@ Slack does **not** provide support for live (production) issues.
 
 For support after you go live, see  
 [NHS login: Go live and support – Support after you go live](https://digital.nhs.uk/services/nhs-login/nhs-login-for-partners-and-developers/nhs-login-integration-toolkit/go-live-and-support#support-after-you-go-live)
+
+Your Slack account will be automatically deactivated if you do not use it for 28 days or more. To reactivate it, contact us at **england.support.nhslogin@nhs.net**.
