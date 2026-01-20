@@ -73,3 +73,7 @@ Once the patient receives the email, they follow a short journey to activate the
 ### Developer documentation
 
 For technical details about how the Provisioning API works, see the [Provision Account External Interface Specification](https://nhsconnect.github.io/nhslogin/provision-account-external-interface/).
+
+## Partner onboarding
+
+If you would like to discuss onboarding or assess whether account provisioning is suitable for your service, contact us at [england.engage.nhslogin@nhs.net](mailto:england.engage.nhslogin@nhs.net).
