@@ -71,10 +71,8 @@ You will only receive the information covered by your approved scopes.
 
 For technical details about how Users Endpoint V2 works, see the [Users Endpoint V2 Interface Specification](https://nhsconnect.github.io/nhslogin/users-endpointv2-external-interface/).
 
-Yep — use a `mailto:` link in Markdown.
-
-Here’s the section (your preferred wording) with a clickable email address:
+---
 
 ## Partner onboarding
 
-If your organisation would like to discuss onboarding or assess whether the endpoint is suitable for your service, contact us at [england.engage.nhslogin@nhs.net](mailto:england.engage.nhslogin@nhs.net).
+If you would like to discuss onboarding or assess whether the endpoint is suitable for your service, contact us at [england.engage.nhslogin@nhs.net](mailto:england.engage.nhslogin@nhs.net).
