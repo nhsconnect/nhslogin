@@ -10,8 +10,8 @@ Your service should include a vector value in the query string as part of the in
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
 
-You need to decide the identity authentication and verification level for your product, based on the examples in [Appendix D of the DAPB3051 Identity Verification and
-Authentication Standard for Digital Health and Care Services](https://digital.nhs.uk/data-and-information/information-standards/governance/latest-activity/standards-and-collections/dapb3051-identity-verification-and-authentication-standard-for-digital-health-and-care-services).
+You need to decide the identity authentication and verification level for your product, based on the examples in [Appendix D of the DAPB3051 Identity Verification and Authentication Standard
+for Digital, Data, Analytics and Technology Use (PDF)](https://digital.nhs.uk/binaries/content/assets/website-assets/data-and-information/information-standards/standards-and-collections/dapb3051-amd-51-2025/dapb3051amd_592025_reqspec-3.1.pdf).
 
 For example, if you need High : Strong authentication, then your product must have multi-factor authentication. </p>
 </div>
