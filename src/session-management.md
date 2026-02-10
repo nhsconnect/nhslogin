@@ -5,7 +5,7 @@ title: Session management
 
 NHS login does not support user session management and user logout functionality. Both are partner responsibilities.
 
-However, NHS login follows standards set by the National Institute of Standards and Technology (NIST).
+However, we follows standards set by the National Institute of Standards and Technology (NIST).
 
 Therefore, connected services that use NHS login as an Identity Provider (IdP) and Authentication Service must align to the following NIST standards.
 
@@ -16,7 +16,6 @@ Therefore, connected services that use NHS login as an Identity Provider (IdP) a
 ---
 
 ## Session Management and Refresh Tokens
-
 
 ### Definitions
  - Standalone web application - a partner's own independently accessed web application, intended for consumption by users via any web browser (regardless of device type)
@@ -37,19 +36,15 @@ The user must complete a full authentication journey:
 
 The application must automatically redirect the user to the authentication journey at the end of each period, without user interaction.
 
-
-
 **B) For mobile applications that implement user-to-app authentication:**
 
 The user must complete a full authentication journey:
 - the first time they access the application
 - at least every 30 days thereafter
 
-
-
 If user-to-app authentication is optional, the application must comply with the requirements outlined in A) until the user configures it.
 
 In addition, the application must carry out a user-to-app authentication check:
 - after 5 minutes of inactivity within the application. The application must make this prompt automatically without user interaction
-- on reopening the application if it has been in the background for more than one minute
+- on reopening the application if it has been in the background for more than 1 minute
 - on reopening the application if it has been closed (regardless of elapsed time)
