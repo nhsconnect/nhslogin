@@ -11,7 +11,7 @@ These accounts use dummy details and a static one-time password (OTP), so you ca
 
 Download the test accounts:
 
-- [Sandpit test data spreadsheet (Excel)](REPLACE_WITH_SANDBIT_LINK.xlsx?raw=true)
+- [Sandpit test data spreadsheet (Excel)](https://github.com/nhsconnect/nhslogin/blob/main/assets/test-data/sandpit-test-data.xlsx?raw=true)
 
 You can create new users in the Sandpit to explore the identity verification screens. However, the Sandpit is not connected to the Personal Demographics Service (PDS), so newly created users cannot complete a full end-to-end journey.
 
@@ -23,7 +23,7 @@ You can use these Integration test accounts to complete the full end-to-end NHS 
 
 Download the test accounts:
 
-- [Integration test data spreadsheet (Excel)](REPLACE_WITH_INTEGRATION_LINK.xlsx?raw=true)
+- [Integration test data spreadsheet (Excel)](https://github.com/nhsconnect/nhslogin/blob/main/assets/test-data/integration-test-data.xlsx?raw=true)
 
 If your service uses the NHS Digital IM1 interface to access patient-facing services, we can also provide predefined test data for a successful connection to GP middleware. You can ask for specific GP linkage details to be used during testing.
 
