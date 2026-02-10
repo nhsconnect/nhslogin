@@ -628,60 +628,82 @@
               Test data
             </h1>
 
-            <h2>Sandpit environment</h2>
-<p>You will be provided with a set of test data, including NHS login email addresses and passwords. Both users have a static One Time Password (OTP). This allows you to successfully complete a login and redirect back to your service.</p>
-<p>You may create new users in the Sandpit to understand the ID verification journey. As there is no link to the Personal Demographic Service (PDS) in the Sandpit, you are unable to use newly created users to complete a full end-to-end journey.</p>
-<h2>Integration environment</h2>
-<p>You will be provided with a standard set of Spine Demographics Records. These can be used to create new users and successfully complete ID verification, including validation against PDS. This allows you to complete the full end-to-end journey of NHS login and successfully redirect back to your service.</p>
-<p>You should contact us if you need ID verification to be approved or if you require bespoke test data, like clinical data.</p>
-<p>If your service uses the NHS Digital IM1 interface to access patient facing services, we can also provide predefined test data for successful connection to GP middleware. You can ask for specific GP linkage details to be used during testing.</p>
+            <h2>Sandpit test data</h2>
+<p>You can use these Sandpit test accounts to sign in and explore the NHS login journey.</p>
+<p>These accounts use dummy details and a static one-time password (OTP), so you can test the journey without creating your own users.</p>
+<p>Download the test accounts:</p>
+<ul>
+<li><a href="REPLACE_WITH_SANDBIT_LINK.xlsx?raw=true">Sandpit test data spreadsheet (Excel)</a></li>
+</ul>
+<p>You can create new users in the Sandpit to explore the identity verification screens. However, the Sandpit is not connected to the Personal Demographics Service (PDS), so newly created users cannot complete a full end-to-end journey.</p>
+<hr>
+<h2>Integration test data</h2>
+<p>You can use these Integration test accounts to complete the full end-to-end NHS login journey, including validation against the Personal Demographics Service (PDS).</p>
+<p>Download the test accounts:</p>
+<ul>
+<li><a href="REPLACE_WITH_INTEGRATION_LINK.xlsx?raw=true">Integration test data spreadsheet (Excel)</a></li>
+</ul>
+<p>If your service uses the NHS Digital IM1 interface to access patient-facing services, we can also provide predefined test data for a successful connection to GP middleware. You can ask for specific GP linkage details to be used during testing.</p>
+<hr>
 <h2>Live production environment</h2>
 <p>We can provide you with an existing test user in live to enable smoke testing. The user will have already been verified and therefore will allow a successful redirect back to your service. This does not include any clinical data.</p>
+<hr>
 <h2>Supplier test data requests</h2>
-<p>We’ve built a tool to handle all test data requests from suppliers. It uses test data added to a <a href="https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true">spreadsheet</a> for accounts that need uplifting to either P5 or P9. Below is a breakdown of each required field in the spreadsheet, with guidance on how to populate them correctly:</p>
-<h3>Required fields</h3>
-<p><strong>Email address</strong>
-Must be the email used to create the test account in the target environment.</p>
-<p><strong>First / middle / last name</strong>
-Provide realistic names. Ideally, they should match a valid PDS record in the Spine Integration Environment.
-Middle name is optional.</p>
-<p><strong>Date of birth</strong>
-Format must be either <code>DD/MM/YYYY</code> or <code>YYYY-MM-DD</code>.
-Preferably matches a valid PDS record.</p>
-<p><strong>Phone number</strong>
-Must be a valid UK number starting with <code>+44</code> or <code>07</code>.</p>
-<p><strong>Phone number PDS matched</strong>
-Set to <code>true</code> if you want the phone number to be treated as matched to PDS.
-This is used for testing Identity Verification via Mobile (IDVM).</p>
-<blockquote>
-<p>If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked - no need for ID re-checking.</p>
-</blockquote>
-<p><strong>NHS number</strong>
-Must be a valid 10-digit number that passes the checksum.
-Ideally matches a valid PDS record.
-Use <a href="https://data-gorilla.uk/en/healthcare/nhs-number/">Data Gorilla</a> to validate the number.</p>
-<p><strong>Disable OTP</strong>
-Set to <code>true</code> to skip sending a real OTP and use the static test OTP <code>190696</code>.
-Set to <code>false</code> to send a real OTP to the registered mobile number.</p>
-<p><strong>Disable PDS trace</strong>
-Set to <code>true</code> to prevent NHS login from automatically syncing user data with PDS during login.
-This avoids test data being overwritten and preserves GP IM1 details.</p>
-<p><strong>GP ODS code</strong>
-Provide a valid GP ODS code, ideally one that matches a PDS record.</p>
-<h3>GP IM1 details (optional)</h3>
-<p>Only needed if you're testing IM1 integration and <a href="https://nhsconnect.github.io/nhslogin/gp-credentials/">syncing with GP system.</a></p>
-<p>If left blank, default values will be used.</p>
-<p><strong>GP Account ID</strong> Ideally generated from a test GP system<br>
-<strong>GP Connection Token</strong> Ideally generated from a test GP system<br>
-<strong>GP Linkage Key</strong> Ideally generated from a test GP system<br>
-<strong>Manually Confirmed</strong> Must be set to <code>true</code>. We can’t process requests unless the NHS login account (email, password, and confirmation) is already created.</p>
-<h3>Before you submit</h3>
+<p>We’ve built a tool to handle test data requests from suppliers.</p>
+<p>It uses a spreadsheet to request test data for accounts that need uplifting to identity proofing levels P5 or P9.</p>
+<p>Download the request template:</p>
 <ul>
-<li>Ensure the account is created with a valid email.</li>
-<li>Confirm that the OTP has been sent and verified via email.</li>
+<li><a href="https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true">Supplier test data request spreadsheet (Excel)</a></li>
+</ul>
+<p>Use this spreadsheet to provide the required test data. The sections below explain how to complete each field correctly.</p>
+<h2>Required fields</h2>
+<p><strong>Email address</strong><br>
+Must be the email address used to create the test account in the target environment.</p>
+<p><strong>First, middle and last name</strong><br>
+Provide realistic names. Ideally, these should match a valid Personal Demographics Service (PDS) record in the Spine Integration Environment.<br>
+The middle name is optional.</p>
+<p><strong>Date of birth</strong><br>
+Must be in one of the following formats:</p>
+<ul>
+<li>DD/MM/YYYY</li>
+<li>YYYY-MM-DD</li>
+</ul>
+<p>Ideally, this should match a valid PDS record.</p>
+<p><strong>Phone number</strong><br>
+Must be a valid UK phone number starting with <code>+44</code> or <code>07</code>.</p>
+<p><strong>Phone number PDS matched</strong><br>
+Set to <code>true</code> if you want the phone number to be treated as matched to PDS. This is used for testing Identity Verification via Mobile (IDVM).</p>
+<p>If the user is registered for GP online services and their NHS login mobile number matches the one held by their GP, their account setup can be fast-tracked and no additional identity checks are required.</p>
+<p><strong>NHS number</strong><br>
+Must be a valid 10-digit NHS number that passes the checksum.<br>
+Ideally, this should match a valid PDS record. You can use Data Gorilla to validate the number.</p>
+<p><strong>Disable OTP</strong><br>
+Set to <code>true</code> to skip sending a real one-time password (OTP) and use the static test OTP <code>190696</code>.<br>
+Set to <code>false</code> to send a real OTP to the registered mobile number.</p>
+<p><strong>Disable PDS trace</strong><br>
+Set to <code>true</code> to prevent NHS login from automatically syncing user data with PDS during login.</p>
+<p>This avoids test data being overwritten and helps preserve GP IM1 details during testing.</p>
+<p><strong>GP ODS code</strong><br>
+Provide a valid GP ODS code. Ideally, this should match a PDS record.</p>
+<p><strong>Manually confirmed</strong><br>
+Must be set to <code>true</code>.</p>
+<p>We cannot process requests unless the NHS login account has already been created, including email, password and confirmation.</p>
+<h2>GP IM1 details (optional)</h2>
+<p>Only complete this section if you are testing IM1 integration and syncing with a GP system.</p>
+<p>If left blank, default values will be used.</p>
+<p><strong>GP account ID</strong><br>
+Ideally generated from a test GP system.</p>
+<p><strong>GP connection token</strong><br>
+Ideally generated from a test GP system.</p>
+<p><strong>GP linkage key</strong><br>
+Ideally generated from a test GP system.</p>
+<h2>Before you submit</h2>
+<p>Before submitting the spreadsheet:</p>
+<ul>
+<li>ensure the NHS login account has been created with a valid email address</li>
+<li>confirm the OTP has been sent and verified</li>
 </ul>
 <p>Send any feedback or issues to: <a href="mailto:support.nhslogin@nhs.net">support.nhslogin@nhs.net</a></p>
-<p>Download the supplier  <a href="https://github.com/nhsconnect/nhslogin/blob/main/Supplier-test-data-requests.xlsx?raw=true">test data request spreadsheet</a></p>
 
 
      <div class="app-edit-instructions">
