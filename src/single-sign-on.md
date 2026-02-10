@@ -11,7 +11,7 @@ NHS login supports two parameters `asserted_login_identity` and `prompt` as part
 
 Before partners are able to test SSO between two relying parties or even between the same party as part of an uplift journey, SSO configuration needs to be setup by NHS login.
 
-To enable us to do this we will need to understand your SSO requirement as well as the client IDs being used. Please either send this information to the [Developer Support Slack](https://nhs-login-support-slack-invite.herokuapp.com) or by sending an email to [england.support.nhslogin@nhs.net](mailto:england.support.nhslogin@nhs.net).
+To enable us to do this we will need to understand your SSO requirement as well as the client IDs being used. Please  send this information to [england.support.nhslogin@nhs.net](mailto:england.support.nhslogin@nhs.net).
 
 ---
 
