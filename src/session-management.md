@@ -9,12 +9,13 @@ NHS login does not support user session management or logout functionality. Your
 
 You should follow these standards when implementing session management:
 
-- [NIST SP 800-63B Digital Identity Guidelines: Authentication & Authenticator Management](https://pages.nist.gov/800-63-4/sp800-63b.html) – authentication and session security  
-- [NIST SP 800-63C Digital Identity Guidelines: Federation and Assertions](https://pages.nist.gov/800-63-4/sp800-63c.html) – federation and identity assurance  
+- [NIST SP 800-63B Digital Identity Guidelines: Authentication & Authenticator Management](https://pages.nist.gov/800-63-4/sp800-63b.html) - authentication and session security  
+- [NIST SP 800-63C Digital Identity Guidelines: Federation and Assertions](https://pages.nist.gov/800-63-4/sp800-63c.html) - federation and identity assurance
 
 Any additional authentication used alongside NHS login should meet **Authentication Assurance Level 2 (AAL2)**.
 
 For implementation details, see the [NHS login Identity Federation External Interface Specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/).
+
 ---
 
 ## Session Management and Refresh Tokens
