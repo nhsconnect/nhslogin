@@ -336,26 +336,25 @@
 
                 <p>NHS login does not support user session management or logout functionality. Your service is responsible for managing the user’s session once they are signed in.</p>
 <h2>Standards</h2>
-<p>You should follow these standards when implementing session management:</p>
+<p>You must follow the following NIST Digital Identity Guidelines when implementing session management:</p>
 <ul>
-<li><a href="https://pages.nist.gov/800-63-4/sp800-63b.html">NIST SP 800-63B Digital Identity Guidelines: Authentication &amp; Authenticator Management</a> - authentication and session security</li>
-<li><a href="https://pages.nist.gov/800-63-4/sp800-63c.html">NIST SP 800-63C Digital Identity Guidelines: Federation and Assertions</a> - federation and identity assurance</li>
+<li><a href="https://pages.nist.gov/800-63-4/sp800-63b.html">NIST SP 800-63B Authentication &amp; Authenticator Management</a> - covers session timeouts and re-authentication</li>
+<li><a href="https://pages.nist.gov/800-63-4/sp800-63c.html">NIST SP 800-63C Federation and Assertions</a> - covers how sessions work between services</li>
 </ul>
-<p>Any additional authentication used alongside NHS login should meet <strong>Authentication Assurance Level 2 (AAL2)</strong>.</p>
+<p>Any additional authentication used alongside NHS login must meet <strong>Authentication Assurance Level 2 (AAL2)</strong>.</p>
 <p>For implementation details, see the <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">NHS login Identity Federation External Interface Specification</a>.</p>
 <hr>
-<h2>Session Management and Refresh Tokens</h2>
+<h2>Session management and refresh tokens</h2>
+<p>You should manage sessions using access tokens and refresh tokens as part of the OpenID Connect (OIDC) flow.</p>
 <h3>Definitions</h3>
 <ul>
 <li>Standalone web application - a partner's own independently accessed web application, intended for consumption by users via any web browser (regardless of device type)</li>
-<li>standalone mobile application - a partner's own independently accessed mobile application, intended for installation and consumption by users on a mobile phone or tablet device</li>
+<li>Standalone mobile application - a partner's own independently accessed mobile application, intended for installation and consumption by users on a mobile phone or tablet device</li>
 <li>user-to-app authentication - a biometric or PIN prompt that validates repeat-access to a mobile application after a full authentication journey has been completed on initial access to the app. <br><br>Note: this is distinct from the action taken by the user to unlock their device. Although the application may use the same operating system-level mechanism to implement a biometrics or a PIN, this is an additional check after the user has unlocked the device</li>
 </ul>
-<hr>
-<h3>Guidance</h3>
- <br>
-<p><strong>A) For standalone web applications, and standalone mobile applications that do not implement user-to-app authentication:</strong>
-<br></p>
+ <br> 
+ **A) For standalone web applications, and standalone mobile applications that do not implement user-to-app authentication:**
+<br>
 <p>The user must complete a full authentication journey:</p>
 <ul>
 <li>after 30 minutes of inactivity within the application</li>
