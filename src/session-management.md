@@ -3,16 +3,18 @@ layout: base.njk
 title: Session management
 ---
 
-NHS login does not support user session management and user logout functionality. Both are partner responsibilities.
+NHS login does not support user session management or logout functionality. Your service is responsible for managing the user’s session once they are signed in.
 
-However, we follows standards set by the National Institute of Standards and Technology (NIST).
+## Standards
 
-Therefore, connected services that use NHS login as an Identity Provider (IdP) and Authentication Service must align to the following NIST standards.
+You should follow these standards when implementing session management:
 
-[NIST SP 800-63C-4 Digital Identity Guidelines: Federation and Assertions](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63C-4.pdf) is used to provide guidance around the NHS login use and operation of OpenID Connect (OIDC), with further detail within the NHS login External Interface Specification.
+- [NIST SP 800-63B Digital Identity Guidelines: Authentication & Authenticator Management](https://pages.nist.gov/800-63-4/sp800-63b.html) – authentication and session security  
+- [NIST SP 800-63C Digital Identity Guidelines: Federation and Assertions](https://pages.nist.gov/800-63-4/sp800-63c.html) – federation and identity assurance  
 
-[NIST SP 800-63B Digital Identity Guidelines: Authentication and Lifecycle Management](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63B.pdf) is used to define the Authentication Assurance levels which support the operation of NHS login. Where authentication solutions are used alongside NHS login, they should also meet an AAL level of 2.
+Any additional authentication used alongside NHS login should meet **Authentication Assurance Level 2 (AAL2)**.
 
+For implementation details, see the [NHS login Identity Federation External Interface Specification](https://nhsconnect.github.io/nhslogin/interface-spec-doc/).
 ---
 
 ## Session Management and Refresh Tokens
