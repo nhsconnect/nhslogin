@@ -25,9 +25,7 @@ You should manage sessions using access tokens and refresh tokens as part of the
  - Standalone mobile application - a partner's own independently accessed mobile application, intended for installation and consumption by users on a mobile phone or tablet device
  - user-to-app authentication - a biometric or PIN prompt that validates repeat-access to a mobile application after a full authentication journey has been completed on initial access to the app. <br><br>Note: this is distinct from the action taken by the user to unlock their device. Although the application may use the same operating system-level mechanism to implement a biometrics or a PIN, this is an additional check after the user has unlocked the device
 
- <br> 
  **A) For standalone web applications, and standalone mobile applications that do not implement user-to-app authentication:**
-<br>
 
 The user must complete a full authentication journey:
 - after 30 minutes of inactivity within the application
