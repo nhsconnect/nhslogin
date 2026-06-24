@@ -1,4 +1,7 @@
-# Developer support
+---
+layout: base.njk
+title: Developer support
+---
 
 We provide support for developers through the [NHS England Developer Community](https://developer.community.nhs.uk/).
 
