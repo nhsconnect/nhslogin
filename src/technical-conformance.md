@@ -20,7 +20,7 @@ IM1 suppliers have the option to test the GP Online and online identity verifica
 
  ## Non-IM1 Suppliers
 
-Non-IM1 suppliers can choose to use the basic patient records provided to proceed through the online identity verification journey. Non-IM1 suppliers now also have the abiliy to test the GP online journey.
+Non-IM1 suppliers can choose to use the basic patient records provided to proceed through the online identity verification journey. Non-IM1 suppliers now also have the ability to test the GP online journey.
 
 - NHS login provide a set of patient records that exist in the Integration Environment, the details include linkage Key, account ID and ODS code
 - Non-IM1 suppliers can create new NHS login accounts and proceed through the GP Online Journey by providing valid details from the Integration Environment
