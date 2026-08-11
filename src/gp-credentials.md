@@ -71,7 +71,8 @@ The platforms that NHS login provides coverage for GP login credentials are:
 - Optum (EMIS Web): 100%
 - TPP: 100%
 - Medicus: live (GP Connect PFS)
-**Note:** For Medicus users, the gp_linkage_key claim will contain DUMMY. This is a placeholder — Medicus uses GP Connect PFS APIs and does not require IM1 linkage keys.
+  
+**Note:** For Medicus users, the `gp_linkeage_key` claim will contain `DUMMY`. This is a placeholder - Medicus uses GP Connect PFS APIs and does not require IM1 linkage keys.
 
 <hr>
         <div class="nhsuk-grid-row">
