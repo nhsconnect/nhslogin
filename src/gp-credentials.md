@@ -81,7 +81,7 @@ The platforms that NHS login provides coverage for GP login credentials are:
                     <div class="nhsuk-card__content">
                         <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-full width">
-                                <h2>Additional guidance from EMIS Web (Optum)</h2>
+                                <h2>Additional guidance from Optum (EMIS Web)</h2>
                                 <hr>
                             </div>
                         </div>
