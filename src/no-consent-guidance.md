@@ -80,13 +80,21 @@ title: Sharing a user's NHS login information with your service
 </ul>
 <h4>HTML</h4>
 <div class="code-snippet">
+<ul class="app-tabs" role="tablist">
+<li class="app-tabs__item app-tabs__item--current" role="presentation" data-index="browser-html"><a href="javascript:void(0);" role="tab" aria-controls="browser-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></li>
+</ul>
+<div class="app-tabs__container js-tabs__container" id="browser-no-consent-html" role="tabpanel">
+<div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="browser-html"><a href="javascript:void(0);" role="tab" aria-controls="browser-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></div>
+<div class="code-snippet__preformatted" data-index="browser-html">
+<div class="app-code-snippet__macro"></div>
 <div class="app-code-snippet__container">
 <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
-<pre><code>&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
+<pre><code class="hljs">&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
 &lt;p&gt;The service provider needs your NHS login information to match you to your record.&lt;/p&gt;
 &lt;p&gt;If you need medical help, go to &lt;a href=&quot;https://111.nhs.uk/&quot;&gt;111.nhs.uk&lt;/a&gt; or call &lt;a href=&quot;tel:111&quot;&gt;111&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Call &lt;a href=&quot;tel:999&quot;&gt;999&lt;/a&gt; if it is a life-threatening emergency.&lt;/p&gt;
 &lt;p&gt;Close this tab to go back to NHS App.&lt;/p&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -115,12 +123,20 @@ title: Sharing a user's NHS login information with your service
 </ul>
 <h4>HTML</h4>
 <div class="code-snippet">
+<ul class="app-tabs" role="tablist">
+<li class="app-tabs__item app-tabs__item--current" role="presentation" data-index="mobile-html"><a href="javascript:void(0);" role="tab" aria-controls="mobile-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></li>
+</ul>
+<div class="app-tabs__container js-tabs__container" id="mobile-no-consent-html" role="tabpanel">
+<div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="mobile-html"><a href="javascript:void(0);" role="tab" aria-controls="mobile-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></div>
+<div class="code-snippet__preformatted" data-index="mobile-html">
+<div class="app-code-snippet__macro"></div>
 <div class="app-code-snippet__container">
 <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
-<pre><code>&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
+<pre><code class="hljs">&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
 &lt;p&gt;The service provider needs your NHS login information to match you to your record.&lt;/p&gt;
 &lt;p&gt;If you need medical help, go to &lt;a href=&quot;https://111.nhs.uk/&quot;&gt;111.nhs.uk&lt;/a&gt; or call &lt;a href=&quot;tel:111&quot;&gt;111&lt;/a&gt; or your GP.&lt;/p&gt;
 &lt;p&gt;Call &lt;a href=&quot;tel:999&quot;&gt;999&lt;/a&gt; if it is a life-threatening emergency.&lt;/p&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -154,13 +170,22 @@ title: Sharing a user's NHS login information with your service
 </summary>
 <div class="nhsuk-details__text">
 <div class="code-snippet">
+<ul class="app-tabs" role="tablist">
+<li class="app-tabs__item app-tabs__item--current" role="presentation" data-index="alternative-html"><a href="javascript:void(0);" role="tab" aria-controls="alternative-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></li>
+</ul>
+<div class="app-tabs__container js-tabs__container" id="alternative-no-consent-html" role="tabpanel">
+<div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="alternative-html"><a href="javascript:void(0);" role="tab" aria-controls="alternative-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></div>
+<div class="code-snippet__preformatted" data-index="alternative-html">
+<div class="app-code-snippet__macro"></div>
 <div class="app-code-snippet__container">
 <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
-<pre><code>&lt;h1&gt;Choose how you want to continue&lt;/h1&gt;
+<pre><code class="hljs">&lt;h1&gt;Choose how you want to continue&lt;/h1&gt;
 &lt;p&gt;You chose not to share your NHS login information with [Service name].&lt;/p&gt;
 &lt;p&gt;To continue, you can go back and agree to share your information or sign in to [Service name].&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;[NHS login return URL]&quot;&gt;Go back and agree to share your information&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;[Service authentication URL]&quot;&gt;Sign in to [Service name]&lt;/a&gt;&lt;/p&gt;</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -187,13 +212,22 @@ title: Sharing a user's NHS login information with your service
 </summary>
 <div class="nhsuk-details__text">
 <div class="code-snippet">
+<ul class="app-tabs" role="tablist">
+<li class="app-tabs__item app-tabs__item--current" role="presentation" data-index="standard-html"><a href="javascript:void(0);" role="tab" aria-controls="standard-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></li>
+</ul>
+<div class="app-tabs__container js-tabs__container" id="standard-no-consent-html" role="tabpanel">
+<div class="app-tabs__item app-tabs__item--mobile" role="presentation" data-index="standard-html"><a href="javascript:void(0);" role="tab" aria-controls="standard-no-consent-html" data-track="tab-html" aria-selected="true">HTML</a></div>
+<div class="code-snippet__preformatted" data-index="standard-html">
+<div class="app-code-snippet__macro"></div>
 <div class="app-code-snippet__container">
 <a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
-<pre><code>&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
+<pre><code class="hljs">&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
 &lt;p&gt;[Service name] needs your NHS login information to match you to your record.&lt;/p&gt;
 &lt;p&gt;[dynamic content]&lt;/p&gt;
 &lt;p&gt;If you need medical help, go to &lt;a href=&quot;https://111.nhs.uk/&quot;&gt;111.nhs.uk&lt;/a&gt; or call &lt;a href=&quot;tel:111&quot;&gt;111&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Call &lt;a href=&quot;tel:999&quot;&gt;999&lt;/a&gt; if it is a life-threatening emergency.&lt;/p&gt;</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>

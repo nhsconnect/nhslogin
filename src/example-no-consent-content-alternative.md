@@ -3,12 +3,16 @@ layout: base-example.njk
 title: Alternative authentication no-consent screen
 ---
 
-<p><img src="/nhslogin/images/myhealth-app-wordmark.png" alt="MyHealth App" style="display:block;max-width:235px;width:100%;height:auto;margin:0 0 24px;"></p>
+<style>
+.no-consent-example-screen{max-width:294px;margin:0 auto;border:1px solid #a7b3b9;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.06);font-family:Arial,sans-serif}.no-consent-example-brand{height:48px;overflow:hidden;background:#f0faed;border-bottom:1px solid #c4dab9}.no-consent-example-brand img{display:block;width:100%;height:auto}.no-consent-example-body{padding:21px 20px 23px}.no-consent-example-body h1{font-size:23px;line-height:1.18;margin:0 0 18px;color:#212b32}.no-consent-example-body p{font-size:14px;line-height:1.43;margin:0 0 14px;color:#212b32}.no-consent-example-body a{font-size:14px}.no-consent-example-body p:last-child{margin-bottom:0}.no-consent-example-button{display:block;width:100%;box-sizing:border-box;margin:7px 0 4px;padding:10px 9px;background:#007f3b;color:#fff!important;text-align:center;text-decoration:none;font-size:14px!important;font-weight:700;box-shadow:inset 0 -2px #005a30}.no-consent-example-button:visited{color:#fff!important}
+</style>
 
+<div class="no-consent-example-screen">
+<div class="no-consent-example-brand"><img src="/nhslogin/images/myhealth-app-wordmark.png" alt="MyHealth App"></div>
+<div class="no-consent-example-body">
 <h1>Choose how you want to continue</h1>
-
 <p>You chose not to share your NHS login information with MyHealth App.</p>
-
-<p><a class="nhsuk-button" href="#">Sign in with MyHealth App</a></p>
-
+<p><a class="no-consent-example-button" href="#">Sign in with MyHealth App</a></p>
 <p><a href="#">Go back and agree to share information</a></p>
+</div>
+</div>
