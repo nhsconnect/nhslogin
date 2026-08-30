@@ -57,58 +57,73 @@ title: Sharing a user's NHS login information with your service
 <p>For any queries about how NHS App works with your service, email <a href="mailto:app.integration@nhs.net">app.integration@nhs.net</a>.</p>
 
 <details class="nhsuk-details nhsuk-expander--no-outline">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">Using a browser</span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You must use the content and emergency contact links shown below. Say “the service provider”, not the name of your service. Do not add other content to the screen.</p>
-
-    <h4>Example screen</h4>
-    <div class="design-example">
-      <a href="/nhslogin/example-no-consent-content-nhs-app-browser" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
-      <div class="code-embed">
-        <iframe title="NHS App or Wayfinder browser no-consent screen" src="/nhslogin/example-no-consent-content-nhs-app-browser" class="design-example-frame" scrolling="no" style="overflow:hidden;height:430px;"></iframe>
-      </div>
-    </div>
-
-    <h4>Required back-button behaviour</h4>
-    <p>Users should close your service tab to return to NHS App. Do not add your own back button.</p>
-    <p>If a user selects the browser Back button, reload the no-consent error screen where possible. If you cannot reload it, NHS login prevents the user from re-entering your service and shows its own error page. You do not need to take any further action.</p>
-
-    <h4>Styling requirements</h4>
-    <ul>
-      <li>Heading font size should be no smaller than 20px.</li>
-      <li>Body copy should be no smaller than 16px.</li>
-      <li>Make all emergency contact links operational.</li>
-    </ul>
-  </div>
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">Using a browser</span>
+</summary>
+<div class="nhsuk-details__text">
+<p>You must use the content and emergency contact links shown below. Say “the service provider”, not the name of your service. Do not add other content to the screen.</p>
+<h4>Example screen</h4>
+<div class="design-example">
+<a href="/nhslogin/example-no-consent-content-nhs-app-browser" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
+<div class="code-embed">
+<iframe title="NHS App or Wayfinder browser no-consent screen" src="/nhslogin/example-no-consent-content-nhs-app-browser" class="design-example-frame" scrolling="no" style="overflow:hidden;height:430px;"></iframe>
+</div>
+</div>
+<h4>Required back-button behaviour</h4>
+<p>Users should close your service tab to return to NHS App. Do not add your own back button.</p>
+<p>If a user selects the browser Back button, reload the no-consent error screen where possible. If you cannot reload it, NHS login prevents the user from re-entering your service and shows its own error page. You do not need to take any further action.</p>
+<h4>Styling requirements</h4>
+<ul>
+<li>Heading font size should be no smaller than 20px.</li>
+<li>Body copy should be no smaller than 16px.</li>
+<li>Make all emergency contact links operational.</li>
+</ul>
+<h4>HTML</h4>
+<div class="code-snippet">
+<div class="app-code-snippet__container">
+<a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+<pre><code>&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
+&lt;p&gt;The service provider needs your NHS login information to match you to your record.&lt;/p&gt;
+&lt;p&gt;If you need medical help, go to &lt;a href=&quot;https://111.nhs.uk/&quot;&gt;111.nhs.uk&lt;/a&gt; or call &lt;a href=&quot;tel:111&quot;&gt;111&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Call &lt;a href=&quot;tel:999&quot;&gt;999&lt;/a&gt; if it is a life-threatening emergency.&lt;/p&gt;
+&lt;p&gt;Close this tab to go back to NHS App.&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
 </details>
 
 <details class="nhsuk-details nhsuk-expander--no-outline">
-  <summary class="nhsuk-details__summary">
-    <span class="nhsuk-details__summary-text">Using the NHS App mobile application</span>
-  </summary>
-  <div class="nhsuk-details__text">
-    <p>You must use the content and emergency contact links shown below. Say “the service provider”, not the name of your service. Do not add other content to the screen.</p>
-
-    <h4>Example screen</h4>
-    <div class="design-example">
-      <a href="/nhslogin/example-no-consent-content-wayfinder" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
-      <div class="code-embed">
-        <iframe title="NHS App mobile no-consent screen" src="/nhslogin/example-no-consent-content-wayfinder" class="design-example-frame" scrolling="no" style="overflow:hidden;height:430px;"></iframe>
-      </div>
-    </div>
-
-    <h4>Native back-navigation behaviour</h4>
-    <p>A user can return to the previous point in their journey in NHS App using the native back link.</p>
-
-    <h4>Styling requirements</h4>
-    <ul>
-      <li>Heading font size should be no smaller than 20px.</li>
-      <li>Body copy should be no smaller than 16px.</li>
-      <li>Make all emergency contact links operational.</li>
-    </ul>
-  </div>
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">Using the NHS App mobile application</span>
+</summary>
+<div class="nhsuk-details__text">
+<p>You must use the content and emergency contact links shown below. Say “the service provider”, not the name of your service. Do not add other content to the screen.</p>
+<h4>Example screen</h4>
+<div class="design-example">
+<a href="/nhslogin/example-no-consent-content-wayfinder" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
+<div class="code-embed">
+<iframe title="NHS App mobile no-consent screen" src="/nhslogin/example-no-consent-content-wayfinder" class="design-example-frame" scrolling="no" style="overflow:hidden;height:430px;"></iframe>
+</div>
+</div>
+<h4>Native back-navigation behaviour</h4>
+<p>A user can return to the previous point in their journey in NHS App using the native back link.</p>
+<h4>Styling requirements</h4>
+<ul>
+<li>Heading font size should be no smaller than 20px.</li>
+<li>Body copy should be no smaller than 16px.</li>
+<li>Make all emergency contact links operational.</li>
+</ul>
+<h4>HTML</h4>
+<div class="code-snippet">
+<div class="app-code-snippet__container">
+<a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+<pre><code>&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
+&lt;p&gt;The service provider needs your NHS login information to match you to your record.&lt;/p&gt;
+&lt;p&gt;If you need medical help, go to &lt;a href=&quot;https://111.nhs.uk/&quot;&gt;111.nhs.uk&lt;/a&gt; or call &lt;a href=&quot;tel:111&quot;&gt;111&lt;/a&gt; or your GP.&lt;/p&gt;
+&lt;p&gt;Call &lt;a href=&quot;tel:999&quot;&gt;999&lt;/a&gt; if it is a life-threatening emergency.&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
 </details>
 
 <h3 id="guest-process">If you offer a guest process</h3>
@@ -133,6 +148,23 @@ title: Sharing a user's NHS login information with your service
     <iframe title="Alternative authentication no-consent screen" src="/nhslogin/example-no-consent-content-alternative" class="design-example-frame" scrolling="no" style="overflow:hidden;height:340px;"></iframe>
   </div>
 </div>
+<details class="nhsuk-details nhsuk-expander--no-outline">
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">HTML</span>
+</summary>
+<div class="nhsuk-details__text">
+<div class="code-snippet">
+<div class="app-code-snippet__container">
+<a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+<pre><code>&lt;h1&gt;Choose how you want to continue&lt;/h1&gt;
+&lt;p&gt;You chose not to share your NHS login information with [Service name].&lt;/p&gt;
+&lt;p&gt;To continue, you can go back and agree to share your information or sign in to [Service name].&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;[NHS login return URL]&quot;&gt;Go back and agree to share your information&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;[Service authentication URL]&quot;&gt;Sign in to [Service name]&lt;/a&gt;&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</details>
 
 <h3 id="standard-no-consent">If none of the above apply</h3>
 
@@ -149,5 +181,22 @@ title: Sharing a user's NHS login information with your service
     <iframe title="Standard no-consent error screen" src="/nhslogin/example-no-consent-content-other" class="design-example-frame" scrolling="no" style="overflow:hidden;height:390px;"></iframe>
   </div>
 </div>
+<details class="nhsuk-details nhsuk-expander--no-outline">
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">HTML</span>
+</summary>
+<div class="nhsuk-details__text">
+<div class="code-snippet">
+<div class="app-code-snippet__container">
+<a class="app-link--copy" href="javascript:void(0);" aria-live="assertive">Copy code</a>
+<pre><code>&lt;h1&gt;You cannot continue without sharing your information&lt;/h1&gt;
+&lt;p&gt;[Service name] needs your NHS login information to match you to your record.&lt;/p&gt;
+&lt;p&gt;[dynamic content]&lt;/p&gt;
+&lt;p&gt;If you need medical help, go to &lt;a href=&quot;https://111.nhs.uk/&quot;&gt;111.nhs.uk&lt;/a&gt; or call &lt;a href=&quot;tel:111&quot;&gt;111&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Call &lt;a href=&quot;tel:999&quot;&gt;999&lt;/a&gt; if it is a life-threatening emergency.&lt;/p&gt;</code></pre>
+</div>
+</div>
+</div>
+</details>
 
 <p>Contact us if you are unsure which version of the no-consent error screen content guidance is right for your service.</p>
