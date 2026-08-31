@@ -26,9 +26,9 @@ title: Sharing a user's NHS login information with your service
 <p><a href="/nhslogin/images/nhs-login-original-consent-screen.png" target="_blank" rel="noopener noreferrer">Open the full-size consent screen</a></p>
 <p><a href="/nhslogin/images/nhs-login-original-no-consent-screen.png" target="_blank" rel="noopener noreferrer">Open the full-size no-consent confirmation screen</a></p>
 
-<p>If they agree, an ID token with their information is securely passed from NHS login to your service.</p>
+<p>If they agree, NHS login redirects them to your service with an authorisation code. Your service exchanges this for an ID token.</p>
 
-<p>If they do not agree, they are redirected to your service without an ID token or authorisation code.</p>
+<p>If they do not agree, NHS login redirects them to your service without an authorisation code. NHS login does not issue an ID token.</p>
 
 <h2>What to do when users do not share their NHS login information</h2>
 
