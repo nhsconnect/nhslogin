@@ -30,13 +30,13 @@ title: Sharing a user's NHS login information with your service
 
 <h2>What to do when users do not share their NHS login information</h2>
 
-<p>Users who arrive at your service without sharing their NHS login information need clear guidance on what they can do next.</p>
+<p>Users who do not agree may be redirected to your service without their NHS login information.</p>
 
-<p>Follow the appropriate guidance below depending on how your system operates.</p>
+<p>Choose the option below that applies to your service.</p>
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>Users who arrive at your service without sharing their personal information are still authenticated by NHS login.</p>
+  <p>The user has authenticated with NHS login, but their NHS login information has not been passed to your service.</p>
 </div>
 
 <h3 id="nhs-app-or-wayfinder">If your service is accessed through the NHS App or Wayfinder</h3>
@@ -201,8 +201,7 @@ title: Sharing a user's NHS login information with your service
 <span class="nhsuk-details__summary-text">Guidance for a standard no-consent error screen</span>
 </summary>
 <div class="nhsuk-details__text">
-<p>Use the name of your service in the <code>[Service name]</code> placeholder.</p>
-<p>Tell the user that their NHS login information was not passed to your service. Only add your own content in the <code>[dynamic content]</code> section if it helps the user move on from the no-consent error screen or correct an error.</p>
+<p>The example below uses MyHealth App to show how the screen can look. Replace <code>[Service name]</code> with the name of your service. Use <code>[dynamic content]</code> only if it helps the user move on or correct an error.</p>
 
 <h4>Example screen</h4>
 <div class="design-example">
