@@ -23,8 +23,6 @@ title: Sharing a user's NHS login information with your service
 <img class="nhsuk-image__img" src="/nhslogin/images/nhs-login-consent-no-consent-flow.svg" alt="NHS login consent screen with a tick route to the partner service and a cross route through the no-consent confirmation screen to the partner service without an authorisation code">
 </div>
 </div>
-<p><a href="/nhslogin/images/nhs-login-original-consent-screen.png" target="_blank" rel="noopener noreferrer">Open the full-size consent screen</a></p>
-<p><a href="/nhslogin/images/nhs-login-original-no-consent-screen.png" target="_blank" rel="noopener noreferrer">Open the full-size no-consent confirmation screen</a></p>
 
 <p>If they agree, NHS login redirects them to your service with an authorisation code. Your service exchanges this for an ID token.</p>
 
@@ -135,30 +133,42 @@ title: Sharing a user's NHS login information with your service
 
 <h3 id="guest-process">If you offer a guest process</h3>
 
-<p>A guest process allows users to access your service without sharing any NHS login information. For example, the NHS Find a GP service enables you to look for a GP surgery, either using your NHS login details or as a guest user.</p>
+<p>A guest process allows users to access your service without sharing any NHS login information.</p>
 
-<p>If you offer a guest route, you do not need to show an error screen. Instead, make sure the user can see a guest option on your landing screen once they arrive from NHS login.</p>
+<p>If you offer a guest process, you do not need to show an error screen. Instead, make sure the user can see a guest option on your landing screen once they arrive from NHS login.</p>
+
+<h4>Example of a guest option</h4>
+<div class="design-example">
+<a href="/nhslogin/example-no-consent-content-guest" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
+<div class="code-embed">
+<iframe title="Guest-process option example" src="/nhslogin/example-no-consent-content-guest" class="design-example-frame" scrolling="no" style="overflow:hidden;height:310px;"></iframe>
+</div>
+</div>
 
 <h3 id="alternative-authentication">If you provide an alternative authentication method</h3>
 
-<p>If your service offers a way for users to authenticate other than NHS login, you must show a screen that:</p>
+<p>If your service offers a way for users to authenticate other than NHS login, you must show a clear way for them to continue.</p>
 
+<details class="nhsuk-details nhsuk-expander--no-outline">
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">Guidance for an alternative authentication screen</span>
+</summary>
+<div class="nhsuk-details__text">
+<p>The screen must:</p>
 <ul>
-  <li>allows the user to go back to NHS login and opt to share their information</li>
-  <li>provides a link or CTA to your alternative authentication method</li>
+<li>allow the user to go back to NHS login and opt to share their information</li>
+<li>provide a link or button to your alternative authentication method</li>
 </ul>
 
-<h4>Example of a partner-controlled alternative authentication screen</h4>
+<h4>Example screen</h4>
 <div class="design-example">
-  <a href="/nhslogin/example-no-consent-content-alternative" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
-  <div class="code-embed">
-    <iframe title="Alternative authentication no-consent screen" src="/nhslogin/example-no-consent-content-alternative" class="design-example-frame" scrolling="no" style="overflow:hidden;height:340px;"></iframe>
-  </div>
+<a href="/nhslogin/example-no-consent-content-alternative" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
+<div class="code-embed">
+<iframe title="Alternative authentication no-consent screen" src="/nhslogin/example-no-consent-content-alternative" class="design-example-frame" scrolling="no" style="overflow:hidden;height:340px;"></iframe>
+</div>
 </div>
 <h4>Styling requirements</h4>
-
 <p>You can use your service font, headers, footers and styling on this screen.</p>
-
 <h4>HTML</h4>
 <div class="code-snippet">
 <ul class="app-tabs" role="tablist">
@@ -179,28 +189,31 @@ title: Sharing a user's NHS login information with your service
 </div>
 </div>
 </div>
+</div>
+</details>
 
 <h3 id="standard-no-consent">If none of the above apply</h3>
 
 <p>Use the standard no-consent error screen if your service is not covered by the NHS App or Wayfinder guidance and has neither a guest process nor an alternative authentication method.</p>
 
+<details class="nhsuk-details nhsuk-expander--no-outline">
+<summary class="nhsuk-details__summary">
+<span class="nhsuk-details__summary-text">Guidance for a standard no-consent error screen</span>
+</summary>
+<div class="nhsuk-details__text">
 <p>Use the name of your service in the <code>[Service name]</code> placeholder.</p>
-
 <p>Tell the user that their NHS login information was not passed to your service. Only add your own content in the <code>[dynamic content]</code> section if it helps the user move on from the no-consent error screen or correct an error.</p>
 
-<h4>Example of a partner-owned no-consent error screen</h4>
+<h4>Example screen</h4>
 <div class="design-example">
-  <a href="/nhslogin/example-no-consent-content-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
-  <div class="code-embed">
-    <iframe title="Standard no-consent error screen" src="/nhslogin/example-no-consent-content-other" class="design-example-frame" scrolling="no" style="overflow:hidden;height:390px;"></iframe>
-  </div>
+<a href="/nhslogin/example-no-consent-content-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
+<div class="code-embed">
+<iframe title="Standard no-consent error screen" src="/nhslogin/example-no-consent-content-other" class="design-example-frame" scrolling="no" style="overflow:hidden;height:390px;"></iframe>
+</div>
 </div>
 <h4>Styling requirements</h4>
-
 <p>You can use your service font, headers, footers and styling on this screen, but it must follow our styling guidelines.</p>
-
 <p>To minimise clinical risk, make sure all anchor tags to emergency services are operational and implemented as suggested.</p>
-
 <h4>HTML</h4>
 <div class="code-snippet">
 <ul class="app-tabs" role="tablist">
@@ -221,5 +234,7 @@ title: Sharing a user's NHS login information with your service
 </div>
 </div>
 </div>
+</div>
+</details>
 
 <p>Contact us if you are unsure which version of the no-consent error screen content guidance is right for your service.</p>
