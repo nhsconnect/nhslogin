@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1380 970" role="img" aria-labelledby="title description">
+  <title id="title">Consent and no-consent routes back to a partner service</title>
+  <desc id="description">A consent screen has a solid route from I agree to a partner service, shown with a blue tick. The I do not agree link has a dotted route, marked with a blue cross, to the no-consent confirmation screen. From its lower option, a dotted route returns to the partner service without an authorisation code and NHS login does not issue an ID token.</desc>
+  <defs>
+    <marker id="arrow-solid" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L13,6.5 L0,13 Z" fill="#212b32"/>
+    </marker>
+    <marker id="arrow-dotted" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L13,6.5 L0,13 Z" fill="#212b32"/>
+    </marker>
+    <clipPath id="consent-clip"><rect x="58" y="178" width="270" height="704"/></clipPath>
+    <clipPath id="no-consent-clip"><rect x="548" y="318" width="270" height="528"/></clipPath>
+  </defs>
+
+  <rect width="1380" height="970" fill="#ffffff"/>
+
+  <!-- Real NHS login screenshots: cropped only to remove unequal outer white margins. -->
+  <image href="nhs-login-original-consent-screen.png" x="-42" y="178" width="471" height="704" clip-path="url(#consent-clip)"/>
+  <image href="nhs-login-original-no-consent-screen.png" x="506" y="318" width="354" height="528" clip-path="url(#no-consent-clip)"/>
+  <rect x="58.5" y="178.5" width="269" height="703" fill="none" stroke="#aeb7bd" stroke-width="1"/>
+  <rect x="548.5" y="318.5" width="269" height="527" fill="none" stroke="#aeb7bd" stroke-width="1"/>
+
+  <!-- User agrees: solid route from the I agree button. -->
+  <path d="M328 646 H466 V148 H922" fill="none" stroke="#212b32" stroke-width="4" marker-end="url(#arrow-solid)"/>
+  <g aria-label="User agrees">
+    <circle cx="700" cy="148" r="31" fill="#ffffff" stroke="#005eb8" stroke-width="4"/>
+    <path d="M683 149 L696 163 L719 132" fill="none" stroke="#005eb8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- User does not agree: dotted route begins at the no-consent link. -->
+  <path d="M284 688 H331 M389 688 H495 V582 H521" fill="none" stroke="#212b32" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 8" marker-end="url(#arrow-dotted)"/>
+  <g aria-label="User does not agree">
+    <circle cx="360" cy="688" r="31" fill="#ffffff" stroke="#005eb8" stroke-width="4"/>
+    <path d="M344 672 L376 704 M376 672 L344 704" fill="none" stroke="#005eb8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- User selects the lower no-consent option: dotted route to partner service. -->
+  <path d="M818 612 H865 V655 H922" fill="none" stroke="#212b32" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 8" marker-end="url(#arrow-dotted)"/>
+
+  <!-- Partner-service outcomes. -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#212b32" text-anchor="middle">
+    <rect x="943" y="63" width="395" height="170" rx="12" fill="#f0f4f5" stroke="#aeb7bd" stroke-width="2"/>
+    <text x="1140.5" y="121">
+      <tspan x="1140.5" dy="0">User is redirected to the</tspan>
+      <tspan x="1140.5" dy="36">partner service with an</tspan>
+      <tspan x="1140.5" dy="36">authorisation code</tspan>
+    </text>
+
+    <rect x="943" y="549" width="395" height="210" rx="12" fill="#f0f4f5" stroke="#aeb7bd" stroke-width="2"/>
+    <text x="1140.5" y="598">
+      <tspan x="1140.5" dy="0">User is redirected to the</tspan>
+      <tspan x="1140.5" dy="36">partner service without an</tspan>
+      <tspan x="1140.5" dy="36">authorisation code.</tspan>
+      <tspan x="1140.5" dy="36">NHS login does not issue</tspan>
+      <tspan x="1140.5" dy="36">an ID token.</tspan>
+    </text>
+  </g>
+</svg>
