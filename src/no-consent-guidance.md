@@ -17,26 +17,14 @@ title: Sharing a user's NHS login information with your service
 
 <p>Before users access your service, they will see the following screens asking if they agree to share information.</p>
 
-<div class="nhsuk-grid-row">
-<div class="nhsuk-grid-column-one-half">
-<h3>Consent screen</h3>
 <div class="design-example">
-<a href="/nhslogin/images/nhs-login-original-consent-screen.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this consent screen in a new window</a>
+<a href="/nhslogin/images/nhs-login-consent-no-consent-flow.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this simplified consent and no-consent flow in a new window</a>
 <div class="code-embed">
-<img class="nhsuk-image__img" src="/nhslogin/images/nhs-login-original-consent-screen.png" alt="NHS login consent screen with an I agree button and an I do not agree to share this information link" style="display:block;width:100%;max-width:280px;height:auto;">
+<img class="nhsuk-image__img" src="/nhslogin/images/nhs-login-consent-no-consent-flow.png" alt="NHS login consent screen followed by a blue arrow labelled User does not agree leading to the NHS login no-consent confirmation screen">
 </div>
 </div>
-</div>
-<div class="nhsuk-grid-column-one-half">
-<h3>No-consent confirmation screen</h3>
-<div class="design-example">
-<a href="/nhslogin/images/nhs-login-original-no-consent-screen.png" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this no-consent confirmation screen in a new window</a>
-<div class="code-embed">
-<img class="nhsuk-image__img" src="/nhslogin/images/nhs-login-original-no-consent-screen.png" alt="NHS login no-consent confirmation screen with a choice to go back and agree or continue without sharing information" style="display:block;width:100%;max-width:280px;height:auto;">
-</div>
-</div>
-</div>
-</div>
+<p><a href="/nhslogin/images/nhs-login-original-consent-screen.png" target="_blank" rel="noopener noreferrer">Open the full-size consent screen</a></p>
+<p><a href="/nhslogin/images/nhs-login-original-no-consent-screen.png" target="_blank" rel="noopener noreferrer">Open the full-size no-consent confirmation screen</a></p>
 
 <p>If they agree, an ID token with their information is securely passed from NHS login to your service.</p>
 
