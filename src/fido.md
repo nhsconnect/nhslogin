@@ -12,7 +12,7 @@ title: Biometric sign-in and passkeys
   <p>Continue to use your standard NHS login OpenID Connect integration. You do not need to make technical changes to that integration to support FIDO2. FIDO1 is not available as a new partner integration.</p>
 </div>
 
-<h2>Biometric sign-in</h2>
+<h2>Biometric sign-in (FIDO1)</h2>
 
 <p>NHS login supports biometric sign-in as part of the NHS login journey. This is sometimes referred to as FIDO1. It is not a separate integration for partner services.</p>
 
@@ -20,13 +20,7 @@ title: Biometric sign-in and passkeys
 
 <p>Your service does not receive the user's biometric data.</p>
 
-<div class="nhsuk-warning-callout">
-  <h3 class="nhsuk-warning-callout__label">
-    <span role="text"><span class="nhsuk-u-visually-hidden">Warning: </span>FIDO1 is not available as a new partner integration</span>
-  </h3>
-  <p>Do not make technical changes to support users who sign in this way.</p>
-  <p>If your service already has a FIDO1 integration, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a> before making changes.</p>
-</div>
+<p>FIDO1 is not available as a new partner integration. If your service already has a FIDO1 integration, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a> before making changes.</p>
 
 <h2>Passkeys</h2>
 
@@ -38,7 +32,7 @@ title: Biometric sign-in and passkeys
 
 <h3>FIDO2 in WebView apps</h3>
 
-<p>WebViews do not support FIDO2 passkeys. If your native mobile app uses a WebView, users cannot add or use passkeys in that WebView.</p>
+<p>WebViews do not support FIDO2 passkeys. If your native mobile app uses a WebView, users cannot add or use passkeys in that WebView. This affects the passkey experience in the app; it does not change your standard NHS login OpenID Connect integration.</p>
 
 <p>If you need guidance on passkeys in a native mobile app, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a>.</p>
 
