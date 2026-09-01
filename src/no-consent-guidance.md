@@ -15,7 +15,7 @@ title: Sharing a user's NHS login information with your service
   <li>your service has an update to the user information required</li>
 </ul>
 
-<p>Before users access your service, they will see the following screens asking if they agree to share information.</p>
+<p>Before users access your service, they will see the following screens asking if they agree to share their information.</p>
 
 <div class="design-example">
 <a href="/nhslogin/images/nhs-login-consent-no-consent-flow.svg" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this simplified consent and no-consent flow in a new window</a>
