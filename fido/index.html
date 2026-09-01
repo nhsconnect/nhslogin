@@ -17,7 +17,7 @@
     <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
     <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-    <title>Biometric FIDO Authentication</title>
+    <title>Biometric sign-in and passkeys</title>
   </head>
 
   <body>
@@ -331,20 +331,46 @@
               <div class="app-pane__main-content">
 
                 <h1 class="app-page-heading">
-                  Biometric FIDO Authentication
+                  Biometric sign-in and passkeys
                 </h1>
 
-                <p class="nhsuk-body">NHS login offers both FIDO1 and FIDO2 (passkeys).
-<p>Passkeys are a secure method of authentication, allowing users to access NHS services by using biometrics, PIN, or security keys.</p>
-<p>The main advantage of FIDO2 is that it enables FIDO credentials to roam across multiple devices. This allows users to register once and authenticate seamlessly on different devices. In contrast, FIDO1 is typically tied to a single device.</p>
-<h3>FIDO2 on WebView apps</h3>
-<p>WebViews do not support FIDO2 passkeys. If a mobile app uses WebViews instead of the native app, users will not be able to add a passkey or use their existing passkeys to log in.</p>
-<p>Further information on this issue and other ways an app browser can support passkeys:</p>
-<ul>
-<li><a href="https://www.corbado.com/blog/native-app-passkeys">Native App Passkeys: Native vs. WebView Implementation</a></li>
-<li><a href="https://help.duo.com/s/article/8433?language=en_US">Guide to iOS and Android WebAuthn Support for Native Applications</a></li> 
-</ul>
-<p>If your app does not support FIDO2 and you want to implement FIDO1, find out how we currently use FIDO on our <a href="/nhslogin/interface-spec-doc/">NHS login Interface Specification</a>.</p>
+                <p>NHS login can offer users ways to sign in without entering their password. These are managed by NHS login.</p>
+<h2>What partners need to do</h2>
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>Continue to use your standard NHS login OpenID Connect integration. You do not need to make technical changes to that integration to support FIDO2. FIDO1 is not available as a new partner integration.</p>
+</div>
+<h2>Biometric sign-in</h2>
+<p>NHS login supports biometric sign-in as part of the NHS login journey. This is sometimes referred to as FIDO1. It is not a separate integration for partner services.</p>
+<p>Users may authenticate on their device using biometrics, such as face or fingerprint recognition.</p>
+<p>Your service does not receive the user's biometric data.</p>
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text"><span class="nhsuk-u-visually-hidden">Warning: </span>FIDO1 is not available as a new partner integration</span>
+  </h3>
+  <p>Do not make technical changes to support users who sign in this way.</p>
+  <p>If your service already has a FIDO1 integration, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a> before making changes.</p>
+</div>
+<h2>Passkeys</h2>
+<p>NHS login also supports passkeys. Passkeys are based on FIDO2.</p>
+<p>A user may unlock a passkey on their device using biometrics, a device PIN or a security key.</p>
+<p>If your service has a native mobile app, supporting passkeys can require technical changes in that app. <a href="/nhslogin/developer-support/">Get support with your NHS login integration</a> if you need guidance.</p>
+<h3>FIDO2 in WebView apps</h3>
+<p>WebViews do not support FIDO2 passkeys. If your native mobile app uses a WebView, users cannot add or use passkeys in that WebView.</p>
+<p>If you need guidance on passkeys in a native mobile app, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a>.</p>
+<details class="nhsuk-details">
+  <summary class="nhsuk-details__summary">
+    <span class="nhsuk-details__summary-text">How FIDO, biometrics and passkeys relate</span>
+  </summary>
+  <div class="nhsuk-details__text">
+    <p>FIDO is a family of authentication standards. Biometrics are one way for a user to unlock or approve use of a credential on their device.</p>
+    <p>A user may instead use a device PIN or a security key. NHS login and your service do not receive the user's biometric data.</p>
+    <p>Passkeys use FIDO2. FIDO1 is an earlier FIDO approach that is not available as a new partner integration.</p>
+  </div>
+</details>
+<p>To understand what users see when they set up and use a passkey, see the <a href="https://help.login.nhs.uk/manage/passkeys">NHS login Help Centre passkey guidance</a>.</p>
+<h2>Developer support</h2>
+<p>If you are unsure whether your service has an existing FIDO1 integration, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a>.</p>
 
 
                 <div class="app-edit-instructions">
