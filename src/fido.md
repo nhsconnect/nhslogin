@@ -38,4 +38,4 @@ title: Biometric sign-in and passkeys
 
 <h2>Developer support</h2>
 
-<p>If you are unsure whether your service has an existing FIDO1 integration, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a>.</p>
+<p>If you need help with biometric sign-in, passkeys or an existing FIDO1 integration, <a href="/nhslogin/developer-support/">contact NHS login developer support</a>.</p>
