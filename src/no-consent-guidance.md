@@ -201,7 +201,7 @@ title: Sharing a user's NHS login information with your service
 <span class="nhsuk-details__summary-text">Guidance for a standard no-consent error screen</span>
 </summary>
 <div class="nhsuk-details__text">
-<p>The example below uses MyHealth App to show how the screen can look. Replace <code>[Service name]</code> with the name of your service. Use <code>[dynamic content]</code> only if it helps the user move on or correct an error.</p>
+<p>The example below uses MyHealth App to show how the screen can look. In the HTML, replace <code>[Service name]</code> with the name of your service. Only add content in <code>[dynamic content]</code> if it helps the user move on or correct an error.</p>
 
 <h4>Example screen</h4>
 <div class="design-example">
