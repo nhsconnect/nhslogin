@@ -3,9 +3,9 @@ layout: base.njk
 title: Biometric sign-in and passkeys
 ---
 
-<p>NHS login can offer users ways to sign in without entering their password. These are managed by NHS login.</p>
+<p>This page explains how NHS login uses biometric sign-in and passkeys, and what this means for partner integrations.</p>
 
-<h2>What partners need to do</h2>
+<p>For most partners, no change is needed.</p>
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
