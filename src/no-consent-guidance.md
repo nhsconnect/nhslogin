@@ -236,4 +236,4 @@ title: Sharing a user's NHS login information with your service
 </div>
 </details>
 
-<p>Contact us if you are unsure which version of the no-consent error screen content guidance is right for your service.</p>
+<p>If you are unsure which version applies to your service, <a href="/nhslogin/developer-support/">get support with your NHS login integration</a>.</p>
