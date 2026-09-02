@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Passkeys and biometric sign-in
+title: Biometric sign-in and passkeys
 ---
 
 <p>This page explains how NHS login uses passkeys and biometric sign-in, and what this means for partner integrations.</p>
@@ -9,7 +9,7 @@ title: Passkeys and biometric sign-in
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
-  <p>Continue to use your standard NHS login OpenID Connect integration. You do not need to make technical changes to that integration to support FIDO2 passkeys.</p>
+  <p>Continue to use your standard NHS login OpenID Connect integration. You do not need to make technical changes to that integration to support FIDO2 passkeys. FIDO1 is not available for partner onboarding.</p>
 </div>
 
 <h2>Passkeys (FIDO2)</h2>
@@ -31,8 +31,6 @@ title: Passkeys and biometric sign-in
 <h2>Biometric sign-in (FIDO1)</h2>
 
 <p>NHS login supports biometric sign-in as part of the NHS login journey. This is sometimes referred to as FIDO1. It is not a separate integration for partner services.</p>
-
-<p>FIDO1 is not available for partner onboarding.</p>
 
 <h2>Developer support</h2>
 
