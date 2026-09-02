@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Biometric sign-in and passkeys
+title: Passkeys and biometric sign-in
 ---
 
 <p>This page explains how NHS login uses passkeys and biometric sign-in, and what this means for partner integrations.</p>
