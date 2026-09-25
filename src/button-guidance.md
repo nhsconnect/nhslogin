@@ -115,7 +115,7 @@ Use this version if no NHS logo is visible on the same screen. This is the versi
 <div class="design-example">
   <a href="/nhslogin/example-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
   <div class="code-embed">
-    <iframe title="NHS login button with the NHS logo" src="/nhslogin/example-other" class="design-example-frame" scrolling="no" style="overflow:hidden;height:156px;"></iframe>
+    <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-example-button-with-logo.svg" alt="NHS login button with the NHS logo. The label Continue to NHS login is on one line.">
   </div>
 </div>
 
