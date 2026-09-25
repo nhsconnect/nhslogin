@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/nhslogin">
+
+    <link rel="stylesheet" href="nhslogin/css/main.css">
+    <link rel="stylesheet" href="nhslogin/css/mobile-menu.css">
+
+    <script src="nhslogin/js/main.min.js" defer></script>
+
+    <link rel="shortcut icon" href="/nhslogin/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/nhslogin/images/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
+
+    <title>Using the nonce parameter with NHS login</title>
+  </head>
+
+  <body>
+    <header class="nhsuk-header" role="banner">
+      <div class="nhsuk-width-container nhsuk-header__container">
+        <div class="nhsuk-header__logo">
+          <a class="nhsuk-header__link nhsuk-header__link--service" href="/nhslogin" aria-label="NHS digital service manual homepage">
+            <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+              <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+              <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+              <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+            </svg>
+
+            <span class="nhsuk-header__service-name">
+              NHS login developer documentation
+            </span>
+          </a>
+        </div>
+
+        <div class="nhsuk-header__menu">
+          <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">
+            Menu
+          </button>
+        </div>
+
+        <div class="nhsuk-header__content" id="content-header">
+        </div>
+
+      </div>
+
+      <nav class="nhsuk-header__navigation mobile-menu" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-header__navigation-title">
+      <span id="label-navigation">Menu</span>
+
+      <button class="nhsuk-header__navigation-close" id="close-menu">
+        <svg class="nhsuk-icon nhsuk-icon__close"
+             xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             aria-hidden="true"
+             focusable="false">
+          <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+        </svg>
+        <span class="nhsuk-u-visually-hidden">Close menu</span>
+      </button>
+    </p>
+
+    <ul class="nhsuk-header__navigation-list">
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">NHS login</h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin">
+          What is NHS login
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/oidc-login-flow">
+          The OIDC login flow
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">Integrating with NHS login</h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/integration-process">
+          The NHS login integration process
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/user-journeys">
+          NHS login user journeys
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/button-guidance">
+          How to use the NHS login button
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/no-consent-guidance">
+          Sharing a user's NHS login information with your service
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/artificial-intelligence">
+          Artificial intelligence (AI)
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <!-- Remaining sections unchanged except fixed URLs -->
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">Provisioning accounts</h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/what-is-account-provisioning">
+          What is account provisioning?
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="app-side-nav__heading mobile-menu__heading">Users Endpoint V2</h2>
+      </li>
+
+      <li class="nhsuk-header__navigation-item">
+        <a class="nhsuk-header__navigation-link" href="/nhslogin/what-is-users-endpointv2">
+          What is Users Endpoint V2?
+          <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+          </svg>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+    </header>
+
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full app-component-reading-width">
+
+            <div class="app-pane">
+
+              <div class="app-pane__side-bar">
+
+  <nav class="app-side-nav">
+
+    <h2 class="app-side-nav__heading">NHS login</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin">What is NHS login?</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/oidc-login-flow">The OIDC login flow</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Integrating with NHS login</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/integration-process">The NHS login integration process</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/user-journeys">NHS login user journeys</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/button-guidance">How to use the NHS login button</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/no-consent-guidance">Sharing a user's NHS login information with your service</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/artificial-intelligence">Artificial intelligence (AI)</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Testing NHS login</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/compare-environments">Compare NHS login environments</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/integrating-to-sandpit">Integrate to the sandpit</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/generating-pem">Generate public key</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/test-data">Test data</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/testing-scenarios">Testing scenarios</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">External Interface Specification</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/interface-spec-doc">Identity Federation External Interface Specification</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Provisioning accounts</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/what-is-account-provisioning">What is account provisioning?</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/provision-account-external-interface">Provision Account External Interface Specification</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Users Endpoint V2</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/what-is-users-endpointv2">What is Users Endpoint V2?</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/users-endpointv2-external-interface">Users Endpoint V2 External Interface Specification</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Conformance</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/technical-conformance">Technical Conformance</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Developer support</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/developer-support">Developer support</a>
+      </li>
+    </ul>
+
+    <h2 class="app-side-nav__heading">Features</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/fido">Passkeys and biometric sign-in</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/gp-credentials">GP credentials</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/step-up-p5-p9">Medium (P5) to high (P9) verification step-up journey</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/multiple-redirect-uris">Multiple redirect URIs</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/linking-to-settings">NHS login user settings</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/scopes-and-claims">Scopes and claims</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/session-management">Session management</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/single-sign-on">Single Sign On (SSO)</a>
+      </li>
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/vectors-of-trust">Vectors of Trust</a>
+      </li>
+
+    </ul>
+
+    <h2 class="app-side-nav__heading">Code examples</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+
+      <li class="app-side-nav__item">
+        <a class="app-side-nav__link" href="/nhslogin/example-oidc">Example OIDC clients</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</div>
+
+
+              <div class="app-pane__main-content">
+
+                <h1 class="app-page-heading">
+                  Using the nonce parameter with NHS login
+                </h1>
+
+                <p>You must include a new <code>nonce</code> value in every OpenID Connect authorisation request you send to NHS login. The <a href="https://nhsconnect.github.io/nhslogin/interface-spec-doc/">External Interface Specification (EIS)</a> requires you to include it.</p>
+<h2>What you need to do</h2>
+<ol>
+<li>Generate a new, unpredictable <code>nonce</code> value. Do not reuse it for another authentication request.</li>
+<li>Store the value securely for the duration of the authentication transaction, until you have checked the ID token.</li>
+<li>Send the value to the NHS login <code>/authorize</code> endpoint.</li>
+<li>Check that the <code>nonce</code> claim in the returned ID token matches the value you originally sent.</li>
+<li>If the <code>nonce</code> claim is missing or does not match, do not sign the user in.</li>
+</ol>
+<p>Complete these steps in every NHS login journey your service supports, including separate web and mobile implementations.</p>
+<h2>Add nonce to your authorisation request</h2>
+<p>Add the <code>nonce</code> parameter when you start the NHS login authorisation code flow. Send it to the NHS login <code>/authorize</code> endpoint with the other registered values for your service.</p>
+<pre class="language-text"><code class="language-text">GET [NHS-login-authorize-endpoint]?<br>  response_type=code&<br>  client_id=[your-client-id]&<br>  redirect_uri=[your-registered-redirect-uri]&<br>  scope=openid&<br>  state=[your-state-value]&<br>  nonce=[a-new-unpredictable-value]</code></pre>
+<p>NHS login returns the same value in the <code>nonce</code> claim of the ID token.</p>
+<h2>Check the ID token</h2>
+<p>After you exchange the authorisation code for tokens, validate the ID token using your OpenID Connect library or implementation. As part of that validation, compare its <code>nonce</code> claim with the value you stored when the authentication transaction began.</p>
+<p>If the <code>nonce</code> claim is missing or does not match the stored value, do not sign the user in. Treat the response as invalid and follow your service's usual error-handling process.</p>
+<div class="nhsuk-inset-text">
+  <span class="nhsuk-u-visually-hidden">Information: </span>
+  <p>Your OpenID Connect library may generate and validate a <code>nonce</code> for you. Check its configuration and make sure it sends a new <code>nonce</code> in every NHS login authorisation request.</p>
+</div>
+<h2>More information and support</h2>
+<p>Read the <a href="https://nhsconnect.github.io/nhslogin/oidc-login-flow/">OIDC login flow</a> for an overview of how NHS login authorisation works. The <a href="https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest">OpenID Connect Core specification</a> explains the <code>nonce</code> parameter in more technical detail.</p>
+<p>Contact <a href="https://nhsconnect.github.io/nhslogin/developer-support/">NHS login developer support</a> if you need help making this change.</p>
+
+
+                <div class="app-edit-instructions">
+                  <hr />
+                  <p>
+                    <a href="https://github.com/nhsconnect/nhslogin/blob/main/./src/nonce.md">
+                      Edit this page
+                    </a> on GitHub
+                  </p>
+                </div>
+
+                <div class="app-index-navigation app-u-hide-desktop">
+                  <nav class="app-side-nav">
+                  </nav>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="nhsuk-footer" id="nhsuk-footer">
+        <div class="nhsuk-width-container">
+
+          <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+
+          <ul class="nhsuk-footer__list">
+  <li class="nhsuk-footer__list-item">
+    <a class="nhsuk-footer__list-item-link" href="https://github.com/nhsconnect/nhslogin">
+      GitHub
+    </a>
+  </li>
+
+  <li class="nhsuk-footer__list-item">
+    <a class="nhsuk-footer__list-item-link" href="/nhslogin/developer-support/">
+      Developer support
+    </a>
+  </li>
+
+  <li class="nhsuk-footer__list-item">
+    <a class="nhsuk-footer__list-item-link" href="mailto:england.engage.nhslogin@nhs.net">
+      Contact us
+    </a>
+  </li>
+</ul>
+
+          <p class="nhsuk-footer__copyright">
+            © Crown copyright
+          </p>
+
+        </div>
+      </div>
+
+      <div class="app-ogl-footer">
+        <div class="nhsuk-width-container"></div>
+      </div>
+    </footer>
+
+    <script src="nhslogin/js/iframeResizer.contentWindow.js"></script>
+    <script src="nhslogin/js/mobile-menu.js"></script>
+
+  </body>
+</html>
