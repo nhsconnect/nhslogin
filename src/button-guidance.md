@@ -50,26 +50,18 @@ There are 3 button versions. Each has specific requirements for its label, NHS l
 }
 .button-guidance-do-dont .nhsuk-list--tick,
 .button-guidance-do-dont .nhsuk-list--cross {
-  margin: 0;
-  padding-left: 40px;
-}
-.button-guidance-do-dont .nhsuk-list--tick > li,
-.button-guidance-do-dont .nhsuk-list--cross > li {
   position: relative;
-  margin-bottom: 10px;
-}
-.button-guidance-do-dont .nhsuk-list--tick > li:last-child,
-.button-guidance-do-dont .nhsuk-list--cross > li:last-child {
-  margin-bottom: 0;
+  margin: 0;
+  padding-left: 36px;
+  list-style: none;
 }
 .button-guidance-do-dont .nhsuk-list--tick svg,
 .button-guidance-do-dont .nhsuk-list--cross svg {
   position: absolute;
-  top: -1px;
-  left: -28px;
-  width: 24px;
-  height: 24px;
-  margin: 0;
+  left: -4px;
+  width: 32px;
+  height: 32px;
+  margin-top: -4px;
 }
 .button-guidance-do-dont .nhsuk-icon--tick { fill: #007f3b; }
 .button-guidance-do-dont .nhsuk-icon--cross { fill: #d5281b; }
@@ -118,8 +110,6 @@ Use this version if no NHS logo is visible on the same screen. This is the versi
     <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-example-button-with-logo.svg" alt="NHS login button with the NHS logo. The label Continue to NHS login is on one line.">
   </div>
 </div>
-
-[Download the NHS login button package for websites or apps that do not use the NHS logo](https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other).
 
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
@@ -325,6 +315,8 @@ Use this version if no NHS logo is visible on the same screen. This is the versi
   </div>
 </details>
 
+[Download the button package with the NHS logo](https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/Other).
+
 ### Place this button on your sign-in or registration screen
 
 If you offer other native or third-party sign-in or registration options, show NHS login first and make it as clear and visible as the other options. If you have a clear user need not to do this, contact NHS login with evidence before making the change.
@@ -365,8 +357,6 @@ Use this version only when the NHS logo is already visible on the screen where p
 </div>
 
 Follow the placement, form-separation and sizing guidance above for this button version.
-
-[Download the NHS login button package for websites or apps that use NHS branding](https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS).
 
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
@@ -564,6 +554,8 @@ Follow the placement, form-separation and sizing guidance above for this button 
   </div>
 </details>
 
+[Download the button package without the NHS logo](https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS).
+
 ## NHS Design System button
 
 Only NHS services that use the [NHS Design System](https://service-manual.nhs.uk/design-system/) can use this version, for example the NHS App. The button uses the label `Continue`.
@@ -576,8 +568,6 @@ Only NHS services that use the [NHS Design System](https://service-manual.nhs.uk
 </div>
 
 Follow the placement, form-separation and sizing guidance above for this button version.
-
-[Download the NHS login button package for services that use the NHS Design System](https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS-Design-System).
 
 <details class="nhsuk-details">
   <summary class="nhsuk-details__summary">
@@ -774,6 +764,8 @@ Follow the placement, form-separation and sizing guidance above for this button 
 
   </div>
 </details>
+
+[Download the NHS Design System button package](https://github.com/nhsconnect/nhslogin/tree/main/src/buttons/NHS-Design-System).
 
 ## What happens after someone selects an NHS login button
 
