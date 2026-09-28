@@ -5,7 +5,7 @@ title: How to use the NHS login button
 
 This page explains how to use the NHS login button on your website or app.
 
-There are 3 button versions. Each has specific requirements for its label, NHS logo, colour, size and placement.
+There are 3 versions of the NHS login button. You must use the right version for your product and follow the design requirements below.
 
 <style>
 .button-guidance-before-button {
@@ -99,7 +99,7 @@ There are 3 button versions. Each has specific requirements for its label, NHS l
     <div class="nhsuk-card__content">
       <h3 class="nhsuk-card__heading">Do</h3>
       <ul class="nhsuk-list nhsuk-list--tick" role="list">
-        <li><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path fill="#007f3b" d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" /></svg>use the right button based on the design of your login screen</li>
+        <li><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path fill="#007f3b" d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" /></svg>use the right button based on the design of your login or registration screen</li>
         <li><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path fill="#007f3b" d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" /></svg>use the supplied label, logo treatment and button styles</li>
         <li><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path fill="#007f3b" d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" /></svg>show NHS login first when other sign-in or registration options are available</li>
         <li><svg class="nhsuk-icon nhsuk-icon--tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" focusable="false" aria-hidden="true"><path fill="#007f3b" d="M11.4 17.5a2 2 0 0 1-2.7.1h-.1L4 12.8a1.5 1.5 0 0 1 2.1-2L10 14.7l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z" /></svg>contact NHS login if a clear user need means you cannot follow this guidance</li>
