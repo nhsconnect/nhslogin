@@ -10,15 +10,19 @@
   <rect width="1200" height="600" fill="#ffffff"/>
   <rect x="40" y="70" width="1120" height="460" fill="#e8edee"/>
   <!-- y is the rendered height of the button. Clear space is 0.5y. -->
-  <line x1="150" y1="260" x2="150" y2="372" stroke="#212b32" stroke-width="3" stroke-dasharray="3 7" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <!-- The y dimension runs from the top to the bottom of the blue button. -->
+  <path d="M150 260 L141 278 H159 Z" fill="#212b32"/>
+  <line x1="150" y1="282" x2="150" y2="350" stroke="#212b32" stroke-width="3" stroke-dasharray="3 7"/>
+  <path d="M150 372 L141 354 H159 Z" fill="#212b32"/>
   <text x="106" y="327" fill="#212b32" font-family="Arial, Helvetica, sans-serif" font-size="32">y</text>
 
-  <line x1="500" y1="204" x2="500" y2="250" stroke="#212b32" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <text x="456" y="171" fill="#212b32" font-family="Arial, Helvetica, sans-serif" font-size="32">0.5y</text>
+  <!-- y is 112 units, so every 0.5y dimension line is exactly 56 units. -->
+  <line x1="500" y1="194" x2="500" y2="250" stroke="#212b32" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="456" y="168" fill="#212b32" font-family="Arial, Helvetica, sans-serif" font-size="32">0.5y</text>
 
   <!-- The arrowhead meets the edge of the button shadow, matching the top measurement. -->
   <line x1="500" y1="388" x2="500" y2="444" stroke="#212b32" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <text x="456" y="492" fill="#212b32" font-family="Arial, Helvetica, sans-serif" font-size="32">0.5y</text>
+  <text x="456" y="488" fill="#212b32" font-family="Arial, Helvetica, sans-serif" font-size="32">0.5y</text>
 
   <!-- The arrowhead meets the button edge, matching the top measurement. -->
   <line x1="828" y1="316" x2="884" y2="316" stroke="#212b32" stroke-width="3" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
