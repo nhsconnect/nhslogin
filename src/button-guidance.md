@@ -10,10 +10,13 @@ There are 3 button versions. Each has specific requirements for its label, NHS l
 <style>
 .button-guidance-before-button {
   padding-top: 24px;
+  margin-bottom: 32px;
 }
+
 @media (min-width: 40.0625em) {
   .button-guidance-before-button {
     padding-top: 32px;
+    margin-bottom: 40px;
   }
 }
 </style>
