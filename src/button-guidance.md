@@ -10,16 +10,18 @@ There are 3 versions of the NHS login button. You must use the correct version a
 <style>
 .button-guidance-before-button {
   padding-top: 24px;
+  margin-bottom: 32px;
 }
+
 @media (min-width: 40.0625em) {
   .button-guidance-before-button {
     padding-top: 32px;
+    margin-bottom: 40px;
   }
 }
 </style>
 
 <h2 class="button-guidance-before-button">Before you add the button</h2>
-
 
 <style>
 .button-guidance-do-dont .nhsuk-card--feature {
