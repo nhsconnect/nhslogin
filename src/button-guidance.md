@@ -7,7 +7,18 @@ This page explains how to use the NHS login button on your website or app.
 
 There are 3 button versions. Each has specific requirements for its label, NHS logo, colour, size and placement.
 
-## Before you add the button
+<style>
+.button-guidance-before-button {
+  padding-top: 24px;
+}
+@media (min-width: 40.0625em) {
+  .button-guidance-before-button {
+    padding-top: 32px;
+  }
+}
+</style>
+
+<h2 class="button-guidance-before-button">Before you add the button</h2>
 
 <style>
 .button-guidance-do-dont .nhsuk-card--feature {
@@ -107,7 +118,7 @@ Use this version if no NHS logo is visible on the same screen. This is the versi
 <div class="design-example">
   <a href="/nhslogin/example-other" class="design-example__pop-out" target="_blank" rel="noopener noreferrer">Open this example in a new window</a>
   <div class="code-embed">
-    <img class="nhsuk-image__img" src="/nhslogin/images/Guidance-example-button-with-logo.svg" alt="NHS login button with the NHS logo. The label Continue to NHS login is on one line.">
+    <iframe title="NHS login button with the NHS logo" src="/nhslogin/example-other" class="design-example-frame" scrolling="no" style="overflow:hidden;height:160px;"></iframe>
   </div>
 </div>
 
