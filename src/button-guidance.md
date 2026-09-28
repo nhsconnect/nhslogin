@@ -5,7 +5,7 @@ title: How to use the NHS login button
 
 This page explains how to use the NHS login button on your website or app.
 
-There are 3 button versions. Each has specific requirements for its label, NHS logo, colour, size and placement.
+There are 3 versions of the NHS login button. You must use the correct version and follow the design requirements below.
 
 <style>
 .button-guidance-before-button {
