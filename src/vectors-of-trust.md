@@ -1,11 +1,11 @@
 ---
 layout: base.njk
-title: Introduction to Vectors of Trust
+title: Vectors of Trust
 ---
 
 A Vector of Trust [(VoT RFC 8485)](https://tools.ietf.org/html/rfc8485) allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.
 
-Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.
+Your service can include the `vtr` parameter in the authorisation request that starts the OIDC flow. NHS login uses default values if you omit it.
 
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
@@ -21,7 +21,8 @@ Multi-factor authentication (MFA), also known as two-step verification or two-fa
 
 This typically includes:
 <ul>
-  <li>something the user knows, usually a password or PIN </li>
+  <li>something the user knows, usually a password or PIN
+</li>
   <li>something they have, such as a phone that can receive one-time passcodes (OTPs)</li>
   <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
 </ul>
@@ -158,14 +159,21 @@ Authentication Standard for Digital Health and Care Services](https://digital.nh
 
 ## Requesting Vectors of Trust values
 
-The client **may** request a set of acceptable VoT values with the "vtr" (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.
+The `vtr` (vector of trust request) parameter is optional. You can send it as part of the authorisation request to request a set of acceptable VoT values. Its value is an array of JSON strings, each identifying an acceptable set of vector components.
 
 The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form `["P9.Cp.Cd ", "P9.Cm"]` is stating that either the full set of "P9 AND Cp AND Cd" simultaneously OR the full set of "P9 AND Cm" simultaneously are acceptable for this transaction.
 
 Vector request values **may** omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.
 
-Omission of the "vtr" will result in a default value of `[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]` being assumed. 
-**Note:** a VoT must be submitted in your SCAL and in your Environment Request Forms.
+### Use values configured for your service
+
+When NHS login is configured for your service, you agree the Vector of Trust values your service can request. Include the values you need in your SCAL and Environment Request Forms.
+
+You can omit the `vtr` parameter. NHS login will then use the default values:
+
+`[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]`
+
+If you send a `vtr` value, it must be one configured for your service. NHS login will reject an authorisation request that asks for a value your service is not configured to use.
 
 ---
 
@@ -330,6 +338,5 @@ Also note that SSO behaviour, or to refuse SSO behaviour, can be controlled usin
 The trust mark provides a list of claims that NHS login supports. This enables the client to verify which components of a trust framework NHS login supports and hence their trustworthiness.
 
 The NHS login trust mark is self-hosted.
-
 
 
