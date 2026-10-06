@@ -17,7 +17,7 @@
     <link rel="mask-icon" href="/nhslogin/images/favicon.svg" color="#005eb8">
     <link rel="icon" sizes="192x192" href="/nhslogin/images/favicon-192x192.png">
 
-    <title>Introduction to Vectors of Trust</title>
+    <title>Vectors of Trust</title>
   </head>
 
   <body>
@@ -343,11 +343,11 @@
               <div class="app-pane__main-content">
 
                 <h1 class="app-page-heading">
-                  Introduction to Vectors of Trust
+                  Vectors of Trust
                 </h1>
 
                 <p>A Vector of Trust <a href="https://tools.ietf.org/html/rfc8485">(VoT RFC 8485)</a> allows you to request the level of authentication and identity verification users need to access your service. This will be determined by the transactions the user carries out in your service.</p>
-<p>Your service should include a vector value in the query string as part of the initialisation of the OIDC flow.</p>
+<p>Your service can include the <code>vtr</code> parameter in the authorisation request that starts the OIDC flow. NHS login uses default values if you omit it.</p>
 <div class="nhsuk-inset-text">
   <span class="nhsuk-u-visually-hidden">Information: </span>
 <p>You need to decide the identity authentication and verification level for your product, based on the examples in <a href="https://digital.nhs.uk/binaries/content/assets/website-assets/data-and-information/information-standards/standards-and-collections/dapb3051-amd-51-2025/dapb3051amd_592025_reqspec-3.1.pdf">Appendix D of the DAPB3051 Identity Verification and Authentication Standard
@@ -358,7 +358,8 @@ for Digital, Data, Analytics and Technology Use (PDF)</a>.</p>
 <p>Multi-factor authentication (MFA), also known as two-step verification or two-factor authentication (2FA), requires users to provide at least two types of authentication.</p>
 <p>This typically includes:</p>
 <ul>
-  <li>something the user knows, usually a password or PIN </li>
+  <li>something the user knows, usually a password or PIN
+</li>
   <li>something they have, such as a phone that can receive one-time passcodes (OTPs)</li>
   <li>something they are, for example fingerprint or facial recognition (biometrics)</li>
 </ul>
@@ -481,11 +482,14 @@ Authentication Standard for Digital Health and Care Services</a>.</p>
 </table>
 <hr>
 <h2>Requesting Vectors of Trust values</h2>
-<p>The client <strong>may</strong> request a set of acceptable VoT values with the &quot;vtr&quot; (vector of trust request) claim request as part of the Authentication Request. The value of this field is an array of JSON strings, each string identifying an acceptable set of vector components.</p>
+<p>The <code>vtr</code> (vector of trust request) parameter is optional. You can send it as part of the authorisation request to request a set of acceptable VoT values. Its value is an array of JSON strings, each identifying an acceptable set of vector components.</p>
 <p>The component values within each vector are ANDed together while the separate vectors are ORed together. For example, a list of vectors in the form <code>[&quot;P9.Cp.Cd &quot;, &quot;P9.Cm&quot;]</code> is stating that either the full set of &quot;P9 AND Cp AND Cd&quot; simultaneously OR the full set of &quot;P9 AND Cm&quot; simultaneously are acceptable for this transaction.</p>
 <p>Vector request values <strong>may</strong> omit components, indicating that any value is acceptable for that component category, including omission of that component in the response vector.</p>
-<p>Omission of the &quot;vtr&quot; will result in a default value of <code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code> being assumed.
-<strong>Note:</strong> a VoT must be submitted in your SCAL and in your Environment Request Forms.</p>
+<h3>Use values configured for your service</h3>
+<p>When NHS login is configured for your service, you agree the Vector of Trust values your service can request. Include the values you need in your SCAL and Environment Request Forms.</p>
+<p>You can omit the <code>vtr</code> parameter. NHS login will then use the default values:</p>
+<p><code>[“P9.Cp.Cd”,“P9.Cp.Ck”,“P9.Cm”]</code></p>
+<p>If you send a <code>vtr</code> value, it must be one configured for your service. NHS login will reject an authorisation request that asks for a value your service is not configured to use.</p>
 <hr>
 <h2>Returned Vectors of Trust values</h2>
 <p>The vector is sent as a string within the &quot;vot&quot; (vector of trust) claim in the ID and Access tokens. The trustmark that applies to this vector is sent as an HTTPS URL in the &quot;vtm&quot; (vector trust mark) claim to provide context to the vector.</p>
