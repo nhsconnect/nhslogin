@@ -5,7 +5,7 @@ title: Developer support
 
 We provide support for developers through the [NHS England Developer Community](https://developer.community.nhs.uk/).
 
-The Developer Community is replacing the NHS login Support Slack workspace. It's the place to ask questions, raise queries, and get support for onboarding, integration, and test environments.
+The Developer Community is the place to ask questions, raise queries, and get support for onboarding, integration, and test environments.
 
 ## Join the Developer Community
 
