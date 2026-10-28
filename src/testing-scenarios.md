@@ -4,7 +4,7 @@ title: Testing scenarios
 ---
 The following testing scenarios should be used as part of the [technical integration](https://nhsconnect.github.io/nhslogin/integration-process/) of your product. 
 
-Any test data requests to support these scenarios can be requested via the [NHS login section of the Developer Community](https://developer.community.nhs.uk/c/nhs-login/23/).
+Any test data requests to support these scenarios can be made through the [NHS England Developer Community](https://developer.community.nhs.uk/ ). Sign in, then use the `NHS_Login_Private_Space` private chat.
 
 ## Vector of Trust check
 We use a [Vector of Trust (VoT)](https://nhsconnect.github.io/nhslogin/vectors-of-trust/) check to ensure that the VoT sent in an authentication request by a supplier matches the one registered against the client ID.
